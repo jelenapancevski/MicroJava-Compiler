@@ -1,0 +1,202 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+
+nonterminal Program Program;
+nonterminal Declarations Declarations;
+nonterminal Declaration Declaration;
+nonterminal ConstDecl ConstDecl;
+nonterminal ConstantList ConstantList;
+nonterminal Constant Constant;
+nonterminal VarDecl VarDecl;
+nonterminal VariablesList VariablesList;
+nonterminal ArrayBrackets ArrayBrackets;
+nonterminal MethodDeclList MethodDeclList;
+nonterminal MethodDecl MethodDecl;
+nonterminal MethodType MethodType;
+nonterminal MethodParameters MethodParameters;
+nonterminal FormPars FormPars;
+nonterminal MethodVariables MethodVariables;
+nonterminal MethodStatements MethodStatements;
+nonterminal Statement Statement;
+nonterminal PrintConstant PrintConstant;
+nonterminal DesignatorStatement DesignatorStatement;
+nonterminal DesignatorList DesignatorList;
+nonterminal DesignatorListElement DesignatorListElement;
+nonterminal Type Type;
+nonterminal Expr Expr;
+nonterminal TermList TermList;
+nonterminal Term Term;
+nonterminal FactorList FactorList;
+nonterminal Factor Factor;
+nonterminal ActParams ActParams;
+nonterminal ActPars ActPars;
+nonterminal Designator Designator;
+nonterminal DesignatorParameterList DesignatorParameterList;
+nonterminal DesignatorParameter DesignatorParameter;
+nonterminal Assignop Assignop;
+nonterminal Addop Addop;
+nonterminal Mulop Mulop;
+terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
+
+
+/* 
+Designator ::= IDENT | IDENT LBRACKET Expr RBRACKET
+Designator := ident [ "[" Expr "]" ]. 
+*/
+
+
+Program ::= (Program) PROG IDENT Declarations:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new Program(D1, M2); RESULT.setLine(D1left); :} ;
+
+Declarations ::= (Declarations) Declarations:D1 Declaration:D2 {: RESULT=new Declarations(D1, D2); RESULT.setLine(D1left); :} 
+				|
+				(NoDeclarations) {: RESULT=new NoDeclarations(); :} /*epsilon*/
+				;
+
+Declaration ::= (ConstDecl) ConstDecl:C1 {: RESULT=new ConstDecl(C1); RESULT.setLine(C1left); :} 
+				|
+				(VarDecl) VarDecl:V1 {: RESULT=new VarDecl(V1); RESULT.setLine(V1left); :} 
+				/*|
+				(ClassDecl) ClassDecl*/ 
+				;
+				
+ConstDecl ::= (ConstDecl) CONST Type:T1 ConstantList:C2 SEMICOLON {: RESULT=new ConstDecl(T1, C2); RESULT.setLine(T1left); :} ;
+
+ConstantList ::= (ConstantList) ConstantList:C1 COMMA IDENT EQUAL Constant:C2 {: RESULT=new ConstantList(C1, C2); RESULT.setLine(C1left); :} 
+				|
+				(Constant) IDENT EQUAL Constant:C1 {: RESULT=new Constant(C1); RESULT.setLine(C1left); :} 
+				;
+				
+Constant ::= (NumberConstant) NUMCONST {: RESULT=new NumberConstant(); :} 
+			|
+			(CharConstant) CHARCONST {: RESULT=new CharConstant(); :} 
+			|
+			(BoolConstant) BOOLCONST {: RESULT=new BoolConstant(); :}
+			;
+				
+VarDecl ::= (VarDecl) Type:T1 VariablesList:V2 SEMICOLON {: RESULT=new VarDecl(T1, V2); RESULT.setLine(T1left); :} ;
+
+VariablesList ::= (VariablesList) VariablesList:V1 COMMA IDENT ArrayBrackets:A2 {: RESULT=new VariablesList(V1, A2); RESULT.setLine(V1left); :} 
+				|
+				(Variable) IDENT ArrayBrackets:A1 {: RESULT=new Variable(A1); RESULT.setLine(A1left); :} 
+				;				
+ArrayBrackets ::= (ArrayBrackets) LBRACKET RBRACKET {: RESULT=new ArrayBrackets(); :}
+					|
+				  (NoArrayBrackets) {: RESULT=new NoArrayBrackets(); :} /*epsilon*/
+				  ; 
+
+MethodDeclList ::= (MethodDeclList) MethodDeclList:M1 MethodDecl:M2 {: RESULT=new MethodDeclList(M1, M2); RESULT.setLine(M1left); :} 
+				|
+				(NoMethods) {: RESULT=new NoMethods(); :} /*epsilon*/
+				;
+
+MethodDecl ::= (MethodDecl) MethodType:M1 IDENT LPAREN MethodParameters:M2 RPAREN MethodVariables:M3 LBRACE MethodStatements:M4 RBRACE {: RESULT=new MethodDecl(M1, M2, M3, M4); RESULT.setLine(M1left); :};
+
+MethodType ::= (Type) Type:T1 {: RESULT=new Type(T1); RESULT.setLine(T1left); :} | (Void) VOID {: RESULT=new Void(); :} ;
+
+MethodParameters ::= (MethodParameters) FormPars:F1 {: RESULT=new MethodParameters(F1); RESULT.setLine(F1left); :} 
+					|
+					(NoMethodParameters) {: RESULT=new NoMethodParameters(); :} /* epsilon */
+					;
+FormPars ::= (FormPars) FormPars:F1 COMMA Type:T2 IDENT ArrayBrackets:A3 {: RESULT=new FormPars(F1, T2, A3); RESULT.setLine(F1left); :}
+			|
+			(OneFormParam) Type:T1 IDENT ArrayBrackets:A2 {: RESULT=new OneFormParam(T1, A2); RESULT.setLine(T1left); :}
+			;
+			
+MethodVariables ::= (MethodVariables) MethodVariables:M1 VarDecl:V2 {: RESULT=new MethodVariables(M1, V2); RESULT.setLine(M1left); :}
+					|
+					(NoMethodVariables) {: RESULT=new NoMethodVariables(); :} /* epsilon */
+					;
+
+MethodStatements ::= (MethodStatements) MethodStatements:M1 Statement:S2 {: RESULT=new MethodStatements(M1, S2); RESULT.setLine(M1left); :}
+					|
+					(NoMethodStatements) {: RESULT=new NoMethodStatements(); :} /* epsilon */
+					;
+
+Statement ::= (DesignatorStatement) DesignatorStatement:D1 SEMICOLON {: RESULT=new DesignatorStatement(D1); RESULT.setLine(D1left); :}
+				|
+			 	(ReadStatement) READ LPAREN Designator:D1 RPAREN SEMICOLON {: RESULT=new ReadStatement(D1); RESULT.setLine(D1left); :}
+			 	|
+			 	(PrintStatement) PRINT LPAREN Expr:E1 PrintConstant:P2 RPAREN SEMICOLON {: RESULT=new PrintStatement(E1, P2); RESULT.setLine(E1left); :}
+			 	;
+PrintConstant ::= (PrintConstant) COMMA NUMCONST {: RESULT=new PrintConstant(); :}
+					|
+				  (NoPrintConstant) {: RESULT=new NoPrintConstant(); :} /*epsilon*/
+				  ;	
+
+DesignatorStatement ::= (ValueIncrement) Designator:D1 INCREMENT {: RESULT=new ValueIncrement(D1); RESULT.setLine(D1left); :} 
+						|
+						(ValueDecrement) Designator:D1 DECREMENT {: RESULT=new ValueDecrement(D1); RESULT.setLine(D1left); :}
+						|
+						(Assignment) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new Assignment(D1, A2, E3); RESULT.setLine(D1left); :}
+						| 
+						(FuncionCall) Designator:D1 LPAREN ActParams:A2 RPAREN {: RESULT=new FuncionCall(D1, A2); RESULT.setLine(D1left); :}
+						|
+						(MultipleAssignment) LBRACKET DesignatorList:D1 RBRACKET EQUAL Designator:D2 {: RESULT=new MultipleAssignment(D1, D2); RESULT.setLine(D1left); :}
+						;
+
+DesignatorList ::= (DesignatorList) DesignatorList:D1 COMMA DesignatorListElement:D2 {: RESULT=new DesignatorList(D1, D2); RESULT.setLine(D1left); :} 
+				   |
+				   (DesignatorListElement) DesignatorListElement:D1 {: RESULT=new DesignatorListElement(D1); RESULT.setLine(D1left); :}
+				   ;	
+				   			
+DesignatorListElement ::= (DesignatorListElement)Designator:D1 {: RESULT=new DesignatorListElement(D1); RESULT.setLine(D1left); :} 
+						  |
+						  (NoDesignatorElement) {: RESULT=new NoDesignatorElement(); :}/*epsilon*/
+						  ;
+						
+Expr ::= (NegativeExpression) MINUS TermList:T1 {: RESULT=new NegativeExpression(T1); RESULT.setLine(T1left); :} | (Expression) TermList:T1 {: RESULT=new Expression(T1); RESULT.setLine(T1left); :} ;
+
+TermList ::= (TermList) TermList:T1 Addop:A2 Term:T3 {: RESULT=new TermList(T1, A2, T3); RESULT.setLine(T1left); :} | (OneTerm) Term:T1 {: RESULT=new OneTerm(T1); RESULT.setLine(T1left); :} ; 
+
+Term ::= (Term) FactorList:F1 {: RESULT=new Term(F1); RESULT.setLine(F1left); :} ;
+
+FactorList ::= (FactorList) FactorList:F1 Mulop:M2 Factor:F3 {: RESULT=new FactorList(F1, M2, F3); RESULT.setLine(F1left); :} | (OneFactor) Factor:F1 {: RESULT=new OneFactor(F1); RESULT.setLine(F1left); :} ;
+
+Factor ::= (NumberConstant) NUMCONST {: RESULT=new NumberConstant(); :} 
+			|
+			(CharConstant) CHARCONST {: RESULT=new CharConstant(); :} 
+			|
+			(BoolConstant) BOOLCONST {: RESULT=new BoolConstant(); :}
+			|
+			(BracketExpression) LPAREN Expr:E1 RPAREN {: RESULT=new BracketExpression(E1); RESULT.setLine(E1left); :}
+			|
+			(ArrayCreation) NEW Type:T1 LBRACKET Expr:E2 RBRACKET {: RESULT=new ArrayCreation(T1, E2); RESULT.setLine(T1left); :}
+			|
+			(ObjectCreation) NEW Type:T1 LPAREN ActParams:A2 RPAREN {: RESULT=new ObjectCreation(T1, A2); RESULT.setLine(T1left); :}
+			|
+			(FunctionCall) Designator:D1 LPAREN ActParams:A2 RPAREN {: RESULT=new FunctionCall(D1, A2); RESULT.setLine(D1left); :}
+			|
+			(Factor) Designator:D1 {: RESULT=new Factor(D1); RESULT.setLine(D1left); :}
+			;
+			
+ActParams ::= (ActParams) ActPars:A1 {: RESULT=new ActParams(A1); RESULT.setLine(A1left); :} 
+				|
+				(NoActParams) {: RESULT=new NoActParams(); :} /* epsilon */
+				;
+
+ActPars ::= (ActParsList) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParsList(A1, E2); RESULT.setLine(A1left); :} 
+			|
+			(OneActParameter) Expr:E1 {: RESULT=new OneActParameter(E1); RESULT.setLine(E1left); :}
+			;	
+				
+/* Designator = ident {"." ident | "[" Expr "]"} */
+Designator ::= (Designator) IDENT DesignatorParameterList:D1 {: RESULT=new Designator(D1); RESULT.setLine(D1left); :} ;
+
+DesignatorParameterList ::= (DesignatorParameterList) DesignatorParameterList:D1 DesignatorParameter:D2 {: RESULT=new DesignatorParameterList(D1, D2); RESULT.setLine(D1left); :}
+							|
+							(NoDesignatorParameters) {: RESULT=new NoDesignatorParameters(); :} /* epsilon */ ;
+
+DesignatorParameter ::= (DotNotation) DOT IDENT {: RESULT=new DotNotation(); :} | (ElementAccess) LBRACKET Expr:E1 RBRACKET {: RESULT=new ElementAccess(E1); RESULT.setLine(E1left); :} ;
+
+Assignop ::= (Equal) EQUAL {: RESULT=new Equal(); :} ; 
+
+Addop ::= (Plus) PLUS {: RESULT=new Plus(); :} | (Minus) MINUS {: RESULT=new Minus(); :} ;
+
+Mulop ::= (Multiply) MULTIPLY {: RESULT=new Multiply(); :} | (Divide) DIVIDE {: RESULT=new Divide(); :} | (Moduo) MODUO {: RESULT=new Moduo(); :} ;
+
+Type ::= (Type) IDENT {: RESULT=new Type(); :} ;

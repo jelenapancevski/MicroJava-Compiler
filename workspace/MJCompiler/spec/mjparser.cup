@@ -1,0 +1,168 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+
+nonterminal Program, Declarations, Declaration, ConstDecl, ConstantList, Constant, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameters, FormPars, MethodVariables, MethodStatements, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Type, Expr, TermList, Term, FactorList, Factor, ActParams, ActPars, Designator, DesignatorParameterList, DesignatorParameter, Assignop, Addop, Mulop;
+terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
+
+
+/* 
+Designator ::= IDENT | IDENT LBRACKET Expr RBRACKET
+Designator := ident [ "[" Expr "]" ]. 
+*/
+
+
+Program ::= (Program) PROG IDENT Declarations LBRACE MethodDeclList RBRACE ;
+
+Declarations ::= (Declarations) Declarations Declaration 
+				|
+				(NoDeclarations) /*epsilon*/
+				;
+
+Declaration ::= (ConstDecl) ConstDecl 
+				|
+				(VarDecl) VarDecl 
+				/*|
+				(ClassDecl) ClassDecl*/ 
+				;
+				
+ConstDecl ::= (ConstDecl) CONST Type ConstantList SEMICOLON ;
+
+ConstantList ::= (ConstantList) ConstantList COMMA IDENT EQUAL Constant 
+				|
+				(Constant) IDENT EQUAL Constant 
+				;
+				
+Constant ::= (NumberConstant) NUMCONST 
+			|
+			(CharConstant) CHARCONST 
+			|
+			(BoolConstant) BOOLCONST
+			;
+				
+VarDecl ::= (VarDecl) Type VariablesList SEMICOLON ;
+
+VariablesList ::= (VariablesList) VariablesList COMMA IDENT ArrayBrackets 
+				|
+				(Variable) IDENT ArrayBrackets 
+				;				
+ArrayBrackets ::= (ArrayBrackets) LBRACKET RBRACKET
+					|
+				  (NoArrayBrackets) /*epsilon*/
+				  ; 
+
+MethodDeclList ::= (MethodDeclList) MethodDeclList MethodDecl 
+				|
+				(NoMethods) /*epsilon*/
+				;
+
+MethodDecl ::= (MethodDecl) MethodType IDENT LPAREN MethodParameters RPAREN MethodVariables LBRACE MethodStatements RBRACE;
+
+MethodType ::= (Type) Type | (Void) VOID ;
+
+MethodParameters ::= (MethodParameters) FormPars 
+					|
+					(NoMethodParameters) /* epsilon */
+					;
+FormPars ::= (FormPars) FormPars COMMA Type IDENT ArrayBrackets
+			|
+			(OneFormParam) Type IDENT ArrayBrackets
+			;
+			
+MethodVariables ::= (MethodVariables) MethodVariables VarDecl
+					|
+					(NoMethodVariables) /* epsilon */
+					;
+
+MethodStatements ::= (MethodStatements) MethodStatements Statement
+					|
+					(NoMethodStatements) /* epsilon */
+					;
+
+Statement ::= (DesignatorStatement) DesignatorStatement SEMICOLON
+				|
+			 	(ReadStatement) READ LPAREN Designator RPAREN SEMICOLON
+			 	|
+			 	(PrintStatement) PRINT LPAREN Expr PrintConstant RPAREN SEMICOLON
+			 	;
+PrintConstant ::= (PrintConstant) COMMA NUMCONST
+					|
+				  (NoPrintConstant) /*epsilon*/
+				  ;	
+
+DesignatorStatement ::= (ValueIncrement) Designator INCREMENT 
+						|
+						(ValueDecrement) Designator DECREMENT
+						|
+						(Assignment) Designator Assignop Expr
+						| 
+						(FuncionCall) Designator LPAREN ActParams RPAREN
+						|
+						(MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL Designator
+						;
+
+DesignatorList ::= (DesignatorList) DesignatorList COMMA DesignatorListElement 
+				   |
+				   (DesignatorListElement) DesignatorListElement
+				   ;	
+				   			
+DesignatorListElement ::= (DesignatorListElement)Designator 
+						  |
+						  (NoDesignatorElement)/*epsilon*/
+						  ;
+						
+Expr ::= (NegativeExpression) MINUS TermList | (Expression) TermList ;
+
+TermList ::= (TermList) TermList Addop Term | (OneTerm) Term ; 
+
+Term ::= (Term) FactorList ;
+
+FactorList ::= (FactorList) FactorList Mulop Factor | (OneFactor) Factor ;
+
+Factor ::= (NumberConstant) NUMCONST 
+			|
+			(CharConstant) CHARCONST 
+			|
+			(BoolConstant) BOOLCONST
+			|
+			(BracketExpression) LPAREN Expr RPAREN
+			|
+			(ArrayCreation) NEW Type LBRACKET Expr RBRACKET
+			|
+			(ObjectCreation) NEW Type LPAREN ActParams RPAREN
+			|
+			(FunctionCall) Designator LPAREN ActParams RPAREN
+			|
+			(Factor) Designator
+			;
+			
+ActParams ::= (ActParams) ActPars 
+				|
+				(NoActParams) /* epsilon */
+				;
+
+ActPars ::= (ActParsList) ActPars COMMA Expr 
+			|
+			(OneActParameter) Expr
+			;	
+				
+/* Designator = ident {"." ident | "[" Expr "]"} */
+Designator ::= (Designator) IDENT DesignatorParameterList ;
+
+DesignatorParameterList ::= (DesignatorParameterList) DesignatorParameterList DesignatorParameter
+							|
+							(NoDesignatorParameters) /* epsilon */ ;
+
+DesignatorParameter ::= (DotNotation) DOT IDENT | (ElementAccess) LBRACKET Expr RBRACKET ;
+
+Assignop ::= (Equal) EQUAL ; 
+
+Addop ::= (Plus) PLUS | (Minus) MINUS ;
+
+Mulop ::= (Multiply) MULTIPLY | (Divide) DIVIDE | (Moduo) MODUO ;
+
+Type ::= (Type) IDENT ;
