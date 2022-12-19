@@ -6,14 +6,16 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 
 
-nonterminal Program, Declarations, Declaration, ConstDecl, ConstantList, Constant, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameters, FormPars, MethodVariables, MethodStatements, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Type, Expr, TermList, Term, FactorList, Factor, ActParams, ActPars, Designator, DesignatorParameterList, DesignatorParameter, Assignop, Addop, Mulop;
-terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
+nonterminal Program, Declarations, Declaration, ConstDecl, ConstantList, Constant, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameters, FormPars, MethodVariables, MethodStatements, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Type, Expr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Assignop, Relop, Addop, Mulop;
+terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
+/*terminal String IDENT;
+terminal Integer NUMCONST; */
 
+terminal IF, ELSE, WHILE, BREAK, CONTINUE, RETURN, FOREACH, ARROW;
+nonterminal StatementsList;
+terminal CLASS, THIS, COLON, DO, EXTENDS, ENUM;
 
-/* 
-Designator ::= IDENT | IDENT LBRACKET Expr RBRACKET
-Designator := ident [ "[" Expr "]" ]. 
-*/
+precedence left ELSE;
 
 
 Program ::= (Program) PROG IDENT Declarations LBRACE MethodDeclList RBRACE ;
@@ -88,7 +90,31 @@ Statement ::= (DesignatorStatement) DesignatorStatement SEMICOLON
 			 	(ReadStatement) READ LPAREN Designator RPAREN SEMICOLON
 			 	|
 			 	(PrintStatement) PRINT LPAREN Expr PrintConstant RPAREN SEMICOLON
+			 	|
+			 	(IfElseStatement) IF LPAREN Condition RPAREN Statement ELSE Statement
+			 	|
+			 	(IfStatement) IF LPAREN Condition RPAREN Statement
+			 	|
+			 	(WhileStatement) WHILE LPAREN Condition RPAREN Statement
+			 	|
+			 	(BreakStatement) BREAK SEMICOLON
+			 	|
+			 	(ContinueStatement) CONTINUE SEMICOLON
+			 	|
+			 	(ReturnStatement) RETURN SEMICOLON
+			 	|
+			 	(ReturnExpression) RETURN Expr SEMICOLON
+			 	|
+			 	(ForEachStatement) Designator DOT FOREACH LPAREN IDENT ARROW Statement RPAREN SEMICOLON
+			 	|
+			 	(Statements) LBRACE StatementsList RBRACE
 			 	;
+			 	
+StatementsList ::= (StatementsList) StatementsList Statement
+				|
+				(NoStatement) /*epsilon */
+			 	;
+			 	
 PrintConstant ::= (PrintConstant) COMMA NUMCONST
 					|
 				  (NoPrintConstant) /*epsilon*/
@@ -149,17 +175,32 @@ ActPars ::= (ActParsList) ActPars COMMA Expr
 			|
 			(OneActParameter) Expr
 			;	
-				
-/* Designator = ident {"." ident | "[" Expr "]"} */
-Designator ::= (Designator) IDENT DesignatorParameterList ;
+			
+Condition ::= (Conditions) Condition OR CondTerm 
+			  |
+			  (Condition) CondTerm 
+			  ;
 
-DesignatorParameterList ::= (DesignatorParameterList) DesignatorParameterList DesignatorParameter
-							|
-							(NoDesignatorParameters) /* epsilon */ ;
+CondTerm ::= (CondTerms) CondTerm AND CondFact 
+			|
+			(CondTerm) CondFact
+			;
 
-DesignatorParameter ::= (DotNotation) DOT IDENT | (ElementAccess) LBRACKET Expr RBRACKET ;
+CondFact ::= (CondFacts) CondFact Relop Expr 
+			|
+			(CondFact) Expr
+			;			
+
+/* 
+
+Designator := ident [ "[" Expr "]" ]. 
+*/
+						
+Designator ::= (Designator) IDENT | (ArrayDesignator) IDENT LBRACKET Expr RBRACKET ;
 
 Assignop ::= (Equal) EQUAL ; 
+
+Relop ::= (IsEqual) ISEQUAL | (NotEqual) NOTEQUAL | (Greater) GT | (GreaterEqual) GTE | (LessThan) LT | (LessThanEqual) LTE ;
 
 Addop ::= (Plus) PLUS | (Minus) MINUS ;
 

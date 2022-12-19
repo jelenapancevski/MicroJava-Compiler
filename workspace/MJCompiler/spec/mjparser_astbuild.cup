@@ -35,19 +35,23 @@ nonterminal FactorList FactorList;
 nonterminal Factor Factor;
 nonterminal ActParams ActParams;
 nonterminal ActPars ActPars;
+nonterminal Condition Condition;
+nonterminal CondTerm CondTerm;
+nonterminal CondFact CondFact;
 nonterminal Designator Designator;
-nonterminal DesignatorParameterList DesignatorParameterList;
-nonterminal DesignatorParameter DesignatorParameter;
 nonterminal Assignop Assignop;
+nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
-terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
+terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
+/*terminal String IDENT;
+terminal Integer NUMCONST; */
 
+terminal IF, ELSE, WHILE, BREAK, CONTINUE, RETURN, FOREACH, ARROW;
+nonterminal StatementsList StatementsList;
+terminal CLASS, THIS, COLON, DO, EXTENDS, ENUM;
 
-/* 
-Designator ::= IDENT | IDENT LBRACKET Expr RBRACKET
-Designator := ident [ "[" Expr "]" ]. 
-*/
+precedence left ELSE;
 
 
 Program ::= (Program) PROG IDENT Declarations:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new Program(D1, M2); RESULT.setLine(D1left); :} ;
@@ -122,7 +126,31 @@ Statement ::= (DesignatorStatement) DesignatorStatement:D1 SEMICOLON {: RESULT=n
 			 	(ReadStatement) READ LPAREN Designator:D1 RPAREN SEMICOLON {: RESULT=new ReadStatement(D1); RESULT.setLine(D1left); :}
 			 	|
 			 	(PrintStatement) PRINT LPAREN Expr:E1 PrintConstant:P2 RPAREN SEMICOLON {: RESULT=new PrintStatement(E1, P2); RESULT.setLine(E1left); :}
+			 	|
+			 	(IfElseStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseStatement(C1, S2, S3); RESULT.setLine(C1left); :}
+			 	|
+			 	(IfStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new IfStatement(C1, S2); RESULT.setLine(C1left); :}
+			 	|
+			 	(WhileStatement) WHILE LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new WhileStatement(C1, S2); RESULT.setLine(C1left); :}
+			 	|
+			 	(BreakStatement) BREAK SEMICOLON {: RESULT=new BreakStatement(); :}
+			 	|
+			 	(ContinueStatement) CONTINUE SEMICOLON {: RESULT=new ContinueStatement(); :}
+			 	|
+			 	(ReturnStatement) RETURN SEMICOLON {: RESULT=new ReturnStatement(); :}
+			 	|
+			 	(ReturnExpression) RETURN Expr:E1 SEMICOLON {: RESULT=new ReturnExpression(E1); RESULT.setLine(E1left); :}
+			 	|
+			 	(ForEachStatement) Designator:D1 DOT FOREACH LPAREN IDENT ARROW Statement:S2 RPAREN SEMICOLON {: RESULT=new ForEachStatement(D1, S2); RESULT.setLine(D1left); :}
+			 	|
+			 	(Statements) LBRACE StatementsList:S1 RBRACE {: RESULT=new Statements(S1); RESULT.setLine(S1left); :}
 			 	;
+			 	
+StatementsList ::= (StatementsList) StatementsList:S1 Statement:S2 {: RESULT=new StatementsList(S1, S2); RESULT.setLine(S1left); :}
+				|
+				(NoStatement) {: RESULT=new NoStatement(); :} /*epsilon */
+			 	;
+			 	
 PrintConstant ::= (PrintConstant) COMMA NUMCONST {: RESULT=new PrintConstant(); :}
 					|
 				  (NoPrintConstant) {: RESULT=new NoPrintConstant(); :} /*epsilon*/
@@ -183,17 +211,32 @@ ActPars ::= (ActParsList) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParsList(A1,
 			|
 			(OneActParameter) Expr:E1 {: RESULT=new OneActParameter(E1); RESULT.setLine(E1left); :}
 			;	
-				
-/* Designator = ident {"." ident | "[" Expr "]"} */
-Designator ::= (Designator) IDENT DesignatorParameterList:D1 {: RESULT=new Designator(D1); RESULT.setLine(D1left); :} ;
+			
+Condition ::= (Conditions) Condition:C1 OR CondTerm:C2 {: RESULT=new Conditions(C1, C2); RESULT.setLine(C1left); :} 
+			  |
+			  (Condition) CondTerm:C1 {: RESULT=new Condition(C1); RESULT.setLine(C1left); :} 
+			  ;
 
-DesignatorParameterList ::= (DesignatorParameterList) DesignatorParameterList:D1 DesignatorParameter:D2 {: RESULT=new DesignatorParameterList(D1, D2); RESULT.setLine(D1left); :}
-							|
-							(NoDesignatorParameters) {: RESULT=new NoDesignatorParameters(); :} /* epsilon */ ;
+CondTerm ::= (CondTerms) CondTerm:C1 AND CondFact:C2 {: RESULT=new CondTerms(C1, C2); RESULT.setLine(C1left); :} 
+			|
+			(CondTerm) CondFact:C1 {: RESULT=new CondTerm(C1); RESULT.setLine(C1left); :}
+			;
 
-DesignatorParameter ::= (DotNotation) DOT IDENT {: RESULT=new DotNotation(); :} | (ElementAccess) LBRACKET Expr:E1 RBRACKET {: RESULT=new ElementAccess(E1); RESULT.setLine(E1left); :} ;
+CondFact ::= (CondFacts) CondFact:C1 Relop:R2 Expr:E3 {: RESULT=new CondFacts(C1, R2, E3); RESULT.setLine(C1left); :} 
+			|
+			(CondFact) Expr:E1 {: RESULT=new CondFact(E1); RESULT.setLine(E1left); :}
+			;			
+
+/* 
+
+Designator := ident [ "[" Expr "]" ]. 
+*/
+						
+Designator ::= (Designator) IDENT {: RESULT=new Designator(); :} | (ArrayDesignator) IDENT LBRACKET Expr:E1 RBRACKET {: RESULT=new ArrayDesignator(E1); RESULT.setLine(E1left); :} ;
 
 Assignop ::= (Equal) EQUAL {: RESULT=new Equal(); :} ; 
+
+Relop ::= (IsEqual) ISEQUAL {: RESULT=new IsEqual(); :} | (NotEqual) NOTEQUAL {: RESULT=new NotEqual(); :} | (Greater) GT {: RESULT=new Greater(); :} | (GreaterEqual) GTE {: RESULT=new GreaterEqual(); :} | (LessThan) LT {: RESULT=new LessThan(); :} | (LessThanEqual) LTE {: RESULT=new LessThanEqual(); :} ;
 
 Addop ::= (Plus) PLUS {: RESULT=new Plus(); :} | (Minus) MINUS {: RESULT=new Minus(); :} ;
 
