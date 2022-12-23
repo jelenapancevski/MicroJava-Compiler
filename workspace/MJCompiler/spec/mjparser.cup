@@ -54,7 +54,7 @@ scan with {:
 :}
 
 
-nonterminal Program, Declarations, Declaration, ConstDecl, ConstantList, Constant, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameters, FormPars, MethodVariables, MethodStatements, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Type, Expr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Assignop, Relop, Addop, Mulop;
+nonterminal Program, DeclarationList, Declaration, ConstDecl, ConstantList, Constant, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Type, Expr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Assignop, Relop, Addop, Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
 /*terminal String IDENT;
 terminal Integer NUMCONST; */
@@ -66,25 +66,25 @@ terminal CLASS, THIS, COLON, DO, EXTENDS, ENUM;
 precedence left ELSE;
 
 
-Program ::= (Program) PROG IDENT Declarations LBRACE MethodDeclList RBRACE ;
+Program ::= (Program) PROG IDENT DeclarationList LBRACE MethodDeclList RBRACE ;
 
-Declarations ::= (Declarations) Declarations Declaration 
+DeclarationList ::= (Declarations) DeclarationList Declaration 
 				|
 				(NoDeclarations) /*epsilon*/
 				;
 
-Declaration ::= (ConstDecl) ConstDecl 
+Declaration ::= (ConstantDeclaration) ConstDecl 
 				|
-				(VarDecl) VarDecl 
+				(VariableDeclaration) VarDecl 
 				/*|
-				(ClassDecl) ClassDecl*/ 
+				(ClassDeclaration) ClassDecl*/ 
 				;
 				
 ConstDecl ::= (ConstDecl) CONST Type ConstantList SEMICOLON ;
 
-ConstantList ::= (ConstantList) ConstantList COMMA IDENT EQUAL Constant 
+ConstantList ::= (Constants) ConstantList COMMA IDENT EQUAL Constant 
 				|
-				(Constant) IDENT EQUAL Constant 
+				(OneConstant) IDENT EQUAL Constant 
 				;
 				
 Constant ::= (NumberConstant) NUMCONST 
@@ -94,46 +94,51 @@ Constant ::= (NumberConstant) NUMCONST
 			(BoolConstant) BOOLCONST
 			;
 				
-VarDecl ::= (VarDecl) Type VariablesList SEMICOLON ;
+VarDecl ::= (VarDecl) Type VariablesList SEMICOLON
+			/*|
+			(ErrorVariableSemiColon) error SEMICOLON
+			|
+			(ErrorVariableComma) error COMMA VariablesList SEMICOLON */
+			;
 
-VariablesList ::= (VariablesList) VariablesList COMMA IDENT ArrayBrackets 
+VariablesList ::= (Variables) VariablesList COMMA IDENT ArrayBrackets 
 				|
 				(Variable) IDENT ArrayBrackets 
 				;				
-ArrayBrackets ::= (ArrayBrackets) LBRACKET RBRACKET
+ArrayBrackets ::= (HasArrayBrackets) LBRACKET RBRACKET
 					|
 				  (NoArrayBrackets) /*epsilon*/
 				  ; 
 
-MethodDeclList ::= (MethodDeclList) MethodDeclList MethodDecl 
+MethodDeclList ::= (MethodDeclarations) MethodDeclList MethodDecl 
 				|
 				(NoMethods) /*epsilon*/
 				;
 
-MethodDecl ::= (MethodDecl) MethodType IDENT LPAREN MethodParameters RPAREN MethodVariables LBRACE MethodStatements RBRACE;
+MethodDecl ::= (MethodDecl) MethodType IDENT LPAREN MethodParameterList RPAREN MethodVariableList LBRACE MethodStatementList RBRACE;
 
-MethodType ::= (Type) Type | (Void) VOID ;
+MethodType ::= (ReturnMethodType) Type | (TypeVoid) VOID ;
 
-MethodParameters ::= (MethodParameters) FormPars 
+MethodParameterList ::= (MethodParameters) FormPars 
 					|
 					(NoMethodParameters) /* epsilon */
 					;
-FormPars ::= (FormPars) FormPars COMMA Type IDENT ArrayBrackets
+FormPars ::= (FormalParameters) FormPars COMMA Type IDENT ArrayBrackets
 			|
-			(OneFormParam) Type IDENT ArrayBrackets
+			(OneFormalParameter) Type IDENT ArrayBrackets
 			;
 			
-MethodVariables ::= (MethodVariables) MethodVariables VarDecl
+MethodVariableList ::= (MethodVariables) MethodVariableList VarDecl
 					|
 					(NoMethodVariables) /* epsilon */
 					;
 
-MethodStatements ::= (MethodStatements) MethodStatements Statement
+MethodStatementList ::= (MethodStatements) MethodStatementList Statement
 					|
 					(NoMethodStatements) /* epsilon */
 					;
 
-Statement ::= (DesignatorStatement) DesignatorStatement SEMICOLON
+Statement ::= (DesignatorStmt) DesignatorStatement SEMICOLON
 				|
 			 	(ReadStatement) READ LPAREN Designator RPAREN SEMICOLON
 			 	|
@@ -155,10 +160,10 @@ Statement ::= (DesignatorStatement) DesignatorStatement SEMICOLON
 			 	|
 			 	(ForEachStatement) Designator DOT FOREACH LPAREN IDENT ARROW Statement RPAREN SEMICOLON
 			 	|
-			 	(Statements) LBRACE StatementsList RBRACE
+			 	(MultipleStatements) LBRACE StatementsList RBRACE
 			 	;
 			 	
-StatementsList ::= (StatementsList) StatementsList Statement
+StatementsList ::= (Statements) StatementsList Statement
 				|
 				(NoStatement) /*epsilon */
 			 	;
@@ -179,29 +184,29 @@ DesignatorStatement ::= (ValueIncrement) Designator INCREMENT
 						(MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL Designator
 						;
 
-DesignatorList ::= (DesignatorList) DesignatorList COMMA DesignatorListElement 
+DesignatorList ::= (Designators) DesignatorList COMMA DesignatorListElement 
 				   |
-				   (DesignatorListElement) DesignatorListElement
+				   (OneDesignatorListElement) DesignatorListElement
 				   ;	
 				   			
-DesignatorListElement ::= (DesignatorListElement)Designator 
+DesignatorListElement ::= (OneDesignatorElement)Designator 
 						  |
 						  (NoDesignatorElement)/*epsilon*/
 						  ;
 						
 Expr ::= (NegativeExpression) MINUS TermList | (Expression) TermList ;
 
-TermList ::= (TermList) TermList Addop Term | (OneTerm) Term ; 
+TermList ::= (Terms) TermList Addop Term | (OneTerm) Term ; 
 
 Term ::= (Term) FactorList ;
 
-FactorList ::= (FactorList) FactorList Mulop Factor | (OneFactor) Factor ;
+FactorList ::= (Factors) FactorList Mulop Factor | (OneFactor) Factor ;
 
-Factor ::= (NumberConstant) NUMCONST 
+Factor ::= (FactorNumber) NUMCONST 
 			|
-			(CharConstant) CHARCONST 
+			(FactorCharacter) CHARCONST 
 			|
-			(BoolConstant) BOOLCONST
+			(FactorBoolean) BOOLCONST
 			|
 			(BracketExpression) LPAREN Expr RPAREN
 			|
@@ -211,12 +216,12 @@ Factor ::= (NumberConstant) NUMCONST
 			|
 			(FunctionCall) Designator LPAREN ActParams RPAREN
 			|
-			(Factor) Designator
+			(FactorDesignator) Designator
 			;
 			
-ActParams ::= (ActParams) ActPars 
+ActParams ::= (ActualParams) ActPars 
 				|
-				(NoActParams) /* epsilon */
+				(NoActualParams) /* epsilon */
 				;
 
 ActPars ::= (ActParsList) ActPars COMMA Expr 
@@ -226,17 +231,17 @@ ActPars ::= (ActParsList) ActPars COMMA Expr
 			
 Condition ::= (Conditions) Condition OR CondTerm 
 			  |
-			  (Condition) CondTerm 
+			  (OneCondition) CondTerm 
 			  ;
 
-CondTerm ::= (CondTerms) CondTerm AND CondFact 
+CondTerm ::= (ConditionTerms) CondTerm AND CondFact 
 			|
-			(CondTerm) CondFact
+			(ConditionTerm) CondFact
 			;
 
-CondFact ::= (CondFacts) CondFact Relop Expr 
+CondFact ::= (ConditionFacts) Expr Relop Expr 
 			|
-			(CondFact) Expr
+			(ConditionFact) Expr
 			;			
 
 /* 
