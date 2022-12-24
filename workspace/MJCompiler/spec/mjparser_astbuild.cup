@@ -77,6 +77,7 @@ nonterminal DesignatorList DesignatorList;
 nonterminal DesignatorListElement DesignatorListElement;
 nonterminal Type Type;
 nonterminal Expr Expr;
+nonterminal AssignmentExpr AssignmentExpr;
 nonterminal TermList TermList;
 nonterminal Term Term;
 nonterminal FactorList FactorList;
@@ -87,7 +88,6 @@ nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
 nonterminal Designator Designator;
-nonterminal Assignop Assignop;
 nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
@@ -130,17 +130,18 @@ Constant ::= (NumberConstant) NUMCONST {: RESULT=new NumberConstant(); :}
 			(BoolConstant) BOOLCONST {: RESULT=new BoolConstant(); :}
 			;
 				
-VarDecl ::= (VarDecl) Type:T1 VariablesList:V2 SEMICOLON {: RESULT=new VarDecl(T1, V2); RESULT.setLine(T1left); :}
-			/*|
-			(ErrorVariableSemiColon) error SEMICOLON
+VarDecl ::= (VarDeclaration) Type:T1 VariablesList:V2 SEMICOLON {: RESULT=new VarDeclaration(T1, V2); RESULT.setLine(T1left); :}
 			|
-			(ErrorVariableComma) error COMMA VariablesList SEMICOLON */
+			(ErrorVariableSemiColon)error SEMICOLON {: RESULT=new ErrorVariableSemiColon(); :}
+			|
+			(ErrorVariableComma)error COMMA VariablesList:V1 SEMICOLON {: RESULT=new ErrorVariableComma(V1); RESULT.setLine(V1left); :} 
 			;
 
 VariablesList ::= (Variables) VariablesList:V1 COMMA IDENT ArrayBrackets:A2 {: RESULT=new Variables(V1, A2); RESULT.setLine(V1left); :} 
 				|
 				(Variable) IDENT ArrayBrackets:A1 {: RESULT=new Variable(A1); RESULT.setLine(A1left); :} 
-				;				
+				;		
+						
 ArrayBrackets ::= (HasArrayBrackets) LBRACKET RBRACKET {: RESULT=new HasArrayBrackets(); :}
 					|
 				  (NoArrayBrackets) {: RESULT=new NoArrayBrackets(); :} /*epsilon*/
@@ -158,11 +159,21 @@ MethodType ::= (ReturnMethodType) Type:T1 {: RESULT=new ReturnMethodType(T1); RE
 MethodParameterList ::= (MethodParameters) FormPars:F1 {: RESULT=new MethodParameters(F1); RESULT.setLine(F1left); :} 
 					|
 					(NoMethodParameters) {: RESULT=new NoMethodParameters(); :} /* epsilon */
+					/*|
+					(FormalParametersListError) error*/
 					;
+					
 FormPars ::= (FormalParameters) FormPars:F1 COMMA Type:T2 IDENT ArrayBrackets:A3 {: RESULT=new FormalParameters(F1, T2, A3); RESULT.setLine(F1left); :}
 			|
 			(OneFormalParameter) Type:T1 IDENT ArrayBrackets:A2 {: RESULT=new OneFormalParameter(T1, A2); RESULT.setLine(T1left); :}
+			/*|
+			(FormalParameterError) error */
 			;
+
+/*Parameter ::= (OneParameter)Type IDENT ArrayBrackets
+				|
+			  (OneParameterError ) error 
+			;*/
 			
 MethodVariableList ::= (MethodVariables) MethodVariableList:M1 VarDecl:V2 {: RESULT=new MethodVariables(M1, V2); RESULT.setLine(M1left); :}
 					|
@@ -204,7 +215,7 @@ StatementsList ::= (Statements) StatementsList:S1 Statement:S2 {: RESULT=new Sta
 				(NoStatement) {: RESULT=new NoStatement(); :} /*epsilon */
 			 	;
 			 	
-PrintConstant ::= (PrintConstant) COMMA NUMCONST {: RESULT=new PrintConstant(); :}
+PrintConstant ::= (HasPrintConstant) COMMA NUMCONST {: RESULT=new HasPrintConstant(); :}
 					|
 				  (NoPrintConstant) {: RESULT=new NoPrintConstant(); :} /*epsilon*/
 				  ;	
@@ -213,13 +224,20 @@ DesignatorStatement ::= (ValueIncrement) Designator:D1 INCREMENT {: RESULT=new V
 						|
 						(ValueDecrement) Designator:D1 DECREMENT {: RESULT=new ValueDecrement(D1); RESULT.setLine(D1left); :}
 						|
-						(Assignment) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new Assignment(D1, A2, E3); RESULT.setLine(D1left); :}
-						| 
+						(Assignment) Designator:D1 EQUAL AssignmentExpr:A2 {: RESULT=new Assignment(D1, A2); RESULT.setLine(D1left); :}
+						|
 						(FuncionCall) Designator:D1 LPAREN ActParams:A2 RPAREN {: RESULT=new FuncionCall(D1, A2); RESULT.setLine(D1left); :}
 						|
 						(MultipleAssignment) LBRACKET DesignatorList:D1 RBRACKET EQUAL Designator:D2 {: RESULT=new MultipleAssignment(D1, D2); RESULT.setLine(D1left); :}
+						|
+						(MultipleAssignmentError) LBRACKET DesignatorList:D1 RBRACKET EQUAL error {: RESULT=new MultipleAssignmentError(D1); RESULT.setLine(D1left); :} 
 						;
-
+						
+AssignmentExpr ::= (AssignmentExpression) Expr:E1 {: RESULT=new AssignmentExpression(E1); RESULT.setLine(E1left); :}
+					|
+					(AssignmentExprError) error {: RESULT=new AssignmentExprError(); :}
+					;
+					
 DesignatorList ::= (Designators) DesignatorList:D1 COMMA DesignatorListElement:D2 {: RESULT=new Designators(D1, D2); RESULT.setLine(D1left); :} 
 				   |
 				   (OneDesignatorListElement) DesignatorListElement:D1 {: RESULT=new OneDesignatorListElement(D1); RESULT.setLine(D1left); :}
@@ -281,13 +299,13 @@ CondFact ::= (ConditionFacts) Expr:E1 Relop:R2 Expr:E3 {: RESULT=new ConditionFa
 			;			
 
 /* 
-
 Designator := ident [ "[" Expr "]" ]. 
 */
 						
-Designator ::= (Designator) IDENT {: RESULT=new Designator(); :} | (ArrayDesignator) IDENT LBRACKET Expr:E1 RBRACKET {: RESULT=new ArrayDesignator(E1); RESULT.setLine(E1left); :} ;
-
-Assignop ::= (Equal) EQUAL {: RESULT=new Equal(); :} ; 
+Designator ::= (OneDesignator) IDENT {: RESULT=new OneDesignator(); :} 
+				| 
+				(ArrayDesignator) IDENT LBRACKET Expr:E1 RBRACKET {: RESULT=new ArrayDesignator(E1); RESULT.setLine(E1left); :} 
+				;
 
 Relop ::= (IsEqual) ISEQUAL {: RESULT=new IsEqual(); :} | (NotEqual) NOTEQUAL {: RESULT=new NotEqual(); :} | (Greater) GT {: RESULT=new Greater(); :} | (GreaterEqual) GTE {: RESULT=new GreaterEqual(); :} | (LessThan) LT {: RESULT=new LessThan(); :} | (LessThanEqual) LTE {: RESULT=new LessThanEqual(); :} ;
 

@@ -1,0 +1,27 @@
+program DefinicijaGlobalnePromenljive 
+	 //int x, int int y;
+	//int x, int int, y;
+	
+	int a[], + abc, abcd, gfj ;
+{
+	void main() int a;; {
+	a=2;
+	}
+}
+
+//     stek								ulazni simboli
+// program MJProgram int x, int          int y; { void main() { } } 	POP (4)
+// program MJProgram error 			  int y; { void main() { } }    ADVANCE(2)
+// program MJProgram error 			   ; { void main() { } }    	PUSH
+// program MJProgram error; 			   { void main() { } }    	REDUCE(DecVal)
+// program MJProgram VarDeclList  			   { void main() { } }    	REDUCE(DecVal)
+
+
+//     stek								ulazni simboli
+// program MJProgram int x, int          int, y; { void main() { } } 	POP (4)
+// program MJProgram error 			  int , y; { void main() { } }    ADVANCE(1)
+// program MJProgram error 			   , y ; { void main() { } }    	PUSH
+// program MJProgram error, 			  y; { void main() { } }    	PUSH
+// program MJProgram error, y ;			  ; { void main() { } }    		PUSH , REDUCE
+// program MJProgram (ErrorVariableComma)	{ void main() { } }    		REDUCE
+// program MJProgram DeclarationList 

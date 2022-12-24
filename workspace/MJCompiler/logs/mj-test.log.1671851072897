@@ -1,0 +1,69 @@
+INFO  04:00:12,347 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test3.mj
+INFO  04:00:12,379 - #2 program
+INFO  04:00:12,379 - #19 FormalniParametarFunkcije
+INFO  04:00:12,379 - #3 {
+INFO  04:00:12,380 - #6 void
+INFO  04:00:12,380 - #19 main
+INFO  04:00:12,380 - #16 (
+INFO  04:00:12,381 - #19 int
+INFO  04:00:12,381 - #19 a
+INFO  04:00:12,381 - #19 c
+ERROR 04:00:12,381 - 
+Sintaksna greska na liniji 6
+INFO  04:00:12,381 - #19 d
+INFO  04:00:12,381 - #17 )
+INFO  04:00:12,381 - #3 {
+INFO  04:00:12,382 - #4 }
+INFO  04:00:12,382 - #6 void
+INFO  04:00:12,384 - #19 fja
+INFO  04:00:12,385 - #16 (
+INFO  04:00:12,385 - #19 int
+INFO  04:00:12,385 - #19 a
+INFO  04:00:12,385 - #18 ,
+INFO  04:00:12,387 - #19 int
+INFO  04:00:12,387 - #19 p
+INFO  04:00:12,387 - #19 q
+ERROR 04:00:12,387 - 
+Sintaksna greska na liniji 9
+INFO  04:00:12,388 - #17 )
+INFO  04:00:12,388 - #3 {
+INFO  04:00:12,388 - #4 }
+INFO  04:00:12,388 - #4 }
+INFO  04:00:12,389 - Program(
+  NoDeclarations(
+  ) [NoDeclarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethods(
+      ) [NoMethods]
+      MethodDecl(
+        TypeVoid(
+        ) [TypeVoid]
+        MethodParameters(
+          FormalParameterError(
+          ) [FormalParameterError]
+        ) [MethodParameters]
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        NoMethodStatements(
+        ) [NoMethodStatements]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      MethodParameters(
+        FormalParameterError(
+        ) [FormalParameterError]
+      ) [MethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodStatements(
+      ) [NoMethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  04:00:12,389 - ===================================
+INFO  04:00:12,391 -  Print count calls = 0
+INFO  04:00:12,391 -  Deklarisanih promenljivih ima = 0
+INFO  04:00:12,391 -  Formalnih parametara  ima = 0

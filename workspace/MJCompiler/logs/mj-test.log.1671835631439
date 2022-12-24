@@ -1,0 +1,60 @@
+INFO  23:42:31,846 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test2.mj
+INFO  23:42:31,874 - #2 program
+INFO  23:42:31,874 - #19 KonstrukcijaIskazaDodele
+INFO  23:42:31,874 - #3 {
+INFO  23:42:31,875 - #6 void
+INFO  23:42:31,875 - #19 main
+INFO  23:42:31,876 - #16 (
+INFO  23:42:31,876 - #17 )
+INFO  23:42:31,876 - #19 int
+INFO  23:42:31,877 - #19 a
+INFO  23:42:31,877 - #7 ;
+INFO  23:42:31,878 - #3 {
+INFO  23:42:31,878 - #19 a
+INFO  23:42:31,879 - #23 =
+INFO  23:42:31,879 - #7 ;
+ERROR 23:42:31,879 - 
+Sintaksna greska na liniji 6
+INFO  23:42:31,879 - #4 }
+INFO  23:42:31,879 - #4 }
+INFO  23:42:31,883 - Program(
+  NoDeclarations(
+  ) [NoDeclarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclaration(
+          Type(
+          ) [Type]
+          Variable(
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [Variable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        NoMethodStatements(
+        ) [NoMethodStatements]
+        DesignatorStmt(
+          Assignment(
+            OneDesignator(
+            ) [OneDesignator]
+            AssignmentExprError(
+            ) [AssignmentExprError]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  23:42:31,884 - ===================================
+INFO  23:42:31,885 -  Print count calls = 0
+INFO  23:42:31,885 -  Deklarisanih promenljivih ima = 1

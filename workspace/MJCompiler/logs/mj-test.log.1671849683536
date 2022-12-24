@@ -1,0 +1,44 @@
+INFO  03:38:30,859 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test3.mj
+INFO  03:38:30,890 - #2 program
+INFO  03:38:30,890 - #19 FormalniParametarFunkcije
+INFO  03:38:30,891 - #3 {
+INFO  03:38:30,891 - #6 void
+INFO  03:38:30,892 - #19 main
+INFO  03:38:30,892 - #16 (
+INFO  03:38:30,892 - #19 int
+INFO  03:38:30,893 - #19 a
+INFO  03:38:30,893 - #18 ,
+INFO  03:38:30,894 - #19 int
+INFO  03:38:30,895 - #19 p
+INFO  03:38:30,895 - #19 q
+ERROR 03:38:30,895 - 
+Sintaksna greska na liniji 5
+INFO  03:38:30,895 - #18 ,
+INFO  03:38:30,895 - #19 bool
+INFO  03:38:30,895 - #19 c
+INFO  03:38:30,896 - #17 )
+INFO  03:38:30,896 - #3 {
+INFO  03:38:30,896 - #4 }
+INFO  03:38:30,897 - #4 }
+INFO  03:38:30,900 - Program(
+  NoDeclarations(
+  ) [NoDeclarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      FormalParametersList(
+      ) [FormalParametersList]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodStatements(
+      ) [NoMethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  03:38:30,901 - ===================================
+INFO  03:38:30,902 -  Print count calls = 0
+INFO  03:38:30,902 -  Deklarisanih promenljivih ima = 0
+INFO  03:38:30,902 -  Formalnih parametara  ima = 0

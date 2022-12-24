@@ -1,0 +1,88 @@
+INFO  01:47:48,092 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test1.mj
+INFO  01:47:48,133 - #2 program
+INFO  01:47:48,134 - #19 DefinicijaGlobalnePromenljive
+INFO  01:47:48,134 - #19 int
+INFO  01:47:48,135 - #19 a
+INFO  01:47:48,135 - #21 [
+INFO  01:47:48,136 - #22 ]
+INFO  01:47:48,136 - #18 ,
+INFO  01:47:48,138 - #32 +
+ERROR 01:47:48,138 - 
+Sintaksna greska na liniji 5
+INFO  01:47:48,139 - #19 abc
+INFO  01:47:48,139 - #18 ,
+INFO  01:47:48,139 - #19 abcd
+INFO  01:47:48,140 - #7 ;
+INFO  01:47:48,140 - #3 {
+INFO  01:47:48,142 - #6 void
+INFO  01:47:48,143 - #19 main
+INFO  01:47:48,143 - #16 (
+INFO  01:47:48,143 - #17 )
+INFO  01:47:48,144 - #19 int
+INFO  01:47:48,145 - #19 a
+INFO  01:47:48,145 - #7 ;
+INFO  01:47:48,145 - #7 ;
+ERROR 01:47:48,145 - 
+Sintaksna greska na liniji 7
+INFO  01:47:48,145 - #3 {
+INFO  01:47:48,146 - #19 a
+INFO  01:47:48,146 - #23 =
+INFO  01:47:48,148 - #12 2
+INFO  01:47:48,148 - #7 ;
+INFO  01:47:48,150 - #4 }
+INFO  01:47:48,150 - #4 }
+INFO  01:47:48,153 - Program(
+  Declarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VariableDeclaration(
+      ErrorVariableComma(
+        Variable(
+          NoArrayBrackets(
+          ) [NoArrayBrackets]
+        ) [Variable]
+      ) [ErrorVariableComma]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        ErrorVariableSemiColon(
+        ) [ErrorVariableSemiColon]
+      ) [MethodVariables]
+      MethodStatements(
+        NoMethodStatements(
+        ) [NoMethodStatements]
+        DesignatorStmt(
+          Assignment(
+            OneDesignator(
+            ) [OneDesignator]
+            AssignmentExpression(
+              Expression(
+                OneTerm(
+                  Term(
+                    OneFactor(
+                      FactorNumber(
+                      ) [FactorNumber]
+                    ) [OneFactor]
+                  ) [Term]
+                ) [OneTerm]
+              ) [Expression]
+            ) [AssignmentExpression]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  01:47:48,154 - ===================================
+INFO  01:47:48,156 -  Print count calls = 0
+INFO  01:47:48,156 -  Deklarisanih promenljivih ima = 0

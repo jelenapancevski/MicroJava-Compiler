@@ -1,0 +1,33 @@
+INFO  04:13:47,282 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test2.mj
+INFO  04:13:47,311 - #2 program
+INFO  04:13:47,312 - #19 KonstrukcijaIskazaDodele
+INFO  04:13:47,312 - #19 int
+INFO  04:13:47,312 - #19 x
+INFO  04:13:47,313 - #7 ;
+INFO  04:13:47,314 - #5 const
+INFO  04:13:47,314 - #19 int
+INFO  04:13:47,314 - #19 y
+INFO  04:13:47,314 - #23 =
+INFO  04:13:47,314 - #12 5
+INFO  04:13:47,314 - #7 ;
+INFO  04:13:47,316 - #3 {
+INFO  04:13:47,317 - #6 void
+INFO  04:13:47,317 - #19 main
+INFO  04:13:47,318 - #16 (
+INFO  04:13:47,318 - #17 )
+INFO  04:13:47,318 - #19 int
+INFO  04:13:47,319 - #19 a
+INFO  04:13:47,319 - #7 ;
+INFO  04:13:47,319 - #3 {
+INFO  04:13:47,319 - #19 a
+INFO  04:13:47,320 - #23 =
+INFO  04:13:47,320 - #7 ;
+ERROR 04:13:47,320 - 
+Sintaksna greska na liniji 6
+INFO  04:13:47,320 - #19 x
+INFO  04:13:47,320 - #23 =
+INFO  04:13:47,320 - #19 y
+INFO  04:13:47,320 - #7 ;
+INFO  04:13:47,320 - #4 }
+INFO  04:13:47,321 - #4 }
+ERROR 04:13:47,321 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9

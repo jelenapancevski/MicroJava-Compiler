@@ -28,14 +28,15 @@ public class MJParserTest {
 		
 		Reader br = null;
 		try {
-			File sourceCode = new File("test/test302.mj");
+			File sourceCode = new File("test/sintaksne_greske/test1.mj");
 			log.info("Compiling source file: " + sourceCode.getAbsolutePath());
 			
 			br = new BufferedReader(new FileReader(sourceCode));
 			Yylex lexer = new Yylex(br);
 			
 			MJParser p = new MJParser(lexer);
-	        Symbol s = p.parse();  //pocetak parsiranja
+	       // Symbol s = p.parse();  //pocetak parsiranja
+			Symbol s= p.debug_parse();
 	        
 	        Program prog = (Program)(s.value); 
 			// ispis sintaksnog stabla
@@ -48,7 +49,9 @@ public class MJParserTest {
 	      
 			log.info(" Print count calls = " + v.printCallCount);
 
-			log.info(" Deklarisanih promenljivih ima = " + v.varDeclCount);
+			log.info(" Global declarations count = " + v.varDeclCount);
+			
+			log.info(" Formal parameters count = " + v.formalParametersCount);
 			
 		} 
 		finally {

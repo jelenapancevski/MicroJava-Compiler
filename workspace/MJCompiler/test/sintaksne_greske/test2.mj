@@ -1,0 +1,26 @@
+program KonstrukcijaIskazaDodele 
+	//int x;
+	
+{
+	void main() int a; int b[];{
+	a=;;;;;;
+	a=125+x+ (x+7)+b[1];
+	
+	
+	}
+}
+
+//     stek																ulazni simboli
+// program MJProgram int x;           									{ void main() int a; { a=;;} } 	SHIFT (11)
+// program MJProgram int x;{ void main() MethodVariableList { a=error				;;} } 	SHIFT (1)
+// program MJProgram int x;{ void main() int a; { a=error;				;} } 	REDUCE (AssignmentError)
+// program MJProgram int x;{ void main() int a; {(AssignmentError)		;} } 	REDUCE (DesignatorStatement)	   
+// program MJProgram int x;{ void main() int a; {(DesignatorStatement)	;} } 	REDUCE (DesignatorStatement)
+// program MJProgram int x;{ void main() int a; {(DesignatorStatement);  } }	REDUCE (Statement) 
+// program MJProgram int x;{ void main() int a; {(Statement) 			 } }	REDUCE (MethodStatementList) SHIFT(1)																		SHIFT(1)
+// program MJProgram int x;{ void main() int a; {(MethodStatementList)}   }		REDUCE (MethodStatementList)	
+// program MJProgram int x;{ void main(MethodParameterList) MethodVariableList {(MethodStatementList)}   }	REDUCE (MethodDecl)
+// program MJProgram int x;{ (MethodDecl)								 }									REDUCE(MethodDeclList)
+// program MJProgram int x;{ (MethodDeclList)								 }									SHIFT(1)
+// program MJProgram int x;{ (MethodDeclList)}											
+//PROG IDENT 		DeclarationList { 	MethodDeclList } 								   

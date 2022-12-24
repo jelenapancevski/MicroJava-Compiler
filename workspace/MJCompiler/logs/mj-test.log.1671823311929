@@ -1,0 +1,178 @@
+INFO  19:58:41,784 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test2.mj
+INFO  19:58:41,812 - #2 program
+INFO  19:58:41,812 - #19 KonstrukcijaIskazaDodele
+INFO  19:58:41,812 - #19 int
+INFO  19:58:41,812 - #19 x
+INFO  19:58:41,813 - #7 ;
+INFO  19:58:41,814 - #3 {
+INFO  19:58:41,814 - #6 void
+INFO  19:58:41,815 - #19 main
+INFO  19:58:41,815 - #16 (
+INFO  19:58:41,815 - #17 )
+INFO  19:58:41,816 - #19 int
+INFO  19:58:41,817 - #19 a
+INFO  19:58:41,817 - #7 ;
+INFO  19:58:41,817 - #19 int
+INFO  19:58:41,817 - #19 b
+INFO  19:58:41,817 - #21 [
+INFO  19:58:41,817 - #22 ]
+INFO  19:58:41,817 - #7 ;
+INFO  19:58:41,818 - #3 {
+INFO  19:58:41,818 - #19 a
+INFO  19:58:41,819 - #23 =
+INFO  19:58:41,819 - #12 125
+INFO  19:58:41,820 - #32 +
+INFO  19:58:41,821 - #19 x
+INFO  19:58:41,821 - #32 +
+INFO  19:58:41,821 - #16 (
+INFO  19:58:41,821 - #19 x
+INFO  19:58:41,821 - #32 +
+INFO  19:58:41,821 - #12 7
+INFO  19:58:41,821 - #17 )
+INFO  19:58:41,822 - #32 +
+INFO  19:58:41,822 - #19 b
+INFO  19:58:41,822 - #21 [
+INFO  19:58:41,822 - #12 1
+INFO  19:58:41,822 - #22 ]
+INFO  19:58:41,822 - #7 ;
+INFO  19:58:41,822 - #4 }
+INFO  19:58:41,822 - #4 }
+INFO  19:58:41,825 - Program(
+  Declarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+        ) [Type]
+        Variable(
+          NoArrayBrackets(
+          ) [NoArrayBrackets]
+        ) [Variable]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        MethodVariables(
+          NoMethodVariables(
+          ) [NoMethodVariables]
+          VarDeclaration(
+            Type(
+            ) [Type]
+            Variable(
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [Variable]
+          ) [VarDeclaration]
+        ) [MethodVariables]
+        VarDeclaration(
+          Type(
+          ) [Type]
+          Variable(
+            HasArrayBrackets(
+            ) [HasArrayBrackets]
+          ) [Variable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        NoMethodStatements(
+        ) [NoMethodStatements]
+        DesignatorStmt(
+          Assignment(
+            OneDesignator(
+            ) [OneDesignator]
+            Equal(
+            ) [Equal]
+            Expression(
+              Terms(
+                Terms(
+                  Terms(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorNumber(
+                          ) [FactorNumber]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                    Plus(
+                    ) [Plus]
+                    Term(
+                      OneFactor(
+                        FactorDesignator(
+                          OneDesignator(
+                          ) [OneDesignator]
+                        ) [FactorDesignator]
+                      ) [OneFactor]
+                    ) [Term]
+                  ) [Terms]
+                  Plus(
+                  ) [Plus]
+                  Term(
+                    OneFactor(
+                      BracketExpression(
+                        Expression(
+                          Terms(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                            Plus(
+                            ) [Plus]
+                            Term(
+                              OneFactor(
+                                FactorNumber(
+                                ) [FactorNumber]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [Terms]
+                        ) [Expression]
+                      ) [BracketExpression]
+                    ) [OneFactor]
+                  ) [Term]
+                ) [Terms]
+                Plus(
+                ) [Plus]
+                Term(
+                  OneFactor(
+                    FactorDesignator(
+                      ArrayDesignator(
+                        Expression(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorNumber(
+                                ) [FactorNumber]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                      ) [ArrayDesignator]
+                    ) [FactorDesignator]
+                  ) [OneFactor]
+                ) [Term]
+              ) [Terms]
+            ) [Expression]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  19:58:41,826 - ===================================
+INFO  19:58:41,828 -  Print count calls = 0
+INFO  19:58:41,828 -  Deklarisanih promenljivih ima = 3

@@ -1,0 +1,136 @@
+INFO  19:58:20,163 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test2.mj
+INFO  19:58:20,190 - #2 program
+INFO  19:58:20,191 - #19 KonstrukcijaIskazaDodele
+INFO  19:58:20,191 - #19 int
+INFO  19:58:20,191 - #19 x
+INFO  19:58:20,192 - #7 ;
+INFO  19:58:20,192 - #3 {
+INFO  19:58:20,192 - #6 void
+INFO  19:58:20,193 - #19 main
+INFO  19:58:20,193 - #16 (
+INFO  19:58:20,193 - #17 )
+INFO  19:58:20,194 - #19 int
+INFO  19:58:20,194 - #19 a
+INFO  19:58:20,194 - #7 ;
+INFO  19:58:20,194 - #3 {
+INFO  19:58:20,194 - #19 a
+INFO  19:58:20,195 - #23 =
+INFO  19:58:20,195 - #12 125
+INFO  19:58:20,196 - #32 +
+INFO  19:58:20,197 - #19 x
+INFO  19:58:20,197 - #32 +
+INFO  19:58:20,198 - #16 (
+INFO  19:58:20,198 - #19 x
+INFO  19:58:20,198 - #32 +
+INFO  19:58:20,198 - #12 7
+INFO  19:58:20,198 - #17 )
+INFO  19:58:20,198 - #7 ;
+INFO  19:58:20,198 - #4 }
+INFO  19:58:20,199 - #4 }
+INFO  19:58:20,200 - Program(
+  Declarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+        ) [Type]
+        Variable(
+          NoArrayBrackets(
+          ) [NoArrayBrackets]
+        ) [Variable]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclaration(
+          Type(
+          ) [Type]
+          Variable(
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [Variable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        NoMethodStatements(
+        ) [NoMethodStatements]
+        DesignatorStmt(
+          Assignment(
+            OneDesignator(
+            ) [OneDesignator]
+            Equal(
+            ) [Equal]
+            Expression(
+              Terms(
+                Terms(
+                  OneTerm(
+                    Term(
+                      OneFactor(
+                        FactorNumber(
+                        ) [FactorNumber]
+                      ) [OneFactor]
+                    ) [Term]
+                  ) [OneTerm]
+                  Plus(
+                  ) [Plus]
+                  Term(
+                    OneFactor(
+                      FactorDesignator(
+                        OneDesignator(
+                        ) [OneDesignator]
+                      ) [FactorDesignator]
+                    ) [OneFactor]
+                  ) [Term]
+                ) [Terms]
+                Plus(
+                ) [Plus]
+                Term(
+                  OneFactor(
+                    BracketExpression(
+                      Expression(
+                        Terms(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorDesignator(
+                                  OneDesignator(
+                                  ) [OneDesignator]
+                                ) [FactorDesignator]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                          Plus(
+                          ) [Plus]
+                          Term(
+                            OneFactor(
+                              FactorNumber(
+                              ) [FactorNumber]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [Terms]
+                      ) [Expression]
+                    ) [BracketExpression]
+                  ) [OneFactor]
+                ) [Term]
+              ) [Terms]
+            ) [Expression]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  19:58:20,200 - ===================================
+INFO  19:58:20,202 -  Print count calls = 0
+INFO  19:58:20,202 -  Deklarisanih promenljivih ima = 2

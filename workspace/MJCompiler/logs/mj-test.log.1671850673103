@@ -1,0 +1,74 @@
+INFO  03:54:19,089 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test3.mj
+INFO  03:54:19,125 - #2 program
+INFO  03:54:19,125 - #19 FormalniParametarFunkcije
+INFO  03:54:19,125 - #3 {
+INFO  03:54:19,126 - #6 void
+INFO  03:54:19,127 - #19 main
+INFO  03:54:19,128 - #16 (
+INFO  03:54:19,128 - #19 int
+INFO  03:54:19,128 - #19 a
+INFO  03:54:19,129 - #19 c
+ERROR 03:54:19,129 - 
+Sintaksna greska na liniji 6
+INFO  03:54:19,129 - #19 d
+INFO  03:54:19,129 - #17 )
+INFO  03:54:19,129 - #3 {
+INFO  03:54:19,130 - #4 }
+INFO  03:54:19,130 - #6 void
+INFO  03:54:19,133 - #19 fja
+INFO  03:54:19,134 - #16 (
+INFO  03:54:19,134 - #19 int
+INFO  03:54:19,134 - #19 a
+INFO  03:54:19,135 - #18 ,
+INFO  03:54:19,136 - #19 int
+INFO  03:54:19,136 - #19 p
+INFO  03:54:19,136 - #19 q
+ERROR 03:54:19,136 - 
+Sintaksna greska na liniji 9
+INFO  03:54:19,137 - #18 ,
+INFO  03:54:19,137 - #19 bool
+INFO  03:54:19,137 - #19 c
+INFO  03:54:19,137 - #17 )
+INFO  03:54:19,138 - #3 {
+INFO  03:54:19,138 - #4 }
+INFO  03:54:19,138 - #4 }
+INFO  03:54:19,139 - Program(
+  NoDeclarations(
+  ) [NoDeclarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethods(
+      ) [NoMethods]
+      MethodDecl(
+        TypeVoid(
+        ) [TypeVoid]
+        FormalParametersListError(
+        ) [FormalParametersListError]
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        NoMethodStatements(
+        ) [NoMethodStatements]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      MethodParameters(
+        FormalParameterError(
+          Type(
+          ) [Type]
+          NoArrayBrackets(
+          ) [NoArrayBrackets]
+        ) [FormalParameterError]
+      ) [MethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodStatements(
+      ) [NoMethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  03:54:19,139 - ===================================
+INFO  03:54:19,141 -  Print count calls = 0
+INFO  03:54:19,141 -  Deklarisanih promenljivih ima = 0
+INFO  03:54:19,142 -  Formalnih parametara  ima = 0

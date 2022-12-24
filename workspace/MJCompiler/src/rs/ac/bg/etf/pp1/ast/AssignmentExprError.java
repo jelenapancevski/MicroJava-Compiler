@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 23/11/2022 1:25:58
+// 24/11/2022 4:41:16
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class Equal extends Assignop {
+public class AssignmentExprError extends AssignmentExpr {
 
-    public Equal () {
+    public AssignmentExprError () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class Equal extends Assignop {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("Equal(\n");
+        buffer.append("AssignmentExprError(\n");
 
         buffer.append(tab);
-        buffer.append(") [Equal]");
+        buffer.append(") [AssignmentExprError]");
         return buffer.toString();
     }
 }

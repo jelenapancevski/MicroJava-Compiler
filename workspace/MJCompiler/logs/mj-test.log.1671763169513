@@ -1,0 +1,89 @@
+INFO  03:36:31,331 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test1.mj
+INFO  03:36:31,360 - #2 program
+INFO  03:36:31,360 - #19 MJProgram
+INFO  03:36:31,360 - #19 int
+INFO  03:36:31,360 - #19 x
+INFO  03:36:31,361 - #18 ,
+INFO  03:36:31,361 - #19 int
+INFO  03:36:31,361 - #19 int
+ERROR 03:36:31,362 - 
+Sintaksna greska na liniji 3
+INFO  03:36:31,362 - #18 ,
+INFO  03:36:31,362 - #19 y
+INFO  03:36:31,362 - #7 ;
+INFO  03:36:31,362 - #3 {
+INFO  03:36:31,363 - #6 void
+INFO  03:36:31,363 - #19 main
+INFO  03:36:31,363 - #16 (
+INFO  03:36:31,363 - #17 )
+INFO  03:36:31,364 - #19 int
+INFO  03:36:31,364 - #19 a
+INFO  03:36:31,364 - #7 ;
+INFO  03:36:31,364 - #3 {
+INFO  03:36:31,365 - #19 a
+INFO  03:36:31,365 - #23 =
+INFO  03:36:31,365 - #12 2
+INFO  03:36:31,366 - #7 ;
+INFO  03:36:31,367 - #4 }
+INFO  03:36:31,367 - #4 }
+INFO  03:36:31,368 - Program(
+  Declarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VariableDeclaration(
+      ErrorVariableComma(
+        Variable(
+          NoArrayBrackets(
+          ) [NoArrayBrackets]
+        ) [Variable]
+      ) [ErrorVariableComma]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclaration(
+          Type(
+          ) [Type]
+          Variable(
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [Variable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        NoMethodStatements(
+        ) [NoMethodStatements]
+        DesignatorStmt(
+          Assignment(
+            Designator(
+            ) [Designator]
+            Equal(
+            ) [Equal]
+            Expression(
+              OneTerm(
+                Term(
+                  OneFactor(
+                    FactorNumber(
+                    ) [FactorNumber]
+                  ) [OneFactor]
+                ) [Term]
+              ) [OneTerm]
+            ) [Expression]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  03:36:31,369 - ===================================
+INFO  03:36:31,370 -  Print count calls = 0
+INFO  03:36:31,370 -  Deklarisanih promenljivih ima = 1

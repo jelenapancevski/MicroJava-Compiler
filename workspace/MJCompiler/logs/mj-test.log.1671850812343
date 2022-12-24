@@ -1,0 +1,78 @@
+INFO  03:58:09,613 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test3.mj
+INFO  03:58:09,648 - #2 program
+INFO  03:58:09,648 - #19 FormalniParametarFunkcije
+INFO  03:58:09,648 - #3 {
+INFO  03:58:09,649 - #6 void
+INFO  03:58:09,649 - #19 main
+INFO  03:58:09,650 - #16 (
+INFO  03:58:09,650 - #19 int
+INFO  03:58:09,650 - #19 a
+INFO  03:58:09,651 - #19 c
+ERROR 03:58:09,651 - 
+Sintaksna greska na liniji 6
+INFO  03:58:09,651 - #19 d
+INFO  03:58:09,651 - #17 )
+INFO  03:58:09,651 - #3 {
+INFO  03:58:09,652 - #4 }
+INFO  03:58:09,652 - #6 void
+INFO  03:58:09,654 - #19 fja
+INFO  03:58:09,654 - #16 (
+INFO  03:58:09,654 - #19 int
+INFO  03:58:09,654 - #19 a
+INFO  03:58:09,655 - #18 ,
+INFO  03:58:09,657 - #19 int
+INFO  03:58:09,657 - #19 p
+INFO  03:58:09,657 - #19 q
+ERROR 03:58:09,657 - 
+Sintaksna greska na liniji 9
+INFO  03:58:09,657 - #18 ,
+INFO  03:58:09,657 - #19 bool
+INFO  03:58:09,657 - #19 c
+INFO  03:58:09,657 - #17 )
+INFO  03:58:09,658 - #3 {
+INFO  03:58:09,658 - #4 }
+INFO  03:58:09,658 - #4 }
+INFO  03:58:09,660 - Program(
+  NoDeclarations(
+  ) [NoDeclarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethods(
+      ) [NoMethods]
+      MethodDecl(
+        TypeVoid(
+        ) [TypeVoid]
+        MethodParameters(
+          FormalParameterError(
+          ) [FormalParameterError]
+        ) [MethodParameters]
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        NoMethodStatements(
+        ) [NoMethodStatements]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      MethodParameters(
+        FormalParameters(
+          FormalParameterError(
+          ) [FormalParameterError]
+          Type(
+          ) [Type]
+          NoArrayBrackets(
+          ) [NoArrayBrackets]
+        ) [FormalParameters]
+      ) [MethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodStatements(
+      ) [NoMethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  03:58:09,660 - ===================================
+INFO  03:58:09,661 -  Print count calls = 0
+INFO  03:58:09,662 -  Deklarisanih promenljivih ima = 0
+INFO  03:58:09,662 -  Formalnih parametara  ima = 1

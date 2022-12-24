@@ -1,0 +1,92 @@
+INFO  04:11:59,262 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test3.mj
+INFO  04:11:59,294 - #2 program
+INFO  04:11:59,294 - #19 FormalniParametarFunkcije
+INFO  04:11:59,294 - #3 {
+INFO  04:11:59,295 - #6 void
+INFO  04:11:59,295 - #19 main
+INFO  04:11:59,296 - #16 (
+INFO  04:11:59,296 - #19 int
+INFO  04:11:59,296 - #19 a
+INFO  04:11:59,296 - #19 c
+ERROR 04:11:59,297 - 
+Sintaksna greska na liniji 6
+INFO  04:11:59,297 - #19 d
+INFO  04:11:59,297 - #17 )
+INFO  04:11:59,297 - #3 {
+INFO  04:11:59,297 - #4 }
+INFO  04:11:59,298 - #6 void
+INFO  04:11:59,300 - #19 fja
+INFO  04:11:59,300 - #16 (
+INFO  04:11:59,300 - #19 int
+INFO  04:11:59,300 - #19 a
+INFO  04:11:59,301 - #18 ,
+INFO  04:11:59,302 - #19 int
+INFO  04:11:59,302 - #19 p
+INFO  04:11:59,302 - #19 q
+ERROR 04:11:59,302 - 
+Sintaksna greska na liniji 9
+INFO  04:11:59,302 - #18 ,
+INFO  04:11:59,302 - #19 bool
+INFO  04:11:59,302 - #19 c
+INFO  04:11:59,302 - #17 )
+INFO  04:11:59,303 - #3 {
+INFO  04:11:59,303 - #4 }
+INFO  04:11:59,303 - #4 }
+INFO  04:11:59,304 - Program(
+  NoDeclarations(
+  ) [NoDeclarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethods(
+      ) [NoMethods]
+      MethodDecl(
+        TypeVoid(
+        ) [TypeVoid]
+        MethodParameters(
+          OneFormalParameter(
+            OneParameterError(
+            ) [OneParameterError]
+          ) [OneFormalParameter]
+        ) [MethodParameters]
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        NoMethodStatements(
+        ) [NoMethodStatements]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      MethodParameters(
+        FormalParameters(
+          FormalParameters(
+            OneFormalParameter(
+              OneParameter(
+                Type(
+                ) [Type]
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [OneParameter]
+            ) [OneFormalParameter]
+            OneParameterError(
+            ) [OneParameterError]
+          ) [FormalParameters]
+          OneParameter(
+            Type(
+            ) [Type]
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [OneParameter]
+        ) [FormalParameters]
+      ) [MethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodStatements(
+      ) [NoMethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  04:11:59,304 - ===================================
+INFO  04:11:59,305 -  Print count calls = 0
+INFO  04:11:59,306 -  Deklarisanih promenljivih ima = 0
+INFO  04:11:59,306 -  Formalnih parametara  ima = 2

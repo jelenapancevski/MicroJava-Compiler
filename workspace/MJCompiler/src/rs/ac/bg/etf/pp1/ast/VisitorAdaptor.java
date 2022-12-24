@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 23/11/2022 1:25:58
+// 24/11/2022 4:41:16
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -15,7 +15,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Constant Constant) { }
     public void visit(Relop Relop) { }
     public void visit(TermList TermList) { }
-    public void visit(Assignop Assignop) { }
     public void visit(MethodType MethodType) { }
     public void visit(MethodStatementList MethodStatementList) { }
     public void visit(ActParams ActParams) { }
@@ -24,13 +23,17 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
     public void visit(VariablesList VariablesList) { }
+    public void visit(Designator Designator) { }
     public void visit(Condition Condition) { }
+    public void visit(AssignmentExpr AssignmentExpr) { }
     public void visit(Expr Expr) { }
     public void visit(ActPars ActPars) { }
+    public void visit(PrintConstant PrintConstant) { }
     public void visit(DesignatorList DesignatorList) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
     public void visit(MethodVariableList MethodVariableList) { }
     public void visit(Statement Statement) { }
+    public void visit(VarDecl VarDecl) { }
     public void visit(DesignatorListElement DesignatorListElement) { }
     public void visit(CondFact CondFact) { }
     public void visit(Declaration Declaration) { }
@@ -49,9 +52,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Greater Greater) { visit(); }
     public void visit(NotEqual NotEqual) { visit(); }
     public void visit(IsEqual IsEqual) { visit(); }
-    public void visit(Equal Equal) { visit(); }
     public void visit(ArrayDesignator ArrayDesignator) { visit(); }
-    public void visit(Designator Designator) { visit(); }
+    public void visit(OneDesignator OneDesignator) { visit(); }
     public void visit(ConditionFact ConditionFact) { visit(); }
     public void visit(ConditionFacts ConditionFacts) { visit(); }
     public void visit(ConditionTerm ConditionTerm) { visit(); }
@@ -81,13 +83,16 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(OneDesignatorElement OneDesignatorElement) { visit(); }
     public void visit(OneDesignatorListElement OneDesignatorListElement) { visit(); }
     public void visit(Designators Designators) { visit(); }
+    public void visit(AssignmentExprError AssignmentExprError) { visit(); }
+    public void visit(AssignmentExpression AssignmentExpression) { visit(); }
+    public void visit(MultipleAssignmentError MultipleAssignmentError) { visit(); }
     public void visit(MultipleAssignment MultipleAssignment) { visit(); }
     public void visit(FuncionCall FuncionCall) { visit(); }
     public void visit(Assignment Assignment) { visit(); }
     public void visit(ValueDecrement ValueDecrement) { visit(); }
     public void visit(ValueIncrement ValueIncrement) { visit(); }
     public void visit(NoPrintConstant NoPrintConstant) { visit(); }
-    public void visit(PrintConstant PrintConstant) { visit(); }
+    public void visit(HasPrintConstant HasPrintConstant) { visit(); }
     public void visit(NoStatement NoStatement) { visit(); }
     public void visit(Statements Statements) { visit(); }
     public void visit(MultipleStatements MultipleStatements) { visit(); }
@@ -119,7 +124,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(HasArrayBrackets HasArrayBrackets) { visit(); }
     public void visit(Variable Variable) { visit(); }
     public void visit(Variables Variables) { visit(); }
-    public void visit(VarDecl VarDecl) { visit(); }
+    public void visit(ErrorVariableComma ErrorVariableComma) { visit(); }
+    public void visit(ErrorVariableSemiColon ErrorVariableSemiColon) { visit(); }
+    public void visit(VarDeclaration VarDeclaration) { visit(); }
     public void visit(BoolConstant BoolConstant) { visit(); }
     public void visit(CharConstant CharConstant) { visit(); }
     public void visit(NumberConstant NumberConstant) { visit(); }

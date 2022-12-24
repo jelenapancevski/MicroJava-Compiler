@@ -54,7 +54,7 @@ scan with {:
 :}
 
 
-nonterminal Program, DeclarationList, Declaration, ConstDecl, ConstantList, Constant, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Type, Expr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Assignop, Relop, Addop, Mulop;
+nonterminal Program, DeclarationList, Declaration, ConstDecl, ConstantList, Constant, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Type, Expr, AssignmentExpr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Relop, Addop, Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
 /*terminal String IDENT;
 terminal Integer NUMCONST; */
@@ -94,17 +94,18 @@ Constant ::= (NumberConstant) NUMCONST
 			(BoolConstant) BOOLCONST
 			;
 				
-VarDecl ::= (VarDecl) Type VariablesList SEMICOLON
-			/*|
-			(ErrorVariableSemiColon) error SEMICOLON
+VarDecl ::= (VarDeclaration) Type VariablesList SEMICOLON
 			|
-			(ErrorVariableComma) error COMMA VariablesList SEMICOLON */
+			(ErrorVariableSemiColon)error SEMICOLON
+			|
+			(ErrorVariableComma)error COMMA VariablesList SEMICOLON 
 			;
 
 VariablesList ::= (Variables) VariablesList COMMA IDENT ArrayBrackets 
 				|
 				(Variable) IDENT ArrayBrackets 
-				;				
+				;		
+						
 ArrayBrackets ::= (HasArrayBrackets) LBRACKET RBRACKET
 					|
 				  (NoArrayBrackets) /*epsilon*/
@@ -122,11 +123,21 @@ MethodType ::= (ReturnMethodType) Type | (TypeVoid) VOID ;
 MethodParameterList ::= (MethodParameters) FormPars 
 					|
 					(NoMethodParameters) /* epsilon */
+					/*|
+					(FormalParametersListError) error*/
 					;
+					
 FormPars ::= (FormalParameters) FormPars COMMA Type IDENT ArrayBrackets
 			|
 			(OneFormalParameter) Type IDENT ArrayBrackets
+			/*|
+			(FormalParameterError) error */
 			;
+
+/*Parameter ::= (OneParameter)Type IDENT ArrayBrackets
+				|
+			  (OneParameterError ) error 
+			;*/
 			
 MethodVariableList ::= (MethodVariables) MethodVariableList VarDecl
 					|
@@ -168,7 +179,7 @@ StatementsList ::= (Statements) StatementsList Statement
 				(NoStatement) /*epsilon */
 			 	;
 			 	
-PrintConstant ::= (PrintConstant) COMMA NUMCONST
+PrintConstant ::= (HasPrintConstant) COMMA NUMCONST
 					|
 				  (NoPrintConstant) /*epsilon*/
 				  ;	
@@ -177,13 +188,20 @@ DesignatorStatement ::= (ValueIncrement) Designator INCREMENT
 						|
 						(ValueDecrement) Designator DECREMENT
 						|
-						(Assignment) Designator Assignop Expr
-						| 
+						(Assignment) Designator EQUAL AssignmentExpr
+						|
 						(FuncionCall) Designator LPAREN ActParams RPAREN
 						|
 						(MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL Designator
+						|
+						(MultipleAssignmentError) LBRACKET DesignatorList RBRACKET EQUAL error 
 						;
-
+						
+AssignmentExpr ::= (AssignmentExpression) Expr
+					|
+					(AssignmentExprError) error
+					;
+					
 DesignatorList ::= (Designators) DesignatorList COMMA DesignatorListElement 
 				   |
 				   (OneDesignatorListElement) DesignatorListElement
@@ -245,13 +263,13 @@ CondFact ::= (ConditionFacts) Expr Relop Expr
 			;			
 
 /* 
-
 Designator := ident [ "[" Expr "]" ]. 
 */
 						
-Designator ::= (Designator) IDENT | (ArrayDesignator) IDENT LBRACKET Expr RBRACKET ;
-
-Assignop ::= (Equal) EQUAL ; 
+Designator ::= (OneDesignator) IDENT 
+				| 
+				(ArrayDesignator) IDENT LBRACKET Expr RBRACKET 
+				;
 
 Relop ::= (IsEqual) ISEQUAL | (NotEqual) NOTEQUAL | (Greater) GT | (GreaterEqual) GTE | (LessThan) LT | (LessThanEqual) LTE ;
 

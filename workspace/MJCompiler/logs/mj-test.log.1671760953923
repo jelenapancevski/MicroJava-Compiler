@@ -1,0 +1,48 @@
+INFO  02:56:22,016 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test1.mj
+INFO  02:56:22,043 - #2 program
+INFO  02:56:22,043 - #19 MJProgram
+INFO  02:56:22,043 - #19 int
+INFO  02:56:22,044 - #19 x
+INFO  02:56:22,044 - #18 ,
+INFO  02:56:22,045 - #19 int
+INFO  02:56:22,046 - #19 int
+ERROR 02:56:22,046 - 
+Sintaksna greska na liniji 2
+INFO  02:56:22,046 - #19 y
+INFO  02:56:22,046 - #7 ;
+INFO  02:56:22,046 - #3 {
+INFO  02:56:22,046 - #6 void
+INFO  02:56:22,047 - #19 main
+ERROR 02:56:22,047 - Izvrsen oporavak do ; u liniji2
+INFO  02:56:22,048 - #16 (
+INFO  02:56:22,048 - #17 )
+INFO  02:56:22,049 - #3 {
+INFO  02:56:22,050 - #4 }
+INFO  02:56:22,051 - #4 }
+INFO  02:56:22,052 - Program(
+  Declarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VariableDeclaration(
+      ErrorVariableSemiColon(
+      ) [ErrorVariableSemiColon]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodStatements(
+      ) [NoMethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  02:56:22,052 - ===================================
+INFO  02:56:22,054 -  Print count calls = 0
+INFO  02:56:22,054 -  Deklarisanih promenljivih ima = 0

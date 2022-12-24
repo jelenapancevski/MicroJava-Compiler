@@ -1,0 +1,29 @@
+INFO  03:18:53,927 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test1.mj
+INFO  03:18:53,956 - #2 program
+INFO  03:18:53,956 - #19 MJProgram
+INFO  03:18:53,956 - #19 int
+INFO  03:18:53,957 - #19 x
+INFO  03:18:53,957 - #18 ,
+INFO  03:18:53,958 - #19 int
+INFO  03:18:53,958 - #19 int
+ERROR 03:18:53,958 - 
+Sintaksna greska na liniji 2
+INFO  03:18:53,958 - #19 y
+INFO  03:18:53,958 - #7 ;
+INFO  03:18:53,959 - #3 {
+INFO  03:18:53,959 - #6 void
+INFO  03:18:53,959 - #19 main
+ERROR 03:18:53,960 - Izvrsen oporavak do ; u liniji2
+INFO  03:18:53,961 - #16 (
+INFO  03:18:53,961 - #17 )
+INFO  03:18:53,961 - #3 {
+INFO  03:18:53,962 - #19 int
+INFO  03:18:53,962 - #19 a
+ERROR 03:18:53,962 - 
+Sintaksna greska na liniji 6
+INFO  03:18:53,962 - #23 =
+INFO  03:18:53,962 - #12 2
+INFO  03:18:53,963 - #7 ;
+INFO  03:18:53,963 - #4 }
+INFO  03:18:53,963 - #4 }
+ERROR 03:18:53,963 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 17
