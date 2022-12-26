@@ -51,8 +51,8 @@ import java_cup.runtime.Symbol;
 "this" {return new_symbol(sym.THIS,yytext());}
 "foreach" {return new_symbol(sym.FOREACH,yytext());}
 
-"true" {return new_symbol(sym.BOOLCONST,yytext());}
-"false" {return new_symbol(sym.BOOLCONST,yytext());}
+"true" {return new_symbol(sym.BOOLCONST,true);}
+"false" {return new_symbol(sym.BOOLCONST,false);}
 
 "+" {return new_symbol(sym.PLUS,yytext());}
 "-" {return new_symbol(sym.MINUS,yytext());}
