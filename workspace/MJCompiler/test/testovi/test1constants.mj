@@ -2,15 +2,11 @@
 
 program test301
 
-	const int nula = 0;
-	const int jedan = 1;
-	const int pet = 5;
+	const int nula = 0, jedan = 1, pet = 5;
 	
-	const bool radi = true;
-	const bool neradi = false;
+	const bool radi = true, neradi = false;
 	
-	const char slovoa = 'a';
-	const char slovob = 'b';
+	const char slovoa = 'a', slovob ='b';
 	
 
 	int niz[], niz2[], a, b;

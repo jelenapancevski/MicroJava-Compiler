@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2022 15:2:49
+// 26/11/2022 16:55:57
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,15 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class Variables extends VariablesList {
 
     private VariablesList VariablesList;
-    private String I2;
-    private ArrayBrackets ArrayBrackets;
+    private Variable Variable;
 
-    public Variables (VariablesList VariablesList, String I2, ArrayBrackets ArrayBrackets) {
+    public Variables (VariablesList VariablesList, Variable Variable) {
         this.VariablesList=VariablesList;
         if(VariablesList!=null) VariablesList.setParent(this);
-        this.I2=I2;
-        this.ArrayBrackets=ArrayBrackets;
-        if(ArrayBrackets!=null) ArrayBrackets.setParent(this);
+        this.Variable=Variable;
+        if(Variable!=null) Variable.setParent(this);
     }
 
     public VariablesList getVariablesList() {
@@ -27,20 +25,12 @@ public class Variables extends VariablesList {
         this.VariablesList=VariablesList;
     }
 
-    public String getI2() {
-        return I2;
+    public Variable getVariable() {
+        return Variable;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
-    }
-
-    public ArrayBrackets getArrayBrackets() {
-        return ArrayBrackets;
-    }
-
-    public void setArrayBrackets(ArrayBrackets ArrayBrackets) {
-        this.ArrayBrackets=ArrayBrackets;
+    public void setVariable(Variable Variable) {
+        this.Variable=Variable;
     }
 
     public void accept(Visitor visitor) {
@@ -49,18 +39,18 @@ public class Variables extends VariablesList {
 
     public void childrenAccept(Visitor visitor) {
         if(VariablesList!=null) VariablesList.accept(visitor);
-        if(ArrayBrackets!=null) ArrayBrackets.accept(visitor);
+        if(Variable!=null) Variable.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(VariablesList!=null) VariablesList.traverseTopDown(visitor);
-        if(ArrayBrackets!=null) ArrayBrackets.traverseTopDown(visitor);
+        if(Variable!=null) Variable.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(VariablesList!=null) VariablesList.traverseBottomUp(visitor);
-        if(ArrayBrackets!=null) ArrayBrackets.traverseBottomUp(visitor);
+        if(Variable!=null) Variable.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -75,11 +65,8 @@ public class Variables extends VariablesList {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
-        buffer.append("\n");
-
-        if(ArrayBrackets!=null)
-            buffer.append(ArrayBrackets.toString("  "+tab));
+        if(Variable!=null)
+            buffer.append(Variable.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

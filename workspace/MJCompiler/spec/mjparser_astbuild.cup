@@ -101,7 +101,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant;
  
 
@@ -148,10 +148,12 @@ VarDecl ::= (VarDeclaration) Type:T1 VariablesList:V2 SEMICOLON {: RESULT=new Va
 			(ErrorVariableComma)error COMMA VariablesList:V1 SEMICOLON {: RESULT=new ErrorVariableComma(V1); RESULT.setLine(V1left); :} 
 			;
 
-VariablesList ::= (Variables) VariablesList:V1 COMMA IDENT:I2 ArrayBrackets:A3 {: RESULT=new Variables(V1, I2, A3); RESULT.setLine(V1left); :} 
+VariablesList ::= (Variables) VariablesList:V1 COMMA Variable:V2 {: RESULT=new Variables(V1, V2); RESULT.setLine(V1left); :} 
 				|
-				(Variable) IDENT:I1 ArrayBrackets:A2 {: RESULT=new Variable(I1, A2); RESULT.setLine(I1left); :} 
-				;		
+				(OneVariable) Variable:V1 {: RESULT=new OneVariable(V1); RESULT.setLine(V1left); :} 
+				;	 
+
+Variable ::= (Variable) IDENT:varName ArrayBrackets:isArray {: RESULT=new Variable(varName, isArray); RESULT.setLine(varNameleft); :} ;					
 						
 ArrayBrackets ::= (HasArrayBrackets) LBRACKET RBRACKET {: RESULT=new HasArrayBrackets(); :}
 					|

@@ -68,7 +68,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant;
  
 
@@ -115,10 +115,12 @@ VarDecl ::= (VarDeclaration) Type VariablesList SEMICOLON
 			(ErrorVariableComma)error COMMA VariablesList SEMICOLON 
 			;
 
-VariablesList ::= (Variables) VariablesList COMMA IDENT ArrayBrackets 
+VariablesList ::= (Variables) VariablesList COMMA Variable 
 				|
-				(Variable) IDENT ArrayBrackets 
-				;		
+				(OneVariable) Variable 
+				;	 
+
+Variable ::= (Variable) IDENT:varName ArrayBrackets:isArray ;					
 						
 ArrayBrackets ::= (HasArrayBrackets) LBRACKET RBRACKET
 					|

@@ -5,21 +5,21 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ConditionTerm extends CondTerm {
+public class OneVariable extends VariablesList {
 
-    private CondFact CondFact;
+    private Variable Variable;
 
-    public ConditionTerm (CondFact CondFact) {
-        this.CondFact=CondFact;
-        if(CondFact!=null) CondFact.setParent(this);
+    public OneVariable (Variable Variable) {
+        this.Variable=Variable;
+        if(Variable!=null) Variable.setParent(this);
     }
 
-    public CondFact getCondFact() {
-        return CondFact;
+    public Variable getVariable() {
+        return Variable;
     }
 
-    public void setCondFact(CondFact CondFact) {
-        this.CondFact=CondFact;
+    public void setVariable(Variable Variable) {
+        this.Variable=Variable;
     }
 
     public void accept(Visitor visitor) {
@@ -27,32 +27,32 @@ public class ConditionTerm extends CondTerm {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(CondFact!=null) CondFact.accept(visitor);
+        if(Variable!=null) Variable.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(CondFact!=null) CondFact.traverseTopDown(visitor);
+        if(Variable!=null) Variable.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(CondFact!=null) CondFact.traverseBottomUp(visitor);
+        if(Variable!=null) Variable.traverseBottomUp(visitor);
         accept(visitor);
     }
 
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ConditionTerm(\n");
+        buffer.append("OneVariable(\n");
 
-        if(CondFact!=null)
-            buffer.append(CondFact.toString("  "+tab));
+        if(Variable!=null)
+            buffer.append(Variable.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [ConditionTerm]");
+        buffer.append(") [OneVariable]");
         return buffer.toString();
     }
 }

@@ -14,12 +14,28 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	int nVars;
 	boolean errorDetected = false;
 	Struct boolType;
+	Struct boolArray;
+	Struct charArray;
+	Struct intArray;
 	Type currentType;
 	
 	public SemanticAnalyzer() {
 		// Inserting boolean type into table of symbols
 		boolType = new Struct(Struct.Bool);
 		Tab.currentScope().addToLocals(new Obj(Obj.Type, "bool", boolType));
+		
+		/*// Creating boolean Array struct
+		boolArray = new Struct(Struct.Array);
+		boolArray.setElementType(boolType);
+		
+		// Creating char Array struct 
+		charArray = new Struct(Struct.Array);
+		charArray.setElementType(Tab.charType);
+		
+		// Creating int Array struct 
+		intArray = new Struct(Struct.Array);
+		intArray.setElementType(Tab.intType);
+		*/
 		
 	}
 	
@@ -53,6 +69,9 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	     Tab.openScope();
 	 }
 	 
+	 
+	 /* DECLARATIONS OF CONSTANTS */
+	 
 	 // NumberConstant - returns type int
 	  public void visit(NumberConstant numberConstant){
 		  numberConstant.struct = Tab.intType;
@@ -68,7 +87,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  boolConstant.struct = boolType;
 	   }
 	  
-	  // ConstantDeclaration -  IDENT:constName EQUAL Constant
+	  // ConstantDeclaration - IDENT:constName EQUAL Constant
 	  public void visit (ConstantDeclaration constantDeclaration) {
 		  // Check if constant name is taken 
 		  if( Tab.find(constantDeclaration.getConstName())!=Tab.noObj) {
@@ -94,15 +113,18 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  case 1:
 			  NumberConstant numberConst= (NumberConstant)constantDeclaration.getConstant();
 			  constantDeclaration.obj.setAdr(numberConst.getNumConstant());
+			  report_info("Deklarisana konstanta "+ constantDeclaration.getConstName() + " jednaka "+ numberConst.getNumConstant(), constantDeclaration);
 			  break;
 		  // Char	  
 		  case 2:
 			  CharConstant charConst= (CharConstant)constantDeclaration.getConstant();
 			  constantDeclaration.obj.setAdr(charConst.getCharConstant());
+			  report_info("Deklarisana konstanta "+ constantDeclaration.getConstName() + " jednaka "+ charConst.getCharConstant(), constantDeclaration);
 			  break;
 		  // Bool	  
 		  case 5:
 			  BoolConstant boolConst= (BoolConstant)constantDeclaration.getConstant();
+			  report_info("Deklarisana konstanta "+ constantDeclaration.getConstName() + " jednaka "+ boolConst.getBoolConstant(), constantDeclaration);
 			  if( boolConst.getBoolConstant()) {
 				  // TRUE
 				  constantDeclaration.obj.setAdr(1);
@@ -113,7 +135,34 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			 
 			  break;
 		  }
+		
+
+	  }
+	  
+	  /* DECLARATION OF VARIABLES */
+	  
+	  // Variable - IDENT:varName ArrayBrackets:isArray 
+	  public void visit (Variable variable) {
+		  // Check if variable name is taken
+		  if( Tab.find(variable.getVarName())!=Tab.noObj) {
+			  // Variable is already declared error
+			  report_error("Greska na liniji "+ variable.getLine()+" : promenljiva sa nazivom "+ variable.getVarName()+"je vec deklarisana", null);
+			  variable.obj = Tab.noObj;
+			  return;
+		  }
 		  
+		  if (variable.getArrayBrackets() instanceof HasArrayBrackets) {
+			  // Array declared
+			  variable.obj = Tab.insert(Obj.Var, variable.getVarName(), new Struct(Struct.Array, currentType.struct));
+			  report_info("Deklarisan niz "+ variable.getVarName(), variable);
+
+		  }
+		  else {
+			  // Variable declared
+			  variable.obj = Tab.insert(Obj.Var, variable.getVarName(), currentType.struct);
+			  report_info("Deklarisana promenljiva "+ variable.getVarName(), variable);
+
+		  }
 	  }
 	  
 	  public void visit (Type type) {

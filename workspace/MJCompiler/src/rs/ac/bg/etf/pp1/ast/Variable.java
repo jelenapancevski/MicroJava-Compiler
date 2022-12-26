@@ -1,27 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2022 15:2:49
+// 26/11/2022 16:55:57
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class Variable extends VariablesList {
+public class Variable implements SyntaxNode {
 
-    private String I1;
+    private SyntaxNode parent;
+    private int line;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
+
+    private String varName;
     private ArrayBrackets ArrayBrackets;
 
-    public Variable (String I1, ArrayBrackets ArrayBrackets) {
-        this.I1=I1;
+    public Variable (String varName, ArrayBrackets ArrayBrackets) {
+        this.varName=varName;
         this.ArrayBrackets=ArrayBrackets;
         if(ArrayBrackets!=null) ArrayBrackets.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public String getVarName() {
+        return varName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setVarName(String varName) {
+        this.varName=varName;
     }
 
     public ArrayBrackets getArrayBrackets() {
@@ -30,6 +34,22 @@ public class Variable extends VariablesList {
 
     public void setArrayBrackets(ArrayBrackets ArrayBrackets) {
         this.ArrayBrackets=ArrayBrackets;
+    }
+
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -55,7 +75,7 @@ public class Variable extends VariablesList {
         buffer.append(tab);
         buffer.append("Variable(\n");
 
-        buffer.append(" "+tab+I1);
+        buffer.append(" "+tab+varName);
         buffer.append("\n");
 
         if(ArrayBrackets!=null)
