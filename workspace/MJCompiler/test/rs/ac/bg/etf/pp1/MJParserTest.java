@@ -14,6 +14,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.util.Log4JUtils;
+import rs.etf.pp1.symboltable.Tab;
 
 public class MJParserTest {
 
@@ -28,31 +29,34 @@ public class MJParserTest {
 		
 		Reader br = null;
 		try {
-			File sourceCode = new File("test/sintaksne_greske/test1.mj");
+			File sourceCode = new File("test/test301.mj");
 			log.info("Compiling source file: " + sourceCode.getAbsolutePath());
 			
 			br = new BufferedReader(new FileReader(sourceCode));
 			Yylex lexer = new Yylex(br);
 			
 			MJParser p = new MJParser(lexer);
-	       // Symbol s = p.parse();  //pocetak parsiranja
-			Symbol s= p.debug_parse();
+	        Symbol s = p.parse();  //pocetak parsiranja
+			//Symbol s= p.debug_parse();
 	        
 	        Program prog = (Program)(s.value); 
+	        Tab.init();
 			// ispis sintaksnog stabla
 			log.info(prog.toString(""));
 			log.info("===================================");
 
 			// ispis prepoznatih programskih konstrukcija
-			RuleVisitor v = new RuleVisitor();
+			//RuleVisitor v = new RuleVisitor();
+			SemanticAnalyzer v = new SemanticAnalyzer();
 			prog.traverseBottomUp(v); 
 	      
-			log.info(" Print count calls = " + v.printCallCount);
+			//log.info(" Print count calls = " + v.printCallCount);
 
-			log.info(" Global declarations count = " + v.varDeclCount);
+			//log.info(" Global declarations count = " + v.varDeclCount);
 			
-			log.info(" Formal parameters count = " + v.formalParametersCount);
+			//	log.info(" Formal parameters count = " + v.formalParametersCount);
 			
+			Tab.dump();
 		} 
 		finally {
 			if (br != null) try { br.close(); } catch (IOException e1) { log.error(e1.getMessage(), e1); }

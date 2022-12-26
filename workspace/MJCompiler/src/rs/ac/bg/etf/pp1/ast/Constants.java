@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/11/2022 4:41:16
+// 26/11/2022 3:30:20
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class Constants extends ConstantList {
 
     private ConstantList ConstantList;
-    private Constant Constant;
+    private ConstantDeclaration ConstantDeclaration;
 
-    public Constants (ConstantList ConstantList, Constant Constant) {
+    public Constants (ConstantList ConstantList, ConstantDeclaration ConstantDeclaration) {
         this.ConstantList=ConstantList;
         if(ConstantList!=null) ConstantList.setParent(this);
-        this.Constant=Constant;
-        if(Constant!=null) Constant.setParent(this);
+        this.ConstantDeclaration=ConstantDeclaration;
+        if(ConstantDeclaration!=null) ConstantDeclaration.setParent(this);
     }
 
     public ConstantList getConstantList() {
@@ -25,12 +25,12 @@ public class Constants extends ConstantList {
         this.ConstantList=ConstantList;
     }
 
-    public Constant getConstant() {
-        return Constant;
+    public ConstantDeclaration getConstantDeclaration() {
+        return ConstantDeclaration;
     }
 
-    public void setConstant(Constant Constant) {
-        this.Constant=Constant;
+    public void setConstantDeclaration(ConstantDeclaration ConstantDeclaration) {
+        this.ConstantDeclaration=ConstantDeclaration;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class Constants extends ConstantList {
 
     public void childrenAccept(Visitor visitor) {
         if(ConstantList!=null) ConstantList.accept(visitor);
-        if(Constant!=null) Constant.accept(visitor);
+        if(ConstantDeclaration!=null) ConstantDeclaration.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(ConstantList!=null) ConstantList.traverseTopDown(visitor);
-        if(Constant!=null) Constant.traverseTopDown(visitor);
+        if(ConstantDeclaration!=null) ConstantDeclaration.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(ConstantList!=null) ConstantList.traverseBottomUp(visitor);
-        if(Constant!=null) Constant.traverseBottomUp(visitor);
+        if(ConstantDeclaration!=null) ConstantDeclaration.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class Constants extends ConstantList {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Constant!=null)
-            buffer.append(Constant.toString("  "+tab));
+        if(ConstantDeclaration!=null)
+            buffer.append(ConstantDeclaration.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

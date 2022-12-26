@@ -1,25 +1,55 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/11/2022 4:41:16
+// 26/11/2022 3:30:20
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ConstantDeclaration extends Declaration {
+public class ConstantDeclaration implements SyntaxNode {
 
-    private ConstDecl ConstDecl;
+    private SyntaxNode parent;
+    private int line;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
 
-    public ConstantDeclaration (ConstDecl ConstDecl) {
-        this.ConstDecl=ConstDecl;
-        if(ConstDecl!=null) ConstDecl.setParent(this);
+    private String constName;
+    private Constant Constant;
+
+    public ConstantDeclaration (String constName, Constant Constant) {
+        this.constName=constName;
+        this.Constant=Constant;
+        if(Constant!=null) Constant.setParent(this);
     }
 
-    public ConstDecl getConstDecl() {
-        return ConstDecl;
+    public String getConstName() {
+        return constName;
     }
 
-    public void setConstDecl(ConstDecl ConstDecl) {
-        this.ConstDecl=ConstDecl;
+    public void setConstName(String constName) {
+        this.constName=constName;
+    }
+
+    public Constant getConstant() {
+        return Constant;
+    }
+
+    public void setConstant(Constant Constant) {
+        this.Constant=Constant;
+    }
+
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +57,16 @@ public class ConstantDeclaration extends Declaration {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(ConstDecl!=null) ConstDecl.accept(visitor);
+        if(Constant!=null) Constant.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(ConstDecl!=null) ConstDecl.traverseTopDown(visitor);
+        if(Constant!=null) Constant.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(ConstDecl!=null) ConstDecl.traverseBottomUp(visitor);
+        if(Constant!=null) Constant.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +75,11 @@ public class ConstantDeclaration extends Declaration {
         buffer.append(tab);
         buffer.append("ConstantDeclaration(\n");
 
-        if(ConstDecl!=null)
-            buffer.append(ConstDecl.toString("  "+tab));
+        buffer.append(" "+tab+constName);
+        buffer.append("\n");
+
+        if(Constant!=null)
+            buffer.append(Constant.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

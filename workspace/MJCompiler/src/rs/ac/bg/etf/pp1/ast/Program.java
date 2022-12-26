@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/11/2022 4:41:16
+// 26/11/2022 3:30:20
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,14 +9,27 @@ public class Program implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
+
+    private ProgramIdentificator ProgramIdentificator;
     private DeclarationList DeclarationList;
     private MethodDeclList MethodDeclList;
 
-    public Program (DeclarationList DeclarationList, MethodDeclList MethodDeclList) {
+    public Program (ProgramIdentificator ProgramIdentificator, DeclarationList DeclarationList, MethodDeclList MethodDeclList) {
+        this.ProgramIdentificator=ProgramIdentificator;
+        if(ProgramIdentificator!=null) ProgramIdentificator.setParent(this);
         this.DeclarationList=DeclarationList;
         if(DeclarationList!=null) DeclarationList.setParent(this);
         this.MethodDeclList=MethodDeclList;
         if(MethodDeclList!=null) MethodDeclList.setParent(this);
+    }
+
+    public ProgramIdentificator getProgramIdentificator() {
+        return ProgramIdentificator;
+    }
+
+    public void setProgramIdentificator(ProgramIdentificator ProgramIdentificator) {
+        this.ProgramIdentificator=ProgramIdentificator;
     }
 
     public DeclarationList getDeclarationList() {
@@ -56,17 +69,20 @@ public class Program implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(ProgramIdentificator!=null) ProgramIdentificator.accept(visitor);
         if(DeclarationList!=null) DeclarationList.accept(visitor);
         if(MethodDeclList!=null) MethodDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(ProgramIdentificator!=null) ProgramIdentificator.traverseTopDown(visitor);
         if(DeclarationList!=null) DeclarationList.traverseTopDown(visitor);
         if(MethodDeclList!=null) MethodDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(ProgramIdentificator!=null) ProgramIdentificator.traverseBottomUp(visitor);
         if(DeclarationList!=null) DeclarationList.traverseBottomUp(visitor);
         if(MethodDeclList!=null) MethodDeclList.traverseBottomUp(visitor);
         accept(visitor);
@@ -76,6 +92,12 @@ public class Program implements SyntaxNode {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("Program(\n");
+
+        if(ProgramIdentificator!=null)
+            buffer.append(ProgramIdentificator.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(DeclarationList!=null)
             buffer.append(DeclarationList.toString("  "+tab));

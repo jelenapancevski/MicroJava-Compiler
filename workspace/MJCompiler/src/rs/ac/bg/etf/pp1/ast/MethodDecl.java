@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/11/2022 4:41:16
+// 26/11/2022 3:30:20
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,13 +10,15 @@ public class MethodDecl implements SyntaxNode {
     private SyntaxNode parent;
     private int line;
     private MethodType MethodType;
+    private String I2;
     private MethodParameterList MethodParameterList;
     private MethodVariableList MethodVariableList;
     private MethodStatementList MethodStatementList;
 
-    public MethodDecl (MethodType MethodType, MethodParameterList MethodParameterList, MethodVariableList MethodVariableList, MethodStatementList MethodStatementList) {
+    public MethodDecl (MethodType MethodType, String I2, MethodParameterList MethodParameterList, MethodVariableList MethodVariableList, MethodStatementList MethodStatementList) {
         this.MethodType=MethodType;
         if(MethodType!=null) MethodType.setParent(this);
+        this.I2=I2;
         this.MethodParameterList=MethodParameterList;
         if(MethodParameterList!=null) MethodParameterList.setParent(this);
         this.MethodVariableList=MethodVariableList;
@@ -31,6 +33,14 @@ public class MethodDecl implements SyntaxNode {
 
     public void setMethodType(MethodType MethodType) {
         this.MethodType=MethodType;
+    }
+
+    public String getI2() {
+        return I2;
+    }
+
+    public void setI2(String I2) {
+        this.I2=I2;
     }
 
     public MethodParameterList getMethodParameterList() {
@@ -109,6 +119,9 @@ public class MethodDecl implements SyntaxNode {
             buffer.append(MethodType.toString("  "+tab));
         else
             buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         if(MethodParameterList!=null)

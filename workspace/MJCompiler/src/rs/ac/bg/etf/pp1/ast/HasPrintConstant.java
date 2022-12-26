@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/11/2022 4:41:16
+// 26/11/2022 3:30:20
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class HasPrintConstant extends PrintConstant {
 
-    public HasPrintConstant () {
+    private Integer N1;
+
+    public HasPrintConstant (Integer N1) {
+        this.N1=N1;
+    }
+
+    public Integer getN1() {
+        return N1;
+    }
+
+    public void setN1(Integer N1) {
+        this.N1=N1;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class HasPrintConstant extends PrintConstant {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("HasPrintConstant(\n");
+
+        buffer.append(" "+tab+N1);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [HasPrintConstant]");

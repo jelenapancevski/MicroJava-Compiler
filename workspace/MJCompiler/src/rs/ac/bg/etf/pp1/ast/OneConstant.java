@@ -1,25 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/11/2022 4:41:16
+// 26/11/2022 3:30:20
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class OneConstant extends ConstantList {
 
-    private Constant Constant;
+    private ConstantDeclaration ConstantDeclaration;
 
-    public OneConstant (Constant Constant) {
-        this.Constant=Constant;
-        if(Constant!=null) Constant.setParent(this);
+    public OneConstant (ConstantDeclaration ConstantDeclaration) {
+        this.ConstantDeclaration=ConstantDeclaration;
+        if(ConstantDeclaration!=null) ConstantDeclaration.setParent(this);
     }
 
-    public Constant getConstant() {
-        return Constant;
+    public ConstantDeclaration getConstantDeclaration() {
+        return ConstantDeclaration;
     }
 
-    public void setConstant(Constant Constant) {
-        this.Constant=Constant;
+    public void setConstantDeclaration(ConstantDeclaration ConstantDeclaration) {
+        this.ConstantDeclaration=ConstantDeclaration;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +27,16 @@ public class OneConstant extends ConstantList {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Constant!=null) Constant.accept(visitor);
+        if(ConstantDeclaration!=null) ConstantDeclaration.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Constant!=null) Constant.traverseTopDown(visitor);
+        if(ConstantDeclaration!=null) ConstantDeclaration.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Constant!=null) Constant.traverseBottomUp(visitor);
+        if(ConstantDeclaration!=null) ConstantDeclaration.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +45,8 @@ public class OneConstant extends ConstantList {
         buffer.append(tab);
         buffer.append("OneConstant(\n");
 
-        if(Constant!=null)
-            buffer.append(Constant.toString("  "+tab));
+        if(ConstantDeclaration!=null)
+            buffer.append(ConstantDeclaration.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

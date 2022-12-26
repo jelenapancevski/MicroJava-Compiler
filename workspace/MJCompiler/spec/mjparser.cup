@@ -54,8 +54,8 @@ scan with {:
 :}
 
 
-nonterminal Program, DeclarationList, Declaration, ConstDecl, ConstantList, Constant, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Type, Expr, AssignmentExpr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Relop, Addop, Mulop;
-terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NUMCONST, CHARCONST, BOOLCONST, NEW, LPAREN, RPAREN, COMMA, IDENT, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
+nonterminal DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Expr, AssignmentExpr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Relop, Addop, Mulop;
+terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NEW, LPAREN, RPAREN, COMMA, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
 /*terminal String IDENT;
 terminal Integer NUMCONST; */
 
@@ -63,17 +63,28 @@ terminal IF, ELSE, WHILE, BREAK, CONTINUE, RETURN, FOREACH, ARROW;
 nonterminal StatementsList;
 terminal CLASS, THIS, COLON, DO, EXTENDS, ENUM;
 
+terminal String IDENT;
+terminal Character CHARCONST;
+terminal Integer NUMCONST;
+terminal Boolean BOOLCONST;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant;
+ 
+
 precedence left ELSE;
 
 
-Program ::= (Program) PROG IDENT DeclarationList LBRACE MethodDeclList RBRACE ;
+Program ::= (Program) PROG ProgramIdentificator:programIdent DeclarationList LBRACE MethodDeclList RBRACE ;
+
+ProgramIdentificator ::= (ProgramIdentificator) IDENT:progIdent ;
 
 DeclarationList ::= (Declarations) DeclarationList Declaration 
 				|
 				(NoDeclarations) /*epsilon*/
 				;
 
-Declaration ::= (ConstantDeclaration) ConstDecl 
+Declaration ::= (CnstDeclaration) ConstDecl 
 				|
 				(VariableDeclaration) VarDecl 
 				/*|
@@ -82,10 +93,13 @@ Declaration ::= (ConstantDeclaration) ConstDecl
 				
 ConstDecl ::= (ConstDecl) CONST Type ConstantList SEMICOLON ;
 
-ConstantList ::= (Constants) ConstantList COMMA IDENT EQUAL Constant 
+
+ConstantList ::= (Constants) ConstantList COMMA ConstantDeclaration 
 				|
-				(OneConstant) IDENT EQUAL Constant 
+				(OneConstant) ConstantDeclaration
 				;
+				
+ConstantDeclaration ::= (ConstantDeclaration) IDENT:constName EQUAL Constant ;
 				
 Constant ::= (NumberConstant) NUMCONST 
 			|
@@ -277,4 +291,4 @@ Addop ::= (Plus) PLUS | (Minus) MINUS ;
 
 Mulop ::= (Multiply) MULTIPLY | (Divide) DIVIDE | (Moduo) MODUO ;
 
-Type ::= (Type) IDENT ;
+Type ::= (Type) IDENT:typeName ;

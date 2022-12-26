@@ -1,0 +1,95 @@
+INFO  04:47:08,014 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\test1.mj
+INFO  04:47:08,047 - #2 program
+INFO  04:47:08,048 - #19 DefinicijaGlobalnePromenljive
+INFO  04:47:08,048 - #19 int
+INFO  04:47:08,048 - #19 a
+INFO  04:47:08,049 - #21 [
+INFO  04:47:08,049 - #22 ]
+INFO  04:47:08,049 - #18 ,
+INFO  04:47:08,050 - #32 +
+ERROR 04:47:08,050 - 
+Sintaksna greska na liniji 5
+INFO  04:47:08,050 - #19 abc
+INFO  04:47:08,050 - #18 ,
+INFO  04:47:08,050 - #19 abcd
+INFO  04:47:08,051 - #18 ,
+INFO  04:47:08,051 - #19 gfj
+INFO  04:47:08,052 - #7 ;
+INFO  04:47:08,053 - #3 {
+INFO  04:47:08,053 - #6 void
+INFO  04:47:08,054 - #19 main
+INFO  04:47:08,055 - #16 (
+INFO  04:47:08,055 - #17 )
+INFO  04:47:08,056 - #19 int
+INFO  04:47:08,057 - #19 a
+INFO  04:47:08,057 - #7 ;
+INFO  04:47:08,057 - #7 ;
+ERROR 04:47:08,058 - 
+Sintaksna greska na liniji 7
+INFO  04:47:08,058 - #3 {
+INFO  04:47:08,058 - #19 a
+INFO  04:47:08,058 - #23 =
+INFO  04:47:08,060 - #12 2
+INFO  04:47:08,060 - #7 ;
+INFO  04:47:08,063 - #4 }
+INFO  04:47:08,063 - #4 }
+INFO  04:47:08,065 - Program(
+  Declarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VariableDeclaration(
+      ErrorVariableComma(
+        Variables(
+          Variable(
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [Variable]
+          NoArrayBrackets(
+          ) [NoArrayBrackets]
+        ) [Variables]
+      ) [ErrorVariableComma]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      TypeVoid(
+      ) [TypeVoid]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        ErrorVariableSemiColon(
+        ) [ErrorVariableSemiColon]
+      ) [MethodVariables]
+      MethodStatements(
+        NoMethodStatements(
+        ) [NoMethodStatements]
+        DesignatorStmt(
+          Assignment(
+            OneDesignator(
+            ) [OneDesignator]
+            AssignmentExpression(
+              Expression(
+                OneTerm(
+                  Term(
+                    OneFactor(
+                      FactorNumber(
+                      ) [FactorNumber]
+                    ) [OneFactor]
+                  ) [Term]
+                ) [OneTerm]
+              ) [Expression]
+            ) [AssignmentExpression]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  04:47:08,065 - ===================================
+INFO  04:47:08,066 -  Print count calls = 0
+INFO  04:47:08,066 -  Global declarations count = 2
+INFO  04:47:08,066 -  Formal parameters count = 0
