@@ -101,11 +101,11 @@ ConstantList ::= (Constants) ConstantList COMMA ConstantDeclaration
 				
 ConstantDeclaration ::= (ConstantDeclaration) IDENT:constName EQUAL Constant ;
 				
-Constant ::= (NumberConstant) NUMCONST 
+Constant ::= (NumberConstant) NUMCONST:numConstant 
 			|
-			(CharConstant) CHARCONST 
+			(CharConstant) CHARCONST:charConstant  
 			|
-			(BoolConstant) BOOLCONST
+			(BoolConstant) BOOLCONST:boolConstant 
 			;
 				
 VarDecl ::= (VarDeclaration) Type VariablesList SEMICOLON

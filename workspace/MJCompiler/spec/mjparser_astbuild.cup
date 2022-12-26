@@ -134,11 +134,11 @@ ConstantList ::= (Constants) ConstantList:C1 COMMA ConstantDeclaration:C2 {: RES
 				
 ConstantDeclaration ::= (ConstantDeclaration) IDENT:constName EQUAL Constant:C1 {: RESULT=new ConstantDeclaration(constName, C1); RESULT.setLine(constNameleft); :} ;
 				
-Constant ::= (NumberConstant) NUMCONST:N1 {: RESULT=new NumberConstant(N1); RESULT.setLine(N1left); :} 
+Constant ::= (NumberConstant) NUMCONST:numConstant {: RESULT=new NumberConstant(numConstant); RESULT.setLine(numConstantleft); :} 
 			|
-			(CharConstant) CHARCONST:C1 {: RESULT=new CharConstant(C1); RESULT.setLine(C1left); :} 
+			(CharConstant) CHARCONST:charConstant {: RESULT=new CharConstant(charConstant); RESULT.setLine(charConstantleft); :}  
 			|
-			(BoolConstant) BOOLCONST:B1 {: RESULT=new BoolConstant(B1); RESULT.setLine(B1left); :}
+			(BoolConstant) BOOLCONST:boolConstant {: RESULT=new BoolConstant(boolConstant); RESULT.setLine(boolConstantleft); :} 
 			;
 				
 VarDecl ::= (VarDeclaration) Type:T1 VariablesList:V2 SEMICOLON {: RESULT=new VarDeclaration(T1, V2); RESULT.setLine(T1left); :}

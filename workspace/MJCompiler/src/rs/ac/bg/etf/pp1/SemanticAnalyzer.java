@@ -16,8 +16,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	Struct boolType;
 	Type currentType;
 	
-	public void SemanticAnalyzer() {
-		
+	public SemanticAnalyzer() {
 		// Inserting boolean type into table of symbols
 		boolType = new Struct(Struct.Bool);
 		Tab.currentScope().addToLocals(new Obj(Obj.Type, "bool", boolType));
@@ -89,6 +88,31 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  
 		  // Type is equivalent with current type adding new constant to table of symbols
 		  constantDeclaration.obj= Tab.insert(Obj.Con, constantDeclaration.getConstName(), constantDeclaration.getConstant().struct);
+		  // Set value for constant in table of symbols 
+		  switch(constantDeclaration.obj.getType().getKind()) {
+		  // Int
+		  case 1:
+			  NumberConstant numberConst= (NumberConstant)constantDeclaration.getConstant();
+			  constantDeclaration.obj.setAdr(numberConst.getNumConstant());
+			  break;
+		  // Char	  
+		  case 2:
+			  CharConstant charConst= (CharConstant)constantDeclaration.getConstant();
+			  constantDeclaration.obj.setAdr(charConst.getCharConstant());
+			  break;
+		  // Bool	  
+		  case 5:
+			  BoolConstant boolConst= (BoolConstant)constantDeclaration.getConstant();
+			  if( boolConst.getBoolConstant()) {
+				  // TRUE
+				  constantDeclaration.obj.setAdr(1);
+			  }else {
+				  // FALSE
+				  constantDeclaration.obj.setAdr(0);
+			  }
+			 
+			  break;
+		  }
 		  
 	  }
 	  
