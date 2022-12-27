@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2022 16:55:57
+// 27/11/2022 18:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class TypeVoid extends MethodType {
+public class VoidMethod extends MethodTypeName {
 
-    public TypeVoid () {
+    private String methodName;
+
+    public VoidMethod (String methodName) {
+        this.methodName=methodName;
+    }
+
+    public String getMethodName() {
+        return methodName;
+    }
+
+    public void setMethodName(String methodName) {
+        this.methodName=methodName;
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +39,13 @@ public class TypeVoid extends MethodType {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("TypeVoid(\n");
+        buffer.append("VoidMethod(\n");
+
+        buffer.append(" "+tab+methodName);
+        buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [TypeVoid]");
+        buffer.append(") [VoidMethod]");
         return buffer.toString();
     }
 }

@@ -14,11 +14,12 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	int nVars;
 	boolean errorDetected = false;
 	Struct boolType;
-	Struct boolArray;
+	/*Struct boolArray;
 	Struct charArray;
-	Struct intArray;
+	Struct intArray;*/
 	Type currentType;
-	
+	Obj currentMethod;
+	int methodArguments = 0;
 	public SemanticAnalyzer() {
 		// Inserting boolean type into table of symbols
 		boolType = new Struct(Struct.Bool);
@@ -55,6 +56,29 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			msg.append (" na liniji ").append(line);
 		log.info(msg.toString());
 	}
+	
+	
+	 public void visit (Type type) {
+		  currentType=type;
+		  Obj objType = Tab.find(type.getTypeName());
+		  if (objType == Tab.noObj) {
+			  // Type does not exist 
+			  report_error("Greska na liniji "+ type.getLine()+" : tip sa nazivom "+ type.getTypeName()+"ne postoji", null);
+			  type.struct = Tab.noType;
+			  currentType.struct = Tab.noType;
+			  return;
+		  }
+		  if(objType.getKind()!=Obj.Type) {
+			  // Given type name does not present any type 
+			  report_error("Greska na liniji "+ type.getLine()+" : tip sa nazivom "+ type.getTypeName()+"ne predstavlja tip", null);
+			  type.struct = Tab.noType;
+			  currentType.struct = Tab.noType;
+			  return;
+
+		  }
+		  type.struct = objType.getType();
+		  
+	  }
 	
 	
 	 public void visit(Program Program) {
@@ -165,26 +189,61 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  }
 	  }
 	  
-	  public void visit (Type type) {
-		  currentType=type;
-		  Obj objType = Tab.find(type.getTypeName());
-		  if (objType == Tab.noObj) {
-			  // Type does not exist 
-			  report_error("Greska na liniji "+ type.getLine()+" : tip sa nazivom "+ type.getTypeName()+"ne postoji", null);
-			  type.struct = Tab.noType;
-			  currentType.struct = Tab.noType;
-			  return;
-		  }
-		  if(objType.getKind()!=Obj.Type) {
-			  // Given type name does not present any type 
-			  report_error("Greska na liniji "+ type.getLine()+" : tip sa nazivom "+ type.getTypeName()+"ne predstavlja tip", null);
-			  type.struct = Tab.noType;
-			  currentType.struct = Tab.noType;
-			  return;
+	 
+	  
+	  /* METHODS DECLARATIONS */
+
+	  // (MethodDecl) MethodTypeName LPAREN MethodParameterList RPAREN MethodVariableList LBRACE MethodStatementList RBRACE;
+	  public void visit (MethodDecl methodDecl) {
+		  // Set number of method arguments 
+		  currentMethod.setLevel(methodArguments);
+		  report_info("Deklarisana funkcija "+ currentMethod.getName() + " sa "+ currentMethod.getLevel()+" ulazna parametra" , null);
+
+		  Tab.chainLocalSymbols(methodDecl.getMethodTypeName().obj);
+		  currentMethod = null;
+		 // returnFound= false;
+		  Tab.closeScope(); 
+
+		/*
+		  if(!returnFound && currentMethod.getType() != Tab.noType){
+			report_error("Semanticka greska na liniji " + methodDecl.getLine() + ": funkcija " + currentMethod.getName() + " nema return iskaz!", null);
+    	}
+		
+		*/
+	  }
+	  
+	  // (ReturnMethod) Type:returnType IDENT:methodName 
+	  public void visit (ReturnMethod returnMethod) {
+		  returnMethod.obj = Tab.insert(Obj.Meth, returnMethod.getMethodName(), returnMethod.getType().struct);
+		  currentMethod = returnMethod.obj;
+		  Tab.openScope();
+		  report_info("Deklarisana funkcija "+ returnMethod.getMethodName() + " povratna vrednost je tipa "+ returnMethod.getType().getTypeName(), returnMethod);
+	  }
+	  
+	  // (VoidMethod) VOID IDENT:methodName
+	  public void visit (VoidMethod voidMethod) {
+		  voidMethod.obj = Tab.insert(Obj.Meth, voidMethod.getMethodName(), Tab.noType );
+		  currentMethod = voidMethod.obj;
+		  methodArguments = 0;
+		  Tab.openScope();
+		  report_info("Deklarisana funkcija "+ voidMethod.getMethodName() + " povratna vrednost je tipa VOID", voidMethod);
+	  }
+	  
+	  // (OneParameter) Type:argumentType IDENT:argumentName ArrayBrackets:isArray ;
+	  public void visit (OneParameter oneParameter) {
+		  methodArguments++;
+		  if (oneParameter.getArrayBrackets() instanceof HasArrayBrackets) {
+			  // Array argument
+			  oneParameter.obj = Tab.insert(Obj.Var, oneParameter.getArgumentName(), new Struct(Struct.Array, oneParameter.getType().struct));
+			  report_info(methodArguments+". argument "+ oneParameter.getArgumentName()+" niz tipa "+oneParameter.getType().getTypeName(), oneParameter);
 
 		  }
-		  type.struct = objType.getType();
-		  
+		  else {
+			  // Variable argument
+			  oneParameter.obj = Tab.insert(Obj.Var, oneParameter.getArgumentName(), oneParameter.getType().struct);
+			  report_info(methodArguments+". argument "+ oneParameter.getArgumentName()+" tipa "+oneParameter.getType().getTypeName(), oneParameter);
+
+		  }
 	  }
-	 
+	  
 }

@@ -63,7 +63,6 @@ nonterminal VariablesList VariablesList;
 nonterminal ArrayBrackets ArrayBrackets;
 nonterminal MethodDeclList MethodDeclList;
 nonterminal MethodDecl MethodDecl;
-nonterminal MethodType MethodType;
 nonterminal MethodParameterList MethodParameterList;
 nonterminal FormPars FormPars;
 nonterminal MethodVariableList MethodVariableList;
@@ -101,7 +100,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant;
  
 
@@ -165,9 +164,9 @@ MethodDeclList ::= (MethodDeclarations) MethodDeclList:M1 MethodDecl:M2 {: RESUL
 				(NoMethods) {: RESULT=new NoMethods(); :} /*epsilon*/
 				;
 
-MethodDecl ::= (MethodDecl) MethodType:M1 IDENT:I2 LPAREN MethodParameterList:M3 RPAREN MethodVariableList:M4 LBRACE MethodStatementList:M5 RBRACE {: RESULT=new MethodDecl(M1, I2, M3, M4, M5); RESULT.setLine(M1left); :};
+MethodDecl ::= (MethodDecl) MethodTypeName:M1 LPAREN MethodParameterList:M2 RPAREN MethodVariableList:M3 LBRACE MethodStatementList:M4 RBRACE {: RESULT=new MethodDecl(M1, M2, M3, M4); RESULT.setLine(M1left); :};
 
-MethodType ::= (ReturnMethodType) Type:T1 {: RESULT=new ReturnMethodType(T1); RESULT.setLine(T1left); :} | (TypeVoid) VOID {: RESULT=new TypeVoid(); :} ;
+MethodTypeName ::= (ReturnMethod) Type:returnType IDENT:methodName {: RESULT=new ReturnMethod(returnType, methodName); RESULT.setLine(returnTypeleft); :} | (VoidMethod) VOID IDENT:methodName {: RESULT=new VoidMethod(methodName); RESULT.setLine(methodNameleft); :};
 
 MethodParameterList ::= (MethodParameters) FormPars:F1 {: RESULT=new MethodParameters(F1); RESULT.setLine(F1left); :} 
 					|
@@ -176,12 +175,14 @@ MethodParameterList ::= (MethodParameters) FormPars:F1 {: RESULT=new MethodParam
 					(FormalParametersListError) error*/
 					;
 					
-FormPars ::= (FormalParameters) FormPars:F1 COMMA Type:T2 IDENT:I3 ArrayBrackets:A4 {: RESULT=new FormalParameters(F1, T2, I3, A4); RESULT.setLine(F1left); :}
+FormPars ::= (FormalParameters) FormPars:F1 COMMA OneParameter:O2 {: RESULT=new FormalParameters(F1, O2); RESULT.setLine(F1left); :}
 			|
-			(OneFormalParameter) Type:T1 IDENT:I2 ArrayBrackets:A3 {: RESULT=new OneFormalParameter(T1, I2, A3); RESULT.setLine(T1left); :}
+			(OneFormalParameter) OneParameter:O1 {: RESULT=new OneFormalParameter(O1); RESULT.setLine(O1left); :}
 			/*|
 			(FormalParameterError) error */
 			;
+
+OneParameter ::= (OneParameter) Type:argumentType IDENT:argumentName ArrayBrackets:isArray {: RESULT=new OneParameter(argumentType, argumentName, isArray); RESULT.setLine(argumentTypeleft); :} ;			
 
 /*Parameter ::= (OneParameter)Type IDENT ArrayBrackets
 				|

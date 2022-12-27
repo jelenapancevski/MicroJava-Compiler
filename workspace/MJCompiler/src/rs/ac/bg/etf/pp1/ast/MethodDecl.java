@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2022 16:55:57
+// 27/11/2022 18:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,16 +9,14 @@ public class MethodDecl implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private MethodType MethodType;
-    private String I2;
+    private MethodTypeName MethodTypeName;
     private MethodParameterList MethodParameterList;
     private MethodVariableList MethodVariableList;
     private MethodStatementList MethodStatementList;
 
-    public MethodDecl (MethodType MethodType, String I2, MethodParameterList MethodParameterList, MethodVariableList MethodVariableList, MethodStatementList MethodStatementList) {
-        this.MethodType=MethodType;
-        if(MethodType!=null) MethodType.setParent(this);
-        this.I2=I2;
+    public MethodDecl (MethodTypeName MethodTypeName, MethodParameterList MethodParameterList, MethodVariableList MethodVariableList, MethodStatementList MethodStatementList) {
+        this.MethodTypeName=MethodTypeName;
+        if(MethodTypeName!=null) MethodTypeName.setParent(this);
         this.MethodParameterList=MethodParameterList;
         if(MethodParameterList!=null) MethodParameterList.setParent(this);
         this.MethodVariableList=MethodVariableList;
@@ -27,20 +25,12 @@ public class MethodDecl implements SyntaxNode {
         if(MethodStatementList!=null) MethodStatementList.setParent(this);
     }
 
-    public MethodType getMethodType() {
-        return MethodType;
+    public MethodTypeName getMethodTypeName() {
+        return MethodTypeName;
     }
 
-    public void setMethodType(MethodType MethodType) {
-        this.MethodType=MethodType;
-    }
-
-    public String getI2() {
-        return I2;
-    }
-
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setMethodTypeName(MethodTypeName MethodTypeName) {
+        this.MethodTypeName=MethodTypeName;
     }
 
     public MethodParameterList getMethodParameterList() {
@@ -88,7 +78,7 @@ public class MethodDecl implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(MethodType!=null) MethodType.accept(visitor);
+        if(MethodTypeName!=null) MethodTypeName.accept(visitor);
         if(MethodParameterList!=null) MethodParameterList.accept(visitor);
         if(MethodVariableList!=null) MethodVariableList.accept(visitor);
         if(MethodStatementList!=null) MethodStatementList.accept(visitor);
@@ -96,14 +86,14 @@ public class MethodDecl implements SyntaxNode {
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(MethodType!=null) MethodType.traverseTopDown(visitor);
+        if(MethodTypeName!=null) MethodTypeName.traverseTopDown(visitor);
         if(MethodParameterList!=null) MethodParameterList.traverseTopDown(visitor);
         if(MethodVariableList!=null) MethodVariableList.traverseTopDown(visitor);
         if(MethodStatementList!=null) MethodStatementList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(MethodType!=null) MethodType.traverseBottomUp(visitor);
+        if(MethodTypeName!=null) MethodTypeName.traverseBottomUp(visitor);
         if(MethodParameterList!=null) MethodParameterList.traverseBottomUp(visitor);
         if(MethodVariableList!=null) MethodVariableList.traverseBottomUp(visitor);
         if(MethodStatementList!=null) MethodStatementList.traverseBottomUp(visitor);
@@ -115,13 +105,10 @@ public class MethodDecl implements SyntaxNode {
         buffer.append(tab);
         buffer.append("MethodDecl(\n");
 
-        if(MethodType!=null)
-            buffer.append(MethodType.toString("  "+tab));
+        if(MethodTypeName!=null)
+            buffer.append(MethodTypeName.toString("  "+tab));
         else
             buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         if(MethodParameterList!=null)

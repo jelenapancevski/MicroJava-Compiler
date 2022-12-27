@@ -54,7 +54,7 @@ scan with {:
 :}
 
 
-nonterminal DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodType, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Expr, AssignmentExpr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Relop, Addop, Mulop;
+nonterminal DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Expr, AssignmentExpr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Relop, Addop, Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NEW, LPAREN, RPAREN, COMMA, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
 /*terminal String IDENT;
 terminal Integer NUMCONST; */
@@ -68,7 +68,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant;
  
 
@@ -132,9 +132,9 @@ MethodDeclList ::= (MethodDeclarations) MethodDeclList MethodDecl
 				(NoMethods) /*epsilon*/
 				;
 
-MethodDecl ::= (MethodDecl) MethodType IDENT LPAREN MethodParameterList RPAREN MethodVariableList LBRACE MethodStatementList RBRACE;
+MethodDecl ::= (MethodDecl) MethodTypeName LPAREN MethodParameterList RPAREN MethodVariableList LBRACE MethodStatementList RBRACE;
 
-MethodType ::= (ReturnMethodType) Type | (TypeVoid) VOID ;
+MethodTypeName ::= (ReturnMethod) Type:returnType IDENT:methodName | (VoidMethod) VOID IDENT:methodName;
 
 MethodParameterList ::= (MethodParameters) FormPars 
 					|
@@ -143,12 +143,14 @@ MethodParameterList ::= (MethodParameters) FormPars
 					(FormalParametersListError) error*/
 					;
 					
-FormPars ::= (FormalParameters) FormPars COMMA Type IDENT ArrayBrackets
+FormPars ::= (FormalParameters) FormPars COMMA OneParameter
 			|
-			(OneFormalParameter) Type IDENT ArrayBrackets
+			(OneFormalParameter) OneParameter
 			/*|
 			(FormalParameterError) error */
 			;
+
+OneParameter ::= (OneParameter) Type:argumentType IDENT:argumentName ArrayBrackets:isArray ;			
 
 /*Parameter ::= (OneParameter)Type IDENT ArrayBrackets
 				|

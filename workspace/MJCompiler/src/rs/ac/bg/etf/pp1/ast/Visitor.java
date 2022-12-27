@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2022 16:55:57
+// 27/11/2022 18:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,13 +9,12 @@ public interface Visitor {
 
     public void visit(DeclarationList DeclarationList);
     public void visit(ArrayBrackets ArrayBrackets);
-    public void visit(StatementsList StatementsList);
     public void visit(Mulop Mulop);
+    public void visit(StatementsList StatementsList);
     public void visit(ConstantList ConstantList);
     public void visit(Constant Constant);
     public void visit(Relop Relop);
     public void visit(TermList TermList);
-    public void visit(MethodType MethodType);
     public void visit(MethodStatementList MethodStatementList);
     public void visit(ActParams ActParams);
     public void visit(FactorList FactorList);
@@ -29,6 +28,7 @@ public interface Visitor {
     public void visit(Expr Expr);
     public void visit(ActPars ActPars);
     public void visit(PrintConstant PrintConstant);
+    public void visit(MethodTypeName MethodTypeName);
     public void visit(DesignatorList DesignatorList);
     public void visit(DesignatorStatement DesignatorStatement);
     public void visit(MethodVariableList MethodVariableList);
@@ -111,12 +111,13 @@ public interface Visitor {
     public void visit(MethodStatements MethodStatements);
     public void visit(NoMethodVariables NoMethodVariables);
     public void visit(MethodVariables MethodVariables);
+    public void visit(OneParameter OneParameter);
     public void visit(OneFormalParameter OneFormalParameter);
     public void visit(FormalParameters FormalParameters);
     public void visit(NoMethodParameters NoMethodParameters);
     public void visit(MethodParameters MethodParameters);
-    public void visit(TypeVoid TypeVoid);
-    public void visit(ReturnMethodType ReturnMethodType);
+    public void visit(VoidMethod VoidMethod);
+    public void visit(ReturnMethod ReturnMethod);
     public void visit(MethodDecl MethodDecl);
     public void visit(NoMethods NoMethods);
     public void visit(MethodDeclarations MethodDeclarations);

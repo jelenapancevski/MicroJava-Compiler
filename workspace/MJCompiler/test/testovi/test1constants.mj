@@ -13,7 +13,7 @@ program test301
 	char nizch[];
 	
 {
-	void main()	
+	void main(int s, bool c[])	
 		int bodovi;
 		bool bt;
 	{

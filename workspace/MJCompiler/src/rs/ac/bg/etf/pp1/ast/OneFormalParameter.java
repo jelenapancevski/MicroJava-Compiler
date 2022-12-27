@@ -1,46 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2022 16:55:57
+// 27/11/2022 18:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class OneFormalParameter extends FormPars {
 
-    private Type Type;
-    private String I2;
-    private ArrayBrackets ArrayBrackets;
+    private OneParameter OneParameter;
 
-    public OneFormalParameter (Type Type, String I2, ArrayBrackets ArrayBrackets) {
-        this.Type=Type;
-        if(Type!=null) Type.setParent(this);
-        this.I2=I2;
-        this.ArrayBrackets=ArrayBrackets;
-        if(ArrayBrackets!=null) ArrayBrackets.setParent(this);
+    public OneFormalParameter (OneParameter OneParameter) {
+        this.OneParameter=OneParameter;
+        if(OneParameter!=null) OneParameter.setParent(this);
     }
 
-    public Type getType() {
-        return Type;
+    public OneParameter getOneParameter() {
+        return OneParameter;
     }
 
-    public void setType(Type Type) {
-        this.Type=Type;
-    }
-
-    public String getI2() {
-        return I2;
-    }
-
-    public void setI2(String I2) {
-        this.I2=I2;
-    }
-
-    public ArrayBrackets getArrayBrackets() {
-        return ArrayBrackets;
-    }
-
-    public void setArrayBrackets(ArrayBrackets ArrayBrackets) {
-        this.ArrayBrackets=ArrayBrackets;
+    public void setOneParameter(OneParameter OneParameter) {
+        this.OneParameter=OneParameter;
     }
 
     public void accept(Visitor visitor) {
@@ -48,19 +27,16 @@ public class OneFormalParameter extends FormPars {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Type!=null) Type.accept(visitor);
-        if(ArrayBrackets!=null) ArrayBrackets.accept(visitor);
+        if(OneParameter!=null) OneParameter.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Type!=null) Type.traverseTopDown(visitor);
-        if(ArrayBrackets!=null) ArrayBrackets.traverseTopDown(visitor);
+        if(OneParameter!=null) OneParameter.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Type!=null) Type.traverseBottomUp(visitor);
-        if(ArrayBrackets!=null) ArrayBrackets.traverseBottomUp(visitor);
+        if(OneParameter!=null) OneParameter.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -69,17 +45,8 @@ public class OneFormalParameter extends FormPars {
         buffer.append(tab);
         buffer.append("OneFormalParameter(\n");
 
-        if(Type!=null)
-            buffer.append(Type.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+I2);
-        buffer.append("\n");
-
-        if(ArrayBrackets!=null)
-            buffer.append(ArrayBrackets.toString("  "+tab));
+        if(OneParameter!=null)
+            buffer.append(OneParameter.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
