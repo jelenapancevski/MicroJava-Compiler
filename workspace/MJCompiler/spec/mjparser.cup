@@ -54,10 +54,9 @@ scan with {:
 :}
 
 
-nonterminal DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, Expr, AssignmentExpr, TermList, Term, FactorList, Factor, ActParams, ActPars, Condition, CondTerm, CondFact, Designator, Relop, Addop, Mulop;
+nonterminal ForEach, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, AssignmentExpr, ActParams, ActPars, CondTerm, CondFact, Relop, Addop, Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NEW, LPAREN, RPAREN, COMMA, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
-/*terminal String IDENT;
-terminal Integer NUMCONST; */
+
 
 terminal IF, ELSE, WHILE, BREAK, CONTINUE, RETURN, FOREACH, ARROW;
 nonterminal StatementsList;
@@ -68,8 +67,8 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition;
  
 
 precedence left ELSE;
@@ -177,7 +176,7 @@ Statement ::= (DesignatorStmt) DesignatorStatement SEMICOLON
 			 	|
 			 	(IfStatement) IF LPAREN Condition RPAREN Statement
 			 	|
-			 	(WhileStatement) WHILE LPAREN Condition RPAREN Statement
+			 	(WhileStatement) While LPAREN Condition RPAREN Statement
 			 	|
 			 	(BreakStatement) BREAK SEMICOLON
 			 	|
@@ -187,10 +186,14 @@ Statement ::= (DesignatorStmt) DesignatorStatement SEMICOLON
 			 	|
 			 	(ReturnExpression) RETURN Expr SEMICOLON
 			 	|
-			 	(ForEachStatement) Designator DOT FOREACH LPAREN IDENT ARROW Statement RPAREN SEMICOLON
+			 	(ForEachStatement) Designator DOT ForEach LPAREN IDENT:ident ARROW Statement RPAREN SEMICOLON
 			 	|
 			 	(MultipleStatements) LBRACE StatementsList RBRACE
 			 	;
+			 	
+While ::= (WhileLoop) WHILE;
+ 
+ForEach ::= (ForEachLoop) FOREACH;
 			 	
 StatementsList ::= (Statements) StatementsList Statement
 				|
@@ -208,7 +211,7 @@ DesignatorStatement ::= (ValueIncrement) Designator INCREMENT
 						|
 						(Assignment) Designator EQUAL AssignmentExpr
 						|
-						(FuncionCall) Designator LPAREN ActParams RPAREN
+						(FuncionCall) FunctionName LPAREN ActParams RPAREN
 						|
 						(MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL Designator
 						|
@@ -238,9 +241,9 @@ Term ::= (Term) FactorList ;
 
 FactorList ::= (Factors) FactorList Mulop Factor | (OneFactor) Factor ;
 
-Factor ::= (FactorNumber) NUMCONST 
+Factor ::= (FactorNumber) NUMCONST
 			|
-			(FactorCharacter) CHARCONST 
+			(FactorCharacter) CHARCONST
 			|
 			(FactorBoolean) BOOLCONST
 			|
@@ -248,23 +251,26 @@ Factor ::= (FactorNumber) NUMCONST
 			|
 			(ArrayCreation) NEW Type LBRACKET Expr RBRACKET
 			|
-			(ObjectCreation) NEW Type LPAREN ActParams RPAREN
-			|
-			(FunctionCall) Designator LPAREN ActParams RPAREN
+			/*(ObjectCreation) NEW Type LPAREN ActParams RPAREN
+			|*/
+			(FunctionCall) FunctionName LPAREN ActParams RPAREN
 			|
 			(FactorDesignator) Designator
 			;
+
+FunctionName ::= (FunctionName) Designator ; 
 			
 ActParams ::= (ActualParams) ActPars 
 				|
 				(NoActualParams) /* epsilon */
 				;
 
-ActPars ::= (ActParsList) ActPars COMMA Expr 
+ActPars ::= (ActParsList) ActPars COMMA Parameter 
 			|
-			(OneActParameter) Expr
+			(OneActParameter) Parameter
 			;	
-			
+Parameter ::= (Parameter) Expr ;
+
 Condition ::= (Conditions) Condition OR CondTerm 
 			  |
 			  (OneCondition) CondTerm 
@@ -275,7 +281,7 @@ CondTerm ::= (ConditionTerms) CondTerm AND CondFact
 			(ConditionTerm) CondFact
 			;
 
-CondFact ::= (ConditionFacts) Expr Relop Expr 
+CondFact ::= (ConditionFacts) Expr:expr1 Relop Expr:expr2 
 			|
 			(ConditionFact) Expr
 			;			
@@ -284,9 +290,9 @@ CondFact ::= (ConditionFacts) Expr Relop Expr
 Designator := ident [ "[" Expr "]" ]. 
 */
 						
-Designator ::= (OneDesignator) IDENT 
+Designator ::= (OneDesignator) IDENT:designatorName 
 				| 
-				(ArrayDesignator) IDENT LBRACKET Expr RBRACKET 
+				(ArrayDesignator) IDENT:designatorName LBRACKET Expr RBRACKET 
 				;
 
 Relop ::= (IsEqual) ISEQUAL | (NotEqual) NOTEQUAL | (Greater) GT | (GreaterEqual) GTE | (LessThan) LT | (LessThanEqual) LTE ;

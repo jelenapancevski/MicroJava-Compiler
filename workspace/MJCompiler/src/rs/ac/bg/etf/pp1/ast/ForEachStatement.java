@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/11/2022 18:16:49
+// 28/11/2022 3:56:18
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,16 @@ package rs.ac.bg.etf.pp1.ast;
 public class ForEachStatement extends Statement {
 
     private Designator Designator;
-    private String I2;
+    private ForEach ForEach;
+    private String ident;
     private Statement Statement;
 
-    public ForEachStatement (Designator Designator, String I2, Statement Statement) {
+    public ForEachStatement (Designator Designator, ForEach ForEach, String ident, Statement Statement) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
-        this.I2=I2;
+        this.ForEach=ForEach;
+        if(ForEach!=null) ForEach.setParent(this);
+        this.ident=ident;
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
     }
@@ -27,12 +30,20 @@ public class ForEachStatement extends Statement {
         this.Designator=Designator;
     }
 
-    public String getI2() {
-        return I2;
+    public ForEach getForEach() {
+        return ForEach;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setForEach(ForEach ForEach) {
+        this.ForEach=ForEach;
+    }
+
+    public String getIdent() {
+        return ident;
+    }
+
+    public void setIdent(String ident) {
+        this.ident=ident;
     }
 
     public Statement getStatement() {
@@ -49,17 +60,20 @@ public class ForEachStatement extends Statement {
 
     public void childrenAccept(Visitor visitor) {
         if(Designator!=null) Designator.accept(visitor);
+        if(ForEach!=null) ForEach.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Designator!=null) Designator.traverseTopDown(visitor);
+        if(ForEach!=null) ForEach.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Designator!=null) Designator.traverseBottomUp(visitor);
+        if(ForEach!=null) ForEach.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -75,7 +89,13 @@ public class ForEachStatement extends Statement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        if(ForEach!=null)
+            buffer.append(ForEach.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(" "+tab+ident);
         buffer.append("\n");
 
         if(Statement!=null)

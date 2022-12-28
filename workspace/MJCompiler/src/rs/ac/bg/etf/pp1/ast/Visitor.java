@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/11/2022 18:16:49
+// 28/11/2022 3:56:18
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -23,6 +23,7 @@ public interface Visitor {
     public void visit(CondTerm CondTerm);
     public void visit(VariablesList VariablesList);
     public void visit(Designator Designator);
+    public void visit(While While);
     public void visit(Condition Condition);
     public void visit(AssignmentExpr AssignmentExpr);
     public void visit(Expr Expr);
@@ -38,6 +39,7 @@ public interface Visitor {
     public void visit(CondFact CondFact);
     public void visit(Declaration Declaration);
     public void visit(MethodDeclList MethodDeclList);
+    public void visit(ForEach ForEach);
     public void visit(FormPars FormPars);
     public void visit(MethodParameterList MethodParameterList);
     public void visit(Type Type);
@@ -60,13 +62,14 @@ public interface Visitor {
     public void visit(ConditionTerms ConditionTerms);
     public void visit(OneCondition OneCondition);
     public void visit(Conditions Conditions);
+    public void visit(Parameter Parameter);
     public void visit(OneActParameter OneActParameter);
     public void visit(ActParsList ActParsList);
     public void visit(NoActualParams NoActualParams);
     public void visit(ActualParams ActualParams);
+    public void visit(FunctionName FunctionName);
     public void visit(FactorDesignator FactorDesignator);
     public void visit(FunctionCall FunctionCall);
-    public void visit(ObjectCreation ObjectCreation);
     public void visit(ArrayCreation ArrayCreation);
     public void visit(BracketExpression BracketExpression);
     public void visit(FactorBoolean FactorBoolean);
@@ -95,6 +98,8 @@ public interface Visitor {
     public void visit(HasPrintConstant HasPrintConstant);
     public void visit(NoStatement NoStatement);
     public void visit(Statements Statements);
+    public void visit(ForEachLoop ForEachLoop);
+    public void visit(WhileLoop WhileLoop);
     public void visit(MultipleStatements MultipleStatements);
     public void visit(ForEachStatement ForEachStatement);
     public void visit(ReturnExpression ReturnExpression);

@@ -1,20 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/11/2022 18:16:49
+// 28/11/2022 3:56:18
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class WhileStatement extends Statement {
 
+    private While While;
     private Condition Condition;
     private Statement Statement;
 
-    public WhileStatement (Condition Condition, Statement Statement) {
+    public WhileStatement (While While, Condition Condition, Statement Statement) {
+        this.While=While;
+        if(While!=null) While.setParent(this);
         this.Condition=Condition;
         if(Condition!=null) Condition.setParent(this);
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
+    }
+
+    public While getWhile() {
+        return While;
+    }
+
+    public void setWhile(While While) {
+        this.While=While;
     }
 
     public Condition getCondition() {
@@ -38,17 +49,20 @@ public class WhileStatement extends Statement {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(While!=null) While.accept(visitor);
         if(Condition!=null) Condition.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(While!=null) While.traverseTopDown(visitor);
         if(Condition!=null) Condition.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(While!=null) While.traverseBottomUp(visitor);
         if(Condition!=null) Condition.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
         accept(visitor);
@@ -58,6 +72,12 @@ public class WhileStatement extends Statement {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("WhileStatement(\n");
+
+        if(While!=null)
+            buffer.append(While.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(Condition!=null)
             buffer.append(Condition.toString("  "+tab));

@@ -54,6 +54,8 @@ scan with {:
 :}
 
 
+nonterminal ForEach ForEach;
+nonterminal While While;
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
 nonterminal ConstDecl ConstDecl;
@@ -72,24 +74,16 @@ nonterminal PrintConstant PrintConstant;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesignatorList DesignatorList;
 nonterminal DesignatorListElement DesignatorListElement;
-nonterminal Expr Expr;
 nonterminal AssignmentExpr AssignmentExpr;
-nonterminal TermList TermList;
-nonterminal Term Term;
-nonterminal FactorList FactorList;
-nonterminal Factor Factor;
 nonterminal ActParams ActParams;
 nonterminal ActPars ActPars;
-nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
-nonterminal Designator Designator;
 nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NEW, LPAREN, RPAREN, COMMA, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
-/*terminal String IDENT;
-terminal Integer NUMCONST; */
+
 
 terminal IF, ELSE, WHILE, BREAK, CONTINUE, RETURN, FOREACH, ARROW;
 nonterminal StatementsList StatementsList;
@@ -100,8 +94,8 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition;
  
 
 precedence left ELSE;
@@ -209,7 +203,7 @@ Statement ::= (DesignatorStmt) DesignatorStatement:D1 SEMICOLON {: RESULT=new De
 			 	|
 			 	(IfStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new IfStatement(C1, S2); RESULT.setLine(C1left); :}
 			 	|
-			 	(WhileStatement) WHILE LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new WhileStatement(C1, S2); RESULT.setLine(C1left); :}
+			 	(WhileStatement) While:W1 LPAREN Condition:C2 RPAREN Statement:S3 {: RESULT=new WhileStatement(W1, C2, S3); RESULT.setLine(W1left); :}
 			 	|
 			 	(BreakStatement) BREAK SEMICOLON {: RESULT=new BreakStatement(); :}
 			 	|
@@ -219,10 +213,14 @@ Statement ::= (DesignatorStmt) DesignatorStatement:D1 SEMICOLON {: RESULT=new De
 			 	|
 			 	(ReturnExpression) RETURN Expr:E1 SEMICOLON {: RESULT=new ReturnExpression(E1); RESULT.setLine(E1left); :}
 			 	|
-			 	(ForEachStatement) Designator:D1 DOT FOREACH LPAREN IDENT:I2 ARROW Statement:S3 RPAREN SEMICOLON {: RESULT=new ForEachStatement(D1, I2, S3); RESULT.setLine(D1left); :}
+			 	(ForEachStatement) Designator:D1 DOT ForEach:F2 LPAREN IDENT:ident ARROW Statement:S3 RPAREN SEMICOLON {: RESULT=new ForEachStatement(D1, F2, ident, S3); RESULT.setLine(D1left); :}
 			 	|
 			 	(MultipleStatements) LBRACE StatementsList:S1 RBRACE {: RESULT=new MultipleStatements(S1); RESULT.setLine(S1left); :}
 			 	;
+			 	
+While ::= (WhileLoop) WHILE {: RESULT=new WhileLoop(); :};
+ 
+ForEach ::= (ForEachLoop) FOREACH {: RESULT=new ForEachLoop(); :};
 			 	
 StatementsList ::= (Statements) StatementsList:S1 Statement:S2 {: RESULT=new Statements(S1, S2); RESULT.setLine(S1left); :}
 				|
@@ -240,7 +238,7 @@ DesignatorStatement ::= (ValueIncrement) Designator:D1 INCREMENT {: RESULT=new V
 						|
 						(Assignment) Designator:D1 EQUAL AssignmentExpr:A2 {: RESULT=new Assignment(D1, A2); RESULT.setLine(D1left); :}
 						|
-						(FuncionCall) Designator:D1 LPAREN ActParams:A2 RPAREN {: RESULT=new FuncionCall(D1, A2); RESULT.setLine(D1left); :}
+						(FuncionCall) FunctionName:F1 LPAREN ActParams:A2 RPAREN {: RESULT=new FuncionCall(F1, A2); RESULT.setLine(F1left); :}
 						|
 						(MultipleAssignment) LBRACKET DesignatorList:D1 RBRACKET EQUAL Designator:D2 {: RESULT=new MultipleAssignment(D1, D2); RESULT.setLine(D1left); :}
 						|
@@ -270,9 +268,9 @@ Term ::= (Term) FactorList:F1 {: RESULT=new Term(F1); RESULT.setLine(F1left); :}
 
 FactorList ::= (Factors) FactorList:F1 Mulop:M2 Factor:F3 {: RESULT=new Factors(F1, M2, F3); RESULT.setLine(F1left); :} | (OneFactor) Factor:F1 {: RESULT=new OneFactor(F1); RESULT.setLine(F1left); :} ;
 
-Factor ::= (FactorNumber) NUMCONST:N1 {: RESULT=new FactorNumber(N1); RESULT.setLine(N1left); :} 
+Factor ::= (FactorNumber) NUMCONST:N1 {: RESULT=new FactorNumber(N1); RESULT.setLine(N1left); :}
 			|
-			(FactorCharacter) CHARCONST:C1 {: RESULT=new FactorCharacter(C1); RESULT.setLine(C1left); :} 
+			(FactorCharacter) CHARCONST:C1 {: RESULT=new FactorCharacter(C1); RESULT.setLine(C1left); :}
 			|
 			(FactorBoolean) BOOLCONST:B1 {: RESULT=new FactorBoolean(B1); RESULT.setLine(B1left); :}
 			|
@@ -280,23 +278,26 @@ Factor ::= (FactorNumber) NUMCONST:N1 {: RESULT=new FactorNumber(N1); RESULT.set
 			|
 			(ArrayCreation) NEW Type:T1 LBRACKET Expr:E2 RBRACKET {: RESULT=new ArrayCreation(T1, E2); RESULT.setLine(T1left); :}
 			|
-			(ObjectCreation) NEW Type:T1 LPAREN ActParams:A2 RPAREN {: RESULT=new ObjectCreation(T1, A2); RESULT.setLine(T1left); :}
-			|
-			(FunctionCall) Designator:D1 LPAREN ActParams:A2 RPAREN {: RESULT=new FunctionCall(D1, A2); RESULT.setLine(D1left); :}
+			/*(ObjectCreation) NEW Type LPAREN ActParams RPAREN
+			|*/
+			(FunctionCall) FunctionName:F1 LPAREN ActParams:A2 RPAREN {: RESULT=new FunctionCall(F1, A2); RESULT.setLine(F1left); :}
 			|
 			(FactorDesignator) Designator:D1 {: RESULT=new FactorDesignator(D1); RESULT.setLine(D1left); :}
 			;
+
+FunctionName ::= (FunctionName) Designator:D1 {: RESULT=new FunctionName(D1); RESULT.setLine(D1left); :} ; 
 			
 ActParams ::= (ActualParams) ActPars:A1 {: RESULT=new ActualParams(A1); RESULT.setLine(A1left); :} 
 				|
 				(NoActualParams) {: RESULT=new NoActualParams(); :} /* epsilon */
 				;
 
-ActPars ::= (ActParsList) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParsList(A1, E2); RESULT.setLine(A1left); :} 
+ActPars ::= (ActParsList) ActPars:A1 COMMA Parameter:P2 {: RESULT=new ActParsList(A1, P2); RESULT.setLine(A1left); :} 
 			|
-			(OneActParameter) Expr:E1 {: RESULT=new OneActParameter(E1); RESULT.setLine(E1left); :}
+			(OneActParameter) Parameter:P1 {: RESULT=new OneActParameter(P1); RESULT.setLine(P1left); :}
 			;	
-			
+Parameter ::= (Parameter) Expr:E1 {: RESULT=new Parameter(E1); RESULT.setLine(E1left); :} ;
+
 Condition ::= (Conditions) Condition:C1 OR CondTerm:C2 {: RESULT=new Conditions(C1, C2); RESULT.setLine(C1left); :} 
 			  |
 			  (OneCondition) CondTerm:C1 {: RESULT=new OneCondition(C1); RESULT.setLine(C1left); :} 
@@ -307,7 +308,7 @@ CondTerm ::= (ConditionTerms) CondTerm:C1 AND CondFact:C2 {: RESULT=new Conditio
 			(ConditionTerm) CondFact:C1 {: RESULT=new ConditionTerm(C1); RESULT.setLine(C1left); :}
 			;
 
-CondFact ::= (ConditionFacts) Expr:E1 Relop:R2 Expr:E3 {: RESULT=new ConditionFacts(E1, R2, E3); RESULT.setLine(E1left); :} 
+CondFact ::= (ConditionFacts) Expr:expr1 Relop:R1 Expr:expr2 {: RESULT=new ConditionFacts(expr1, R1, expr2); RESULT.setLine(expr1left); :} 
 			|
 			(ConditionFact) Expr:E1 {: RESULT=new ConditionFact(E1); RESULT.setLine(E1left); :}
 			;			
@@ -316,9 +317,9 @@ CondFact ::= (ConditionFacts) Expr:E1 Relop:R2 Expr:E3 {: RESULT=new ConditionFa
 Designator := ident [ "[" Expr "]" ]. 
 */
 						
-Designator ::= (OneDesignator) IDENT:I1 {: RESULT=new OneDesignator(I1); RESULT.setLine(I1left); :} 
+Designator ::= (OneDesignator) IDENT:designatorName {: RESULT=new OneDesignator(designatorName); RESULT.setLine(designatorNameleft); :} 
 				| 
-				(ArrayDesignator) IDENT:I1 LBRACKET Expr:E2 RBRACKET {: RESULT=new ArrayDesignator(I1, E2); RESULT.setLine(I1left); :} 
+				(ArrayDesignator) IDENT:designatorName LBRACKET Expr:E1 RBRACKET {: RESULT=new ArrayDesignator(designatorName, E1); RESULT.setLine(designatorNameleft); :} 
 				;
 
 Relop ::= (IsEqual) ISEQUAL {: RESULT=new IsEqual(); :} | (NotEqual) NOTEQUAL {: RESULT=new NotEqual(); :} | (Greater) GT {: RESULT=new Greater(); :} | (GreaterEqual) GTE {: RESULT=new GreaterEqual(); :} | (LessThan) LT {: RESULT=new LessThan(); :} | (LessThanEqual) LTE {: RESULT=new LessThanEqual(); :} ;

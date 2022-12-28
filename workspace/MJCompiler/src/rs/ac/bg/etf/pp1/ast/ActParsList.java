@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/11/2022 18:16:49
+// 28/11/2022 3:56:18
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ActParsList extends ActPars {
 
     private ActPars ActPars;
-    private Expr Expr;
+    private Parameter Parameter;
 
-    public ActParsList (ActPars ActPars, Expr Expr) {
+    public ActParsList (ActPars ActPars, Parameter Parameter) {
         this.ActPars=ActPars;
         if(ActPars!=null) ActPars.setParent(this);
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+        this.Parameter=Parameter;
+        if(Parameter!=null) Parameter.setParent(this);
     }
 
     public ActPars getActPars() {
@@ -25,12 +25,12 @@ public class ActParsList extends ActPars {
         this.ActPars=ActPars;
     }
 
-    public Expr getExpr() {
-        return Expr;
+    public Parameter getParameter() {
+        return Parameter;
     }
 
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setParameter(Parameter Parameter) {
+        this.Parameter=Parameter;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class ActParsList extends ActPars {
 
     public void childrenAccept(Visitor visitor) {
         if(ActPars!=null) ActPars.accept(visitor);
-        if(Expr!=null) Expr.accept(visitor);
+        if(Parameter!=null) Parameter.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(ActPars!=null) ActPars.traverseTopDown(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(Parameter!=null) Parameter.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(ActPars!=null) ActPars.traverseBottomUp(visitor);
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(Parameter!=null) Parameter.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class ActParsList extends ActPars {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(Parameter!=null)
+            buffer.append(Parameter.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

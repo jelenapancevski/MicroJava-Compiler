@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/11/2022 18:16:49
+// 28/11/2022 3:56:18
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -23,6 +23,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(CondTerm CondTerm) { }
     public void visit(VariablesList VariablesList) { }
     public void visit(Designator Designator) { }
+    public void visit(While While) { }
     public void visit(Condition Condition) { }
     public void visit(AssignmentExpr AssignmentExpr) { }
     public void visit(Expr Expr) { }
@@ -38,6 +39,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(CondFact CondFact) { }
     public void visit(Declaration Declaration) { }
     public void visit(MethodDeclList MethodDeclList) { }
+    public void visit(ForEach ForEach) { }
     public void visit(FormPars FormPars) { }
     public void visit(MethodParameterList MethodParameterList) { }
     public void visit(Type Type) { visit(); }
@@ -60,13 +62,14 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConditionTerms ConditionTerms) { visit(); }
     public void visit(OneCondition OneCondition) { visit(); }
     public void visit(Conditions Conditions) { visit(); }
+    public void visit(Parameter Parameter) { visit(); }
     public void visit(OneActParameter OneActParameter) { visit(); }
     public void visit(ActParsList ActParsList) { visit(); }
     public void visit(NoActualParams NoActualParams) { visit(); }
     public void visit(ActualParams ActualParams) { visit(); }
+    public void visit(FunctionName FunctionName) { visit(); }
     public void visit(FactorDesignator FactorDesignator) { visit(); }
     public void visit(FunctionCall FunctionCall) { visit(); }
-    public void visit(ObjectCreation ObjectCreation) { visit(); }
     public void visit(ArrayCreation ArrayCreation) { visit(); }
     public void visit(BracketExpression BracketExpression) { visit(); }
     public void visit(FactorBoolean FactorBoolean) { visit(); }
@@ -95,6 +98,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(HasPrintConstant HasPrintConstant) { visit(); }
     public void visit(NoStatement NoStatement) { visit(); }
     public void visit(Statements Statements) { visit(); }
+    public void visit(ForEachLoop ForEachLoop) { visit(); }
+    public void visit(WhileLoop WhileLoop) { visit(); }
     public void visit(MultipleStatements MultipleStatements) { visit(); }
     public void visit(ForEachStatement ForEachStatement) { visit(); }
     public void visit(ReturnExpression ReturnExpression) { visit(); }
