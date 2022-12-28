@@ -1,428 +1,364 @@
-INFO  04:42:45,713 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\testovi\test1sveprovere.mj
-INFO  04:42:45,756 - #2 program
-INFO  04:42:45,756 - #47 test301
-INFO  04:42:45,756 - #5 const
-INFO  04:42:45,757 - #47 int
-INFO  04:42:45,757 - #47 nula
-INFO  04:42:45,758 - #19 =
-INFO  04:42:45,758 - #49 0
-INFO  04:42:45,758 - #15 ,
-INFO  04:42:45,759 - #47 jedan
-INFO  04:42:45,759 - #19 =
-INFO  04:42:45,759 - #49 1
-INFO  04:42:45,759 - #15 ,
-INFO  04:42:45,759 - #47 pet
-INFO  04:42:45,759 - #19 =
-INFO  04:42:45,759 - #49 5
-INFO  04:42:45,759 - #7 ;
-INFO  04:42:45,759 - #5 const
-INFO  04:42:45,760 - #47 bool
-INFO  04:42:45,760 - #47 radi
-INFO  04:42:45,760 - #19 =
-INFO  04:42:45,763 - #50 true
-INFO  04:42:45,763 - #15 ,
-INFO  04:42:45,763 - #47 neradi
-INFO  04:42:45,763 - #19 =
-INFO  04:42:45,763 - #49 2
-INFO  04:42:45,763 - #7 ;
-INFO  04:42:45,763 - #5 const
-INFO  04:42:45,763 - #47 char
-INFO  04:42:45,763 - #47 slovoa
-INFO  04:42:45,764 - #19 =
-INFO  04:42:45,764 - #48 a
-INFO  04:42:45,764 - #15 ,
-INFO  04:42:45,764 - #47 slovob
-INFO  04:42:45,764 - #19 =
-INFO  04:42:45,764 - #49 15
-INFO  04:42:45,764 - #7 ;
-INFO  04:42:45,764 - #5 const
-INFO  04:42:45,764 - #47 char
-INFO  04:42:45,764 - #47 slovob
-INFO  04:42:45,764 - #19 =
-INFO  04:42:45,764 - #48 b
-INFO  04:42:45,764 - #7 ;
-INFO  04:42:45,764 - #47 int
-INFO  04:42:45,765 - #47 niz
-INFO  04:42:45,765 - #17 [
-INFO  04:42:45,765 - #18 ]
-INFO  04:42:45,765 - #15 ,
-INFO  04:42:45,766 - #47 niz2
-INFO  04:42:45,766 - #17 [
-INFO  04:42:45,766 - #18 ]
-INFO  04:42:45,766 - #15 ,
-INFO  04:42:45,766 - #47 a
-INFO  04:42:45,766 - #15 ,
-INFO  04:42:45,767 - #47 b
-INFO  04:42:45,767 - #7 ;
-INFO  04:42:45,767 - #47 char
-INFO  04:42:45,767 - #47 nizch
-INFO  04:42:45,767 - #17 [
-INFO  04:42:45,768 - #18 ]
-INFO  04:42:45,768 - #7 ;
-INFO  04:42:45,768 - #47 LEPO
-INFO  04:42:45,768 - #47 je
-INFO  04:42:45,768 - #7 ;
-INFO  04:42:45,768 - #47 nizch
-INFO  04:42:45,768 - #47 nijeok
-INFO  04:42:45,768 - #7 ;
-INFO  04:42:45,768 - #3 {
-INFO  04:42:45,768 - #47 int
-INFO  04:42:45,769 - #47 funca
-INFO  04:42:45,769 - #13 (
-INFO  04:42:45,769 - #47 char
-INFO  04:42:45,769 - #47 a
-INFO  04:42:45,769 - #15 ,
-INFO  04:42:45,770 - #47 char
-INFO  04:42:45,770 - #47 b
-INFO  04:42:45,770 - #14 )
-INFO  04:42:45,770 - #3 {
-INFO  04:42:45,771 - #47 niz
-INFO  04:42:45,771 - #19 =
-INFO  04:42:45,771 - #12 new
-INFO  04:42:45,771 - #47 int
-INFO  04:42:45,771 - #17 [
-INFO  04:42:45,771 - #49 5
-INFO  04:42:45,771 - #18 ]
-INFO  04:42:45,772 - #7 ;
-INFO  04:42:45,773 - #47 niz2
-INFO  04:42:45,773 - #19 =
-INFO  04:42:45,773 - #12 new
-INFO  04:42:45,773 - #47 int
-INFO  04:42:45,773 - #17 [
-INFO  04:42:45,773 - #47 slovoa
-INFO  04:42:45,773 - #18 ]
-INFO  04:42:45,773 - #7 ;
-INFO  04:42:45,773 - #47 nizch
-INFO  04:42:45,773 - #19 =
-INFO  04:42:45,773 - #12 new
-INFO  04:42:45,773 - #47 int
-INFO  04:42:45,773 - #17 [
-INFO  04:42:45,773 - #49 10
-INFO  04:42:45,773 - #18 ]
-INFO  04:42:45,774 - #7 ;
-INFO  04:42:45,774 - #9 print
-INFO  04:42:45,774 - #13 (
-INFO  04:42:45,774 - #47 a
-INFO  04:42:45,774 - #14 )
-INFO  04:42:45,774 - #7 ;
-INFO  04:42:45,774 - #9 print
-INFO  04:42:45,775 - #13 (
-INFO  04:42:45,775 - #47 b
-INFO  04:42:45,775 - #14 )
-INFO  04:42:45,775 - #7 ;
-INFO  04:42:45,775 - #38 return
-INFO  04:42:45,775 - #49 1
-INFO  04:42:45,775 - #7 ;
-INFO  04:42:45,775 - #4 }
-INFO  04:42:45,775 - #6 void
-INFO  04:42:45,776 - #47 main
-INFO  04:42:45,776 - #13 (
-INFO  04:42:45,776 - #47 int
-INFO  04:42:45,776 - #47 s
-INFO  04:42:45,776 - #15 ,
-INFO  04:42:45,776 - #47 bool
-INFO  04:42:45,776 - #47 c
-INFO  04:42:45,776 - #17 [
-INFO  04:42:45,776 - #18 ]
-INFO  04:42:45,776 - #14 )
-INFO  04:42:45,776 - #47 int
-INFO  04:42:45,776 - #47 bodovi
-INFO  04:42:45,776 - #7 ;
-INFO  04:42:45,776 - #47 bool
-INFO  04:42:45,776 - #47 bt
-INFO  04:42:45,776 - #7 ;
-INFO  04:42:45,777 - #3 {
-INFO  04:42:45,777 - #47 funcb
-INFO  04:42:45,777 - #13 (
-INFO  04:42:45,777 - #14 )
-INFO  04:42:45,778 - #7 ;
-INFO  04:42:45,778 - #47 niz
-INFO  04:42:45,778 - #13 (
-INFO  04:42:45,778 - #49 2
-INFO  04:42:45,778 - #14 )
-INFO  04:42:45,778 - #7 ;
-INFO  04:42:45,778 - #47 funca
-INFO  04:42:45,778 - #13 (
-INFO  04:42:45,778 - #49 1
-INFO  04:42:45,779 - #14 )
-INFO  04:42:45,779 - #7 ;
-INFO  04:42:45,779 - #47 funca
-INFO  04:42:45,779 - #13 (
-INFO  04:42:45,779 - #49 1
-INFO  04:42:45,779 - #15 ,
-INFO  04:42:45,779 - #49 2
-INFO  04:42:45,779 - #14 )
-INFO  04:42:45,779 - #7 ;
-INFO  04:42:45,779 - #47 funca
-INFO  04:42:45,779 - #13 (
-INFO  04:42:45,779 - #47 slovob
-INFO  04:42:45,779 - #15 ,
-INFO  04:42:45,779 - #49 2
-INFO  04:42:45,779 - #14 )
-INFO  04:42:45,779 - #7 ;
-INFO  04:42:45,779 - #47 funca
-INFO  04:42:45,779 - #13 (
-INFO  04:42:45,779 - #47 slovoa
-INFO  04:42:45,779 - #15 ,
-INFO  04:42:45,779 - #47 slovob
-INFO  04:42:45,780 - #14 )
-INFO  04:42:45,780 - #7 ;
-INFO  04:42:45,780 - #47 bodovi
-INFO  04:42:45,780 - #19 =
-INFO  04:42:45,780 - #49 0
-INFO  04:42:45,780 - #7 ;
-INFO  04:42:45,780 - #47 bodovi
-INFO  04:42:45,780 - #10 ++
-INFO  04:42:45,780 - #7 ;
-INFO  04:42:45,780 - #47 bodovi
-INFO  04:42:45,780 - #19 =
-INFO  04:42:45,780 - #47 bodovi
-INFO  04:42:45,780 - #28 +
-INFO  04:42:45,780 - #47 jedan
-INFO  04:42:45,781 - #7 ;
-INFO  04:42:45,781 - #47 bodovi
-INFO  04:42:45,781 - #19 =
-INFO  04:42:45,781 - #47 bodovi
-INFO  04:42:45,781 - #30 *
-INFO  04:42:45,781 - #47 pet
-INFO  04:42:45,782 - #7 ;
-INFO  04:42:45,782 - #47 bodovi
-INFO  04:42:45,782 - #11 --
-INFO  04:42:45,782 - #7 ;
-INFO  04:42:45,782 - #9 print
-INFO  04:42:45,782 - #13 (
-INFO  04:42:45,782 - #47 bodovi
-INFO  04:42:45,782 - #14 )
-INFO  04:42:45,782 - #7 ;
-INFO  04:42:45,783 - #47 niz
-INFO  04:42:45,783 - #19 =
-INFO  04:42:45,783 - #12 new
-INFO  04:42:45,783 - #47 int
-INFO  04:42:45,783 - #17 [
-INFO  04:42:45,783 - #49 3
-INFO  04:42:45,783 - #18 ]
-INFO  04:42:45,783 - #7 ;
-INFO  04:42:45,783 - #47 niz
-INFO  04:42:45,783 - #17 [
-INFO  04:42:45,783 - #47 nula
-INFO  04:42:45,783 - #18 ]
-INFO  04:42:45,783 - #19 =
-INFO  04:42:45,783 - #47 jedan
-INFO  04:42:45,783 - #7 ;
-INFO  04:42:45,783 - #47 niz
-INFO  04:42:45,783 - #17 [
-INFO  04:42:45,783 - #49 1
-INFO  04:42:45,783 - #18 ]
-INFO  04:42:45,783 - #19 =
-INFO  04:42:45,783 - #49 2
-INFO  04:42:45,783 - #7 ;
-INFO  04:42:45,783 - #47 niz
-INFO  04:42:45,784 - #17 [
-INFO  04:42:45,784 - #47 niz
-INFO  04:42:45,784 - #17 [
-INFO  04:42:45,784 - #47 jedan
-INFO  04:42:45,784 - #18 ]
-INFO  04:42:45,784 - #18 ]
-INFO  04:42:45,784 - #19 =
-INFO  04:42:45,784 - #47 niz
-INFO  04:42:45,784 - #17 [
-INFO  04:42:45,785 - #47 niz
-INFO  04:42:45,787 - #17 [
-INFO  04:42:45,787 - #49 0
-INFO  04:42:45,787 - #18 ]
-INFO  04:42:45,787 - #18 ]
-INFO  04:42:45,787 - #30 *
-INFO  04:42:45,787 - #49 3
-INFO  04:42:45,787 - #7 ;
-INFO  04:42:45,787 - #47 bodovi
-INFO  04:42:45,787 - #19 =
-INFO  04:42:45,787 - #47 niz
-INFO  04:42:45,787 - #17 [
-INFO  04:42:45,787 - #49 2
-INFO  04:42:45,787 - #18 ]
-INFO  04:42:45,787 - #31 /
-INFO  04:42:45,787 - #47 niz
-INFO  04:42:45,788 - #17 [
-INFO  04:42:45,788 - #49 0
-INFO  04:42:45,788 - #18 ]
-INFO  04:42:45,788 - #7 ;
-INFO  04:42:45,788 - #9 print
-INFO  04:42:45,788 - #13 (
-INFO  04:42:45,788 - #47 bodovi
-INFO  04:42:45,788 - #14 )
-INFO  04:42:45,788 - #7 ;
-INFO  04:42:45,788 - #9 print
-INFO  04:42:45,788 - #13 (
-INFO  04:42:45,788 - #47 niz
-INFO  04:42:45,789 - #17 [
-INFO  04:42:45,789 - #49 2
-INFO  04:42:45,789 - #18 ]
-INFO  04:42:45,789 - #14 )
-INFO  04:42:45,789 - #7 ;
-INFO  04:42:45,789 - #17 [
-INFO  04:42:45,789 - #47 a
-INFO  04:42:45,789 - #15 ,
-INFO  04:42:45,789 - #47 b
-INFO  04:42:45,789 - #18 ]
-INFO  04:42:45,790 - #19 =
-INFO  04:42:45,790 - #47 niz
-INFO  04:42:45,790 - #7 ;
-INFO  04:42:45,790 - #9 print
-INFO  04:42:45,790 - #13 (
-INFO  04:42:45,790 - #47 a
-INFO  04:42:45,790 - #14 )
-INFO  04:42:45,790 - #7 ;
-INFO  04:42:45,790 - #9 print
-INFO  04:42:45,790 - #13 (
-INFO  04:42:45,790 - #47 b
-INFO  04:42:45,790 - #14 )
-INFO  04:42:45,790 - #7 ;
-INFO  04:42:45,790 - #17 [
-INFO  04:42:45,791 - #15 ,
-INFO  04:42:45,791 - #47 a
-INFO  04:42:45,791 - #15 ,
-INFO  04:42:45,791 - #18 ]
-INFO  04:42:45,791 - #19 =
-INFO  04:42:45,791 - #47 niz
-INFO  04:42:45,791 - #7 ;
-INFO  04:42:45,791 - #9 print
-INFO  04:42:45,791 - #13 (
-INFO  04:42:45,791 - #47 a
-INFO  04:42:45,791 - #14 )
-INFO  04:42:45,791 - #7 ;
-INFO  04:42:45,791 - #47 niz2
-INFO  04:42:45,791 - #19 =
-INFO  04:42:45,791 - #12 new
-INFO  04:42:45,792 - #47 int
-INFO  04:42:45,792 - #17 [
-INFO  04:42:45,792 - #49 2
-INFO  04:42:45,792 - #18 ]
-INFO  04:42:45,792 - #7 ;
-INFO  04:42:45,792 - #17 [
-INFO  04:42:45,792 - #47 niz2
-INFO  04:42:45,792 - #17 [
-INFO  04:42:45,792 - #49 0
-INFO  04:42:45,792 - #18 ]
-INFO  04:42:45,792 - #15 ,
-INFO  04:42:45,792 - #15 ,
-INFO  04:42:45,792 - #47 niz2
-INFO  04:42:45,792 - #17 [
-INFO  04:42:45,792 - #47 niz
-INFO  04:42:45,792 - #17 [
-INFO  04:42:45,792 - #47 nula
-INFO  04:42:45,792 - #18 ]
-INFO  04:42:45,792 - #18 ]
-INFO  04:42:45,792 - #18 ]
-INFO  04:42:45,792 - #19 =
-INFO  04:42:45,792 - #47 niz
-INFO  04:42:45,792 - #7 ;
-INFO  04:42:45,792 - #9 print
-INFO  04:42:45,792 - #13 (
-INFO  04:42:45,792 - #47 niz2
-INFO  04:42:45,792 - #17 [
-INFO  04:42:45,792 - #49 0
-INFO  04:42:45,792 - #18 ]
-INFO  04:42:45,792 - #14 )
-INFO  04:42:45,792 - #7 ;
-INFO  04:42:45,792 - #9 print
-INFO  04:42:45,792 - #13 (
-INFO  04:42:45,792 - #47 niz2
-INFO  04:42:45,792 - #17 [
-INFO  04:42:45,793 - #49 1
-INFO  04:42:45,793 - #18 ]
-INFO  04:42:45,793 - #14 )
-INFO  04:42:45,793 - #7 ;
-INFO  04:42:45,793 - #47 nizch
-INFO  04:42:45,793 - #19 =
-INFO  04:42:45,793 - #12 new
-INFO  04:42:45,793 - #47 char
-INFO  04:42:45,793 - #17 [
-INFO  04:42:45,793 - #49 3
-INFO  04:42:45,793 - #18 ]
-INFO  04:42:45,793 - #7 ;
-INFO  04:42:45,793 - #47 nizch
-INFO  04:42:45,793 - #17 [
-INFO  04:42:45,793 - #49 0
-INFO  04:42:45,793 - #18 ]
-INFO  04:42:45,793 - #19 =
-INFO  04:42:45,793 - #48 a
-INFO  04:42:45,793 - #7 ;
-INFO  04:42:45,793 - #47 nizch
-INFO  04:42:45,793 - #17 [
-INFO  04:42:45,793 - #47 jedan
-INFO  04:42:45,793 - #18 ]
-INFO  04:42:45,793 - #19 =
-INFO  04:42:45,793 - #48 b
-INFO  04:42:45,793 - #7 ;
-INFO  04:42:45,793 - #47 nizch
-INFO  04:42:45,793 - #17 [
-INFO  04:42:45,793 - #47 pet
-INFO  04:42:45,793 - #29 -
-INFO  04:42:45,793 - #49 3
-INFO  04:42:45,794 - #18 ]
-INFO  04:42:45,794 - #19 =
-INFO  04:42:45,794 - #48 c
-INFO  04:42:45,794 - #7 ;
-INFO  04:42:45,794 - #9 print
-INFO  04:42:45,794 - #13 (
-INFO  04:42:45,794 - #47 nizch
-INFO  04:42:45,794 - #17 [
-INFO  04:42:45,794 - #49 1
-INFO  04:42:45,794 - #18 ]
-INFO  04:42:45,794 - #14 )
-INFO  04:42:45,794 - #7 ;
-INFO  04:42:45,794 - #9 print
-INFO  04:42:45,794 - #13 (
-INFO  04:42:45,794 - #47 nizch
-INFO  04:42:45,794 - #17 [
-INFO  04:42:45,794 - #47 jedan
-INFO  04:42:45,794 - #30 *
-INFO  04:42:45,794 - #49 2
-INFO  04:42:45,794 - #18 ]
-INFO  04:42:45,794 - #14 )
-INFO  04:42:45,794 - #7 ;
-INFO  04:42:45,794 - #8 read
-INFO  04:42:45,795 - #13 (
-INFO  04:42:45,795 - #47 bodovi
-INFO  04:42:45,795 - #14 )
-INFO  04:42:45,795 - #7 ;
-INFO  04:42:45,795 - #47 bodovi
-INFO  04:42:45,795 - #19 =
-INFO  04:42:45,795 - #29 -
-INFO  04:42:45,795 - #47 bodovi
-INFO  04:42:45,795 - #28 +
-INFO  04:42:45,795 - #13 (
-INFO  04:42:45,795 - #47 pet
-INFO  04:42:45,795 - #30 *
-INFO  04:42:45,795 - #47 a
-INFO  04:42:45,795 - #31 /
-INFO  04:42:45,795 - #49 2
-INFO  04:42:45,795 - #29 -
-INFO  04:42:45,795 - #47 jedan
-INFO  04:42:45,795 - #14 )
-INFO  04:42:45,795 - #30 *
-INFO  04:42:45,795 - #47 bodovi
-INFO  04:42:45,795 - #29 -
-INFO  04:42:45,795 - #13 (
-INFO  04:42:45,795 - #49 3
-INFO  04:42:45,795 - #32 %
-INFO  04:42:45,795 - #49 2
-INFO  04:42:45,796 - #28 +
-INFO  04:42:45,796 - #49 3
-INFO  04:42:45,796 - #30 *
-INFO  04:42:45,796 - #49 2
-INFO  04:42:45,796 - #29 -
-INFO  04:42:45,796 - #49 3
-INFO  04:42:45,796 - #14 )
-INFO  04:42:45,796 - #7 ;
-INFO  04:42:45,796 - #9 print
-INFO  04:42:45,796 - #13 (
-INFO  04:42:45,796 - #47 bodovi
-INFO  04:42:45,796 - #14 )
-INFO  04:42:45,796 - #7 ;
-INFO  04:42:45,796 - #4 }
-INFO  04:42:45,796 - #4 }
-INFO  04:42:45,808 - Program(
+INFO  04:21:19,604 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\testovi\test1sveprovere.mj
+INFO  04:21:19,642 - #2 program
+INFO  04:21:19,642 - #47 test301
+INFO  04:21:19,642 - #5 const
+INFO  04:21:19,643 - #47 int
+INFO  04:21:19,643 - #47 nula
+INFO  04:21:19,644 - #19 =
+INFO  04:21:19,644 - #49 0
+INFO  04:21:19,644 - #15 ,
+INFO  04:21:19,644 - #47 jedan
+INFO  04:21:19,644 - #19 =
+INFO  04:21:19,644 - #49 1
+INFO  04:21:19,645 - #15 ,
+INFO  04:21:19,645 - #47 pet
+INFO  04:21:19,645 - #19 =
+INFO  04:21:19,645 - #49 5
+INFO  04:21:19,645 - #7 ;
+INFO  04:21:19,645 - #5 const
+INFO  04:21:19,645 - #47 bool
+INFO  04:21:19,646 - #47 radi
+INFO  04:21:19,646 - #19 =
+INFO  04:21:19,646 - #50 true
+INFO  04:21:19,646 - #15 ,
+INFO  04:21:19,646 - #47 neradi
+INFO  04:21:19,646 - #19 =
+INFO  04:21:19,646 - #49 2
+INFO  04:21:19,646 - #7 ;
+INFO  04:21:19,646 - #5 const
+INFO  04:21:19,646 - #47 char
+INFO  04:21:19,646 - #47 slovoa
+INFO  04:21:19,646 - #19 =
+INFO  04:21:19,646 - #48 a
+INFO  04:21:19,646 - #15 ,
+INFO  04:21:19,647 - #47 slovob
+INFO  04:21:19,647 - #19 =
+INFO  04:21:19,647 - #49 15
+INFO  04:21:19,647 - #7 ;
+INFO  04:21:19,647 - #47 int
+INFO  04:21:19,647 - #47 niz
+INFO  04:21:19,647 - #17 [
+INFO  04:21:19,647 - #18 ]
+INFO  04:21:19,647 - #15 ,
+INFO  04:21:19,648 - #47 niz2
+INFO  04:21:19,648 - #17 [
+INFO  04:21:19,648 - #18 ]
+INFO  04:21:19,648 - #15 ,
+INFO  04:21:19,649 - #47 a
+INFO  04:21:19,649 - #15 ,
+INFO  04:21:19,649 - #47 b
+INFO  04:21:19,649 - #7 ;
+INFO  04:21:19,649 - #47 char
+INFO  04:21:19,649 - #47 nizch
+INFO  04:21:19,649 - #17 [
+INFO  04:21:19,649 - #18 ]
+INFO  04:21:19,649 - #7 ;
+INFO  04:21:19,649 - #47 bool
+INFO  04:21:19,649 - #47 nije
+INFO  04:21:19,649 - #47 ok
+ERROR 04:21:19,650 - 
+Sintaksna greska na liniji 14
+INFO  04:21:19,650 - #47 uopste
+INFO  04:21:19,650 - #7 ;
+INFO  04:21:19,650 - #3 {
+INFO  04:21:19,650 - #47 int
+INFO  04:21:19,650 - #47 funca
+INFO  04:21:19,651 - #13 (
+INFO  04:21:19,651 - #47 char
+INFO  04:21:19,651 - #47 a
+INFO  04:21:19,651 - #15 ,
+INFO  04:21:19,652 - #47 char
+INFO  04:21:19,652 - #47 b
+INFO  04:21:19,652 - #14 )
+INFO  04:21:19,652 - #3 {
+INFO  04:21:19,652 - #9 print
+INFO  04:21:19,653 - #13 (
+INFO  04:21:19,653 - #47 a
+INFO  04:21:19,653 - #14 )
+INFO  04:21:19,654 - #7 ;
+INFO  04:21:19,654 - #9 print
+INFO  04:21:19,654 - #13 (
+INFO  04:21:19,654 - #47 b
+INFO  04:21:19,654 - #14 )
+INFO  04:21:19,654 - #7 ;
+INFO  04:21:19,654 - #38 return
+INFO  04:21:19,654 - #49 1
+INFO  04:21:19,654 - #7 ;
+INFO  04:21:19,654 - #4 }
+INFO  04:21:19,655 - #6 void
+INFO  04:21:19,655 - #47 main
+INFO  04:21:19,655 - #13 (
+INFO  04:21:19,655 - #47 int
+INFO  04:21:19,655 - #47 s
+INFO  04:21:19,655 - #15 ,
+INFO  04:21:19,655 - #47 bool
+INFO  04:21:19,655 - #47 c
+INFO  04:21:19,655 - #17 [
+INFO  04:21:19,655 - #18 ]
+INFO  04:21:19,655 - #14 )
+INFO  04:21:19,656 - #47 int
+INFO  04:21:19,656 - #47 bodovi
+INFO  04:21:19,656 - #7 ;
+INFO  04:21:19,656 - #47 bool
+INFO  04:21:19,656 - #47 bt
+INFO  04:21:19,656 - #7 ;
+INFO  04:21:19,656 - #3 {
+INFO  04:21:19,656 - #47 bodovi
+INFO  04:21:19,656 - #19 =
+INFO  04:21:19,656 - #49 0
+INFO  04:21:19,656 - #7 ;
+INFO  04:21:19,656 - #47 bodovi
+INFO  04:21:19,656 - #10 ++
+INFO  04:21:19,656 - #7 ;
+INFO  04:21:19,657 - #47 bodovi
+INFO  04:21:19,657 - #19 =
+INFO  04:21:19,657 - #47 bodovi
+INFO  04:21:19,657 - #28 +
+INFO  04:21:19,657 - #47 jedan
+INFO  04:21:19,658 - #7 ;
+INFO  04:21:19,658 - #47 bodovi
+INFO  04:21:19,658 - #19 =
+INFO  04:21:19,658 - #47 bodovi
+INFO  04:21:19,658 - #30 *
+INFO  04:21:19,658 - #47 pet
+INFO  04:21:19,659 - #7 ;
+INFO  04:21:19,659 - #47 bodovi
+INFO  04:21:19,659 - #11 --
+INFO  04:21:19,659 - #7 ;
+INFO  04:21:19,659 - #9 print
+INFO  04:21:19,659 - #13 (
+INFO  04:21:19,659 - #47 bodovi
+INFO  04:21:19,659 - #14 )
+INFO  04:21:19,659 - #7 ;
+INFO  04:21:19,659 - #47 niz
+INFO  04:21:19,659 - #19 =
+INFO  04:21:19,660 - #12 new
+INFO  04:21:19,660 - #47 int
+INFO  04:21:19,660 - #17 [
+INFO  04:21:19,660 - #49 3
+INFO  04:21:19,660 - #18 ]
+INFO  04:21:19,660 - #7 ;
+INFO  04:21:19,660 - #47 niz
+INFO  04:21:19,660 - #17 [
+INFO  04:21:19,660 - #47 nula
+INFO  04:21:19,660 - #18 ]
+INFO  04:21:19,660 - #19 =
+INFO  04:21:19,660 - #47 jedan
+INFO  04:21:19,660 - #7 ;
+INFO  04:21:19,660 - #47 niz
+INFO  04:21:19,660 - #17 [
+INFO  04:21:19,660 - #49 1
+INFO  04:21:19,660 - #18 ]
+INFO  04:21:19,660 - #19 =
+INFO  04:21:19,660 - #49 2
+INFO  04:21:19,660 - #7 ;
+INFO  04:21:19,661 - #47 niz
+INFO  04:21:19,661 - #17 [
+INFO  04:21:19,661 - #47 niz
+INFO  04:21:19,661 - #17 [
+INFO  04:21:19,661 - #47 jedan
+INFO  04:21:19,661 - #18 ]
+INFO  04:21:19,661 - #18 ]
+INFO  04:21:19,661 - #19 =
+INFO  04:21:19,661 - #47 niz
+INFO  04:21:19,661 - #17 [
+INFO  04:21:19,661 - #47 niz
+INFO  04:21:19,661 - #17 [
+INFO  04:21:19,661 - #49 0
+INFO  04:21:19,661 - #18 ]
+INFO  04:21:19,661 - #18 ]
+INFO  04:21:19,661 - #30 *
+INFO  04:21:19,661 - #49 3
+INFO  04:21:19,661 - #7 ;
+INFO  04:21:19,661 - #47 bodovi
+INFO  04:21:19,661 - #19 =
+INFO  04:21:19,662 - #47 niz
+INFO  04:21:19,662 - #17 [
+INFO  04:21:19,662 - #49 2
+INFO  04:21:19,662 - #18 ]
+INFO  04:21:19,662 - #31 /
+INFO  04:21:19,662 - #47 niz
+INFO  04:21:19,662 - #17 [
+INFO  04:21:19,662 - #49 0
+INFO  04:21:19,662 - #18 ]
+INFO  04:21:19,662 - #7 ;
+INFO  04:21:19,662 - #9 print
+INFO  04:21:19,662 - #13 (
+INFO  04:21:19,662 - #47 bodovi
+INFO  04:21:19,662 - #14 )
+INFO  04:21:19,663 - #7 ;
+INFO  04:21:19,663 - #9 print
+INFO  04:21:19,663 - #13 (
+INFO  04:21:19,663 - #47 niz
+INFO  04:21:19,663 - #17 [
+INFO  04:21:19,663 - #49 2
+INFO  04:21:19,663 - #18 ]
+INFO  04:21:19,663 - #14 )
+INFO  04:21:19,663 - #7 ;
+INFO  04:21:19,663 - #17 [
+INFO  04:21:19,663 - #47 a
+INFO  04:21:19,663 - #15 ,
+INFO  04:21:19,663 - #47 b
+INFO  04:21:19,663 - #18 ]
+INFO  04:21:19,663 - #19 =
+INFO  04:21:19,663 - #47 niz
+INFO  04:21:19,663 - #7 ;
+INFO  04:21:19,663 - #9 print
+INFO  04:21:19,663 - #13 (
+INFO  04:21:19,663 - #47 a
+INFO  04:21:19,663 - #14 )
+INFO  04:21:19,663 - #7 ;
+INFO  04:21:19,664 - #9 print
+INFO  04:21:19,664 - #13 (
+INFO  04:21:19,664 - #47 b
+INFO  04:21:19,664 - #14 )
+INFO  04:21:19,664 - #7 ;
+INFO  04:21:19,664 - #17 [
+INFO  04:21:19,664 - #15 ,
+INFO  04:21:19,664 - #47 a
+INFO  04:21:19,664 - #15 ,
+INFO  04:21:19,664 - #18 ]
+INFO  04:21:19,665 - #19 =
+INFO  04:21:19,665 - #47 niz
+INFO  04:21:19,665 - #7 ;
+INFO  04:21:19,665 - #9 print
+INFO  04:21:19,665 - #13 (
+INFO  04:21:19,665 - #47 a
+INFO  04:21:19,665 - #14 )
+INFO  04:21:19,665 - #7 ;
+INFO  04:21:19,665 - #47 niz2
+INFO  04:21:19,665 - #19 =
+INFO  04:21:19,666 - #12 new
+INFO  04:21:19,666 - #47 int
+INFO  04:21:19,666 - #17 [
+INFO  04:21:19,666 - #49 2
+INFO  04:21:19,666 - #18 ]
+INFO  04:21:19,666 - #7 ;
+INFO  04:21:19,666 - #17 [
+INFO  04:21:19,666 - #47 niz2
+INFO  04:21:19,666 - #17 [
+INFO  04:21:19,666 - #49 0
+INFO  04:21:19,666 - #18 ]
+INFO  04:21:19,666 - #15 ,
+INFO  04:21:19,666 - #15 ,
+INFO  04:21:19,667 - #47 niz2
+INFO  04:21:19,667 - #17 [
+INFO  04:21:19,667 - #47 niz
+INFO  04:21:19,667 - #17 [
+INFO  04:21:19,667 - #47 nula
+INFO  04:21:19,667 - #18 ]
+INFO  04:21:19,667 - #18 ]
+INFO  04:21:19,667 - #18 ]
+INFO  04:21:19,667 - #19 =
+INFO  04:21:19,667 - #47 niz
+INFO  04:21:19,667 - #7 ;
+INFO  04:21:19,667 - #9 print
+INFO  04:21:19,667 - #13 (
+INFO  04:21:19,667 - #47 niz2
+INFO  04:21:19,668 - #17 [
+INFO  04:21:19,668 - #49 0
+INFO  04:21:19,668 - #18 ]
+INFO  04:21:19,668 - #14 )
+INFO  04:21:19,668 - #7 ;
+INFO  04:21:19,668 - #9 print
+INFO  04:21:19,668 - #13 (
+INFO  04:21:19,668 - #47 niz2
+INFO  04:21:19,668 - #17 [
+INFO  04:21:19,668 - #49 1
+INFO  04:21:19,668 - #18 ]
+INFO  04:21:19,668 - #14 )
+INFO  04:21:19,668 - #7 ;
+INFO  04:21:19,668 - #47 nizch
+INFO  04:21:19,668 - #19 =
+INFO  04:21:19,668 - #12 new
+INFO  04:21:19,669 - #47 char
+INFO  04:21:19,669 - #17 [
+INFO  04:21:19,669 - #49 3
+INFO  04:21:19,669 - #18 ]
+INFO  04:21:19,669 - #7 ;
+INFO  04:21:19,669 - #47 nizch
+INFO  04:21:19,669 - #17 [
+INFO  04:21:19,669 - #49 0
+INFO  04:21:19,669 - #18 ]
+INFO  04:21:19,669 - #19 =
+INFO  04:21:19,669 - #48 a
+INFO  04:21:19,669 - #7 ;
+INFO  04:21:19,669 - #47 nizch
+INFO  04:21:19,669 - #17 [
+INFO  04:21:19,669 - #47 jedan
+INFO  04:21:19,669 - #18 ]
+INFO  04:21:19,669 - #19 =
+INFO  04:21:19,669 - #48 b
+INFO  04:21:19,669 - #7 ;
+INFO  04:21:19,669 - #47 nizch
+INFO  04:21:19,669 - #17 [
+INFO  04:21:19,669 - #47 pet
+INFO  04:21:19,669 - #29 -
+INFO  04:21:19,669 - #49 3
+INFO  04:21:19,670 - #18 ]
+INFO  04:21:19,670 - #19 =
+INFO  04:21:19,670 - #48 c
+INFO  04:21:19,670 - #7 ;
+INFO  04:21:19,670 - #9 print
+INFO  04:21:19,670 - #13 (
+INFO  04:21:19,670 - #47 nizch
+INFO  04:21:19,670 - #17 [
+INFO  04:21:19,670 - #49 1
+INFO  04:21:19,670 - #18 ]
+INFO  04:21:19,670 - #14 )
+INFO  04:21:19,670 - #7 ;
+INFO  04:21:19,670 - #9 print
+INFO  04:21:19,670 - #13 (
+INFO  04:21:19,670 - #47 nizch
+INFO  04:21:19,670 - #17 [
+INFO  04:21:19,670 - #47 jedan
+INFO  04:21:19,670 - #30 *
+INFO  04:21:19,670 - #49 2
+INFO  04:21:19,670 - #18 ]
+INFO  04:21:19,670 - #14 )
+INFO  04:21:19,671 - #7 ;
+INFO  04:21:19,671 - #8 read
+INFO  04:21:19,671 - #13 (
+INFO  04:21:19,671 - #47 bodovi
+INFO  04:21:19,671 - #14 )
+INFO  04:21:19,671 - #7 ;
+INFO  04:21:19,671 - #47 bodovi
+INFO  04:21:19,671 - #19 =
+INFO  04:21:19,671 - #29 -
+INFO  04:21:19,671 - #47 bodovi
+INFO  04:21:19,671 - #28 +
+INFO  04:21:19,671 - #13 (
+INFO  04:21:19,671 - #47 pet
+INFO  04:21:19,671 - #30 *
+INFO  04:21:19,671 - #47 a
+INFO  04:21:19,671 - #31 /
+INFO  04:21:19,671 - #49 2
+INFO  04:21:19,671 - #29 -
+INFO  04:21:19,671 - #47 jedan
+INFO  04:21:19,671 - #14 )
+INFO  04:21:19,671 - #30 *
+INFO  04:21:19,671 - #47 bodovi
+INFO  04:21:19,671 - #29 -
+INFO  04:21:19,671 - #13 (
+INFO  04:21:19,671 - #49 3
+INFO  04:21:19,671 - #32 %
+INFO  04:21:19,671 - #49 2
+INFO  04:21:19,672 - #28 +
+INFO  04:21:19,672 - #49 3
+INFO  04:21:19,672 - #30 *
+INFO  04:21:19,672 - #49 2
+INFO  04:21:19,672 - #29 -
+INFO  04:21:19,672 - #49 3
+INFO  04:21:19,672 - #14 )
+INFO  04:21:19,672 - #7 ;
+INFO  04:21:19,672 - #9 print
+INFO  04:21:19,672 - #13 (
+INFO  04:21:19,672 - #47 bodovi
+INFO  04:21:19,672 - #14 )
+INFO  04:21:19,672 - #7 ;
+INFO  04:21:19,672 - #4 }
+INFO  04:21:19,672 - #4 }
+INFO  04:21:19,681 - Program(
   ProgramIdentificator(
    test301
   ) [ProgramIdentificator]
@@ -432,84 +368,34 @@ INFO  04:42:45,808 - Program(
         Declarations(
           Declarations(
             Declarations(
-              Declarations(
-                Declarations(
-                  NoDeclarations(
-                  ) [NoDeclarations]
-                  CnstDeclaration(
-                    ConstDecl(
-                      Type(
-                       int
-                      ) [Type]
-                      Constants(
-                        Constants(
-                          OneConstant(
-                            ConstantDeclaration(
-                             nula
-                              NumberConstant(
-                               0
-                              ) [NumberConstant]
-                            ) [ConstantDeclaration]
-                          ) [OneConstant]
-                          ConstantDeclaration(
-                           jedan
-                            NumberConstant(
-                             1
-                            ) [NumberConstant]
-                          ) [ConstantDeclaration]
-                        ) [Constants]
-                        ConstantDeclaration(
-                         pet
-                          NumberConstant(
-                           5
-                          ) [NumberConstant]
-                        ) [ConstantDeclaration]
-                      ) [Constants]
-                    ) [ConstDecl]
-                  ) [CnstDeclaration]
-                ) [Declarations]
-                CnstDeclaration(
-                  ConstDecl(
-                    Type(
-                     bool
-                    ) [Type]
-                    Constants(
-                      OneConstant(
-                        ConstantDeclaration(
-                         radi
-                          BoolConstant(
-                           true
-                          ) [BoolConstant]
-                        ) [ConstantDeclaration]
-                      ) [OneConstant]
-                      ConstantDeclaration(
-                       neradi
-                        NumberConstant(
-                         2
-                        ) [NumberConstant]
-                      ) [ConstantDeclaration]
-                    ) [Constants]
-                  ) [ConstDecl]
-                ) [CnstDeclaration]
-              ) [Declarations]
+              NoDeclarations(
+              ) [NoDeclarations]
               CnstDeclaration(
                 ConstDecl(
                   Type(
-                   char
+                   int
                   ) [Type]
                   Constants(
-                    OneConstant(
+                    Constants(
+                      OneConstant(
+                        ConstantDeclaration(
+                         nula
+                          NumberConstant(
+                           0
+                          ) [NumberConstant]
+                        ) [ConstantDeclaration]
+                      ) [OneConstant]
                       ConstantDeclaration(
-                       slovoa
-                        CharConstant(
-                         a
-                        ) [CharConstant]
+                       jedan
+                        NumberConstant(
+                         1
+                        ) [NumberConstant]
                       ) [ConstantDeclaration]
-                    ) [OneConstant]
+                    ) [Constants]
                     ConstantDeclaration(
-                     slovob
+                     pet
                       NumberConstant(
-                       15
+                       5
                       ) [NumberConstant]
                     ) [ConstantDeclaration]
                   ) [Constants]
@@ -519,98 +405,105 @@ INFO  04:42:45,808 - Program(
             CnstDeclaration(
               ConstDecl(
                 Type(
-                 char
+                 bool
                 ) [Type]
-                OneConstant(
+                Constants(
+                  OneConstant(
+                    ConstantDeclaration(
+                     radi
+                      BoolConstant(
+                       true
+                      ) [BoolConstant]
+                    ) [ConstantDeclaration]
+                  ) [OneConstant]
                   ConstantDeclaration(
-                   slovob
-                    CharConstant(
-                     b
-                    ) [CharConstant]
+                   neradi
+                    NumberConstant(
+                     2
+                    ) [NumberConstant]
                   ) [ConstantDeclaration]
-                ) [OneConstant]
+                ) [Constants]
               ) [ConstDecl]
             ) [CnstDeclaration]
           ) [Declarations]
-          VariableDeclaration(
-            VarDeclaration(
+          CnstDeclaration(
+            ConstDecl(
               Type(
-               int
+               char
               ) [Type]
-              Variables(
-                Variables(
-                  Variables(
-                    OneVariable(
-                      Variable(
-                       niz
-                        HasArrayBrackets(
-                        ) [HasArrayBrackets]
-                      ) [Variable]
-                    ) [OneVariable]
-                    Variable(
-                     niz2
-                      HasArrayBrackets(
-                      ) [HasArrayBrackets]
-                    ) [Variable]
-                  ) [Variables]
-                  Variable(
-                   a
-                    NoArrayBrackets(
-                    ) [NoArrayBrackets]
-                  ) [Variable]
-                ) [Variables]
-                Variable(
-                 b
-                  NoArrayBrackets(
-                  ) [NoArrayBrackets]
-                ) [Variable]
-              ) [Variables]
-            ) [VarDeclaration]
-          ) [VariableDeclaration]
+              Constants(
+                OneConstant(
+                  ConstantDeclaration(
+                   slovoa
+                    CharConstant(
+                     a
+                    ) [CharConstant]
+                  ) [ConstantDeclaration]
+                ) [OneConstant]
+                ConstantDeclaration(
+                 slovob
+                  NumberConstant(
+                   15
+                  ) [NumberConstant]
+                ) [ConstantDeclaration]
+              ) [Constants]
+            ) [ConstDecl]
+          ) [CnstDeclaration]
         ) [Declarations]
         VariableDeclaration(
           VarDeclaration(
             Type(
-             char
+             int
             ) [Type]
-            OneVariable(
+            Variables(
+              Variables(
+                Variables(
+                  OneVariable(
+                    Variable(
+                     niz
+                      HasArrayBrackets(
+                      ) [HasArrayBrackets]
+                    ) [Variable]
+                  ) [OneVariable]
+                  Variable(
+                   niz2
+                    HasArrayBrackets(
+                    ) [HasArrayBrackets]
+                  ) [Variable]
+                ) [Variables]
+                Variable(
+                 a
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [Variable]
+              ) [Variables]
               Variable(
-               nizch
-                HasArrayBrackets(
-                ) [HasArrayBrackets]
+               b
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
               ) [Variable]
-            ) [OneVariable]
+            ) [Variables]
           ) [VarDeclaration]
         ) [VariableDeclaration]
       ) [Declarations]
       VariableDeclaration(
         VarDeclaration(
           Type(
-           LEPO
+           char
           ) [Type]
           OneVariable(
             Variable(
-             je
-              NoArrayBrackets(
-              ) [NoArrayBrackets]
+             nizch
+              HasArrayBrackets(
+              ) [HasArrayBrackets]
             ) [Variable]
           ) [OneVariable]
         ) [VarDeclaration]
       ) [VariableDeclaration]
     ) [Declarations]
     VariableDeclaration(
-      VarDeclaration(
-        Type(
-         nizch
-        ) [Type]
-        OneVariable(
-          Variable(
-           nijeok
-            NoArrayBrackets(
-            ) [NoArrayBrackets]
-          ) [Variable]
-        ) [OneVariable]
-      ) [VarDeclaration]
+      ErrorVariableSemiColon(
+      ) [ErrorVariableSemiColon]
     ) [VariableDeclaration]
   ) [Declarations]
   MethodDeclarations(
@@ -651,115 +544,8 @@ INFO  04:42:45,808 - Program(
         MethodStatements(
           MethodStatements(
             MethodStatements(
-              MethodStatements(
-                MethodStatements(
-                  MethodStatements(
-                    NoMethodStatements(
-                    ) [NoMethodStatements]
-                    DesignatorStmt(
-                      Assignment(
-                        OneDesignator(
-                         niz
-                        ) [OneDesignator]
-                        AssignmentExpression(
-                          Expression(
-                            OneTerm(
-                              Term(
-                                OneFactor(
-                                  ArrayCreation(
-                                    Type(
-                                     int
-                                    ) [Type]
-                                    Expression(
-                                      OneTerm(
-                                        Term(
-                                          OneFactor(
-                                            FactorNumber(
-                                             5
-                                            ) [FactorNumber]
-                                          ) [OneFactor]
-                                        ) [Term]
-                                      ) [OneTerm]
-                                    ) [Expression]
-                                  ) [ArrayCreation]
-                                ) [OneFactor]
-                              ) [Term]
-                            ) [OneTerm]
-                          ) [Expression]
-                        ) [AssignmentExpression]
-                      ) [Assignment]
-                    ) [DesignatorStmt]
-                  ) [MethodStatements]
-                  DesignatorStmt(
-                    Assignment(
-                      OneDesignator(
-                       niz2
-                      ) [OneDesignator]
-                      AssignmentExpression(
-                        Expression(
-                          OneTerm(
-                            Term(
-                              OneFactor(
-                                ArrayCreation(
-                                  Type(
-                                   int
-                                  ) [Type]
-                                  Expression(
-                                    OneTerm(
-                                      Term(
-                                        OneFactor(
-                                          FactorDesignator(
-                                            OneDesignator(
-                                             slovoa
-                                            ) [OneDesignator]
-                                          ) [FactorDesignator]
-                                        ) [OneFactor]
-                                      ) [Term]
-                                    ) [OneTerm]
-                                  ) [Expression]
-                                ) [ArrayCreation]
-                              ) [OneFactor]
-                            ) [Term]
-                          ) [OneTerm]
-                        ) [Expression]
-                      ) [AssignmentExpression]
-                    ) [Assignment]
-                  ) [DesignatorStmt]
-                ) [MethodStatements]
-                DesignatorStmt(
-                  Assignment(
-                    OneDesignator(
-                     nizch
-                    ) [OneDesignator]
-                    AssignmentExpression(
-                      Expression(
-                        OneTerm(
-                          Term(
-                            OneFactor(
-                              ArrayCreation(
-                                Type(
-                                 int
-                                ) [Type]
-                                Expression(
-                                  OneTerm(
-                                    Term(
-                                      OneFactor(
-                                        FactorNumber(
-                                         10
-                                        ) [FactorNumber]
-                                      ) [OneFactor]
-                                    ) [Term]
-                                  ) [OneTerm]
-                                ) [Expression]
-                              ) [ArrayCreation]
-                            ) [OneFactor]
-                          ) [Term]
-                        ) [OneTerm]
-                      ) [Expression]
-                    ) [AssignmentExpression]
-                  ) [Assignment]
-                ) [DesignatorStmt]
-              ) [MethodStatements]
+              NoMethodStatements(
+              ) [NoMethodStatements]
               PrintStatement(
                 Expression(
                   OneTerm(
@@ -899,212 +685,8 @@ INFO  04:42:45,808 - Program(
                                                               MethodStatements(
                                                                 MethodStatements(
                                                                   MethodStatements(
-                                                                    MethodStatements(
-                                                                      MethodStatements(
-                                                                        MethodStatements(
-                                                                          MethodStatements(
-                                                                            MethodStatements(
-                                                                              MethodStatements(
-                                                                                NoMethodStatements(
-                                                                                ) [NoMethodStatements]
-                                                                                DesignatorStmt(
-                                                                                  FuncionCall(
-                                                                                    FunctionName(
-                                                                                      OneDesignator(
-                                                                                       funcb
-                                                                                      ) [OneDesignator]
-                                                                                    ) [FunctionName]
-                                                                                    NoActualParams(
-                                                                                    ) [NoActualParams]
-                                                                                  ) [FuncionCall]
-                                                                                ) [DesignatorStmt]
-                                                                              ) [MethodStatements]
-                                                                              DesignatorStmt(
-                                                                                FuncionCall(
-                                                                                  FunctionName(
-                                                                                    OneDesignator(
-                                                                                     niz
-                                                                                    ) [OneDesignator]
-                                                                                  ) [FunctionName]
-                                                                                  ActualParams(
-                                                                                    OneActParameter(
-                                                                                      Parameter(
-                                                                                        Expression(
-                                                                                          OneTerm(
-                                                                                            Term(
-                                                                                              OneFactor(
-                                                                                                FactorNumber(
-                                                                                                 2
-                                                                                                ) [FactorNumber]
-                                                                                              ) [OneFactor]
-                                                                                            ) [Term]
-                                                                                          ) [OneTerm]
-                                                                                        ) [Expression]
-                                                                                      ) [Parameter]
-                                                                                    ) [OneActParameter]
-                                                                                  ) [ActualParams]
-                                                                                ) [FuncionCall]
-                                                                              ) [DesignatorStmt]
-                                                                            ) [MethodStatements]
-                                                                            DesignatorStmt(
-                                                                              FuncionCall(
-                                                                                FunctionName(
-                                                                                  OneDesignator(
-                                                                                   funca
-                                                                                  ) [OneDesignator]
-                                                                                ) [FunctionName]
-                                                                                ActualParams(
-                                                                                  OneActParameter(
-                                                                                    Parameter(
-                                                                                      Expression(
-                                                                                        OneTerm(
-                                                                                          Term(
-                                                                                            OneFactor(
-                                                                                              FactorNumber(
-                                                                                               1
-                                                                                              ) [FactorNumber]
-                                                                                            ) [OneFactor]
-                                                                                          ) [Term]
-                                                                                        ) [OneTerm]
-                                                                                      ) [Expression]
-                                                                                    ) [Parameter]
-                                                                                  ) [OneActParameter]
-                                                                                ) [ActualParams]
-                                                                              ) [FuncionCall]
-                                                                            ) [DesignatorStmt]
-                                                                          ) [MethodStatements]
-                                                                          DesignatorStmt(
-                                                                            FuncionCall(
-                                                                              FunctionName(
-                                                                                OneDesignator(
-                                                                                 funca
-                                                                                ) [OneDesignator]
-                                                                              ) [FunctionName]
-                                                                              ActualParams(
-                                                                                ActParsList(
-                                                                                  OneActParameter(
-                                                                                    Parameter(
-                                                                                      Expression(
-                                                                                        OneTerm(
-                                                                                          Term(
-                                                                                            OneFactor(
-                                                                                              FactorNumber(
-                                                                                               1
-                                                                                              ) [FactorNumber]
-                                                                                            ) [OneFactor]
-                                                                                          ) [Term]
-                                                                                        ) [OneTerm]
-                                                                                      ) [Expression]
-                                                                                    ) [Parameter]
-                                                                                  ) [OneActParameter]
-                                                                                  Parameter(
-                                                                                    Expression(
-                                                                                      OneTerm(
-                                                                                        Term(
-                                                                                          OneFactor(
-                                                                                            FactorNumber(
-                                                                                             2
-                                                                                            ) [FactorNumber]
-                                                                                          ) [OneFactor]
-                                                                                        ) [Term]
-                                                                                      ) [OneTerm]
-                                                                                    ) [Expression]
-                                                                                  ) [Parameter]
-                                                                                ) [ActParsList]
-                                                                              ) [ActualParams]
-                                                                            ) [FuncionCall]
-                                                                          ) [DesignatorStmt]
-                                                                        ) [MethodStatements]
-                                                                        DesignatorStmt(
-                                                                          FuncionCall(
-                                                                            FunctionName(
-                                                                              OneDesignator(
-                                                                               funca
-                                                                              ) [OneDesignator]
-                                                                            ) [FunctionName]
-                                                                            ActualParams(
-                                                                              ActParsList(
-                                                                                OneActParameter(
-                                                                                  Parameter(
-                                                                                    Expression(
-                                                                                      OneTerm(
-                                                                                        Term(
-                                                                                          OneFactor(
-                                                                                            FactorDesignator(
-                                                                                              OneDesignator(
-                                                                                               slovob
-                                                                                              ) [OneDesignator]
-                                                                                            ) [FactorDesignator]
-                                                                                          ) [OneFactor]
-                                                                                        ) [Term]
-                                                                                      ) [OneTerm]
-                                                                                    ) [Expression]
-                                                                                  ) [Parameter]
-                                                                                ) [OneActParameter]
-                                                                                Parameter(
-                                                                                  Expression(
-                                                                                    OneTerm(
-                                                                                      Term(
-                                                                                        OneFactor(
-                                                                                          FactorNumber(
-                                                                                           2
-                                                                                          ) [FactorNumber]
-                                                                                        ) [OneFactor]
-                                                                                      ) [Term]
-                                                                                    ) [OneTerm]
-                                                                                  ) [Expression]
-                                                                                ) [Parameter]
-                                                                              ) [ActParsList]
-                                                                            ) [ActualParams]
-                                                                          ) [FuncionCall]
-                                                                        ) [DesignatorStmt]
-                                                                      ) [MethodStatements]
-                                                                      DesignatorStmt(
-                                                                        FuncionCall(
-                                                                          FunctionName(
-                                                                            OneDesignator(
-                                                                             funca
-                                                                            ) [OneDesignator]
-                                                                          ) [FunctionName]
-                                                                          ActualParams(
-                                                                            ActParsList(
-                                                                              OneActParameter(
-                                                                                Parameter(
-                                                                                  Expression(
-                                                                                    OneTerm(
-                                                                                      Term(
-                                                                                        OneFactor(
-                                                                                          FactorDesignator(
-                                                                                            OneDesignator(
-                                                                                             slovoa
-                                                                                            ) [OneDesignator]
-                                                                                          ) [FactorDesignator]
-                                                                                        ) [OneFactor]
-                                                                                      ) [Term]
-                                                                                    ) [OneTerm]
-                                                                                  ) [Expression]
-                                                                                ) [Parameter]
-                                                                              ) [OneActParameter]
-                                                                              Parameter(
-                                                                                Expression(
-                                                                                  OneTerm(
-                                                                                    Term(
-                                                                                      OneFactor(
-                                                                                        FactorDesignator(
-                                                                                          OneDesignator(
-                                                                                           slovob
-                                                                                          ) [OneDesignator]
-                                                                                        ) [FactorDesignator]
-                                                                                      ) [OneFactor]
-                                                                                    ) [Term]
-                                                                                  ) [OneTerm]
-                                                                                ) [Expression]
-                                                                              ) [Parameter]
-                                                                            ) [ActParsList]
-                                                                          ) [ActualParams]
-                                                                        ) [FuncionCall]
-                                                                      ) [DesignatorStmt]
-                                                                    ) [MethodStatements]
+                                                                    NoMethodStatements(
+                                                                    ) [NoMethodStatements]
                                                                     DesignatorStmt(
                                                                       Assignment(
                                                                         OneDesignator(
@@ -2145,45 +1727,26 @@ INFO  04:42:45,808 - Program(
     ) [MethodDecl]
   ) [MethodDeclarations]
 ) [Program]
-INFO  04:42:45,813 - ===================================
-INFO  04:42:45,816 - Deklarisana konstanta nula jednaka 0 na liniji 5
-INFO  04:42:45,816 - Deklarisana konstanta jedan jednaka 1 na liniji 5
-INFO  04:42:45,816 - Deklarisana konstanta pet jednaka 5 na liniji 5
-INFO  04:42:45,816 - Deklarisana konstanta radi jednaka true na liniji 7
-ERROR 04:42:45,816 - Greska na liniji 7 : promenljiva sa nazivom neradi nije kompatibilnog tipa sa dodeljenom vrednoscu
-INFO  04:42:45,816 - Deklarisana konstanta slovoa jednaka a na liniji 9
-ERROR 04:42:45,816 - Greska na liniji 9 : promenljiva sa nazivom slovob nije kompatibilnog tipa sa dodeljenom vrednoscu
-INFO  04:42:45,816 - Deklarisana konstanta slovob jednaka b na liniji 11
-INFO  04:42:45,816 - Deklarisan niz niz na liniji 13
-INFO  04:42:45,816 - Deklarisan niz niz2 na liniji 13
-INFO  04:42:45,816 - Deklarisana promenljiva a na liniji 13
-INFO  04:42:45,816 - Deklarisana promenljiva b na liniji 13
-INFO  04:42:45,816 - Deklarisan niz nizch na liniji 14
-ERROR 04:42:45,816 - Greska na liniji 16 : tip sa nazivom LEPO ne postoji
-INFO  04:42:45,816 - Deklarisana promenljiva je na liniji 16
-ERROR 04:42:45,816 - Greska na liniji 17 : promenljiva sa nazivom nizch ne predstavlja tip
-INFO  04:42:45,816 - Deklarisana promenljiva nijeok na liniji 17
-INFO  04:42:45,816 - Deklarisana funkcija funca povratna vrednost je tipa int na liniji 20
-INFO  04:42:45,816 - 1. argument a tipa char na liniji 20
-INFO  04:42:45,816 - 2. argument b tipa char na liniji 20
-ERROR 04:42:45,816 - Semanticka greska na liniji 22: Expr nije tipa int
-ERROR 04:42:45,816 - Semanticka greska na liniji 22: Expr nije kompatibilan sa tipom designator-a
-ERROR 04:42:45,816 - Semanticka greska na liniji 23: Expr nije kompatibilan sa tipom designator-a
-INFO  04:42:45,817 - Deklarisana funkcija funca sa 2 ulazna parametra
-INFO  04:42:45,817 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 29
-INFO  04:42:45,817 - 1. argument s tipa int na liniji 29
-INFO  04:42:45,817 - 2. argument c niz tipa bool na liniji 29
-INFO  04:42:45,817 - Deklarisana promenljiva bodovi na liniji 30
-INFO  04:42:45,817 - Deklarisana promenljiva bt na liniji 31
-ERROR 04:42:45,817 - Semanticka greska na liniji 35: Promenljiva funcb nije deklarisana!
-ERROR 04:42:45,817 - Semanticka greska na liniji 35: Funkcija noObj nije deklarisana!
-ERROR 04:42:45,817 - Semanticka greska na liniji 35: Broj formalnih i stvarnih argumenata metode noObj nije isti!
-ERROR 04:42:45,817 - Semanticka greska na liniji 36: Promenljiva niz nije funkcija!
-ERROR 04:42:45,817 - Semanticka greska na liniji 36: Broj formalnih i stvarnih argumenata metode noObj nije isti!
-ERROR 04:42:45,817 - Semanticka greska na liniji 36: Broj formalnih i stvarnih argumenata metode noObj nije isti!
-ERROR 04:42:45,817 - Semanticka greska na liniji 37: Tip stvarnog argumenta  nije kompatibilan sa tipom formalnog argumenta a
-ERROR 04:42:45,817 - Semanticka greska na liniji 37: Broj formalnih i stvarnih argumenata metode funca nije isti!
-ERROR 04:42:45,817 - Semanticka greska na liniji 38: Tip stvarnog argumenta  nije kompatibilan sa tipom formalnog argumenta a
-ERROR 04:42:45,817 - Semanticka greska na liniji 38: Tip stvarnog argumenta  nije kompatibilan sa tipom formalnog argumenta b
-ERROR 04:42:45,817 - Semanticka greska na liniji 39: Tip stvarnog argumenta  nije kompatibilan sa tipom formalnog argumenta b
-INFO  04:42:45,817 - Deklarisana funkcija main sa 2 ulazna parametra
+INFO  04:21:19,683 - ===================================
+INFO  04:21:19,685 - Deklarisana konstanta nula jednaka 0 na liniji 5
+INFO  04:21:19,685 - Deklarisana konstanta jedan jednaka 1 na liniji 5
+INFO  04:21:19,685 - Deklarisana konstanta pet jednaka 5 na liniji 5
+INFO  04:21:19,685 - Deklarisana konstanta radi jednaka true na liniji 7
+ERROR 04:21:19,685 - Greska na liniji 7 : promenljiva sa nazivom neradi nije kompatibilnog tipa sa dodeljenom vrednoscu
+INFO  04:21:19,685 - Deklarisana konstanta slovoa jednaka a na liniji 9
+ERROR 04:21:19,685 - Greska na liniji 9 : promenljiva sa nazivom slovob nije kompatibilnog tipa sa dodeljenom vrednoscu
+INFO  04:21:19,685 - Deklarisan niz niz na liniji 12
+INFO  04:21:19,685 - Deklarisan niz niz2 na liniji 12
+INFO  04:21:19,685 - Deklarisana promenljiva a na liniji 12
+INFO  04:21:19,685 - Deklarisana promenljiva b na liniji 12
+INFO  04:21:19,685 - Deklarisan niz nizch na liniji 13
+INFO  04:21:19,685 - Deklarisana funkcija funca povratna vrednost je tipa int na liniji 17
+INFO  04:21:19,685 - 1. argument a tipa char na liniji 17
+INFO  04:21:19,685 - 2. argument b tipa char na liniji 17
+INFO  04:21:19,685 - Deklarisana funkcija funca sa 2 ulazna parametra
+INFO  04:21:19,686 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 23
+INFO  04:21:19,686 - 1. argument s tipa int na liniji 23
+INFO  04:21:19,686 - 2. argument c niz tipa bool na liniji 23
+INFO  04:21:19,686 - Deklarisana promenljiva bodovi na liniji 24
+INFO  04:21:19,686 - Deklarisana promenljiva bt na liniji 25
+INFO  04:21:19,686 - Deklarisana funkcija main sa 2 ulazna parametra

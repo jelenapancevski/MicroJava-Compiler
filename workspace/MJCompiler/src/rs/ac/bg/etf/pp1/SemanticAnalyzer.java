@@ -55,14 +55,14 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  Obj objType = Tab.find(type.getTypeName());
 		  if (objType == Tab.noObj) {
 			  // Type does not exist 
-			  report_error("Greska na liniji "+ type.getLine()+" : tip sa nazivom "+ type.getTypeName()+"ne postoji", null);
+			  report_error("Greska na liniji "+ type.getLine()+" : tip sa nazivom "+ type.getTypeName()+" ne postoji", null);
 			  type.struct = Tab.noType;
 			  currentType.struct = Tab.noType;
 			  return;
 		  }
 		  if(objType.getKind()!=Obj.Type) {
 			  // Given type name does not present any type 
-			  report_error("Greska na liniji "+ type.getLine()+" : tip sa nazivom "+ type.getTypeName()+"ne predstavlja tip", null);
+			  report_error("Greska na liniji "+ type.getLine()+" : promenljiva sa nazivom "+ type.getTypeName()+" ne predstavlja tip", null);
 			  type.struct = Tab.noType;
 			  currentType.struct = Tab.noType;
 			  return;
@@ -116,7 +116,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  // Check if constant type value is equivalent with current type
 		  if(!currentType.struct.equals(constantDeclaration.getConstant().struct)) {
 			  // Constant value has wrong type
-			  report_error("Greska na liniji "+ constantDeclaration.getLine()+" : promenljiva sa nazivom "+ constantDeclaration.getConstName()+"nije kompatibilnog tipa sa dodeljenom vrednoscu", null);
+			  report_error("Greska na liniji "+ constantDeclaration.getLine()+" : promenljiva sa nazivom "+ constantDeclaration.getConstName()+" nije kompatibilnog tipa sa dodeljenom vrednoscu", null);
 			  constantDeclaration.obj=Tab.noObj;
 			  return;
 		  }
@@ -309,7 +309,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  }
 		  // check if type Expr is compatible with type of designator
 		  if (((AssignmentExpression)assignment.getAssignmentExpr()).getExpr().struct.compatibleWith(type)) return; 		
-		  report_error("Semanticka greska na liniji " + assignment.getLine() + ": Ti Expr nije kompatibilan sa tipom designator-a", null);
+		  report_error("Semanticka greska na liniji " + assignment.getLine() + ": Expr nije kompatibilan sa tipom designator-a", null);
 	  }
 	 //(FuncionCall) FunctionName LPAREN ActParams RPAREN
 	  public void visit (FuncionCall funcionCall) {
@@ -624,11 +624,13 @@ CondFact ::= (ConditionFacts) Expr Relop Expr
 	  public void visit (FunctionName functionName) {
 		  Obj function =  Tab.find(functionName.getDesignator().obj.getName());
 		  if (function == Tab.noObj) {
-				report_error("Semanticka greska na liniji " + functionName.getLine() + ": Funkcija "+ functionName.getDesignator().obj.getName()+" nije deklarisana!", null);
+			  	functionName.obj= currentFunction= Tab.noObj;
+			  	report_error("Semanticka greska na liniji " + functionName.getLine() + ": Funkcija "+ functionName.getDesignator().obj.getName()+" nije deklarisana!", null);
 				return;
 		  }
 		  if ( function.getKind()!=3) {
 				report_error("Semanticka greska na liniji " + functionName.getLine() + ": Promenljiva "+ functionName.getDesignator().obj.getName()+" nije funkcija!", null);
+				functionName.obj= currentFunction= Tab.noObj;
 				return;
 		  }
 		  
@@ -649,6 +651,7 @@ CondFact ::= (ConditionFacts) Expr Relop Expr
 		Obj currentarg = (Obj)arguments[parameters];
 		if (!parameter.getExpr().struct.compatibleWith(currentarg.getType())) {
 			report_error("Semanticka greska na liniji " + parameter.getLine() + ": Tip stvarnog argumenta  nije kompatibilan sa tipom formalnog argumenta "+ currentarg.getName(), null);
+			parameters++;
 			return;
 		}
 		parameter.struct = parameter.getExpr().struct;
@@ -659,7 +662,8 @@ CondFact ::= (ConditionFacts) Expr Relop Expr
 	  public void visit (FunctionCall functionCall) {
 		 if (functionCall.getFunctionName().obj.getLevel()!=parameters) {
 			 report_error("Semanticka greska na liniji " + functionCall.getLine() + ": Broj formalnih i stvarnih argumenata metode "+ functionCall.getFunctionName().obj.getName()+" nije isti!", null);
-			return;
+			 functionCall.struct = Tab.noType;
+			 return;
 		 }
 		 functionCall.struct = functionCall.getFunctionName().obj.getType();
 	  }
