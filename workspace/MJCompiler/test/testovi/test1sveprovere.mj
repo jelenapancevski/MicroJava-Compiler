@@ -17,6 +17,10 @@ program test301
 	nizch nijeok ; // nije ok 
 	
 {
+	int sum(int a, int b)int c;{
+	c = a+b;
+	return c;
+	}
 	int funca(char a, char b){
 	niz = new int [5]; //ok
 	niz2 = new int [slovoa]; //nije ok 
@@ -26,12 +30,13 @@ program test301
 	return 1;
 	}
 	
-	void main(int s, bool c[])	
+	void main()	
 		int bodovi;
 		bool bt;
 		
 	{
-	
+		// TESTOVI ZA DesignatorStatement = Designator "(" [ActPars] ")" ";"
+		
 		funcb(); //not ok ne postoji
 		niz(2); // not ok nije u pitanju funkcija
 		funca(1); //not ok
@@ -39,6 +44,65 @@ program test301
 		funca(slovob,2); //not ok
 		
 		funca(slovoa,slovob); //ok
+		
+		// TESTOVI ZA PRINT 
+		
+		print (funca(slovoa,slovob)); // trebalo bi ok
+		print (funca(slovoa,3)); //not ok
+		
+		// TESTOVI ZA DesignatorStatement = Designator ("++" | "--") ";"
+		slovob++; //not ok - constanta
+		radi--; //not ok - constanta
+		niz++; // not ok niz je u pitanju
+		nizch[2]--; // not ok niz je tipa boolean 
+		
+		niz[1]++; //ok
+		niz[2]--; // ok
+		
+		// TESTOVI ZA Statement = "break".
+		break; // not ok
+		
+		// TESTOVI ZA DesignatorStatement = Designator Assignop Expr ";"
+		radi = false ; // not ok jer je constanta
+		niz = 5; //not ok jer nije element niza
+		niz[5]=5; //ok; 
+		
+		// TESTOVI ZA Designator = Designator "[" Expr "]"
+		a = b[1]; //not ok b nije niz
+		a = niz [slovoa]; // not ok slovoa nije tipa int
+		a = niz[10]; //good;
+		
+		// TESTOVI ZA Term = Term Mulop Factor.
+		a = b* funca(slovoa,slovob) ; //ok
+		a = b *  slovoa ; // not ok
+		a = a % 2; //ok
+		b = a / 1; //ok
+		
+		// TESTOVI ZA Expr = Expr Addop Term. 
+		b = 5 + slovoa; //not ok
+		b = pet + a - jedan; //ok 
+		
+		// TESTOVI ZA Expr = "-" Term.
+		b = - slovoa; //not ok
+		b = -jedan; // ok
+		
+		// TESTOVI ZA ActPars = Expr {"," Expr}.
+		a=sum(7,b); //ok
+		b = sum(14-8+b,a%2); //ok
+		b=sum(slovoa,a); //not ok
+		b= sum(a,b);
+		
+		// TESTOVI ZA Statement = "print" "(" Expr ["," numConst] ")" ";".
+		print(new int[7]); // not ok
+		print ( -a+b,7);	//ok
+		
+		// TESTOVI ZA Statement = "read" "(" Designator ")" ";".
+		read(a);	
+		read(slovoa);	//not ok
+		read(niz);	//not ok
+		read(nizch[1]);
+		
+		
 		
 		bodovi = 0;
 		bodovi++;

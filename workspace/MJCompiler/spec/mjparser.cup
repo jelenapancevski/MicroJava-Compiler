@@ -54,7 +54,7 @@ scan with {:
 :}
 
 
-nonterminal ForEach, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, AssignmentExpr, ActParams, ActPars, CondTerm, CondFact, Relop, Addop, Mulop;
+nonterminal ForEach, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, ActParams, ActPars, Relop, Addop, Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NEW, LPAREN, RPAREN, COMMA, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
 
 
@@ -68,7 +68,7 @@ terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
 precedence left ELSE;

@@ -74,11 +74,8 @@ nonterminal PrintConstant PrintConstant;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesignatorList DesignatorList;
 nonterminal DesignatorListElement DesignatorListElement;
-nonterminal AssignmentExpr AssignmentExpr;
 nonterminal ActParams ActParams;
 nonterminal ActPars ActPars;
-nonterminal CondTerm CondTerm;
-nonterminal CondFact CondFact;
 nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
@@ -95,7 +92,7 @@ terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
 precedence left ELSE;
