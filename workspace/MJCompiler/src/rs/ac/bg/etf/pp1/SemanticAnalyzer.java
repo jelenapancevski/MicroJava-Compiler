@@ -9,6 +9,8 @@ import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.etf.pp1.symboltable.concepts.Struct;
+import rs.etf.pp1.symboltable.visitors.DumpSymbolTableVisitor;
+import rs.etf.pp1.symboltable.visitors.SymbolTableVisitor;
 
 public class SemanticAnalyzer extends VisitorAdaptor{
 	
@@ -25,7 +27,8 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	Obj currentMethod;
 	Obj currentFunction;
 	int methodArguments = 0;
-	int parameters;
+	//int parameters;
+	ArrayList <Integer> parameters = new ArrayList<>();
 	ArrayList <OneDesignatorElement> designatorList = null;
 	
 	public SemanticAnalyzer() {
@@ -50,6 +53,16 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			msg.append (" na liniji ").append(line);
 		log.info(msg.toString());
 	}
+	
+	public void report_detection(Obj objectNode,SyntaxNode info) {
+		StringBuilder msg = new StringBuilder(); 
+		msg.append("Detektovana upotreba simbola "+objectNode.getName()+" na liniji "+ info.getLine() + ": ");
+		SymbolTableVisitor visitor = new DumpSymbolTableVisitor();
+		visitor.visitObjNode(objectNode);
+		msg.append(visitor.getOutput());
+		log.info(msg.toString());
+	}
+	
 	public boolean passed() {
 		return !errorDetected;
 	}
@@ -354,7 +367,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			  if(designator==null) continue;
 			  if(designator.getDesignator().obj==Tab.noObj) continue;
 			  if(!designator.getDesignator().obj.getType().compatibleWith(elemType)) {
-				  report_error("Semanticka greska na liniji " + multipleAssignment.getLine() + ": Tip designatora "+designator.getDesignator().obj.getName()+ "nije kompatibilan sa tipom elementa niza "+multipleAssignment.getDesignator().obj.getName(), null);
+				  report_error("Semanticka greska na liniji " + multipleAssignment.getLine() + ": Tip designatora "+designator.getDesignator().obj.getName()+ " nije kompatibilan sa tipom elementa niza "+multipleAssignment.getDesignator().obj.getName(), null);
 			  }
 		  }
 		  
@@ -401,6 +414,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  //(Assignment) Designator EQUAL AssignmentExpr
 	  public void visit (Assignment assignment) {
 		  Struct type;
+		  if( assignment.getAssignmentExpr() instanceof AssignmentExprError) return;
 		  if((assignment.getDesignator().obj==Tab.noObj)||(((AssignmentExpression)assignment.getAssignmentExpr()).getExpr().struct==Tab.noType))  {
 			  return;
 		  } 
@@ -424,11 +438,13 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  
 	 //(FuncionCall) FunctionName LPAREN ActParams RPAREN
 	  public void visit (FuncionCall funcionCall) {
+		  int currentparameters = parameters.get(parameters.size()-1);
+		  parameters.remove(parameters.size()-1);
 		  if (funcionCall.getFunctionName().obj==Tab.noObj) {
 			  	//funcionCall.struct = Tab.noType;
 				 return;
 			 }
-		  if (funcionCall.getFunctionName().obj.getLevel()!=parameters) {
+		  if (funcionCall.getFunctionName().obj.getLevel()!=currentparameters) {
 				 report_error("Semanticka greska na liniji " + funcionCall.getLine() + ": Broj formalnih i stvarnih argumenata metode "+ funcionCall.getFunctionName().obj.getName()+" nije isti!", null);
 				 //funcionCall.struct = Tab.noType;
 				 return;
@@ -454,7 +470,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  }
 
 	  //(WhileStatement) WHILE LPAREN Condition RPAREN Statement
-	  public void visit (While while1) {
+	  public void visit (WhileLoop whileLoop) {
 		  inloop++;
 	  }
 	  
@@ -467,7 +483,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  }
 	  
 	  //(ForEachStatement) Designator DOT FOREACH LPAREN IDENT ARROW Statement RPAREN SEMICOLON
-	  public void visit (ForEach forEach) {
+	  public void visit (ForEachLoop forEachLoop) {
 		  inloop++;
 	  }
 	  
@@ -500,7 +516,8 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			  return;
 		  }
 		  // check if type of ident is equal to type
-		  if (type.equals(Tab.find(forEachStatement.getIdent()).getType())) return; 		
+		  if (type.equals(Tab.find(forEachStatement.getIdent()).getType())) return; 
+		 		
 		  report_error("Semanticka greska na liniji " + forEachStatement.getLine() + ": Promenljiva ident u foreach petlji mora biti istog tipa kao tip elementa niza Designator", null);
 		  
 	  }
@@ -582,6 +599,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  public void visit (Conditions conditions) {
 		  if ((!conditions.getCondition().struct.equals(boolType)) || (!conditions.getCondTerm().struct.equals(boolType))){
 			  report_error("Semanticka greska na liniji " + conditions.getLine() + ": U izrazu sa || oba operanda moraju biti tipa boolean", null);
+			  conditions.struct = Tab.noType;
 			  return;
 		  }
 		  
@@ -598,6 +616,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  public void visit (ConditionTerms conditionTerms) {
 		  if ((!conditionTerms.getCondTerm().struct.equals(boolType)) || (!conditionTerms.getCondFact().struct.equals(boolType))){
 			  report_error("Semanticka greska na liniji " + conditionTerms.getLine() + ": U izrazu sa && oba operanda moraju biti tipa boolean", null);
+			  conditionTerms.struct = Tab.noType;
 			  return;
 		  }
 		  
@@ -730,6 +749,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  
 		  oneDesignator.obj = designator;
 		  // *** DODATI INFO MOZDA 
+		  report_detection(designator,oneDesignator);
 	  }
 	  
 	  /* FACTORS */
@@ -780,6 +800,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  
 	  // (FunctionName) Designator
 	  public void visit (FunctionName functionName) {
+		  parameters.add(0); // added new parameter count
 		  if (functionName.getDesignator().obj==Tab.noObj) {
 			  functionName.obj= currentFunction= Tab.noObj;
 			  return;
@@ -798,7 +819,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  
 		 functionName.obj= function;
 		 currentFunction = function;
-		 parameters = 0;
+		 //report_detection(function, functionName);
 	  }
 	  
 	  /* ACTPARAMS */
@@ -808,28 +829,31 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			 return;
 		 }
 		 int numofarguments = currentFunction.getLevel();
-		 if(numofarguments<=parameters) {
+		 int index = parameters.size()-1;
+		 if(numofarguments<=parameters.get(index)) {
 				report_error("Semanticka greska na liniji " + parameter.getLine() + ": Broj formalnih i stvarnih argumenata metode "+ currentFunction.getName()+" nije isti!", null);
 				return;
 		 }
 		Object [] arguments= currentFunction.getLocalSymbols().toArray();
-		Obj currentarg = (Obj)arguments[parameters];
+		Obj currentarg = (Obj)arguments[parameters.get(index)];
 		if (!parameter.getExpr().struct.compatibleWith(currentarg.getType())) {
 			report_error("Semanticka greska na liniji " + parameter.getLine() + ": Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta "+ currentarg.getName(), null);
-			parameters++;
+			parameters.set(index, parameters.get(index)+1);
 			return;
 		}
 		parameter.struct = parameter.getExpr().struct;
-		parameters++;
+		parameters.set(index, parameters.get(index)+1);
 	  }
 	  
 	  //(FunctionCall) FunctionName LPAREN ActParams RPAREN
 	  public void visit (FunctionCall functionCall) {
+		  int currentparameters = parameters.get(parameters.size()-1);
+		  parameters.remove(parameters.size()-1);
 		 if (functionCall.getFunctionName().obj==Tab.noObj) {
 			 functionCall.struct = Tab.noType;
 			 return;
 		 }
-		 if (functionCall.getFunctionName().obj.getLevel()!=parameters) {
+		 if (functionCall.getFunctionName().obj.getLevel()!=currentparameters) {
 			 report_error("Semanticka greska na liniji " + functionCall.getLine() + ": Broj formalnih i stvarnih argumenata metode "+ functionCall.getFunctionName().obj.getName()+" nije isti!", null);
 			 functionCall.struct = Tab.noType;
 			 return;

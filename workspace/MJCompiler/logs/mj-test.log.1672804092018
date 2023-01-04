@@ -1,482 +1,482 @@
-INFO  21:41:54,941 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\test302.mj
-INFO  21:41:54,986 - #2 program
-INFO  21:41:54,987 - #47 test302
-INFO  21:41:54,987 - #5 const
-INFO  21:41:54,988 - #47 int
-INFO  21:41:54,988 - #47 jedan
-INFO  21:41:54,988 - #19 =
-INFO  21:41:54,988 - #49 1
-INFO  21:41:54,989 - #7 ;
-INFO  21:41:54,989 - #47 int
-INFO  21:41:54,990 - #47 i
-INFO  21:41:54,990 - #7 ;
-INFO  21:41:54,991 - #47 bool
-INFO  21:41:54,992 - #47 ibool
-INFO  21:41:54,992 - #7 ;
-INFO  21:41:54,992 - #47 int
-INFO  21:41:54,992 - #47 niz2
-INFO  21:41:54,992 - #7 ;
-INFO  21:41:54,992 - #47 int
-INFO  21:41:54,992 - #47 niz
-INFO  21:41:54,992 - #17 [
-INFO  21:41:54,992 - #18 ]
-INFO  21:41:54,992 - #7 ;
-INFO  21:41:54,993 - #47 int
-INFO  21:41:54,993 - #47 a
-INFO  21:41:54,993 - #15 ,
-INFO  21:41:54,993 - #47 curr
-INFO  21:41:54,993 - #7 ;
-INFO  21:41:54,993 - #3 {
-INFO  21:41:54,993 - #47 int
-INFO  21:41:54,994 - #47 sum
-INFO  21:41:54,994 - #13 (
-INFO  21:41:54,994 - #47 int
-INFO  21:41:54,994 - #47 z
-INFO  21:41:54,994 - #15 ,
-INFO  21:41:54,995 - #47 int
-INFO  21:41:54,995 - #47 d
-INFO  21:41:54,995 - #14 )
-INFO  21:41:54,995 - #3 {
-INFO  21:41:54,996 - #38 return
-INFO  21:41:54,996 - #47 z
-INFO  21:41:54,996 - #28 +
-INFO  21:41:54,997 - #47 d
-INFO  21:41:54,998 - #7 ;
-INFO  21:41:54,998 - #4 }
-INFO  21:41:54,998 - #47 int
-INFO  21:41:54,999 - #47 inkrement
-INFO  21:41:54,999 - #13 (
-INFO  21:41:54,999 - #47 int
-INFO  21:41:54,999 - #47 a
-INFO  21:41:54,999 - #15 ,
-INFO  21:41:54,999 - #47 int
-INFO  21:41:55,000 - #47 inc
-INFO  21:41:55,000 - #14 )
-INFO  21:41:55,000 - #47 int
-INFO  21:41:55,000 - #47 pom
-INFO  21:41:55,000 - #7 ;
-INFO  21:41:55,000 - #3 {
-INFO  21:41:55,000 - #33 if
-INFO  21:41:55,000 - #13 (
-INFO  21:41:55,000 - #47 inc
-INFO  21:41:55,000 - #20 ==
-INFO  21:41:55,000 - #47 jedan
-INFO  21:41:55,001 - #14 )
-INFO  21:41:55,002 - #47 pom
-INFO  21:41:55,002 - #19 =
-INFO  21:41:55,002 - #49 1
-INFO  21:41:55,002 - #7 ;
-INFO  21:41:55,002 - #34 else
-INFO  21:41:55,003 - #33 if
-INFO  21:41:55,003 - #13 (
-INFO  21:41:55,003 - #47 inc
-INFO  21:41:55,003 - #20 ==
-INFO  21:41:55,003 - #49 2
-INFO  21:41:55,003 - #14 )
-INFO  21:41:55,003 - #47 pom
-INFO  21:41:55,003 - #19 =
-INFO  21:41:55,003 - #47 a
-INFO  21:41:55,003 - #7 ;
-INFO  21:41:55,003 - #38 return
-INFO  21:41:55,003 - #47 sum
-INFO  21:41:55,003 - #13 (
-INFO  21:41:55,004 - #47 a
-INFO  21:41:55,004 - #15 ,
-INFO  21:41:55,005 - #47 pom
-INFO  21:41:55,005 - #14 )
-INFO  21:41:55,005 - #7 ;
-INFO  21:41:55,005 - #4 }
-INFO  21:41:55,005 - #47 bool
-INFO  21:41:55,005 - #47 verify
-INFO  21:41:55,005 - #13 (
-INFO  21:41:55,005 - #14 )
-INFO  21:41:55,006 - #3 {
-INFO  21:41:55,006 - #9 print
-INFO  21:41:55,006 - #13 (
-INFO  21:41:55,006 - #48 v
-INFO  21:41:55,006 - #14 )
-INFO  21:41:55,007 - #7 ;
-INFO  21:41:55,007 - #38 return
-INFO  21:41:55,007 - #50 false
-INFO  21:41:55,007 - #7 ;
-INFO  21:41:55,009 - #4 }
-INFO  21:41:55,009 - #6 void
-INFO  21:41:55,009 - #47 main
-INFO  21:41:55,009 - #13 (
-INFO  21:41:55,009 - #14 )
-INFO  21:41:55,009 - #3 {
-INFO  21:41:55,009 - #33 if
-INFO  21:41:55,009 - #13 (
-INFO  21:41:55,009 - #49 1
-INFO  21:41:55,009 - #21 !=
-INFO  21:41:55,009 - #49 1
-INFO  21:41:55,010 - #14 )
-INFO  21:41:55,010 - #9 print
-INFO  21:41:55,010 - #13 (
-INFO  21:41:55,010 - #29 -
-INFO  21:41:55,010 - #49 6
-INFO  21:41:55,010 - #14 )
-INFO  21:41:55,010 - #7 ;
-INFO  21:41:55,010 - #34 else
-INFO  21:41:55,010 - #9 print
-INFO  21:41:55,010 - #13 (
-INFO  21:41:55,011 - #49 0
-INFO  21:41:55,011 - #14 )
-INFO  21:41:55,011 - #7 ;
-INFO  21:41:55,011 - #47 ibool
-INFO  21:41:55,011 - #19 =
-INFO  21:41:55,011 - #50 false
-INFO  21:41:55,011 - #7 ;
-INFO  21:41:55,011 - #47 i
-INFO  21:41:55,011 - #19 =
-INFO  21:41:55,011 - #49 0
-INFO  21:41:55,011 - #7 ;
-INFO  21:41:55,011 - #35 while
-INFO  21:41:55,012 - #13 (
-INFO  21:41:55,012 - #47 i
-INFO  21:41:55,012 - #24 <
-INFO  21:41:55,013 - #49 5
-INFO  21:41:55,013 - #14 )
-INFO  21:41:55,013 - #3 {
-INFO  21:41:55,013 - #33 if
-INFO  21:41:55,014 - #13 (
-INFO  21:41:55,014 - #47 i
-INFO  21:41:55,014 - #20 ==
-INFO  21:41:55,014 - #49 2
-INFO  21:41:55,014 - #14 )
-INFO  21:41:55,014 - #47 ibool
-INFO  21:41:55,014 - #19 =
-INFO  21:41:55,014 - #50 true
-INFO  21:41:55,014 - #7 ;
-INFO  21:41:55,014 - #47 i
-INFO  21:41:55,014 - #10 ++
-INFO  21:41:55,014 - #7 ;
-INFO  21:41:55,015 - #4 }
-INFO  21:41:55,015 - #33 if
-INFO  21:41:55,015 - #13 (
-INFO  21:41:55,015 - #47 ibool
-INFO  21:41:55,015 - #14 )
-INFO  21:41:55,015 - #33 if
-INFO  21:41:55,015 - #13 (
-INFO  21:41:55,015 - #47 i
-INFO  21:41:55,015 - #20 ==
-INFO  21:41:55,015 - #49 5
-INFO  21:41:55,016 - #14 )
-INFO  21:41:55,016 - #9 print
-INFO  21:41:55,016 - #13 (
-INFO  21:41:55,016 - #49 1
-INFO  21:41:55,016 - #14 )
-INFO  21:41:55,016 - #7 ;
-INFO  21:41:55,016 - #34 else
-INFO  21:41:55,016 - #9 print
-INFO  21:41:55,016 - #13 (
-INFO  21:41:55,016 - #29 -
-INFO  21:41:55,016 - #49 1
-INFO  21:41:55,016 - #14 )
-INFO  21:41:55,016 - #7 ;
-INFO  21:41:55,016 - #47 a
-INFO  21:41:55,017 - #19 =
-INFO  21:41:55,017 - #49 2
-INFO  21:41:55,017 - #7 ;
-INFO  21:41:55,017 - #47 niz
-INFO  21:41:55,017 - #19 =
-INFO  21:41:55,017 - #12 new
-INFO  21:41:55,017 - #47 int
-INFO  21:41:55,017 - #17 [
-INFO  21:41:55,017 - #49 3
-INFO  21:41:55,017 - #18 ]
-INFO  21:41:55,017 - #7 ;
-INFO  21:41:55,017 - #47 niz
-INFO  21:41:55,017 - #17 [
-INFO  21:41:55,017 - #49 0
-INFO  21:41:55,018 - #18 ]
-INFO  21:41:55,018 - #19 =
-INFO  21:41:55,018 - #49 1
-INFO  21:41:55,018 - #30 *
-INFO  21:41:55,018 - #47 a
-INFO  21:41:55,019 - #7 ;
-INFO  21:41:55,019 - #47 niz
-INFO  21:41:55,019 - #17 [
-INFO  21:41:55,019 - #49 1
-INFO  21:41:55,019 - #18 ]
-INFO  21:41:55,020 - #19 =
-INFO  21:41:55,020 - #49 2
-INFO  21:41:55,020 - #30 *
-INFO  21:41:55,020 - #47 a
-INFO  21:41:55,020 - #7 ;
-INFO  21:41:55,020 - #47 niz
-INFO  21:41:55,020 - #17 [
-INFO  21:41:55,020 - #49 2
-INFO  21:41:55,020 - #18 ]
-INFO  21:41:55,020 - #19 =
-INFO  21:41:55,020 - #47 sum
-INFO  21:41:55,020 - #13 (
-INFO  21:41:55,020 - #47 niz
-INFO  21:41:55,020 - #17 [
-INFO  21:41:55,020 - #49 1
-INFO  21:41:55,020 - #18 ]
-INFO  21:41:55,020 - #15 ,
-INFO  21:41:55,020 - #47 niz
-INFO  21:41:55,020 - #17 [
-INFO  21:41:55,020 - #49 0
-INFO  21:41:55,020 - #18 ]
-INFO  21:41:55,021 - #14 )
-INFO  21:41:55,021 - #30 *
-INFO  21:41:55,021 - #47 a
-INFO  21:41:55,021 - #28 +
-INFO  21:41:55,021 - #49 1
-INFO  21:41:55,021 - #7 ;
-INFO  21:41:55,021 - #33 if
-INFO  21:41:55,021 - #13 (
-INFO  21:41:55,021 - #47 verify
-INFO  21:41:55,021 - #13 (
-INFO  21:41:55,021 - #14 )
-INFO  21:41:55,022 - #27 ||
-INFO  21:41:55,022 - #47 niz
-INFO  21:41:55,022 - #17 [
-INFO  21:41:55,022 - #49 2
-INFO  21:41:55,022 - #18 ]
-INFO  21:41:55,022 - #20 ==
-INFO  21:41:55,022 - #49 4
-INFO  21:41:55,022 - #14 )
-INFO  21:41:55,022 - #9 print
-INFO  21:41:55,022 - #13 (
-INFO  21:41:55,022 - #47 ord
-INFO  21:41:55,022 - #13 (
-INFO  21:41:55,022 - #48 A
-INFO  21:41:55,022 - #14 )
-INFO  21:41:55,022 - #14 )
-INFO  21:41:55,022 - #7 ;
-INFO  21:41:55,022 - #34 else
-INFO  21:41:55,022 - #9 print
-INFO  21:41:55,022 - #13 (
-INFO  21:41:55,023 - #47 ord
-INFO  21:41:55,023 - #13 (
-INFO  21:41:55,023 - #48 a
-INFO  21:41:55,023 - #14 )
-INFO  21:41:55,023 - #14 )
-INFO  21:41:55,023 - #7 ;
-INFO  21:41:55,023 - #9 print
-INFO  21:41:55,023 - #13 (
-INFO  21:41:55,023 - #47 eol
-INFO  21:41:55,023 - #14 )
-INFO  21:41:55,023 - #7 ;
-INFO  21:41:55,023 - #47 i
-INFO  21:41:55,023 - #19 =
-INFO  21:41:55,024 - #49 0
-INFO  21:41:55,024 - #7 ;
-INFO  21:41:55,024 - #35 while
-INFO  21:41:55,024 - #13 (
-INFO  21:41:55,024 - #47 i
-INFO  21:41:55,024 - #24 <
-INFO  21:41:55,024 - #49 10
-INFO  21:41:55,024 - #14 )
-INFO  21:41:55,024 - #3 {
-INFO  21:41:55,024 - #33 if
-INFO  21:41:55,024 - #13 (
-INFO  21:41:55,024 - #47 i
-INFO  21:41:55,024 - #20 ==
-INFO  21:41:55,024 - #49 3
-INFO  21:41:55,024 - #14 )
-INFO  21:41:55,024 - #3 {
-INFO  21:41:55,024 - #47 i
-INFO  21:41:55,024 - #10 ++
-INFO  21:41:55,024 - #7 ;
-INFO  21:41:55,024 - #37 continue
-INFO  21:41:55,024 - #7 ;
-INFO  21:41:55,024 - #4 }
-INFO  21:41:55,025 - #33 if
-INFO  21:41:55,025 - #13 (
-INFO  21:41:55,025 - #47 i
-INFO  21:41:55,025 - #20 ==
-INFO  21:41:55,025 - #49 4
-INFO  21:41:55,025 - #14 )
-INFO  21:41:55,025 - #36 break
-INFO  21:41:55,025 - #7 ;
-INFO  21:41:55,025 - #47 i
-INFO  21:41:55,026 - #19 =
-INFO  21:41:55,026 - #47 inkrement
-INFO  21:41:55,026 - #13 (
-INFO  21:41:55,026 - #47 i
-INFO  21:41:55,026 - #15 ,
-INFO  21:41:55,026 - #49 1
-INFO  21:41:55,026 - #14 )
-INFO  21:41:55,026 - #7 ;
-INFO  21:41:55,026 - #4 }
-INFO  21:41:55,026 - #33 if
-INFO  21:41:55,026 - #13 (
-INFO  21:41:55,026 - #47 i
-INFO  21:41:55,026 - #20 ==
-INFO  21:41:55,026 - #49 3
-INFO  21:41:55,026 - #26 &&
-INFO  21:41:55,026 - #47 verify
-INFO  21:41:55,026 - #13 (
-INFO  21:41:55,026 - #14 )
-INFO  21:41:55,026 - #14 )
-INFO  21:41:55,026 - #9 print
-INFO  21:41:55,026 - #13 (
-INFO  21:41:55,026 - #29 -
-INFO  21:41:55,026 - #49 4
-INFO  21:41:55,026 - #14 )
-INFO  21:41:55,026 - #7 ;
-INFO  21:41:55,026 - #34 else
-INFO  21:41:55,026 - #9 print
-INFO  21:41:55,027 - #13 (
-INFO  21:41:55,027 - #49 4
-INFO  21:41:55,027 - #14 )
-INFO  21:41:55,027 - #7 ;
-INFO  21:41:55,027 - #8 read
-INFO  21:41:55,027 - #13 (
-INFO  21:41:55,027 - #47 niz
-INFO  21:41:55,027 - #17 [
-INFO  21:41:55,027 - #49 0
-INFO  21:41:55,027 - #18 ]
-INFO  21:41:55,027 - #14 )
-INFO  21:41:55,027 - #7 ;
-INFO  21:41:55,027 - #8 read
-INFO  21:41:55,027 - #13 (
-INFO  21:41:55,027 - #47 niz
-INFO  21:41:55,027 - #17 [
-INFO  21:41:55,027 - #49 1
-INFO  21:41:55,027 - #18 ]
-INFO  21:41:55,027 - #14 )
-INFO  21:41:55,027 - #7 ;
-INFO  21:41:55,027 - #8 read
-INFO  21:41:55,027 - #13 (
-INFO  21:41:55,027 - #47 niz
-INFO  21:41:55,027 - #17 [
-INFO  21:41:55,027 - #49 2
-INFO  21:41:55,027 - #18 ]
-INFO  21:41:55,027 - #14 )
-INFO  21:41:55,027 - #7 ;
-INFO  21:41:55,027 - #9 print
-INFO  21:41:55,027 - #13 (
-INFO  21:41:55,027 - #47 eol
-INFO  21:41:55,027 - #14 )
-INFO  21:41:55,027 - #7 ;
-INFO  21:41:55,027 - #9 print
-INFO  21:41:55,027 - #13 (
-INFO  21:41:55,028 - #47 sum
-INFO  21:41:55,028 - #13 (
-INFO  21:41:55,028 - #47 sum
-INFO  21:41:55,028 - #13 (
-INFO  21:41:55,028 - #47 niz
-INFO  21:41:55,028 - #17 [
-INFO  21:41:55,028 - #49 0
-INFO  21:41:55,028 - #18 ]
-INFO  21:41:55,028 - #15 ,
-INFO  21:41:55,028 - #47 niz
-INFO  21:41:55,028 - #17 [
-INFO  21:41:55,028 - #49 1
-INFO  21:41:55,028 - #18 ]
-INFO  21:41:55,028 - #14 )
-INFO  21:41:55,028 - #15 ,
-INFO  21:41:55,028 - #47 niz
-INFO  21:41:55,028 - #17 [
-INFO  21:41:55,028 - #49 2
-INFO  21:41:55,028 - #18 ]
-INFO  21:41:55,028 - #14 )
-INFO  21:41:55,028 - #14 )
-INFO  21:41:55,028 - #7 ;
-INFO  21:41:55,028 - #9 print
-INFO  21:41:55,028 - #13 (
-INFO  21:41:55,028 - #47 eol
-INFO  21:41:55,028 - #14 )
-INFO  21:41:55,028 - #7 ;
-INFO  21:41:55,028 - #9 print
-INFO  21:41:55,028 - #13 (
-INFO  21:41:55,028 - #47 inkrement
-INFO  21:41:55,028 - #13 (
-INFO  21:41:55,028 - #47 niz
-INFO  21:41:55,029 - #17 [
-INFO  21:41:55,029 - #49 2
-INFO  21:41:55,029 - #18 ]
-INFO  21:41:55,029 - #15 ,
-INFO  21:41:55,029 - #49 2
-INFO  21:41:55,029 - #14 )
-INFO  21:41:55,029 - #14 )
-INFO  21:41:55,029 - #7 ;
-INFO  21:41:55,029 - #47 a
-INFO  21:41:55,029 - #19 =
-INFO  21:41:55,029 - #49 3
-INFO  21:41:55,029 - #7 ;
-INFO  21:41:55,029 - #47 i
-INFO  21:41:55,029 - #19 =
-INFO  21:41:55,029 - #49 0
-INFO  21:41:55,029 - #7 ;
-INFO  21:41:55,029 - #35 while
-INFO  21:41:55,029 - #13 (
-INFO  21:41:55,029 - #47 i
-INFO  21:41:55,029 - #24 <
-INFO  21:41:55,029 - #49 3
-INFO  21:41:55,029 - #14 )
-INFO  21:41:55,029 - #3 {
-INFO  21:41:55,029 - #47 niz
-INFO  21:41:55,029 - #17 [
-INFO  21:41:55,029 - #47 i
-INFO  21:41:55,029 - #18 ]
-INFO  21:41:55,029 - #19 =
-INFO  21:41:55,029 - #47 niz
-INFO  21:41:55,029 - #17 [
-INFO  21:41:55,029 - #47 i
-INFO  21:41:55,029 - #18 ]
-INFO  21:41:55,029 - #30 *
-INFO  21:41:55,029 - #49 2
-INFO  21:41:55,029 - #30 *
-INFO  21:41:55,029 - #47 a
-INFO  21:41:55,029 - #7 ;
-INFO  21:41:55,029 - #47 i
-INFO  21:41:55,029 - #10 ++
-INFO  21:41:55,030 - #7 ;
-INFO  21:41:55,030 - #4 }
-INFO  21:41:55,030 - #47 niz
-INFO  21:41:55,030 - #16 .
-INFO  21:41:55,030 - #39 foreach
-INFO  21:41:55,030 - #13 (
-INFO  21:41:55,030 - #47 curr
-INFO  21:41:55,030 - #40 =>
-INFO  21:41:55,030 - #9 print
-INFO  21:41:55,030 - #13 (
-INFO  21:41:55,030 - #47 curr
-INFO  21:41:55,030 - #14 )
-INFO  21:41:55,030 - #7 ;
-INFO  21:41:55,030 - #14 )
-INFO  21:41:55,031 - #7 ;
-INFO  21:41:55,031 - #9 print
-INFO  21:41:55,031 - #13 (
-INFO  21:41:55,031 - #47 eol
-INFO  21:41:55,031 - #14 )
-INFO  21:41:55,031 - #7 ;
-INFO  21:41:55,031 - #47 niz2
-INFO  21:41:55,031 - #19 =
-INFO  21:41:55,031 - #49 0
-INFO  21:41:55,031 - #7 ;
-INFO  21:41:55,031 - #47 niz
-INFO  21:41:55,031 - #16 .
-INFO  21:41:55,031 - #39 foreach
-INFO  21:41:55,031 - #13 (
-INFO  21:41:55,031 - #47 curr
-INFO  21:41:55,031 - #40 =>
-INFO  21:41:55,031 - #3 {
-INFO  21:41:55,031 - #47 niz2
-INFO  21:41:55,031 - #19 =
-INFO  21:41:55,031 - #47 niz2
-INFO  21:41:55,031 - #28 +
-INFO  21:41:55,031 - #47 curr
-INFO  21:41:55,031 - #30 *
-INFO  21:41:55,031 - #47 curr
-INFO  21:41:55,031 - #7 ;
-INFO  21:41:55,031 - #4 }
-INFO  21:41:55,031 - #14 )
-INFO  21:41:55,031 - #7 ;
-INFO  21:41:55,031 - #9 print
-INFO  21:41:55,031 - #13 (
-INFO  21:41:55,031 - #47 niz2
-INFO  21:41:55,031 - #14 )
-INFO  21:41:55,031 - #7 ;
-INFO  21:41:55,031 - #4 }
-INFO  21:41:55,031 - #4 }
-INFO  21:41:55,042 - Program(
+INFO  04:46:06,249 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\test302.mj
+INFO  04:46:06,293 - #2 program
+INFO  04:46:06,293 - #47 test302
+INFO  04:46:06,293 - #5 const
+INFO  04:46:06,294 - #47 int
+INFO  04:46:06,294 - #47 jedan
+INFO  04:46:06,295 - #19 =
+INFO  04:46:06,295 - #49 1
+INFO  04:46:06,295 - #7 ;
+INFO  04:46:06,296 - #47 int
+INFO  04:46:06,297 - #47 i
+INFO  04:46:06,297 - #7 ;
+INFO  04:46:06,298 - #47 bool
+INFO  04:46:06,298 - #47 ibool
+INFO  04:46:06,298 - #7 ;
+INFO  04:46:06,298 - #47 int
+INFO  04:46:06,298 - #47 niz2
+INFO  04:46:06,299 - #7 ;
+INFO  04:46:06,299 - #47 int
+INFO  04:46:06,299 - #47 niz
+INFO  04:46:06,299 - #17 [
+INFO  04:46:06,299 - #18 ]
+INFO  04:46:06,299 - #7 ;
+INFO  04:46:06,299 - #47 int
+INFO  04:46:06,299 - #47 a
+INFO  04:46:06,300 - #15 ,
+INFO  04:46:06,300 - #47 curr
+INFO  04:46:06,300 - #7 ;
+INFO  04:46:06,300 - #3 {
+INFO  04:46:06,300 - #47 int
+INFO  04:46:06,300 - #47 sum
+INFO  04:46:06,300 - #13 (
+INFO  04:46:06,300 - #47 int
+INFO  04:46:06,300 - #47 z
+INFO  04:46:06,301 - #15 ,
+INFO  04:46:06,301 - #47 int
+INFO  04:46:06,301 - #47 d
+INFO  04:46:06,301 - #14 )
+INFO  04:46:06,301 - #3 {
+INFO  04:46:06,302 - #38 return
+INFO  04:46:06,302 - #47 z
+INFO  04:46:06,302 - #28 +
+INFO  04:46:06,303 - #47 d
+INFO  04:46:06,304 - #7 ;
+INFO  04:46:06,304 - #4 }
+INFO  04:46:06,304 - #47 int
+INFO  04:46:06,305 - #47 inkrement
+INFO  04:46:06,305 - #13 (
+INFO  04:46:06,305 - #47 int
+INFO  04:46:06,305 - #47 a
+INFO  04:46:06,305 - #15 ,
+INFO  04:46:06,305 - #47 int
+INFO  04:46:06,305 - #47 inc
+INFO  04:46:06,306 - #14 )
+INFO  04:46:06,306 - #47 int
+INFO  04:46:06,306 - #47 pom
+INFO  04:46:06,306 - #7 ;
+INFO  04:46:06,306 - #3 {
+INFO  04:46:06,306 - #33 if
+INFO  04:46:06,306 - #13 (
+INFO  04:46:06,306 - #47 inc
+INFO  04:46:06,306 - #20 ==
+INFO  04:46:06,306 - #47 jedan
+INFO  04:46:06,307 - #14 )
+INFO  04:46:06,307 - #47 pom
+INFO  04:46:06,307 - #19 =
+INFO  04:46:06,307 - #49 1
+INFO  04:46:06,307 - #7 ;
+INFO  04:46:06,308 - #34 else
+INFO  04:46:06,308 - #33 if
+INFO  04:46:06,308 - #13 (
+INFO  04:46:06,308 - #47 inc
+INFO  04:46:06,308 - #20 ==
+INFO  04:46:06,308 - #49 2
+INFO  04:46:06,308 - #14 )
+INFO  04:46:06,308 - #47 pom
+INFO  04:46:06,308 - #19 =
+INFO  04:46:06,308 - #47 a
+INFO  04:46:06,308 - #7 ;
+INFO  04:46:06,308 - #38 return
+INFO  04:46:06,308 - #47 sum
+INFO  04:46:06,308 - #13 (
+INFO  04:46:06,309 - #47 a
+INFO  04:46:06,309 - #15 ,
+INFO  04:46:06,310 - #47 pom
+INFO  04:46:06,310 - #14 )
+INFO  04:46:06,310 - #7 ;
+INFO  04:46:06,310 - #4 }
+INFO  04:46:06,310 - #47 bool
+INFO  04:46:06,310 - #47 verify
+INFO  04:46:06,310 - #13 (
+INFO  04:46:06,310 - #14 )
+INFO  04:46:06,311 - #3 {
+INFO  04:46:06,311 - #9 print
+INFO  04:46:06,311 - #13 (
+INFO  04:46:06,311 - #48 v
+INFO  04:46:06,311 - #14 )
+INFO  04:46:06,311 - #7 ;
+INFO  04:46:06,311 - #38 return
+INFO  04:46:06,312 - #50 false
+INFO  04:46:06,312 - #7 ;
+INFO  04:46:06,313 - #4 }
+INFO  04:46:06,313 - #6 void
+INFO  04:46:06,313 - #47 main
+INFO  04:46:06,313 - #13 (
+INFO  04:46:06,313 - #14 )
+INFO  04:46:06,313 - #3 {
+INFO  04:46:06,313 - #33 if
+INFO  04:46:06,313 - #13 (
+INFO  04:46:06,313 - #49 1
+INFO  04:46:06,313 - #21 !=
+INFO  04:46:06,314 - #49 1
+INFO  04:46:06,314 - #14 )
+INFO  04:46:06,314 - #9 print
+INFO  04:46:06,314 - #13 (
+INFO  04:46:06,314 - #29 -
+INFO  04:46:06,314 - #49 6
+INFO  04:46:06,314 - #14 )
+INFO  04:46:06,314 - #7 ;
+INFO  04:46:06,314 - #34 else
+INFO  04:46:06,315 - #9 print
+INFO  04:46:06,315 - #13 (
+INFO  04:46:06,315 - #49 0
+INFO  04:46:06,315 - #14 )
+INFO  04:46:06,315 - #7 ;
+INFO  04:46:06,315 - #47 ibool
+INFO  04:46:06,315 - #19 =
+INFO  04:46:06,315 - #50 false
+INFO  04:46:06,315 - #7 ;
+INFO  04:46:06,315 - #47 i
+INFO  04:46:06,315 - #19 =
+INFO  04:46:06,315 - #49 0
+INFO  04:46:06,315 - #7 ;
+INFO  04:46:06,315 - #35 while
+INFO  04:46:06,316 - #13 (
+INFO  04:46:06,316 - #47 i
+INFO  04:46:06,316 - #24 <
+INFO  04:46:06,316 - #49 5
+INFO  04:46:06,317 - #14 )
+INFO  04:46:06,317 - #3 {
+INFO  04:46:06,317 - #33 if
+INFO  04:46:06,317 - #13 (
+INFO  04:46:06,317 - #47 i
+INFO  04:46:06,317 - #20 ==
+INFO  04:46:06,317 - #49 2
+INFO  04:46:06,317 - #14 )
+INFO  04:46:06,318 - #47 ibool
+INFO  04:46:06,318 - #19 =
+INFO  04:46:06,318 - #50 true
+INFO  04:46:06,318 - #7 ;
+INFO  04:46:06,318 - #47 i
+INFO  04:46:06,318 - #10 ++
+INFO  04:46:06,318 - #7 ;
+INFO  04:46:06,318 - #4 }
+INFO  04:46:06,318 - #33 if
+INFO  04:46:06,318 - #13 (
+INFO  04:46:06,318 - #47 ibool
+INFO  04:46:06,318 - #14 )
+INFO  04:46:06,318 - #33 if
+INFO  04:46:06,318 - #13 (
+INFO  04:46:06,318 - #47 i
+INFO  04:46:06,318 - #20 ==
+INFO  04:46:06,318 - #49 5
+INFO  04:46:06,318 - #14 )
+INFO  04:46:06,319 - #9 print
+INFO  04:46:06,319 - #13 (
+INFO  04:46:06,319 - #49 1
+INFO  04:46:06,319 - #14 )
+INFO  04:46:06,319 - #7 ;
+INFO  04:46:06,319 - #34 else
+INFO  04:46:06,319 - #9 print
+INFO  04:46:06,319 - #13 (
+INFO  04:46:06,319 - #29 -
+INFO  04:46:06,319 - #49 1
+INFO  04:46:06,319 - #14 )
+INFO  04:46:06,319 - #7 ;
+INFO  04:46:06,319 - #47 a
+INFO  04:46:06,319 - #19 =
+INFO  04:46:06,319 - #49 2
+INFO  04:46:06,319 - #7 ;
+INFO  04:46:06,319 - #47 niz
+INFO  04:46:06,319 - #19 =
+INFO  04:46:06,319 - #12 new
+INFO  04:46:06,319 - #47 int
+INFO  04:46:06,319 - #17 [
+INFO  04:46:06,319 - #49 3
+INFO  04:46:06,319 - #18 ]
+INFO  04:46:06,320 - #7 ;
+INFO  04:46:06,320 - #47 niz
+INFO  04:46:06,320 - #17 [
+INFO  04:46:06,320 - #49 0
+INFO  04:46:06,320 - #18 ]
+INFO  04:46:06,320 - #19 =
+INFO  04:46:06,320 - #49 1
+INFO  04:46:06,320 - #30 *
+INFO  04:46:06,320 - #47 a
+INFO  04:46:06,321 - #7 ;
+INFO  04:46:06,321 - #47 niz
+INFO  04:46:06,321 - #17 [
+INFO  04:46:06,321 - #49 1
+INFO  04:46:06,321 - #18 ]
+INFO  04:46:06,321 - #19 =
+INFO  04:46:06,321 - #49 2
+INFO  04:46:06,321 - #30 *
+INFO  04:46:06,321 - #47 a
+INFO  04:46:06,321 - #7 ;
+INFO  04:46:06,321 - #47 niz
+INFO  04:46:06,321 - #17 [
+INFO  04:46:06,321 - #49 2
+INFO  04:46:06,321 - #18 ]
+INFO  04:46:06,321 - #19 =
+INFO  04:46:06,321 - #47 sum
+INFO  04:46:06,321 - #13 (
+INFO  04:46:06,321 - #47 niz
+INFO  04:46:06,321 - #17 [
+INFO  04:46:06,322 - #49 1
+INFO  04:46:06,322 - #18 ]
+INFO  04:46:06,322 - #15 ,
+INFO  04:46:06,322 - #47 niz
+INFO  04:46:06,322 - #17 [
+INFO  04:46:06,322 - #49 0
+INFO  04:46:06,322 - #18 ]
+INFO  04:46:06,322 - #14 )
+INFO  04:46:06,322 - #30 *
+INFO  04:46:06,322 - #47 a
+INFO  04:46:06,322 - #28 +
+INFO  04:46:06,322 - #49 1
+INFO  04:46:06,322 - #7 ;
+INFO  04:46:06,322 - #33 if
+INFO  04:46:06,322 - #13 (
+INFO  04:46:06,322 - #47 verify
+INFO  04:46:06,322 - #13 (
+INFO  04:46:06,322 - #14 )
+INFO  04:46:06,323 - #27 ||
+INFO  04:46:06,323 - #47 niz
+INFO  04:46:06,323 - #17 [
+INFO  04:46:06,323 - #49 2
+INFO  04:46:06,323 - #18 ]
+INFO  04:46:06,323 - #20 ==
+INFO  04:46:06,323 - #49 4
+INFO  04:46:06,323 - #14 )
+INFO  04:46:06,323 - #9 print
+INFO  04:46:06,323 - #13 (
+INFO  04:46:06,323 - #47 ord
+INFO  04:46:06,323 - #13 (
+INFO  04:46:06,323 - #48 A
+INFO  04:46:06,323 - #14 )
+INFO  04:46:06,323 - #14 )
+INFO  04:46:06,323 - #7 ;
+INFO  04:46:06,323 - #34 else
+INFO  04:46:06,323 - #9 print
+INFO  04:46:06,323 - #13 (
+INFO  04:46:06,323 - #47 ord
+INFO  04:46:06,323 - #13 (
+INFO  04:46:06,323 - #48 a
+INFO  04:46:06,323 - #14 )
+INFO  04:46:06,324 - #14 )
+INFO  04:46:06,324 - #7 ;
+INFO  04:46:06,324 - #9 print
+INFO  04:46:06,324 - #13 (
+INFO  04:46:06,324 - #47 eol
+INFO  04:46:06,324 - #14 )
+INFO  04:46:06,324 - #7 ;
+INFO  04:46:06,324 - #47 i
+INFO  04:46:06,324 - #19 =
+INFO  04:46:06,324 - #49 0
+INFO  04:46:06,324 - #7 ;
+INFO  04:46:06,324 - #35 while
+INFO  04:46:06,324 - #13 (
+INFO  04:46:06,324 - #47 i
+INFO  04:46:06,324 - #24 <
+INFO  04:46:06,325 - #49 10
+INFO  04:46:06,325 - #14 )
+INFO  04:46:06,325 - #3 {
+INFO  04:46:06,325 - #33 if
+INFO  04:46:06,325 - #13 (
+INFO  04:46:06,325 - #47 i
+INFO  04:46:06,325 - #20 ==
+INFO  04:46:06,325 - #49 3
+INFO  04:46:06,325 - #14 )
+INFO  04:46:06,325 - #3 {
+INFO  04:46:06,325 - #47 i
+INFO  04:46:06,325 - #10 ++
+INFO  04:46:06,325 - #7 ;
+INFO  04:46:06,325 - #37 continue
+INFO  04:46:06,325 - #7 ;
+INFO  04:46:06,325 - #4 }
+INFO  04:46:06,326 - #33 if
+INFO  04:46:06,326 - #13 (
+INFO  04:46:06,326 - #47 i
+INFO  04:46:06,326 - #20 ==
+INFO  04:46:06,326 - #49 4
+INFO  04:46:06,326 - #14 )
+INFO  04:46:06,326 - #36 break
+INFO  04:46:06,326 - #7 ;
+INFO  04:46:06,326 - #47 i
+INFO  04:46:06,327 - #19 =
+INFO  04:46:06,327 - #47 inkrement
+INFO  04:46:06,327 - #13 (
+INFO  04:46:06,327 - #47 i
+INFO  04:46:06,327 - #15 ,
+INFO  04:46:06,327 - #49 1
+INFO  04:46:06,327 - #14 )
+INFO  04:46:06,327 - #7 ;
+INFO  04:46:06,327 - #4 }
+INFO  04:46:06,327 - #33 if
+INFO  04:46:06,327 - #13 (
+INFO  04:46:06,327 - #47 i
+INFO  04:46:06,327 - #20 ==
+INFO  04:46:06,327 - #49 3
+INFO  04:46:06,327 - #26 &&
+INFO  04:46:06,327 - #47 verify
+INFO  04:46:06,327 - #13 (
+INFO  04:46:06,327 - #14 )
+INFO  04:46:06,327 - #14 )
+INFO  04:46:06,327 - #9 print
+INFO  04:46:06,327 - #13 (
+INFO  04:46:06,327 - #29 -
+INFO  04:46:06,327 - #49 4
+INFO  04:46:06,327 - #14 )
+INFO  04:46:06,327 - #7 ;
+INFO  04:46:06,328 - #34 else
+INFO  04:46:06,328 - #9 print
+INFO  04:46:06,328 - #13 (
+INFO  04:46:06,328 - #49 4
+INFO  04:46:06,328 - #14 )
+INFO  04:46:06,328 - #7 ;
+INFO  04:46:06,328 - #8 read
+INFO  04:46:06,328 - #13 (
+INFO  04:46:06,328 - #47 niz
+INFO  04:46:06,328 - #17 [
+INFO  04:46:06,328 - #49 0
+INFO  04:46:06,328 - #18 ]
+INFO  04:46:06,328 - #14 )
+INFO  04:46:06,328 - #7 ;
+INFO  04:46:06,328 - #8 read
+INFO  04:46:06,328 - #13 (
+INFO  04:46:06,328 - #47 niz
+INFO  04:46:06,328 - #17 [
+INFO  04:46:06,328 - #49 1
+INFO  04:46:06,328 - #18 ]
+INFO  04:46:06,328 - #14 )
+INFO  04:46:06,328 - #7 ;
+INFO  04:46:06,328 - #8 read
+INFO  04:46:06,328 - #13 (
+INFO  04:46:06,328 - #47 niz
+INFO  04:46:06,328 - #17 [
+INFO  04:46:06,328 - #49 2
+INFO  04:46:06,328 - #18 ]
+INFO  04:46:06,328 - #14 )
+INFO  04:46:06,328 - #7 ;
+INFO  04:46:06,328 - #9 print
+INFO  04:46:06,328 - #13 (
+INFO  04:46:06,328 - #47 eol
+INFO  04:46:06,328 - #14 )
+INFO  04:46:06,329 - #7 ;
+INFO  04:46:06,329 - #9 print
+INFO  04:46:06,329 - #13 (
+INFO  04:46:06,329 - #47 sum
+INFO  04:46:06,329 - #13 (
+INFO  04:46:06,329 - #47 sum
+INFO  04:46:06,329 - #13 (
+INFO  04:46:06,329 - #47 niz
+INFO  04:46:06,329 - #17 [
+INFO  04:46:06,329 - #49 0
+INFO  04:46:06,329 - #18 ]
+INFO  04:46:06,329 - #15 ,
+INFO  04:46:06,329 - #47 niz
+INFO  04:46:06,329 - #17 [
+INFO  04:46:06,329 - #49 1
+INFO  04:46:06,329 - #18 ]
+INFO  04:46:06,329 - #14 )
+INFO  04:46:06,329 - #15 ,
+INFO  04:46:06,329 - #47 niz
+INFO  04:46:06,329 - #17 [
+INFO  04:46:06,329 - #49 2
+INFO  04:46:06,329 - #18 ]
+INFO  04:46:06,329 - #14 )
+INFO  04:46:06,329 - #14 )
+INFO  04:46:06,329 - #7 ;
+INFO  04:46:06,329 - #9 print
+INFO  04:46:06,329 - #13 (
+INFO  04:46:06,329 - #47 eol
+INFO  04:46:06,329 - #14 )
+INFO  04:46:06,329 - #7 ;
+INFO  04:46:06,329 - #9 print
+INFO  04:46:06,329 - #13 (
+INFO  04:46:06,330 - #47 inkrement
+INFO  04:46:06,330 - #13 (
+INFO  04:46:06,330 - #47 niz
+INFO  04:46:06,330 - #17 [
+INFO  04:46:06,330 - #49 2
+INFO  04:46:06,330 - #18 ]
+INFO  04:46:06,330 - #15 ,
+INFO  04:46:06,330 - #49 2
+INFO  04:46:06,330 - #14 )
+INFO  04:46:06,330 - #14 )
+INFO  04:46:06,330 - #7 ;
+INFO  04:46:06,330 - #47 a
+INFO  04:46:06,330 - #19 =
+INFO  04:46:06,330 - #49 3
+INFO  04:46:06,330 - #7 ;
+INFO  04:46:06,330 - #47 i
+INFO  04:46:06,330 - #19 =
+INFO  04:46:06,330 - #49 0
+INFO  04:46:06,330 - #7 ;
+INFO  04:46:06,330 - #35 while
+INFO  04:46:06,330 - #13 (
+INFO  04:46:06,330 - #47 i
+INFO  04:46:06,330 - #24 <
+INFO  04:46:06,330 - #49 3
+INFO  04:46:06,330 - #14 )
+INFO  04:46:06,330 - #3 {
+INFO  04:46:06,330 - #47 niz
+INFO  04:46:06,330 - #17 [
+INFO  04:46:06,330 - #47 i
+INFO  04:46:06,330 - #18 ]
+INFO  04:46:06,330 - #19 =
+INFO  04:46:06,330 - #47 niz
+INFO  04:46:06,330 - #17 [
+INFO  04:46:06,330 - #47 i
+INFO  04:46:06,330 - #18 ]
+INFO  04:46:06,330 - #30 *
+INFO  04:46:06,330 - #49 2
+INFO  04:46:06,330 - #30 *
+INFO  04:46:06,331 - #47 a
+INFO  04:46:06,331 - #7 ;
+INFO  04:46:06,331 - #47 i
+INFO  04:46:06,331 - #10 ++
+INFO  04:46:06,331 - #7 ;
+INFO  04:46:06,331 - #4 }
+INFO  04:46:06,331 - #47 niz
+INFO  04:46:06,331 - #16 .
+INFO  04:46:06,331 - #39 foreach
+INFO  04:46:06,331 - #13 (
+INFO  04:46:06,331 - #47 curr
+INFO  04:46:06,331 - #40 =>
+INFO  04:46:06,332 - #9 print
+INFO  04:46:06,332 - #13 (
+INFO  04:46:06,332 - #47 curr
+INFO  04:46:06,332 - #14 )
+INFO  04:46:06,332 - #7 ;
+INFO  04:46:06,332 - #14 )
+INFO  04:46:06,332 - #7 ;
+INFO  04:46:06,332 - #9 print
+INFO  04:46:06,332 - #13 (
+INFO  04:46:06,332 - #47 eol
+INFO  04:46:06,332 - #14 )
+INFO  04:46:06,332 - #7 ;
+INFO  04:46:06,332 - #47 niz2
+INFO  04:46:06,332 - #19 =
+INFO  04:46:06,332 - #49 0
+INFO  04:46:06,332 - #7 ;
+INFO  04:46:06,332 - #47 niz
+INFO  04:46:06,332 - #16 .
+INFO  04:46:06,332 - #39 foreach
+INFO  04:46:06,332 - #13 (
+INFO  04:46:06,332 - #47 curr
+INFO  04:46:06,332 - #40 =>
+INFO  04:46:06,332 - #3 {
+INFO  04:46:06,332 - #47 niz2
+INFO  04:46:06,332 - #19 =
+INFO  04:46:06,332 - #47 niz2
+INFO  04:46:06,332 - #28 +
+INFO  04:46:06,332 - #47 curr
+INFO  04:46:06,332 - #30 *
+INFO  04:46:06,332 - #47 curr
+INFO  04:46:06,332 - #7 ;
+INFO  04:46:06,332 - #4 }
+INFO  04:46:06,332 - #14 )
+INFO  04:46:06,332 - #7 ;
+INFO  04:46:06,333 - #9 print
+INFO  04:46:06,333 - #13 (
+INFO  04:46:06,333 - #47 niz2
+INFO  04:46:06,333 - #14 )
+INFO  04:46:06,333 - #7 ;
+INFO  04:46:06,333 - #4 }
+INFO  04:46:06,333 - #4 }
+INFO  04:46:06,345 - Program(
   ProgramIdentificator(
    test302
   ) [ProgramIdentificator]
@@ -2550,111 +2550,26 @@ INFO  21:41:55,042 - Program(
     ) [MethodDecl]
   ) [MethodDeclarations]
 ) [Program]
-INFO  21:41:55,045 - ===================================
-INFO  21:41:55,048 - Deklarisana konstanta jedan jednaka 1 na liniji 5
-INFO  21:41:55,048 - Deklarisana promenljiva i na liniji 7
-INFO  21:41:55,048 - Deklarisana promenljiva ibool na liniji 8
-INFO  21:41:55,048 - Deklarisana promenljiva niz2 na liniji 10
-INFO  21:41:55,048 - Deklarisan niz niz na liniji 12
-INFO  21:41:55,048 - Deklarisana promenljiva a na liniji 13
-INFO  21:41:55,048 - Deklarisana promenljiva curr na liniji 13
-INFO  21:41:55,048 - Deklarisana funkcija sum povratna vrednost je tipa int na liniji 17
-INFO  21:41:55,048 - 1. argument z tipa int na liniji 17
-INFO  21:41:55,048 - 2. argument d tipa int na liniji 17
-INFO  21:41:55,048 - Detektovana upotreba simbola z na liniji 19: Var z: int, 0, 1 
-INFO  21:41:55,048 - Detektovana upotreba simbola d na liniji 19: Var d: int, 1, 1 
-INFO  21:41:55,048 - Deklarisana funkcija sum sa 2 ulazna parametra na liniji 17
-INFO  21:41:55,048 - Deklarisana funkcija inkrement povratna vrednost je tipa int na liniji 23
-INFO  21:41:55,048 - 1. argument a tipa int na liniji 23
-INFO  21:41:55,048 - 2. argument inc tipa int na liniji 23
-INFO  21:41:55,048 - Deklarisana promenljiva pom na liniji 24
-INFO  21:41:55,048 - Detektovana upotreba simbola inc na liniji 26: Var inc: int, 1, 1 
-INFO  21:41:55,049 - Detektovana upotreba simbola jedan na liniji 26: Con jedan: int, 1, 0 
-INFO  21:41:55,049 - Detektovana upotreba simbola pom na liniji 26: Var pom: int, 2, 1 
-INFO  21:41:55,049 - Detektovana upotreba simbola inc na liniji 27: Var inc: int, 1, 1 
-INFO  21:41:55,049 - Detektovana upotreba simbola pom na liniji 27: Var pom: int, 2, 1 
-INFO  21:41:55,049 - Detektovana upotreba simbola a na liniji 27: Var a: int, 0, 1 
-INFO  21:41:55,049 - Detektovana upotreba simbola sum na liniji 29: Meth sum: int, 0, 2 
-   Var z: int, 0, 1 
-   Var d: int, 1, 1 
-
-INFO  21:41:55,049 - Detektovana upotreba simbola a na liniji 29: Var a: int, 0, 1 
-INFO  21:41:55,049 - Detektovana upotreba simbola pom na liniji 29: Var pom: int, 2, 1 
-INFO  21:41:55,050 - Deklarisana funkcija inkrement sa 2 ulazna parametra na liniji 23
-INFO  21:41:55,050 - Deklarisana funkcija verify povratna vrednost je tipa bool na liniji 32
-INFO  21:41:55,050 - Deklarisana funkcija verify sa 0 ulazna parametra na liniji 32
-INFO  21:41:55,050 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 37
-INFO  21:41:55,050 - Detektovana upotreba simbola ibool na liniji 43: Var ibool: , 1, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 44: Var i: int, 0, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 45: Var i: int, 0, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 46: Var i: int, 0, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola ibool na liniji 46: Var ibool: , 1, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 47: Var i: int, 0, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola ibool na liniji 50: Var ibool: , 1, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 51: Var i: int, 0, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola a na liniji 53: Var a: int, 4, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola niz na liniji 54: Var niz: Arr of int, 3, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola a na liniji 55: Var a: int, 4, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola a na liniji 56: Var a: int, 4, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola sum na liniji 57: Meth sum: int, 0, 2 
-   Var z: int, 0, 1 
-   Var d: int, 1, 1 
-
-INFO  21:41:55,050 - Detektovana upotreba simbola a na liniji 57: Var a: int, 4, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola verify na liniji 58: Meth verify: , 0, 0 
-
-INFO  21:41:55,050 - Detektovana upotreba simbola ord na liniji 58: Meth ord: int, 0, 1 
-   Var ch: char, 0, 1 
-
-INFO  21:41:55,050 - Detektovana upotreba simbola ord na liniji 59: Meth ord: int, 0, 1 
-   Var ch: char, 0, 1 
-
-INFO  21:41:55,050 - Detektovana upotreba simbola eol na liniji 61: Con eol: char, 10, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 62: Var i: int, 0, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 63: Var i: int, 0, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 64: Var i: int, 0, 0 
-INFO  21:41:55,050 - Detektovana upotreba simbola i na liniji 66: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 69: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 70: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola inkrement na liniji 70: Meth inkrement: int, 0, 2 
-   Var a: int, 0, 1 
-   Var inc: int, 1, 1 
-   Var pom: int, 2, 1 
-
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 70: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 73: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola verify na liniji 73: Meth verify: , 0, 0 
-
-INFO  21:41:55,051 - Detektovana upotreba simbola eol na liniji 79: Con eol: char, 10, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola sum na liniji 80: Meth sum: int, 0, 2 
-   Var z: int, 0, 1 
-   Var d: int, 1, 1 
-
-INFO  21:41:55,051 - Detektovana upotreba simbola sum na liniji 80: Meth sum: int, 0, 2 
-   Var z: int, 0, 1 
-   Var d: int, 1, 1 
-
-INFO  21:41:55,051 - Detektovana upotreba simbola eol na liniji 82: Con eol: char, 10, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola inkrement na liniji 83: Meth inkrement: int, 0, 2 
-   Var a: int, 0, 1 
-   Var inc: int, 1, 1 
-   Var pom: int, 2, 1 
-
-INFO  21:41:55,051 - Detektovana upotreba simbola a na liniji 85: Var a: int, 4, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 86: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 87: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 88: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 88: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola a na liniji 88: Var a: int, 4, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola i na liniji 89: Var i: int, 0, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola niz na liniji 92: Var niz: Arr of int, 3, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola curr na liniji 92: Var curr: int, 5, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola eol na liniji 93: Con eol: char, 10, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola niz2 na liniji 95: Var niz2: int, 2, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola niz na liniji 96: Var niz: Arr of int, 3, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola niz2 na liniji 97: Var niz2: int, 2, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola niz2 na liniji 97: Var niz2: int, 2, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola curr na liniji 97: Var curr: int, 5, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola curr na liniji 97: Var curr: int, 5, 0 
-INFO  21:41:55,051 - Detektovana upotreba simbola niz2 na liniji 99: Var niz2: int, 2, 0 
-INFO  21:41:55,051 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 37
+INFO  04:46:06,349 - ===================================
+INFO  04:46:06,351 - Deklarisana konstanta jedan jednaka 1 na liniji 5
+INFO  04:46:06,351 - Deklarisana promenljiva i na liniji 7
+INFO  04:46:06,351 - Deklarisana promenljiva ibool na liniji 8
+INFO  04:46:06,351 - Deklarisana promenljiva niz2 na liniji 10
+INFO  04:46:06,351 - Deklarisan niz niz na liniji 12
+INFO  04:46:06,351 - Deklarisana promenljiva a na liniji 13
+INFO  04:46:06,351 - Deklarisana promenljiva curr na liniji 13
+INFO  04:46:06,352 - Deklarisana funkcija sum povratna vrednost je tipa int na liniji 17
+INFO  04:46:06,352 - 1. argument z tipa int na liniji 17
+INFO  04:46:06,352 - 2. argument d tipa int na liniji 17
+INFO  04:46:06,352 - Deklarisana funkcija sum sa 2 ulazna parametra na liniji 17
+INFO  04:46:06,352 - Deklarisana funkcija inkrement povratna vrednost je tipa int na liniji 23
+INFO  04:46:06,352 - 1. argument a tipa int na liniji 23
+INFO  04:46:06,352 - 2. argument inc tipa int na liniji 23
+INFO  04:46:06,352 - Deklarisana promenljiva pom na liniji 24
+INFO  04:46:06,352 - Deklarisana funkcija inkrement sa 2 ulazna parametra na liniji 23
+INFO  04:46:06,352 - Deklarisana funkcija verify povratna vrednost je tipa bool na liniji 32
+INFO  04:46:06,352 - Deklarisana funkcija verify sa 0 ulazna parametra na liniji 32
+INFO  04:46:06,352 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 37
+ERROR 04:46:06,353 - Semanticka greska na liniji 80: Broj formalnih i stvarnih argumenata metode sum nije isti!
+ERROR 04:46:06,353 - Semanticka greska na liniji 80: Broj formalnih i stvarnih argumenata metode sum nije isti!
+INFO  04:46:06,353 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 37
