@@ -67,7 +67,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator, DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
@@ -292,8 +292,10 @@ Designator := ident [ "[" Expr "]" ].
 						
 Designator ::= (OneDesignator) IDENT:designatorName 
 				| 
-				(ArrayDesignator) IDENT:designatorName LBRACKET Expr RBRACKET 
+				(ArrayDesignator) DesignatorName LBRACKET Expr RBRACKET 
 				;
+				
+DesignatorName ::= (DesignatorName) IDENT:designatorName;
 
 Relop ::= (IsEqual) ISEQUAL | (NotEqual) NOTEQUAL | (Greater) GT | (GreaterEqual) GTE | (LessThan) LT | (LessThanEqual) LTE ;
 

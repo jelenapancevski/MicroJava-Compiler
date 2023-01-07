@@ -91,7 +91,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator, DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
@@ -316,8 +316,10 @@ Designator := ident [ "[" Expr "]" ].
 						
 Designator ::= (OneDesignator) IDENT:designatorName {: RESULT=new OneDesignator(designatorName); RESULT.setLine(designatorNameleft); :} 
 				| 
-				(ArrayDesignator) IDENT:designatorName LBRACKET Expr:E1 RBRACKET {: RESULT=new ArrayDesignator(designatorName, E1); RESULT.setLine(designatorNameleft); :} 
+				(ArrayDesignator) DesignatorName:D1 LBRACKET Expr:E2 RBRACKET {: RESULT=new ArrayDesignator(D1, E2); RESULT.setLine(D1left); :} 
 				;
+				
+DesignatorName ::= (DesignatorName) IDENT:designatorName {: RESULT=new DesignatorName(designatorName); RESULT.setLine(designatorNameleft); :};
 
 Relop ::= (IsEqual) ISEQUAL {: RESULT=new IsEqual(); :} | (NotEqual) NOTEQUAL {: RESULT=new NotEqual(); :} | (Greater) GT {: RESULT=new Greater(); :} | (GreaterEqual) GTE {: RESULT=new GreaterEqual(); :} | (LessThan) LT {: RESULT=new LessThan(); :} | (LessThanEqual) LTE {: RESULT=new LessThanEqual(); :} ;
 

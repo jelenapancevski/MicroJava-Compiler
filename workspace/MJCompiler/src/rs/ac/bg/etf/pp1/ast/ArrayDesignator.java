@@ -1,27 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 4/0/2023 1:46:18
+// 7/0/2023 0:53:57
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ArrayDesignator extends Designator {
 
-    private String designatorName;
+    private DesignatorName DesignatorName;
     private Expr Expr;
 
-    public ArrayDesignator (String designatorName, Expr Expr) {
-        this.designatorName=designatorName;
+    public ArrayDesignator (DesignatorName DesignatorName, Expr Expr) {
+        this.DesignatorName=DesignatorName;
+        if(DesignatorName!=null) DesignatorName.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
     }
 
-    public String getDesignatorName() {
-        return designatorName;
+    public DesignatorName getDesignatorName() {
+        return DesignatorName;
     }
 
-    public void setDesignatorName(String designatorName) {
-        this.designatorName=designatorName;
+    public void setDesignatorName(DesignatorName DesignatorName) {
+        this.DesignatorName=DesignatorName;
     }
 
     public Expr getExpr() {
@@ -37,15 +38,18 @@ public class ArrayDesignator extends Designator {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(DesignatorName!=null) DesignatorName.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(DesignatorName!=null) DesignatorName.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(DesignatorName!=null) DesignatorName.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -55,7 +59,10 @@ public class ArrayDesignator extends Designator {
         buffer.append(tab);
         buffer.append("ArrayDesignator(\n");
 
-        buffer.append(" "+tab+designatorName);
+        if(DesignatorName!=null)
+            buffer.append(DesignatorName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(Expr!=null)

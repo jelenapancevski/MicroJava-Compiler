@@ -385,7 +385,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			  type = obj.getType();
 		  }
 		  else {
-			  Obj obj = Tab.find(((ArrayDesignator)designator).getDesignatorName());
+			  Obj obj = Tab.find(((ArrayDesignator)designator).getDesignatorName().getDesignatorName());
 			  if(obj == Tab.noObj) return;
 			  type = obj.getType().getElemType();
 		  }
@@ -428,7 +428,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			  type = obj.getType();
 		  }
 		  else {
-			  Obj obj = Tab.find(((ArrayDesignator)assignment.getDesignator()).getDesignatorName());
+			  Obj obj = Tab.find(((ArrayDesignator)assignment.getDesignator()).getDesignatorName().getDesignatorName());
 			  type = obj.getType().getElemType();
 		  }
 		  // check if type Expr is compatible with type of designator
@@ -553,7 +553,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			  type = obj.getType();
 		  }
 		  else {
-			  obj = Tab.find(((ArrayDesignator)readStatement.getDesignator()).getDesignatorName());
+			  obj = Tab.find(((ArrayDesignator)readStatement.getDesignator()).getDesignatorName().getDesignatorName());
 			  if(obj == Tab.noObj) return;
 			  type = obj.getType().getElemType();
 		  }
@@ -712,17 +712,20 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  
 	  /* DESIGNATORS */
 	  
+	  public void visit (DesignatorName designatorName) {
+		  designatorName.obj = Tab.find(designatorName.getDesignatorName());
+	  }
 	  // (ArrayDesignator) IDENT LBRACKET Expr RBRACKET 
 	  public void visit (ArrayDesignator arrayDesignator) {
-		  Obj designator = Tab.find(arrayDesignator.getDesignatorName());
+		  Obj designator = Tab.find(arrayDesignator.getDesignatorName().getDesignatorName());
 		  if (designator == Tab.noObj) {
-				report_error("Semanticka greska na liniji " + arrayDesignator.getLine() + ": Promenljiva "+ arrayDesignator.getDesignatorName()+" nije deklarisana!", null);
+				report_error("Semanticka greska na liniji " + arrayDesignator.getLine() + ": Promenljiva "+ arrayDesignator.getDesignatorName().getDesignatorName()+" nije deklarisana!", null);
 				arrayDesignator.obj = Tab.noObj;
 				return;
 		  }
 		  // Check if IDENT is Array 
 		  if (designator.getType().getKind()!=Struct.Array) {
-				report_error("Semanticka greska na liniji " + arrayDesignator.getLine() + ": Promenljiva "+ arrayDesignator.getDesignatorName()+" nije nizovnog tipa", null);
+				report_error("Semanticka greska na liniji " + arrayDesignator.getLine() + ": Promenljiva "+ arrayDesignator.getDesignatorName().getDesignatorName()+" nije nizovnog tipa", null);
 				arrayDesignator.obj = Tab.noObj;
 				return;
 		  }
