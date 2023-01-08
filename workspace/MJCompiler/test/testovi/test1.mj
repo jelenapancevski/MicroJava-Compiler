@@ -8,6 +8,7 @@ program test301
 
 	int niz[], niz2[], a, b;
 	char nizch[];
+	int length;
 	
 {
 	void main()	
@@ -54,6 +55,14 @@ program test301
 		print(nizch[1]);
 		print(nizch[jedan * 2]);
 			
+		//  length ord chr
+		
+		length = len(nizch);
+		print(length);
+		
+		print(chr(98));
+		
+		print(ord('a'));
 		
 		read(bodovi);
 		bodovi = -bodovi + (pet * a / 2 - jedan) * bodovi - (3 % 2 + 3 * 2 - 3); 

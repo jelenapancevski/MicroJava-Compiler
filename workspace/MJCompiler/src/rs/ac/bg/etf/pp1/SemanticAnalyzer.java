@@ -840,9 +840,12 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Object [] arguments= currentFunction.getLocalSymbols().toArray();
 		Obj currentarg = (Obj)arguments[parameters.get(index)];
 		if (!parameter.getExpr().struct.compatibleWith(currentarg.getType())) {
-			report_error("Semanticka greska na liniji " + parameter.getLine() + ": Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta "+ currentarg.getName(), null);
-			parameters.set(index, parameters.get(index)+1);
-			return;
+			if(!parameter.getExpr().struct.assignableTo(currentarg.getType()) ) {
+				report_error("Semanticka greska na liniji " + parameter.getLine() + ": Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta "+ currentarg.getName(), null);
+				parameters.set(index, parameters.get(index)+1);
+				return;
+			}
+			
 		}
 		parameter.struct = parameter.getExpr().struct;
 		parameters.set(index, parameters.get(index)+1);

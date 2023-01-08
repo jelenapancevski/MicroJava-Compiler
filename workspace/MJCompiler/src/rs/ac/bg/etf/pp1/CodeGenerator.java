@@ -1,6 +1,7 @@
 package rs.ac.bg.etf.pp1;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Stack;
 
 import rs.ac.bg.etf.pp1.ast.*;
@@ -12,6 +13,12 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 public class CodeGenerator extends VisitorAdaptor{
 	private int mainPC;
 	private Stack <Obj> designatorList = null;
+	
+	public CodeGenerator() {
+		chr();
+		ord();
+		len();
+	}
 	public int getMainPC() {
 		return mainPC;
 	}
@@ -20,8 +27,13 @@ public class CodeGenerator extends VisitorAdaptor{
 		this.mainPC = mainPC;
 	}
 	
+	
 	/* METHODS DECLARATIONS */
 	
+	public void generateExitInstruction() {
+		 Code.put(Code.exit);
+	     Code.put(Code.return_);
+	}
 	public void generateEnterInstruction(Obj method) {
 		// Generating enter instruction 
 		 Code.put( Code.enter);
@@ -29,9 +41,39 @@ public class CodeGenerator extends VisitorAdaptor{
 		 Code.put(method.getLocalSymbols().size()); // all function arguments
 	}
 	
+	public void chr() {
+		Obj chrfunc= Tab.find("chr");
+		chrfunc.setAdr(Code.pc);
+		generateEnterInstruction(chrfunc);
+		Code.put(Code.load_n + 0);
+		generateExitInstruction();
+	}
+	public void ord() {
+		Obj ordfunc= Tab.find("ord");
+		ordfunc.setAdr(Code.pc);
+		generateEnterInstruction(ordfunc);
+		Code.put(Code.load_n + 0);
+		generateExitInstruction();
+	}
+	public void len() {
+		Obj lenfunc= Tab.find("len");
+		lenfunc.setAdr(Code.pc);
+		generateEnterInstruction(lenfunc);
+	    Code.put(Code.load_n + 0);
+	    Code.put(Code.arraylength); 
+	    generateExitInstruction();
+	    
+	}
+	
+	
 
 	  // (MethodDecl) MethodTypeName LPAREN MethodParameterList RPAREN MethodVariableList LBRACE MethodStatementList RBRACE;
 	  public void visit (MethodDecl methodDecl) {
+		  if (methodDecl.getMethodTypeName().obj.getType() != Tab.noType) {
+				Code.put(Code.trap);
+				Code.put(0);
+			}
+		  
 		  Code.put(Code.exit);
 		  Code.put(Code.return_);
 	  }
@@ -79,10 +121,6 @@ public class CodeGenerator extends VisitorAdaptor{
 	  public void visit (MultipleAssignment multipleAssignment) {
 		  int index = designatorList.size()-1;
 		 while (!designatorList.empty()) {
-			 if(index<0) {
-				 // runtime error
-				 System.out.println("Error niz je kraci od broja designator-a");
-			 }
 			 Obj designator = designatorList.pop();
 			 if(designator!=null) {
 				 Code.load(multipleAssignment.getDesignator().obj);
@@ -98,6 +136,19 @@ public class CodeGenerator extends VisitorAdaptor{
 	 //(Assignment) Designator EQUAL AssignmentExpr
 	  public void visit (Assignment assignment) {
 		  Code.store(assignment.getDesignator().obj);
+	  }
+	  
+	  //(FuncionCall) FunctionName LPAREN ActParams RPAREN
+	  public void visit (FuncionCall funcionCall) {
+		  int offset = (funcionCall.getFunctionName().obj.getAdr() - Code.pc);
+			// instrukcija call
+			Code.put(Code.call);
+			// adresa funkcije
+			Code.put2(offset);
+			// treba skinuti return sa steka jer je samo statement
+			if (funcionCall.getFunctionName().obj.getType() != Tab.noType) {
+				Code.put(Code.pop);
+			}
 	  }
 	  
 	 //(ValueIncrement) Designator INCREMENT 
@@ -212,6 +263,15 @@ public class CodeGenerator extends VisitorAdaptor{
 			  //1
 			  Code.put(1);
 		  }
+	  }
+	  
+	  //(FunctionCall) FunctionName LPAREN ActParams RPAREN
+	  public void visit (FunctionCall functionCall) {
+		  int offset = (functionCall.getFunctionName().obj.getAdr() - Code.pc);
+			// instrukcija call
+			Code.put(Code.call);
+			// adresa funkcije
+			Code.put2(offset);
 	  }
 	  
 /* DESIGNATORS */
