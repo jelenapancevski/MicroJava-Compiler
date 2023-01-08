@@ -737,6 +737,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  }
 		  
 		  arrayDesignator.obj = new Obj(Obj.Elem,designator.getName(),designator.getType().getElemType());
+
 		  // ?
 				  //designator;
 	  }

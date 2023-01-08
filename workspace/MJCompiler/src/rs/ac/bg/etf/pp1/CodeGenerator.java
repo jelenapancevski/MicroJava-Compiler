@@ -69,11 +69,8 @@ public class CodeGenerator extends VisitorAdaptor{
 
 	  // (MethodDecl) MethodTypeName LPAREN MethodParameterList RPAREN MethodVariableList LBRACE MethodStatementList RBRACE;
 	  public void visit (MethodDecl methodDecl) {
-		  if (methodDecl.getMethodTypeName().obj.getType() != Tab.noType) {
-				Code.put(Code.trap);
-				Code.put(0);
-			}
-		  
+		  if (methodDecl.getMethodTypeName().obj.getType() == Tab.noType) {
+				}
 		  Code.put(Code.exit);
 		  Code.put(Code.return_);
 	  }
@@ -178,7 +175,10 @@ public class CodeGenerator extends VisitorAdaptor{
 			  // read bool / int 
 			  Code.put(Code.read);  
 		  }
-		  Code.store(readStatement.getDesignator().obj);
+		  if(readStatement.getDesignator().obj.getType().getKind()==Struct.Array) {
+			  Code.store(new Obj(Obj.Elem,readStatement.getDesignator().obj.getName(),readStatement.getDesignator().obj.getType().getElemType()));
+		  }else Code.store(readStatement.getDesignator().obj);
+		 
 	  }
 	  
 	  //(PrintStatement) PRINT LPAREN Expr PrintConstant RPAREN SEMICOLON
@@ -197,8 +197,14 @@ public class CodeGenerator extends VisitorAdaptor{
 	public void visit (HasPrintConstant hasPrintConstant) {
 		Code.loadConst(hasPrintConstant.getN1());
 	}
-	
-	
+	//(ReturnStatement) RETURN SEMICOLON
+	public void visit (ReturnStatement returnStatement) {
+		generateExitInstruction();
+	}
+ 	//(ReturnExpression) RETURN Expr SEMICOLON
+	public void visit (ReturnExpression returnExpression) {
+		generateExitInstruction();
+	}
 	/* EXPR */
 	  //(NegativeExpression) MINUS TermList
 	  public void visit (NegativeExpression negativeExpression) {

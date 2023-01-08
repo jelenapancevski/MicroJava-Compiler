@@ -23,7 +23,7 @@ public class Compiler {
 		Log4JUtils.instance().prepareLogFile(Logger.getRootLogger());
 	}
 	
-	public void tsdump() {
+	public static void tsdump() {
 		Tab.dump();
 	}
 	
@@ -64,7 +64,7 @@ public class Compiler {
 			
 			log.info("===================================");
 			
-			Tab.dump();
+			tsdump();
 			
 			if (!p.errorDetected && v.passed()) {
 				// Faza generisanja koda
