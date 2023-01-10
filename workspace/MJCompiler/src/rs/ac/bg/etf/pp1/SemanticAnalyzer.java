@@ -456,14 +456,14 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  
 	  //(IfElseStatement) IF LPAREN Condition RPAREN Statement ELSE Statement
 	  public void visit (IfElseStatement ifElseStatement) {
-		 if(!ifElseStatement.getCondition().struct.equals(boolType)) {
+		 if(!ifElseStatement.getThen().getCondition().struct.equals(boolType)) {
 			 report_error("Semanticka greska na liniji " + ifElseStatement.getLine() + ": Condition nije tipa bool ", null);
 			 return;
 		 }
 	  }
 	  //(IfStatement) IF LPAREN Condition RPAREN Statement
 	  public void visit (IfStatement ifStatement) {
-		  if(!ifStatement.getCondition().struct.equals(boolType)) {
+		  if(!ifStatement.getThen().getCondition().struct.equals(boolType)) {
 			  report_error("Semanticka greska na liniji " + ifStatement.getLine() + ":  Condition nije tipa bool", null);
 				 return; 
 			 }

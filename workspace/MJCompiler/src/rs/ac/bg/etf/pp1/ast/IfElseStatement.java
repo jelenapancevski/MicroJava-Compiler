@@ -1,31 +1,45 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/0/2023 0:53:57
+// 9/0/2023 23:9:27
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class IfElseStatement extends Statement {
 
-    private Condition Condition;
+    private IfStart IfStart;
+    private Then Then;
     private Statement Statement;
-    private Statement Statement1;
+    private ElseStart ElseStart;
+    private ElseStatement ElseStatement;
 
-    public IfElseStatement (Condition Condition, Statement Statement, Statement Statement1) {
-        this.Condition=Condition;
-        if(Condition!=null) Condition.setParent(this);
+    public IfElseStatement (IfStart IfStart, Then Then, Statement Statement, ElseStart ElseStart, ElseStatement ElseStatement) {
+        this.IfStart=IfStart;
+        if(IfStart!=null) IfStart.setParent(this);
+        this.Then=Then;
+        if(Then!=null) Then.setParent(this);
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
-        this.Statement1=Statement1;
-        if(Statement1!=null) Statement1.setParent(this);
+        this.ElseStart=ElseStart;
+        if(ElseStart!=null) ElseStart.setParent(this);
+        this.ElseStatement=ElseStatement;
+        if(ElseStatement!=null) ElseStatement.setParent(this);
     }
 
-    public Condition getCondition() {
-        return Condition;
+    public IfStart getIfStart() {
+        return IfStart;
     }
 
-    public void setCondition(Condition Condition) {
-        this.Condition=Condition;
+    public void setIfStart(IfStart IfStart) {
+        this.IfStart=IfStart;
+    }
+
+    public Then getThen() {
+        return Then;
+    }
+
+    public void setThen(Then Then) {
+        this.Then=Then;
     }
 
     public Statement getStatement() {
@@ -36,12 +50,20 @@ public class IfElseStatement extends Statement {
         this.Statement=Statement;
     }
 
-    public Statement getStatement1() {
-        return Statement1;
+    public ElseStart getElseStart() {
+        return ElseStart;
     }
 
-    public void setStatement1(Statement Statement1) {
-        this.Statement1=Statement1;
+    public void setElseStart(ElseStart ElseStart) {
+        this.ElseStart=ElseStart;
+    }
+
+    public ElseStatement getElseStatement() {
+        return ElseStatement;
+    }
+
+    public void setElseStatement(ElseStatement ElseStatement) {
+        this.ElseStatement=ElseStatement;
     }
 
     public void accept(Visitor visitor) {
@@ -49,22 +71,28 @@ public class IfElseStatement extends Statement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Condition!=null) Condition.accept(visitor);
+        if(IfStart!=null) IfStart.accept(visitor);
+        if(Then!=null) Then.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
-        if(Statement1!=null) Statement1.accept(visitor);
+        if(ElseStart!=null) ElseStart.accept(visitor);
+        if(ElseStatement!=null) ElseStatement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Condition!=null) Condition.traverseTopDown(visitor);
+        if(IfStart!=null) IfStart.traverseTopDown(visitor);
+        if(Then!=null) Then.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
-        if(Statement1!=null) Statement1.traverseTopDown(visitor);
+        if(ElseStart!=null) ElseStart.traverseTopDown(visitor);
+        if(ElseStatement!=null) ElseStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Condition!=null) Condition.traverseBottomUp(visitor);
+        if(IfStart!=null) IfStart.traverseBottomUp(visitor);
+        if(Then!=null) Then.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
-        if(Statement1!=null) Statement1.traverseBottomUp(visitor);
+        if(ElseStart!=null) ElseStart.traverseBottomUp(visitor);
+        if(ElseStatement!=null) ElseStatement.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -73,8 +101,14 @@ public class IfElseStatement extends Statement {
         buffer.append(tab);
         buffer.append("IfElseStatement(\n");
 
-        if(Condition!=null)
-            buffer.append(Condition.toString("  "+tab));
+        if(IfStart!=null)
+            buffer.append(IfStart.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(Then!=null)
+            buffer.append(Then.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
@@ -85,8 +119,14 @@ public class IfElseStatement extends Statement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Statement1!=null)
-            buffer.append(Statement1.toString("  "+tab));
+        if(ElseStart!=null)
+            buffer.append(ElseStart.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(ElseStatement!=null)
+            buffer.append(ElseStatement.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

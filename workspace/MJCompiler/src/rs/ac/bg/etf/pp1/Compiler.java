@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
 import java_cup.runtime.Symbol;
+import rs.ac.bg.etf.pp1.CodeGenerator.IfElseCondition;
 import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.util.Log4JUtils;
 import rs.etf.pp1.mj.runtime.Code;
@@ -73,10 +74,18 @@ public class Compiler {
 				
 				CodeGenerator codeGen = new CodeGenerator();
 				prog.traverseBottomUp(codeGen);
+				
+				/*while (codeGen.ifelseConditions.size()>0) {
+					IfElseCondition cnd = codeGen.ifelseConditions.pop()  ;
+					System.out.println("\n\nIF STATEMENT");
+					System.out.println("ThenAddress "+cnd.ThenAddress);
+					System.out.println("ElseAddress "+cnd.ElseAddress);
+					System.out.println("EndIfStmtAddress "+cnd.EndIfStmtAddress);
+					}*/
 				Code.dataSize = v.nVars;
 				Code.mainPc = codeGen.getMainPC();
 				Code.write(new FileOutputStream(objFile));
-				log.error("Parsiranje koda je uspesno");
+				log.info("Parsiranje koda je uspesno");
 			}
 			else {
 				log.error("Parsiranje koda je neuspesno");

@@ -54,6 +54,12 @@ scan with {:
 :}
 
 
+nonterminal Or Or;
+nonterminal ForStatements ForStatements;
+nonterminal ElseStatement ElseStatement;
+nonterminal Then Then;
+nonterminal IfStart IfStart;
+nonterminal ElseStart ElseStart;
 nonterminal ForEach ForEach;
 nonterminal While While;
 nonterminal DeclarationList DeclarationList;
@@ -196,9 +202,9 @@ Statement ::= (DesignatorStmt) DesignatorStatement:D1 SEMICOLON {: RESULT=new De
 			 	|
 			 	(PrintStatement) PRINT LPAREN Expr:E1 PrintConstant:P2 RPAREN SEMICOLON {: RESULT=new PrintStatement(E1, P2); RESULT.setLine(E1left); :}
 			 	|
-			 	(IfElseStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseStatement(C1, S2, S3); RESULT.setLine(C1left); :}
+			 	(IfElseStatement) IfStart:I1 Then:T2 Statement:S3 ElseStart:E4 ElseStatement:E5 {: RESULT=new IfElseStatement(I1, T2, S3, E4, E5); RESULT.setLine(I1left); :}
 			 	|
-			 	(IfStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new IfStatement(C1, S2); RESULT.setLine(C1left); :}
+			 	(IfStatement) IfStart:I1 Then:T2 Statement:S3 {: RESULT=new IfStatement(I1, T2, S3); RESULT.setLine(I1left); :}
 			 	|
 			 	(WhileStatement) While:W1 LPAREN Condition:C2 RPAREN Statement:S3 {: RESULT=new WhileStatement(W1, C2, S3); RESULT.setLine(W1left); :}
 			 	|
@@ -210,10 +216,20 @@ Statement ::= (DesignatorStmt) DesignatorStatement:D1 SEMICOLON {: RESULT=new De
 			 	|
 			 	(ReturnExpression) RETURN Expr:E1 SEMICOLON {: RESULT=new ReturnExpression(E1); RESULT.setLine(E1left); :}
 			 	|
-			 	(ForEachStatement) Designator:D1 DOT ForEach:F2 LPAREN IDENT:ident ARROW Statement:S3 RPAREN SEMICOLON {: RESULT=new ForEachStatement(D1, F2, ident, S3); RESULT.setLine(D1left); :}
+			 	(ForEachStatement) Designator:D1 DOT ForEach:F2 LPAREN IDENT:ident ARROW ForStatements:F3 RPAREN SEMICOLON {: RESULT=new ForEachStatement(D1, F2, ident, F3); RESULT.setLine(D1left); :}
 			 	|
 			 	(MultipleStatements) LBRACE StatementsList:S1 RBRACE {: RESULT=new MultipleStatements(S1); RESULT.setLine(S1left); :}
 			 	;
+			 	
+ForStatements ::= (ForStatements) Statement:S1 {: RESULT=new ForStatements(S1); RESULT.setLine(S1left); :};
+
+IfStart ::= (IfStart) IF {: RESULT=new IfStart(); :};
+
+Then ::= (Then) LPAREN Condition:C1 RPAREN {: RESULT=new Then(C1); RESULT.setLine(C1left); :} ;
+
+ElseStart ::= (ElseStart) ELSE {: RESULT=new ElseStart(); :};	
+
+ElseStatement ::= (ElseStatement) Statement:S1 {: RESULT=new ElseStatement(S1); RESULT.setLine(S1left); :};		 	
 			 	
 While ::= (WhileLoop) WHILE {: RESULT=new WhileLoop(); :};
  
@@ -295,10 +311,11 @@ ActPars ::= (ActParsList) ActPars:A1 COMMA Parameter:P2 {: RESULT=new ActParsLis
 			;	
 Parameter ::= (Parameter) Expr:E1 {: RESULT=new Parameter(E1); RESULT.setLine(E1left); :} ;
 
-Condition ::= (Conditions) Condition:C1 OR CondTerm:C2 {: RESULT=new Conditions(C1, C2); RESULT.setLine(C1left); :} 
+Condition ::= (Conditions) Condition:C1 Or:O2 CondTerm:C3 {: RESULT=new Conditions(C1, O2, C3); RESULT.setLine(C1left); :} 
 			  |
 			  (OneCondition) CondTerm:C1 {: RESULT=new OneCondition(C1); RESULT.setLine(C1left); :} 
 			  ;
+Or ::= (Or) OR {: RESULT=new Or(); :};
 
 CondTerm ::= (ConditionTerms) CondTerm:C1 AND CondFact:C2 {: RESULT=new ConditionTerms(C1, C2); RESULT.setLine(C1left); :} 
 			|

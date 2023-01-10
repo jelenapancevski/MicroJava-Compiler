@@ -54,7 +54,7 @@ scan with {:
 :}
 
 
-nonterminal ForEach, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, ActParams, ActPars, Relop, Addop, Mulop;
+nonterminal Or, ForStatements, ElseStatement, Then, IfStart, ElseStart, ForEach, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, ActParams, ActPars, Relop, Addop, Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NEW, LPAREN, RPAREN, COMMA, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
 
 
@@ -172,9 +172,9 @@ Statement ::= (DesignatorStmt) DesignatorStatement SEMICOLON
 			 	|
 			 	(PrintStatement) PRINT LPAREN Expr PrintConstant RPAREN SEMICOLON
 			 	|
-			 	(IfElseStatement) IF LPAREN Condition RPAREN Statement ELSE Statement
+			 	(IfElseStatement) IfStart Then Statement ElseStart ElseStatement
 			 	|
-			 	(IfStatement) IF LPAREN Condition RPAREN Statement
+			 	(IfStatement) IfStart Then Statement
 			 	|
 			 	(WhileStatement) While LPAREN Condition RPAREN Statement
 			 	|
@@ -186,10 +186,20 @@ Statement ::= (DesignatorStmt) DesignatorStatement SEMICOLON
 			 	|
 			 	(ReturnExpression) RETURN Expr SEMICOLON
 			 	|
-			 	(ForEachStatement) Designator DOT ForEach LPAREN IDENT:ident ARROW Statement RPAREN SEMICOLON
+			 	(ForEachStatement) Designator DOT ForEach LPAREN IDENT:ident ARROW ForStatements RPAREN SEMICOLON
 			 	|
 			 	(MultipleStatements) LBRACE StatementsList RBRACE
 			 	;
+			 	
+ForStatements ::= (ForStatements) Statement;
+
+IfStart ::= (IfStart) IF;
+
+Then ::= (Then) LPAREN Condition RPAREN ;
+
+ElseStart ::= (ElseStart) ELSE;	
+
+ElseStatement ::= (ElseStatement) Statement;		 	
 			 	
 While ::= (WhileLoop) WHILE;
  
@@ -271,10 +281,11 @@ ActPars ::= (ActParsList) ActPars COMMA Parameter
 			;	
 Parameter ::= (Parameter) Expr ;
 
-Condition ::= (Conditions) Condition OR CondTerm 
+Condition ::= (Conditions) Condition Or CondTerm 
 			  |
 			  (OneCondition) CondTerm 
 			  ;
+Or ::= (Or) OR;
 
 CondTerm ::= (ConditionTerms) CondTerm AND CondFact 
 			|

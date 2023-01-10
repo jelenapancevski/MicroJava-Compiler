@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/0/2023 0:53:57
+// 9/0/2023 23:9:27
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -22,8 +22,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
     public void visit(VariablesList VariablesList) { }
-    public void visit(While While) { }
     public void visit(Designator Designator) { }
+    public void visit(While While) { }
     public void visit(Condition Condition) { }
     public void visit(AssignmentExpr AssignmentExpr) { }
     public void visit(Expr Expr) { }
@@ -61,6 +61,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConditionFacts ConditionFacts) { visit(); }
     public void visit(ConditionTerm ConditionTerm) { visit(); }
     public void visit(ConditionTerms ConditionTerms) { visit(); }
+    public void visit(Or Or) { visit(); }
     public void visit(OneCondition OneCondition) { visit(); }
     public void visit(Conditions Conditions) { visit(); }
     public void visit(Parameter Parameter) { visit(); }
@@ -101,6 +102,11 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Statements Statements) { visit(); }
     public void visit(ForEachLoop ForEachLoop) { visit(); }
     public void visit(WhileLoop WhileLoop) { visit(); }
+    public void visit(ElseStatement ElseStatement) { visit(); }
+    public void visit(ElseStart ElseStart) { visit(); }
+    public void visit(Then Then) { visit(); }
+    public void visit(IfStart IfStart) { visit(); }
+    public void visit(ForStatements ForStatements) { visit(); }
     public void visit(MultipleStatements MultipleStatements) { visit(); }
     public void visit(ForEachStatement ForEachStatement) { visit(); }
     public void visit(ReturnExpression ReturnExpression) { visit(); }
