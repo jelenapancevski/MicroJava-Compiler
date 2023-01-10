@@ -432,24 +432,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	public void visit (Or or ) {
 		ifelseConditions.peek().NextConditionAddress.add(Code.pc);
-		/*boolean first = true;
-		JMPAddres firstadr=null;
-		while (ifelseConditions.peek().JMPAddresses.size()>0) {
-			JMPAddres adr = ifelseConditions.peek().JMPAddresses.pop();
-		if (first) {
-			// change to jump not inverse 
-			int pc  = Code.pc;
-			Code.pc = adr.address;
-			Code.putFalseJump(Code.inverse[adr.code], 0);
-			Code.pc = pc;
-			first = false;
-			firstadr = adr;
-		}
-		else {
-			 Code.fixup(adr.address);
-		}
-		}
-		if(firstadr!=null)ifelseConditions.peek().JMPAddresses.push(firstadr);*/
 		}
 	public void visit (OneCondition oneCondition) {
 		// Gotov jedan CondTerm 
@@ -569,7 +551,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		 adr.code = Code.eq;
 		 ifelseConditions.peek().JMPAddresses.push(adr);
 		 Code.putFalseJump(Code.eq, 0); // skip if 
-		// statements.peek().addCondition(Code.pc-3,Code.eq);
+		
 		 
 	  }
 	  
@@ -594,110 +576,8 @@ public class CodeGenerator extends VisitorAdaptor {
 		  adr.code = code;
 		  ifelseConditions.peek().JMPAddresses.push(adr);
 		  Code.putFalseJump(code, 0); // skip if 
-		  //statements.peek().addCondition(Code.pc-3,code);
+		 
 	  }
 	
-	 /* CONDITIONS */
-	 /* Od pre 
-	  * public class IfElseStatement{
-		  int ifAdr=-1;
-		  int elseAdr=-1;
-		  int endStmt =-1;
-		 public class Condition{
-			  int jmpAdrs;
-			  int code;
-			  public Condition(int jmpAdrs, int code) {
-				  this.jmpAdrs=jmpAdrs;
-				  this.code= code;
-			  }
-		  }
-		 public void addCondition(int jmpAdrs, int code) {
-			 conditions.add(new Condition(jmpAdrs,code));
-		 }
-		 Stack<Condition> conditions = new Stack<>();
-	  }
-	  public void visit(IfStart ifStart) {
-		  // start of if statement
-		  IfElseStatement st = new IfElseStatement();
-		  statements.push(st);
-	  }
-	  public void visit(ElseStart elseStart) {
-		  // start of else statement
-		  Code.putJump(0); // If statments finished skip Else statments
-		  IfElseStatement st = statements.pop();
-		  st.endStmt = Code.pc-2;
-		  statements.push(st);
-		  Code.fixup(st.ifAdr);
-		 
-	  }
-	  
-	  public void visit(Then then) {
-		  IfElseStatement st = statements.pop();
-		  st.ifAdr = Code.pc-2;
-		  statements.push(st);
-	  }
-	  
-	  //(ElseStatement) Statement
-	 public void visit(ElseStatement elseStatement) {
-		 IfElseStatement st=statements.pop();
-		 Code.fixup(st.endStmt);
-		 
-		
-	 }
-	 //	(IfStatement) IfStart LPAREN Condition RPAREN Statement
-	 public void visit (IfStatement ifStatement) {
-		 IfElseStatement st= statements.pop();
-		 Code.fixup(st.ifAdr);
-		
-	 }
-	  public void visit (Or or) {
-		  System.out.println("Usao u or");
-	  }
-	  // (Conditions) Condition OR CondTerm 
-	  public void visit (Conditions conditions) {
-		  
-		  
-	  }
-	  
-	  //(OneCondition) CondTerm 
-	  public void visit (OneCondition oneCondition) {
-	  }
-	  
-	  // (ConditionTerms) CondTerm AND CondFact 
-	  public void visit (ConditionTerms conditionTerms) {
-		 
-	  }
-	  
-	  //(ConditionTerm) CondFact
-	  public void visit (ConditionTerm conditionTerm) {
-		  
-	  }
-	  
-	  //(ConditionFact) Expr
-	  public void visit (ConditionFact conditionFact) {
-		 Code.loadConst(1);
-		 Code.putFalseJump(Code.eq, 0); // skip if 
-		// statements.peek().addCondition(Code.pc-3,Code.eq);
-		 
-	  }
-	  
-	 // (ConditionFacts) Expr Relop Expr  
-	  public void visit (ConditionFacts conditionFacts) {
-		  int code;
-		  if (conditionFacts.getRelop() instanceof IsEqual) {
-			  code = Code.eq;
-		  }else if (conditionFacts.getRelop() instanceof NotEqual) {
-			  code = Code.ne;
-		  }else if (conditionFacts.getRelop() instanceof Greater) {
-			  code = Code.gt;
-		  }else if (conditionFacts.getRelop() instanceof GreaterEqual) {
-			  code = Code.ge;
-		  }else if (conditionFacts.getRelop() instanceof LessThan) {
-			  code = Code.lt;
-		  }else {
-			  code = Code.le;
-		  }
-		  Code.putFalseJump(code, 0); // skip if 
-		  //statements.peek().addCondition(Code.pc-3,code);
-	  }*/
+	 
 }
