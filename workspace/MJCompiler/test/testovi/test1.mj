@@ -42,13 +42,13 @@ int a, curr;
 			
 		ibool = false;				//ok
 		i = 0;
-		//while(i < 5){
+		while(i < 5){
 			if(i == 2) ibool = true;  //ok  92 GOOD
 			i++;						//ok
-		//}
+		}
 		
 		if(ibool)						//ok   107
-			if(i == 5) print(1);		//ok FALI JMP NAKON STATEMENT
+			if(i == 5) print(1);		//ok 
 			else print(-1); 			//ok
 		a = 2;							//ok
 		niz = new int[3];
@@ -60,7 +60,7 @@ int a, curr;
 		
 		print(eol);
 		i = 0;
-		//while (i < 10) {
+		while (i < 10) {
 			if(i == 3) //OK 
 			{
 				i++;
@@ -68,7 +68,7 @@ int a, curr;
 			}
 			//if(i == 4) break;
 			i = inkrement(i, 1);
-		//}
+		}
 		
 		if(i == 3 && verify()) print(-4); //FALI JMP NAKON STATEMENT
 		else print(4);  
@@ -84,10 +84,10 @@ int a, curr;
 		
 		a = 3;
 		i = 0;
-		//while (i < 3){
+		while (i < 3){
 			niz[i] = niz[i] * 2 * a;
 			i++;
-		//}
+		}
 		
 		//niz.foreach(curr => print(curr););
 		print(eol);

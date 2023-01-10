@@ -54,6 +54,7 @@ scan with {:
 :}
 
 
+nonterminal WhileStatements WhileStatements;
 nonterminal Or Or;
 nonterminal ForStatements ForStatements;
 nonterminal ElseStatement ElseStatement;
@@ -232,6 +233,8 @@ ElseStart ::= (ElseStart) ELSE {: RESULT=new ElseStart(); :};
 ElseStatement ::= (ElseStatement) Statement:S1 {: RESULT=new ElseStatement(S1); RESULT.setLine(S1left); :};		 	
 			 	
 While ::= (WhileLoop) WHILE {: RESULT=new WhileLoop(); :};
+
+WhileStatements ::= (WhileStatements) RPAREN {: RESULT=new WhileStatements(); :};
  
 ForEach ::= (ForEachLoop) FOREACH {: RESULT=new ForEachLoop(); :};
 			 	

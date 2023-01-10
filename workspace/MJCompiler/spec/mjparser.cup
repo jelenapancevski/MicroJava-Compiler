@@ -54,7 +54,7 @@ scan with {:
 :}
 
 
-nonterminal Or, ForStatements, ElseStatement, Then, IfStart, ElseStart, ForEach, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, ActParams, ActPars, Relop, Addop, Mulop;
+nonterminal WhileStatements, Or, ForStatements, ElseStatement, Then, IfStart, ElseStart, ForEach, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, ActParams, ActPars, Relop, Addop, Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NEW, LPAREN, RPAREN, COMMA, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
 
 
@@ -202,6 +202,8 @@ ElseStart ::= (ElseStart) ELSE;
 ElseStatement ::= (ElseStatement) Statement;		 	
 			 	
 While ::= (WhileLoop) WHILE;
+
+WhileStatements ::= (WhileStatements) RPAREN;
  
 ForEach ::= (ForEachLoop) FOREACH;
 			 	

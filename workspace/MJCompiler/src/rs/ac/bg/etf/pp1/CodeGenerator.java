@@ -325,6 +325,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		int ThenAddress=-1;
 		int ElseAddress=-1;
 		int EndIfStmtAddress=-1;
+		int WhileStmtStart = -1;
 		ArrayList <Integer> NextConditionAddress = new ArrayList<>();			;
 		
 		Stack <Integer> JMPToEndIfStmt = new Stack<>();
@@ -333,6 +334,65 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	Stack <IfElseCondition> ifelseConditions= new Stack<>();
+	
+	// While
+	public void visit(WhileLoop whileLoop) {
+		ifelseConditions.push(new IfElseCondition());
+		ifelseConditions.peek().WhileStmtStart= Code.pc;
+	}
+	
+	//WhileStatements
+	public void visit (WhileStatements whileStatements) {
+		ifelseConditions.peek().ThenAddress= Code.pc;
+	}
+	
+	//(WhileStatement) While LPAREN Condition RPAREN Statement
+	public void visit (WhileStatement whileStatement) {
+		if(ifelseConditions.peek().JMPAddresses.size()>0)ifelseConditions.peek().CondTermsList.add(ifelseConditions.peek().JMPAddresses);
+		IfElseCondition cnd = ifelseConditions.pop()  ;
+		Code.putJump(cnd.WhileStmtStart);
+		cnd.EndIfStmtAddress = Code.pc;
+		/*for ( Object endjmp : cnd.JMPToEndIfStmt.toArray()) {
+			Code.fixup((int) endjmp+1);
+		}*/
+		
+		while (!cnd.CondTermsList.isEmpty()) {
+			
+			Stack<JMPAddres> condTerm = cnd.CondTermsList.remove(0);
+			boolean lastTerm = cnd.CondTermsList.isEmpty();
+			if (lastTerm) {
+				// set to ElseAddress or EndIfStmtAddress
+				while (condTerm.size()>0) {
+					JMPAddres address = condTerm.pop();
+					int pc = Code.pc;
+					Code.pc = cnd.EndIfStmtAddress;
+					Code.fixup(address.address+1);
+					Code.pc = pc;
+				}
+			} else {
+				int NextConditionAdr = cnd.NextConditionAddress.remove(0);
+				boolean first= true;
+				while (condTerm.size()>0) {
+					JMPAddres address = condTerm.pop();
+					int pc = Code.pc;
+					if(first) {
+						// first set to ThenAddress 
+						// change to jump not inverse 
+						Code.pc = address.address;
+						Code.putFalseJump(Code.inverse[address.code], cnd.ThenAddress);
+						first=false;
+					} else {
+						// others to NEXTCONDITION
+						Code.pc = NextConditionAdr;
+						Code.fixup(Code.pc+1);
+					}
+					Code.pc = pc;
+					
+				}
+				
+			}
+		}
+	}
 	//IfStart
 	public void visit(IfStart ifStart) {
 		ifelseConditions.push(new IfElseCondition());
