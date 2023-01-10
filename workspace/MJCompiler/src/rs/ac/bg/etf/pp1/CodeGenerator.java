@@ -332,12 +332,28 @@ public class CodeGenerator extends VisitorAdaptor {
 		Stack <JMPAddres> JMPAddresses = new Stack<>();
 		ArrayList <Stack<JMPAddres>> CondTermsList = new ArrayList <>();
 	}
-	
+	public class BreakContinue{
+		Stack <Integer> BreakStatements = new Stack<>();
+		Stack <Integer> ContinueStatements = new Stack<>();
+	}
+	Stack <BreakContinue> breakcontinueStatements = new Stack<>();
 	Stack <IfElseCondition> ifelseConditions= new Stack<>();
 	
+	//	(BreakStatement) BREAK SEMICOLON
+	public void visit (BreakStatement breakStatement) {
+		breakcontinueStatements.peek().BreakStatements.push(Code.pc);
+		Code.putJump(0);
+	}
+ 	
+ 	//(ContinueStatement) CONTINUE SEMICOLON
+	public void visit (ContinueStatement continueStatement) {
+		breakcontinueStatements.peek().ContinueStatements.push(Code.pc);
+		Code.putJump(0);
+	}
 	// While
 	public void visit(WhileLoop whileLoop) {
 		ifelseConditions.push(new IfElseCondition());
+		breakcontinueStatements.push(new BreakContinue());
 		ifelseConditions.peek().WhileStmtStart= Code.pc;
 	}
 	
@@ -356,12 +372,29 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.fixup((int) endjmp+1);
 		}*/
 		
+		BreakContinue bc = breakcontinueStatements.pop();
+		// Set break jump address to EndIfStmtAddress
+		for (Integer breakstm : bc.BreakStatements) {
+			int pc = Code.pc;
+			Code.pc = cnd.EndIfStmtAddress;
+			Code.fixup(breakstm+1);
+			Code.pc = pc;
+		}
+		// Set continue jump address to WhileStmtStart
+				for (Integer continuestm : bc.ContinueStatements) {
+					int pc = Code.pc;
+					Code.pc = cnd.WhileStmtStart;
+					Code.fixup(continuestm+1);
+					Code.pc = pc;
+				}
+		
+		
 		while (!cnd.CondTermsList.isEmpty()) {
 			
 			Stack<JMPAddres> condTerm = cnd.CondTermsList.remove(0);
 			boolean lastTerm = cnd.CondTermsList.isEmpty();
 			if (lastTerm) {
-				// set to ElseAddress or EndIfStmtAddress
+				// set to EndIfStmtAddress
 				while (condTerm.size()>0) {
 					JMPAddres address = condTerm.pop();
 					int pc = Code.pc;

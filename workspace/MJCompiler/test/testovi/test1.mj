@@ -64,9 +64,9 @@ int a, curr;
 			if(i == 3) //OK 
 			{
 				i++;
-			//	continue;
+				continue;
 			}
-			//if(i == 4) break;
+			if(i == 4) break;
 			i = inkrement(i, 1);
 		}
 		
