@@ -317,12 +317,19 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	 /* CONDITIONS */
-	
+	public class JMPAddres {
+		int address;
+		int code;
+	}
 	public class IfElseCondition{
 		int ThenAddress=-1;
 		int ElseAddress=-1;
 		int EndIfStmtAddress=-1;
 		ArrayList <Integer> NextConditionAddress = new ArrayList<>();			;
+		
+		Stack <Integer> JMPToEndIfStmt = new Stack<>();
+		Stack <JMPAddres> JMPAddresses = new Stack<>();
+		ArrayList <Stack<JMPAddres>> CondTermsList = new ArrayList <>();
 	}
 	
 	Stack <IfElseCondition> ifelseConditions= new Stack<>();
@@ -330,11 +337,38 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(IfStart ifStart) {
 		ifelseConditions.push(new IfElseCondition());
 	}
-	
+	public void visit (Or or ) {
+		ifelseConditions.peek().NextConditionAddress.add(Code.pc);
+		/*boolean first = true;
+		JMPAddres firstadr=null;
+		while (ifelseConditions.peek().JMPAddresses.size()>0) {
+			JMPAddres adr = ifelseConditions.peek().JMPAddresses.pop();
+		if (first) {
+			// change to jump not inverse 
+			int pc  = Code.pc;
+			Code.pc = adr.address;
+			Code.putFalseJump(Code.inverse[adr.code], 0);
+			Code.pc = pc;
+			first = false;
+			firstadr = adr;
+		}
+		else {
+			 Code.fixup(adr.address);
+		}
+		}
+		if(firstadr!=null)ifelseConditions.peek().JMPAddresses.push(firstadr);*/
+		}
+	public void visit (OneCondition oneCondition) {
+		// Gotov jedan CondTerm 
+		ifelseConditions.peek().CondTermsList.add(ifelseConditions.peek().JMPAddresses);
+		ifelseConditions.peek().JMPAddresses= new Stack<>();
+	}
 	public void visit (Then then) {
 		ifelseConditions.peek().ThenAddress= Code.pc;
 	}
 	public void visit (ElseStart elseStart) {
+		ifelseConditions.peek().JMPToEndIfStmt.push(Code.pc);
+		Code.putJump(0); 
 		ifelseConditions.peek().ElseAddress = Code.pc;
 	}
 	public void visit (ElseStatement elseStatement) {
@@ -342,22 +376,133 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	//(IfStatement) IfStart Then Statement
 	public void visit (IfStatement ifStatement) {
+		if(ifelseConditions.peek().JMPAddresses.size()>0)ifelseConditions.peek().CondTermsList.add(ifelseConditions.peek().JMPAddresses);
 		ifelseConditions.peek().EndIfStmtAddress = Code.pc;
 		IfElseCondition cnd = ifelseConditions.pop()  ;
-		System.out.println("\n\nIF STATEMENT");
-		System.out.println("ThenAddress "+cnd.ThenAddress);
-		System.out.println("ElseAddress "+cnd.ElseAddress);
-		System.out.println("EndIfStmtAddress "+cnd.EndIfStmtAddress);
+		for ( Object endjmp : cnd.JMPToEndIfStmt.toArray()) {
+			Code.fixup((int) endjmp+1);
+		}
+		
+		while (!cnd.CondTermsList.isEmpty()) {
+			
+			Stack<JMPAddres> condTerm = cnd.CondTermsList.remove(0);
+			boolean lastTerm = cnd.CondTermsList.isEmpty();
+			if (lastTerm) {
+				// set to ElseAddress or EndIfStmtAddress
+				while (condTerm.size()>0) {
+					JMPAddres address = condTerm.pop();
+					int pc = Code.pc;
+					if(cnd.ElseAddress!=-1)
+					Code.pc = cnd.ElseAddress;
+					else Code.pc = cnd.EndIfStmtAddress;
+					Code.fixup(address.address+1);
+					Code.pc = pc;
+				}
+			} else {
+				int NextConditionAdr = cnd.NextConditionAddress.remove(0);
+				boolean first= true;
+				while (condTerm.size()>0) {
+					JMPAddres address = condTerm.pop();
+					int pc = Code.pc;
+					if(first) {
+						// first set to ThenAddress 
+						// change to jump not inverse 
+						Code.pc = address.address;
+						Code.putFalseJump(Code.inverse[address.code], cnd.ThenAddress);
+						first=false;
+					} else {
+						// others to NEXTCONDITION
+						Code.pc = NextConditionAdr;
+						Code.fixup(Code.pc+1);
+					}
+					Code.pc = pc;
+					
+				}
+				
+			}
+		}
 	}
 	//(IfElseStatement) IfStart Then Statement ElseStart ElseStatement
 	public void visit (IfElseStatement ifElseStatement) {
+		if(ifelseConditions.peek().JMPAddresses.size()>0)ifelseConditions.peek().CondTermsList.add(ifelseConditions.peek().JMPAddresses);
 		IfElseCondition cnd = ifelseConditions.pop()  ;
-		System.out.println("\n\nIF STATEMENT");
-		System.out.println("ThenAddress "+cnd.ThenAddress);
-		System.out.println("ElseAddress "+cnd.ElseAddress);
-		System.out.println("EndIfStmtAddress "+cnd.EndIfStmtAddress);
+		for ( Object endjmp : cnd.JMPToEndIfStmt.toArray()) {
+			Code.fixup((int) endjmp+1);
+		}
 		
+		while (!cnd.CondTermsList.isEmpty()) {
+			
+			Stack<JMPAddres> condTerm = cnd.CondTermsList.remove(0);
+			boolean lastTerm = cnd.CondTermsList.isEmpty();
+			if (lastTerm) {
+				// set to ElseAddress
+				while (condTerm.size()>0) {
+					JMPAddres address = condTerm.pop();
+					int pc = Code.pc;
+					Code.pc = cnd.ElseAddress;
+					Code.fixup(address.address+1);
+					Code.pc = pc;
+				}
+			} else {
+				int NextConditionAdr = cnd.NextConditionAddress.remove(0);
+				boolean first= true;
+				while (condTerm.size()>0) {
+					JMPAddres address = condTerm.pop();
+					int pc = Code.pc;
+					if(first) {
+						// first set to ThenAddress 
+						// change to jump not inverse 
+						Code.pc = address.address;
+						Code.putFalseJump(Code.inverse[address.code], cnd.ThenAddress);
+						first=false;
+					} else {
+						// others to NEXTCONDITION
+						Code.pc = NextConditionAdr;
+						Code.fixup(Code.pc+1);
+					}
+					Code.pc = pc;
+					
+				}
+				
+			}
+		}
 	}
+	
+	//(ConditionFact) Expr
+	  public void visit (ConditionFact conditionFact) {
+		 Code.loadConst(1);
+		 JMPAddres adr = new JMPAddres();
+		 adr.address = Code.pc;
+		 adr.code = Code.eq;
+		 ifelseConditions.peek().JMPAddresses.push(adr);
+		 Code.putFalseJump(Code.eq, 0); // skip if 
+		// statements.peek().addCondition(Code.pc-3,Code.eq);
+		 
+	  }
+	  
+	 // (ConditionFacts) Expr Relop Expr  
+	  public void visit (ConditionFacts conditionFacts) {
+		  int code;
+		  if (conditionFacts.getRelop() instanceof IsEqual) {
+			  code = Code.eq;
+		  }else if (conditionFacts.getRelop() instanceof NotEqual) {
+			  code = Code.ne;
+		  }else if (conditionFacts.getRelop() instanceof Greater) {
+			  code = Code.gt;
+		  }else if (conditionFacts.getRelop() instanceof GreaterEqual) {
+			  code = Code.ge;
+		  }else if (conditionFacts.getRelop() instanceof LessThan) {
+			  code = Code.lt;
+		  }else {
+			  code = Code.le;
+		  }
+		  JMPAddres adr = new JMPAddres();
+		  adr.address = Code.pc;
+		  adr.code = code;
+		  ifelseConditions.peek().JMPAddresses.push(adr);
+		  Code.putFalseJump(code, 0); // skip if 
+		  //statements.peek().addCondition(Code.pc-3,code);
+	  }
 	
 	 /* CONDITIONS */
 	 /* Od pre 

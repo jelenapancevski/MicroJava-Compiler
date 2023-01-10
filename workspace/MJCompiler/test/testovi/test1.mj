@@ -23,7 +23,7 @@ int a, curr;
 	int inkrement(int a, int inc) 
 		int pom; 
 	{
-		if(inc == jedan) pom = 1;   //34
+		if(inc == jedan) pom = 1;   //34 FALI JMP NAKON STATEMENT POM=1 NA RETURN 
 		else if(inc == 2) pom = a;
 
 		return sum(a,pom);
@@ -37,31 +37,31 @@ int a, curr;
 	void main()
 	{
 		
-		if(1!=1) print(-6); 		//ok
+		if(1!=1) print(-6); 		//ok FALI JMP NAKON STATEMENT print(-6); NA DALJE 
 		else print(0);  			//ok
 			
 		ibool = false;				//ok
 		i = 0;
 		//while(i < 5){
-			if(i == 2) ibool = true;  //ok  92
+			if(i == 2) ibool = true;  //ok  92 GOOD
 			i++;						//ok
 		//}
 		
 		if(ibool)						//ok   107
-			if(i == 5) print(1);		//ok
+			if(i == 5) print(1);		//ok FALI JMP NAKON STATEMENT
 			else print(-1); 			//ok
 		a = 2;							//ok
 		niz = new int[3];
 		niz[0] = 1 * a;
 		niz[1] = 2 * a;
 		niz[2] = sum(niz[1], niz[0]) * a + 1; 	//200 linija ok 
-		if(verify() || niz[2] == 4) print(ord('A')); 
+		if(verify() || niz[2] == 4) print(ord('A')); //NOT OK
 		else print(ord('a'));
 		
 		print(eol);
 		i = 0;
 		//while (i < 10) {
-			if(i == 3)
+			if(i == 3) //OK 
 			{
 				i++;
 			//	continue;
@@ -70,7 +70,7 @@ int a, curr;
 			i = inkrement(i, 1);
 		//}
 		
-		if(i == 3 && verify()) print(-4);
+		if(i == 3 && verify()) print(-4); //FALI JMP NAKON STATEMENT
 		else print(4);  
 		
 		read(niz[0]);
