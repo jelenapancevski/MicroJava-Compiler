@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2023 18:31:26
+// 11/0/2023 6:6:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ForEachLoop extends ForEach {
 
-    public ForEachLoop () {
+    private String ident;
+
+    public ForEachLoop (String ident) {
+        this.ident=ident;
+    }
+
+    public String getIdent() {
+        return ident;
+    }
+
+    public void setIdent(String ident) {
+        this.ident=ident;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class ForEachLoop extends ForEach {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ForEachLoop(\n");
+
+        buffer.append(" "+tab+ident);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [ForEachLoop]");

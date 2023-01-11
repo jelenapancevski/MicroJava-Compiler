@@ -54,7 +54,7 @@ scan with {:
 :}
 
 
-nonterminal WhileStatements, Or, ForStatements, ElseStatement, Then, IfStart, ElseStart, ForEach, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, ActParams, ActPars, Relop, Addop, Mulop;
+nonterminal WhileStatements, Or, ForStatements, ElseStatement, Then, IfStart, ElseStart, While, DeclarationList, Declaration, ConstDecl, ConstantList, VarDecl, VariablesList, ArrayBrackets, MethodDeclList, MethodDecl, MethodParameterList, FormPars, MethodVariableList, MethodStatementList, Statement, PrintConstant, DesignatorStatement, DesignatorList, DesignatorListElement, ActParams, ActPars, Relop, Addop, Mulop;
 terminal PROG, LBRACE, RBRACE, CONST, VOID, SEMICOLON, READ, PRINT, INCREMENT, DECREMENT, NEW, LPAREN, RPAREN, COMMA, DOT, LBRACKET, RBRACKET, EQUAL, ISEQUAL, NOTEQUAL, GT, GTE, LT, LTE, AND, OR, PLUS, MINUS, MULTIPLY, DIVIDE, MODUO;
 
 
@@ -67,7 +67,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator, DesignatorName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator, DesignatorName, ForEach;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
@@ -186,7 +186,7 @@ Statement ::= (DesignatorStmt) DesignatorStatement SEMICOLON
 			 	|
 			 	(ReturnExpression) RETURN Expr SEMICOLON
 			 	|
-			 	(ForEachStatement) Designator DOT ForEach LPAREN IDENT:ident ARROW ForStatements RPAREN SEMICOLON
+			 	(ForEachStatement) Designator DOT ForEach ARROW ForStatements RPAREN SEMICOLON
 			 	|
 			 	(MultipleStatements) LBRACE StatementsList RBRACE
 			 	;
@@ -205,7 +205,7 @@ While ::= (WhileLoop) WHILE;
 
 WhileStatements ::= (WhileStatements) RPAREN;
  
-ForEach ::= (ForEachLoop) FOREACH;
+ForEach ::= (ForEachLoop) FOREACH LPAREN IDENT:ident;
 			 	
 StatementsList ::= (Statements) StatementsList Statement
 				|

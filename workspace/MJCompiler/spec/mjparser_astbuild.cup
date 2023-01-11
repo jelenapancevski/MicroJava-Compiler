@@ -61,7 +61,6 @@ nonterminal ElseStatement ElseStatement;
 nonterminal Then Then;
 nonterminal IfStart IfStart;
 nonterminal ElseStart ElseStart;
-nonterminal ForEach ForEach;
 nonterminal While While;
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
@@ -98,7 +97,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator, DesignatorName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator, DesignatorName, ForEach;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
@@ -217,7 +216,7 @@ Statement ::= (DesignatorStmt) DesignatorStatement:D1 SEMICOLON {: RESULT=new De
 			 	|
 			 	(ReturnExpression) RETURN Expr:E1 SEMICOLON {: RESULT=new ReturnExpression(E1); RESULT.setLine(E1left); :}
 			 	|
-			 	(ForEachStatement) Designator:D1 DOT ForEach:F2 LPAREN IDENT:ident ARROW ForStatements:F3 RPAREN SEMICOLON {: RESULT=new ForEachStatement(D1, F2, ident, F3); RESULT.setLine(D1left); :}
+			 	(ForEachStatement) Designator:D1 DOT ForEach:F2 ARROW ForStatements:F3 RPAREN SEMICOLON {: RESULT=new ForEachStatement(D1, F2, F3); RESULT.setLine(D1left); :}
 			 	|
 			 	(MultipleStatements) LBRACE StatementsList:S1 RBRACE {: RESULT=new MultipleStatements(S1); RESULT.setLine(S1left); :}
 			 	;
@@ -236,7 +235,7 @@ While ::= (WhileLoop) WHILE {: RESULT=new WhileLoop(); :};
 
 WhileStatements ::= (WhileStatements) RPAREN {: RESULT=new WhileStatements(); :};
  
-ForEach ::= (ForEachLoop) FOREACH {: RESULT=new ForEachLoop(); :};
+ForEach ::= (ForEachLoop) FOREACH LPAREN IDENT:ident {: RESULT=new ForEachLoop(ident); RESULT.setLine(identleft); :};
 			 	
 StatementsList ::= (Statements) StatementsList:S1 Statement:S2 {: RESULT=new Statements(S1, S2); RESULT.setLine(S1left); :}
 				|

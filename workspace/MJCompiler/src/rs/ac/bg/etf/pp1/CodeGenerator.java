@@ -169,17 +169,65 @@ public class CodeGenerator extends VisitorAdaptor {
 	//Stack <Integer> positions= new Stack<>();
 	//(ForEachStatement) Designator DOT ForEach LPAREN IDENT:ident ARROW ForStatements RPAREN SEMICOLON
 	public void visit (ForEachLoop forEachLoop) {
-		/*((ForEachStatement)forEachLoop.getParent()).getDesignator().obj.setFpPos(0);
-		Code.load(((ForEachStatement)forEachLoop.getParent()).getDesignator().obj);
-		Code.loadConst(((ForEachStatement)forEachLoop.getParent()).getDesignator().obj.getFpPos());
-		Code.loadConst(((ForEachStatement)forEachLoop.getParent()).getDesignator().obj.getFpPos());
-		positions.add(Code.pc); //beginfor
-		Code.load(((ForEachStatement)forEachLoop.getParent()).getDesignator().obj);
+		ifelseConditions.push(new IfElseCondition());
+		breakcontinueStatements.push(new BreakContinue());
+		Obj designator = ((ForEachStatement)(forEachLoop.getParent())).getDesignator().obj;
+		Obj ident = forEachLoop.obj;
+		Code.load(designator);
+		Code.loadConst(0); //counter
+		Code.load(designator);
 		Code.put(Code.arraylength);
-		Code.putFalseJump(Code.eq, 0);
-		positions.add(Code.pc); //endfor
-		//Code.store(new Obj(Obj.Var, "cnt", Struct.Int))*/
+		ifelseConditions.peek().JMPToEndIfStmt.push(Code.pc);
+		Code.putFalseJump(Code.lt, 0);  // JMP TO STATEMENTS AFTER FOREACH 
+		Code.loadConst(0);
+		ifelseConditions.peek().ForEachStmtStart= Code.pc;// Save address -> FOREACHSTART
+		Code.put(Code.dup2); // duplicate designator and counter 
+		Code.put(Code.aload);
+		Code.store(ident);
+		//Statements
 	}
+	public void visit (ForEachStatement forEachStatement) {
+		Obj designator = forEachStatement.getDesignator().obj;
+		IfElseCondition cnd = ifelseConditions.pop()  ;
+		int addresscontinue = Code.pc;
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.put(Code.dup);
+		Code.load(designator);
+		Code.put(Code.arraylength);
+		Code.putFalseJump(Code.ge, cnd.ForEachStmtStart);  //
+		cnd.EndIfStmtAddress = Code.pc;
+		for(int address: cnd.JMPToEndIfStmt) {
+			Code.fixup(address+1);
+		}
+		
+		BreakContinue bc = breakcontinueStatements.pop();
+		// Set break jump address to EndIfStmtAddress
+		for (Integer breakstm : bc.BreakStatements) {
+			int pc = Code.pc;
+			Code.pc = cnd.EndIfStmtAddress;
+			Code.fixup(breakstm+1);
+			Code.pc = pc;
+		}
+		// Set continue jump address to WhileStmtStart
+				for (Integer continuestm : bc.ContinueStatements) {
+					int pc = Code.pc;
+					Code.pc = addresscontinue;
+					Code.fixup(continuestm+1);
+					Code.pc = pc;
+				}
+		
+	}
+	/*((ForEachStatement)forEachLoop.getParent()).getDesignator().obj.setFpPos(0);
+	Code.load(((ForEachStatement)forEachLoop.getParent()).getDesignator().obj);
+	Code.loadConst(((ForEachStatement)forEachLoop.getParent()).getDesignator().obj.getFpPos());
+	Code.loadConst(((ForEachStatement)forEachLoop.getParent()).getDesignator().obj.getFpPos());
+	positions.add(Code.pc); //beginfor
+	Code.load(((ForEachStatement)forEachLoop.getParent()).getDesignator().obj);
+	Code.put(Code.arraylength);
+	Code.putFalseJump(Code.eq, 0);
+	positions.add(Code.pc); //endfor
+	//Code.store(new Obj(Obj.Var, "cnt", Struct.Int))*/
 	
 	public void visit(ForStatements forStatements) {
 		/*//inc counter
@@ -326,6 +374,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		int ElseAddress=-1;
 		int EndIfStmtAddress=-1;
 		int WhileStmtStart = -1;
+		int ForEachStmtStart = -1;
 		ArrayList <Integer> NextConditionAddress = new ArrayList<>();			;
 		
 		Stack <Integer> JMPToEndIfStmt = new Stack<>();

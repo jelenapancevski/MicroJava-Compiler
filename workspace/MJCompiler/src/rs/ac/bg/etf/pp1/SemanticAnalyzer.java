@@ -485,6 +485,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  //(ForEachStatement) Designator DOT FOREACH LPAREN IDENT ARROW Statement RPAREN SEMICOLON
 	  public void visit (ForEachLoop forEachLoop) {
 		  inloop++;
+		 forEachLoop.obj= Tab.find(forEachLoop.getIdent());
 	  }
 	  
 	  public void visit (ForEachStatement forEachStatement) {
@@ -506,17 +507,17 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			  
 		  }
 		  // Check if ident is variable 
-		  if (Tab.find(forEachStatement.getIdent())==Tab.noObj) {
-			  report_error("Semanticka greska na liniji " + forEachStatement.getLine() + ": Ident"+forEachStatement.getIdent()+" mora biti globalna ili lokalna promenljiva - nije deklarisan", null);
+		  if (forEachStatement.getForEach().obj==Tab.noObj) {
+			  report_error("Semanticka greska na liniji " + forEachStatement.getLine() + ": Ident"+forEachStatement.getForEach().obj.getName()+" mora biti globalna ili lokalna promenljiva - nije deklarisan", null);
 			  return;
 		  }
 		  // Check if it is a type var 
-		  if (Tab.find(forEachStatement.getIdent()).getKind()!=Obj.Var) {
-			  report_error("Semanticka greska na liniji " + forEachStatement.getLine() + ": Ident"+forEachStatement.getIdent()+" mora biti globalna ili lokalna promenljiva", null);
+		  if (forEachStatement.getForEach().obj.getKind()!=Obj.Var) {
+			  report_error("Semanticka greska na liniji " + forEachStatement.getLine() + ": Ident"+forEachStatement.getForEach().obj.getName()+" mora biti globalna ili lokalna promenljiva", null);
 			  return;
 		  }
 		  // check if type of ident is equal to type
-		  if (type.equals(Tab.find(forEachStatement.getIdent()).getType())) return; 
+		  if (type.equals(forEachStatement.getForEach().obj.getType())) return; 
 		 		
 		  report_error("Semanticka greska na liniji " + forEachStatement.getLine() + ": Promenljiva ident u foreach petlji mora biti istog tipa kao tip elementa niza Designator", null);
 		  
