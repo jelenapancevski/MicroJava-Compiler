@@ -72,7 +72,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	// (MethodDecl) MethodTypeName LPAREN MethodParameterList RPAREN
 	// MethodVariableList LBRACE MethodStatementList RBRACE;
 	public void visit(MethodDecl methodDecl) {
-		if (methodDecl.getMethodTypeName().obj.getType() == Tab.noType) {
+		if (methodDecl.getMethodTypeName().obj.getType() != Tab.noType) {
+			Code.put(Code.trap);
+			Code.put(0);
 		}
 		Code.put(Code.exit);
 		Code.put(Code.return_);
