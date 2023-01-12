@@ -120,6 +120,15 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	// (MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL Designator
 	public void visit(MultipleAssignment multipleAssignment) {
+		//Check if length of designator is greater or equal of designatorlist length
+		Code.loadConst(designatorList.size());
+		Code.load(multipleAssignment.getDesignator().obj);
+		Code.put(Code.arraylength);
+		int jmp = Code.pc;
+		Code.putFalseJump(Code.gt, 0);
+		Code.put(Code.trap);
+		Code.put(0);
+		Code.fixup(jmp+1);
 		int index = designatorList.size() - 1;
 		while (!designatorList.empty()) {
 			Obj designator = designatorList.pop();
