@@ -1,40 +1,17 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 6:6:41
+// 12/0/2023 20:28:55
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class Variable implements SyntaxNode {
+public abstract class Variable implements SyntaxNode {
 
     private SyntaxNode parent;
+
     private int line;
+
     public rs.etf.pp1.symboltable.concepts.Obj obj = null;
-
-    private String varName;
-    private ArrayBrackets ArrayBrackets;
-
-    public Variable (String varName, ArrayBrackets ArrayBrackets) {
-        this.varName=varName;
-        this.ArrayBrackets=ArrayBrackets;
-        if(ArrayBrackets!=null) ArrayBrackets.setParent(this);
-    }
-
-    public String getVarName() {
-        return varName;
-    }
-
-    public void setVarName(String varName) {
-        this.varName=varName;
-    }
-
-    public ArrayBrackets getArrayBrackets() {
-        return ArrayBrackets;
-    }
-
-    public void setArrayBrackets(ArrayBrackets ArrayBrackets) {
-        this.ArrayBrackets=ArrayBrackets;
-    }
 
     public SyntaxNode getParent() {
         return parent;
@@ -52,40 +29,11 @@ public class Variable implements SyntaxNode {
         this.line=line;
     }
 
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+    public abstract void accept(Visitor visitor);
+    public abstract void childrenAccept(Visitor visitor);
+    public abstract void traverseTopDown(Visitor visitor);
+    public abstract void traverseBottomUp(Visitor visitor);
 
-    public void childrenAccept(Visitor visitor) {
-        if(ArrayBrackets!=null) ArrayBrackets.accept(visitor);
-    }
-
-    public void traverseTopDown(Visitor visitor) {
-        accept(visitor);
-        if(ArrayBrackets!=null) ArrayBrackets.traverseTopDown(visitor);
-    }
-
-    public void traverseBottomUp(Visitor visitor) {
-        if(ArrayBrackets!=null) ArrayBrackets.traverseBottomUp(visitor);
-        accept(visitor);
-    }
-
-    public String toString(String tab) {
-        StringBuffer buffer=new StringBuffer();
-        buffer.append(tab);
-        buffer.append("Variable(\n");
-
-        buffer.append(" "+tab+varName);
-        buffer.append("\n");
-
-        if(ArrayBrackets!=null)
-            buffer.append(ArrayBrackets.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(tab);
-        buffer.append(") [Variable]");
-        return buffer.toString();
-    }
+    public String toString() { return toString(""); }
+    public abstract String toString(String tab);
 }

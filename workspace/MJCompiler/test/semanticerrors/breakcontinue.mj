@@ -1,0 +1,31 @@
+program breakcontinue
+	
+	int niz[], niz2[], a, b; 
+	char nizch[];			
+	
+	
+{	
+	
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+	
+		// TESTOVI ZA Statement = break i Statement = "continue".
+		while (a<b){	//ok
+		a++;
+		if(a%2==0) continue;
+		if(a==7) break;
+		
+		}
+		break; //not ok
+		continue; //not ok
+		
+	}
+		
+		
+}
+		

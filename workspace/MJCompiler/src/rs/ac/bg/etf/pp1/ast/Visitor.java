@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 6:6:41
+// 12/0/2023 20:28:55
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -16,6 +16,7 @@ public interface Visitor {
     public void visit(Relop Relop);
     public void visit(TermList TermList);
     public void visit(MethodStatementList MethodStatementList);
+    public void visit(Variable Variable);
     public void visit(ActParams ActParams);
     public void visit(FactorList FactorList);
     public void visit(Addop Addop);
@@ -25,6 +26,7 @@ public interface Visitor {
     public void visit(Designator Designator);
     public void visit(While While);
     public void visit(Condition Condition);
+    public void visit(OneParam OneParam);
     public void visit(AssignmentExpr AssignmentExpr);
     public void visit(Expr Expr);
     public void visit(ActPars ActPars);
@@ -62,6 +64,7 @@ public interface Visitor {
     public void visit(ConditionTerm ConditionTerm);
     public void visit(ConditionTerms ConditionTerms);
     public void visit(Or Or);
+    public void visit(ConditionError ConditionError);
     public void visit(OneCondition OneCondition);
     public void visit(Conditions Conditions);
     public void visit(Parameter Parameter);
@@ -124,6 +127,7 @@ public interface Visitor {
     public void visit(MethodStatements MethodStatements);
     public void visit(NoMethodVariables NoMethodVariables);
     public void visit(MethodVariables MethodVariables);
+    public void visit(OneParameterError OneParameterError);
     public void visit(OneParameter OneParameter);
     public void visit(OneFormalParameter OneFormalParameter);
     public void visit(FormalParameters FormalParameters);
@@ -136,11 +140,10 @@ public interface Visitor {
     public void visit(MethodDeclarations MethodDeclarations);
     public void visit(NoArrayBrackets NoArrayBrackets);
     public void visit(HasArrayBrackets HasArrayBrackets);
-    public void visit(Variable Variable);
+    public void visit(ErrorVariable ErrorVariable);
+    public void visit(VariableDecl VariableDecl);
     public void visit(OneVariable OneVariable);
     public void visit(Variables Variables);
-    public void visit(ErrorVariableComma ErrorVariableComma);
-    public void visit(ErrorVariableSemiColon ErrorVariableSemiColon);
     public void visit(VarDeclaration VarDeclaration);
     public void visit(BoolConstant BoolConstant);
     public void visit(CharConstant CharConstant);

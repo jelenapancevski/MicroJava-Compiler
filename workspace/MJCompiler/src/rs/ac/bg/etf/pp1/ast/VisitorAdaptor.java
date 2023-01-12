@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 6:6:41
+// 12/0/2023 20:28:55
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -16,6 +16,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Relop Relop) { }
     public void visit(TermList TermList) { }
     public void visit(MethodStatementList MethodStatementList) { }
+    public void visit(Variable Variable) { }
     public void visit(ActParams ActParams) { }
     public void visit(FactorList FactorList) { }
     public void visit(Addop Addop) { }
@@ -25,6 +26,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Designator Designator) { }
     public void visit(While While) { }
     public void visit(Condition Condition) { }
+    public void visit(OneParam OneParam) { }
     public void visit(AssignmentExpr AssignmentExpr) { }
     public void visit(Expr Expr) { }
     public void visit(ActPars ActPars) { }
@@ -62,6 +64,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConditionTerm ConditionTerm) { visit(); }
     public void visit(ConditionTerms ConditionTerms) { visit(); }
     public void visit(Or Or) { visit(); }
+    public void visit(ConditionError ConditionError) { visit(); }
     public void visit(OneCondition OneCondition) { visit(); }
     public void visit(Conditions Conditions) { visit(); }
     public void visit(Parameter Parameter) { visit(); }
@@ -124,6 +127,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MethodStatements MethodStatements) { visit(); }
     public void visit(NoMethodVariables NoMethodVariables) { visit(); }
     public void visit(MethodVariables MethodVariables) { visit(); }
+    public void visit(OneParameterError OneParameterError) { visit(); }
     public void visit(OneParameter OneParameter) { visit(); }
     public void visit(OneFormalParameter OneFormalParameter) { visit(); }
     public void visit(FormalParameters FormalParameters) { visit(); }
@@ -136,11 +140,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MethodDeclarations MethodDeclarations) { visit(); }
     public void visit(NoArrayBrackets NoArrayBrackets) { visit(); }
     public void visit(HasArrayBrackets HasArrayBrackets) { visit(); }
-    public void visit(Variable Variable) { visit(); }
+    public void visit(ErrorVariable ErrorVariable) { visit(); }
+    public void visit(VariableDecl VariableDecl) { visit(); }
     public void visit(OneVariable OneVariable) { visit(); }
     public void visit(Variables Variables) { visit(); }
-    public void visit(ErrorVariableComma ErrorVariableComma) { visit(); }
-    public void visit(ErrorVariableSemiColon ErrorVariableSemiColon) { visit(); }
     public void visit(VarDeclaration VarDeclaration) { visit(); }
     public void visit(BoolConstant BoolConstant) { visit(); }
     public void visit(CharConstant CharConstant) { visit(); }

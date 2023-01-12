@@ -1,15 +1,11 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 6:6:41
+// 12/0/2023 20:28:55
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class OneParameter implements SyntaxNode {
-
-    private SyntaxNode parent;
-    private int line;
-    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
+public class OneParameter extends OneParam {
 
     private Type Type;
     private String argumentName;
@@ -45,22 +41,6 @@ public class OneParameter implements SyntaxNode {
 
     public void setArrayBrackets(ArrayBrackets ArrayBrackets) {
         this.ArrayBrackets=ArrayBrackets;
-    }
-
-    public SyntaxNode getParent() {
-        return parent;
-    }
-
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
-    }
-
-    public int getLine() {
-        return line;
-    }
-
-    public void setLine(int line) {
-        this.line=line;
     }
 
     public void accept(Visitor visitor) {

@@ -1,25 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 6:6:41
+// 12/0/2023 20:28:55
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class OneFormalParameter extends FormPars {
 
-    private OneParameter OneParameter;
+    private OneParam OneParam;
 
-    public OneFormalParameter (OneParameter OneParameter) {
-        this.OneParameter=OneParameter;
-        if(OneParameter!=null) OneParameter.setParent(this);
+    public OneFormalParameter (OneParam OneParam) {
+        this.OneParam=OneParam;
+        if(OneParam!=null) OneParam.setParent(this);
     }
 
-    public OneParameter getOneParameter() {
-        return OneParameter;
+    public OneParam getOneParam() {
+        return OneParam;
     }
 
-    public void setOneParameter(OneParameter OneParameter) {
-        this.OneParameter=OneParameter;
+    public void setOneParam(OneParam OneParam) {
+        this.OneParam=OneParam;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +27,16 @@ public class OneFormalParameter extends FormPars {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(OneParameter!=null) OneParameter.accept(visitor);
+        if(OneParam!=null) OneParam.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(OneParameter!=null) OneParameter.traverseTopDown(visitor);
+        if(OneParam!=null) OneParam.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(OneParameter!=null) OneParameter.traverseBottomUp(visitor);
+        if(OneParam!=null) OneParam.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +45,8 @@ public class OneFormalParameter extends FormPars {
         buffer.append(tab);
         buffer.append("OneFormalParameter(\n");
 
-        if(OneParameter!=null)
-            buffer.append(OneParameter.toString("  "+tab));
+        if(OneParam!=null)
+            buffer.append(OneParam.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

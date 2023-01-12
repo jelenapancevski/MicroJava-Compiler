@@ -67,7 +67,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParameter, FunctionName, Designator, DesignatorName, ForEach;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParam, FunctionName, Designator, DesignatorName, ForEach;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
@@ -108,19 +108,26 @@ Constant ::= (NumberConstant) NUMCONST:numConstant
 			;
 				
 VarDecl ::= (VarDeclaration) Type VariablesList SEMICOLON
-			|
+			/*|
 			(ErrorVariableSemiColon)error SEMICOLON
 			|
-			(ErrorVariableComma)error COMMA VariablesList SEMICOLON 
+			(ErrorVariableComma)error COMMA VariablesList SEMICOLON*/ 
 			;
 
 VariablesList ::= (Variables) VariablesList COMMA Variable 
 				|
 				(OneVariable) Variable 
+				/*|
+				(ErrorVariableComma) error COMMA
+				|
+				(ErrorVariableSemiColon) error */
 				;	 
-
-Variable ::= (Variable) IDENT:varName ArrayBrackets:isArray ;					
-						
+			
+Variable ::= (VariableDecl) IDENT:varName ArrayBrackets:isArray
+			|
+			(ErrorVariable) error  {: parser.report_error("Greska kod deklaracije promenljive.", null); :}
+			;					
+										
 ArrayBrackets ::= (HasArrayBrackets) LBRACKET RBRACKET
 					|
 				  (NoArrayBrackets) /*epsilon*/
@@ -142,14 +149,16 @@ MethodParameterList ::= (MethodParameters) FormPars
 					(FormalParametersListError) error*/
 					;
 					
-FormPars ::= (FormalParameters) FormPars COMMA OneParameter
+FormPars ::= (FormalParameters) FormPars COMMA OneParam
 			|
-			(OneFormalParameter) OneParameter
+			(OneFormalParameter) OneParam
 			/*|
 			(FormalParameterError) error */
 			;
 
-OneParameter ::= (OneParameter) Type:argumentType IDENT:argumentName ArrayBrackets:isArray ;			
+OneParam ::= (OneParameter) Type:argumentType IDENT:argumentName ArrayBrackets:isArray
+				|
+				(OneParameterError)error   {: parser.report_error("Greska kod deklaracije formalnog parametra funkcije. ", null); :};			
 
 /*Parameter ::= (OneParameter)Type IDENT ArrayBrackets
 				|
@@ -232,7 +241,7 @@ DesignatorStatement ::= (ValueIncrement) Designator INCREMENT
 						
 AssignmentExpr ::= (AssignmentExpression) Expr
 					|
-					(AssignmentExprError) error
+					(AssignmentExprError) error  {: parser.report_error("Greska kod konstrukcije iskaza dodele. ", null); :}
 					;
 					
 DesignatorList ::= (Designators) DesignatorList COMMA DesignatorListElement 
@@ -286,6 +295,9 @@ Parameter ::= (Parameter) Expr ;
 Condition ::= (Conditions) Condition Or CondTerm 
 			  |
 			  (OneCondition) CondTerm 
+			  |
+			  (ConditionError)error
+			 {: parser.report_error("Greska kod logickog izraza. Izvrsen oporavak do ) ", null); :}
 			  ;
 Or ::= (Or) OR;
 

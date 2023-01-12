@@ -1,0 +1,50 @@
+program printstmt
+	
+	const char slovoa = 'a';  
+	
+	const char slovob = 'b';
+
+	int niz[], niz2[], a, b; 
+	char nizch[];			
+	
+{
+	int sum(int a, int b)int c;{
+	c = a+b;
+	return c;
+	}
+	
+	int funca(char a, char b){
+	print(a);
+	print(b);
+	return 1;
+	}
+	
+	bool samearray(int arr1[], int arr2[])bool is;{
+		 if (arr1 == arr2) is=true;
+		 else is = false;
+		 return is; 
+	}
+	
+	
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+		// TESTOVI ZA PRINT 
+		b = 4;
+		a = 7+9/b;
+		print (funca(slovoa,slovob),5); // trebalo bi ok
+		print (funca(slovoa,3),2); //not ok
+		print (niz,7); //not ok
+		print(niz[0],2); //ok
+		print(samearray(niz,niz2)); //ok
+		print(nizch); //not ok
+		print(sum(a,b)); //ok
+		print(new int[7]); // not ok
+		print ( -a+b,7);	//ok
+		}
+}
+		

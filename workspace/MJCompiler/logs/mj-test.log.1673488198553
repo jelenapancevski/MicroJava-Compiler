@@ -1,0 +1,464 @@
+INFO  02:46:24,439 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\syntaxerrors\assignment.mj
+INFO  02:46:24,479 - #2 program
+INFO  02:46:24,479 - #47 assignment
+INFO  02:46:24,479 - #47 int
+INFO  02:46:24,480 - #47 x
+INFO  02:46:24,480 - #7 ;
+INFO  02:46:24,481 - #3 {
+INFO  02:46:24,481 - #6 void
+INFO  02:46:24,482 - #47 main
+INFO  02:46:24,482 - #13 (
+INFO  02:46:24,482 - #14 )
+INFO  02:46:24,483 - #47 int
+INFO  02:46:24,483 - #47 a
+INFO  02:46:24,483 - #7 ;
+INFO  02:46:24,483 - #47 int
+INFO  02:46:24,483 - #47 b
+INFO  02:46:24,483 - #17 [
+INFO  02:46:24,483 - #18 ]
+INFO  02:46:24,483 - #7 ;
+INFO  02:46:24,484 - #3 {
+INFO  02:46:24,484 - #47 x
+INFO  02:46:24,485 - #19 =
+INFO  02:46:24,485 - #47 b
+INFO  02:46:24,485 - #28 +
+INFO  02:46:24,486 - #29 -
+ERROR 02:46:24,486 - 
+Sintaksna greska na liniji 6
+INFO  02:46:24,486 - #7 ;
+INFO  02:46:24,486 - #47 x
+INFO  02:46:24,486 - #19 =
+INFO  02:46:24,486 - #49 2
+INFO  02:46:24,487 - #7 ;
+INFO  02:46:24,487 - #47 a
+INFO  02:46:24,487 - #19 =
+INFO  02:46:24,487 - #7 ;
+ERROR 02:46:24,488 - 
+Sintaksna greska na liniji 8
+INFO  02:46:24,488 - #7 ;
+INFO  02:46:24,488 - #7 ;
+INFO  02:46:24,488 - #7 ;
+INFO  02:46:24,488 - #7 ;
+INFO  02:46:24,488 - #7 ;
+INFO  02:46:24,488 - #47 b
+INFO  02:46:24,488 - #19 =
+INFO  02:46:24,488 - #12 new
+INFO  02:46:24,488 - #47 int
+INFO  02:46:24,489 - #17 [
+INFO  02:46:24,489 - #49 7
+INFO  02:46:24,489 - #18 ]
+INFO  02:46:24,489 - #7 ;
+INFO  02:46:24,489 - #47 b
+INFO  02:46:24,489 - #17 [
+INFO  02:46:24,490 - #49 0
+INFO  02:46:24,490 - #18 ]
+INFO  02:46:24,490 - #19 =
+INFO  02:46:24,490 - #49 0
+INFO  02:46:24,490 - #7 ;
+INFO  02:46:24,490 - #47 b
+INFO  02:46:24,490 - #17 [
+INFO  02:46:24,490 - #49 1
+INFO  02:46:24,490 - #18 ]
+INFO  02:46:24,490 - #19 =
+INFO  02:46:24,491 - #49 1
+INFO  02:46:24,491 - #7 ;
+INFO  02:46:24,491 - #47 b
+INFO  02:46:24,491 - #17 [
+INFO  02:46:24,491 - #49 2
+INFO  02:46:24,491 - #18 ]
+INFO  02:46:24,491 - #19 =
+INFO  02:46:24,491 - #49 2
+INFO  02:46:24,491 - #7 ;
+INFO  02:46:24,491 - #47 b
+INFO  02:46:24,491 - #17 [
+INFO  02:46:24,491 - #49 3
+INFO  02:46:24,491 - #18 ]
+INFO  02:46:24,491 - #19 =
+INFO  02:46:24,491 - #49 3
+INFO  02:46:24,491 - #7 ;
+INFO  02:46:24,492 - #47 a
+INFO  02:46:24,492 - #19 =
+INFO  02:46:24,492 - #47 x
+INFO  02:46:24,492 - #10 ++
+ERROR 02:46:24,492 - 
+Sintaksna greska na liniji 14
+INFO  02:46:24,492 - #28 +
+INFO  02:46:24,492 - #13 (
+INFO  02:46:24,492 - #47 x
+INFO  02:46:24,492 - #30 *
+INFO  02:46:24,492 - #49 7
+INFO  02:46:24,492 - #14 )
+INFO  02:46:24,492 - #28 +
+INFO  02:46:24,492 - #47 b
+INFO  02:46:24,492 - #17 [
+INFO  02:46:24,492 - #49 1
+INFO  02:46:24,492 - #18 ]
+INFO  02:46:24,492 - #7 ;
+INFO  02:46:24,492 - #47 a
+INFO  02:46:24,492 - #19 =
+INFO  02:46:24,493 - #47 x
+INFO  02:46:24,493 - #28 +
+INFO  02:46:24,493 - #13 (
+INFO  02:46:24,493 - #47 x
+INFO  02:46:24,494 - #30 *
+INFO  02:46:24,494 - #49 7
+INFO  02:46:24,496 - #47 a
+ERROR 02:46:24,496 - 
+Sintaksna greska na liniji 16
+INFO  02:46:24,496 - #19 =
+INFO  02:46:24,496 - #47 x
+INFO  02:46:24,496 - #30 *
+INFO  02:46:24,496 - #49 1
+INFO  02:46:24,496 - #28 +
+INFO  02:46:24,496 - #47 b
+INFO  02:46:24,496 - #17 [
+INFO  02:46:24,496 - #49 3
+INFO  02:46:24,496 - #18 ]
+INFO  02:46:24,496 - #28 +
+INFO  02:46:24,496 - #47 b
+INFO  02:46:24,496 - #17 [
+INFO  02:46:24,496 - #49 2
+INFO  02:46:24,497 - #18 ]
+INFO  02:46:24,497 - #31 /
+INFO  02:46:24,497 - #47 b
+INFO  02:46:24,497 - #17 [
+INFO  02:46:24,497 - #49 1
+INFO  02:46:24,497 - #18 ]
+INFO  02:46:24,497 - #28 +
+INFO  02:46:24,497 - #47 b
+INFO  02:46:24,497 - #17 [
+INFO  02:46:24,497 - #49 1
+INFO  02:46:24,497 - #18 ]
+INFO  02:46:24,497 - #32 %
+INFO  02:46:24,497 - #47 b
+INFO  02:46:24,497 - #17 [
+INFO  02:46:24,497 - #49 3
+INFO  02:46:24,497 - #18 ]
+INFO  02:46:24,497 - #7 ;
+INFO  02:46:24,498 - #4 }
+INFO  02:46:24,498 - #4 }
+INFO  02:46:24,503 - Program(
+  ProgramIdentificator(
+   assignment
+  ) [ProgramIdentificator]
+  Declarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+         int
+        ) [Type]
+        OneVariable(
+          VariableDecl(
+           x
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [VariableDecl]
+        ) [OneVariable]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        MethodVariables(
+          NoMethodVariables(
+          ) [NoMethodVariables]
+          VarDeclaration(
+            Type(
+             int
+            ) [Type]
+            OneVariable(
+              VariableDecl(
+               a
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [OneVariable]
+          ) [VarDeclaration]
+        ) [MethodVariables]
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             b
+              HasArrayBrackets(
+              ) [HasArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        MethodStatements(
+          MethodStatements(
+            MethodStatements(
+              MethodStatements(
+                MethodStatements(
+                  MethodStatements(
+                    MethodStatements(
+                      MethodStatements(
+                        MethodStatements(
+                          NoMethodStatements(
+                          ) [NoMethodStatements]
+                          DesignatorStmt(
+                            Assignment(
+                              OneDesignator(
+                               x
+                              ) [OneDesignator]
+                              AssignmentExprError(
+                              ) [AssignmentExprError]
+                            ) [Assignment]
+                          ) [DesignatorStmt]
+                        ) [MethodStatements]
+                        DesignatorStmt(
+                          Assignment(
+                            OneDesignator(
+                             x
+                            ) [OneDesignator]
+                            AssignmentExpression(
+                              Expression(
+                                OneTerm(
+                                  Term(
+                                    OneFactor(
+                                      FactorNumber(
+                                       2
+                                      ) [FactorNumber]
+                                    ) [OneFactor]
+                                  ) [Term]
+                                ) [OneTerm]
+                              ) [Expression]
+                            ) [AssignmentExpression]
+                          ) [Assignment]
+                        ) [DesignatorStmt]
+                      ) [MethodStatements]
+                      DesignatorStmt(
+                        Assignment(
+                          OneDesignator(
+                           a
+                          ) [OneDesignator]
+                          AssignmentExprError(
+                          ) [AssignmentExprError]
+                        ) [Assignment]
+                      ) [DesignatorStmt]
+                    ) [MethodStatements]
+                    DesignatorStmt(
+                      Assignment(
+                        OneDesignator(
+                         b
+                        ) [OneDesignator]
+                        AssignmentExpression(
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  ArrayCreation(
+                                    Type(
+                                     int
+                                    ) [Type]
+                                    Expression(
+                                      OneTerm(
+                                        Term(
+                                          OneFactor(
+                                            FactorNumber(
+                                             7
+                                            ) [FactorNumber]
+                                          ) [OneFactor]
+                                        ) [Term]
+                                      ) [OneTerm]
+                                    ) [Expression]
+                                  ) [ArrayCreation]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                        ) [AssignmentExpression]
+                      ) [Assignment]
+                    ) [DesignatorStmt]
+                  ) [MethodStatements]
+                  DesignatorStmt(
+                    Assignment(
+                      ArrayDesignator(
+                        DesignatorName(
+                         b
+                        ) [DesignatorName]
+                        Expression(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorNumber(
+                                 0
+                                ) [FactorNumber]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                      ) [ArrayDesignator]
+                      AssignmentExpression(
+                        Expression(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorNumber(
+                                 0
+                                ) [FactorNumber]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                      ) [AssignmentExpression]
+                    ) [Assignment]
+                  ) [DesignatorStmt]
+                ) [MethodStatements]
+                DesignatorStmt(
+                  Assignment(
+                    ArrayDesignator(
+                      DesignatorName(
+                       b
+                      ) [DesignatorName]
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorNumber(
+                               1
+                              ) [FactorNumber]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                    ) [ArrayDesignator]
+                    AssignmentExpression(
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorNumber(
+                               1
+                              ) [FactorNumber]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                    ) [AssignmentExpression]
+                  ) [Assignment]
+                ) [DesignatorStmt]
+              ) [MethodStatements]
+              DesignatorStmt(
+                Assignment(
+                  ArrayDesignator(
+                    DesignatorName(
+                     b
+                    ) [DesignatorName]
+                    Expression(
+                      OneTerm(
+                        Term(
+                          OneFactor(
+                            FactorNumber(
+                             2
+                            ) [FactorNumber]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [OneTerm]
+                    ) [Expression]
+                  ) [ArrayDesignator]
+                  AssignmentExpression(
+                    Expression(
+                      OneTerm(
+                        Term(
+                          OneFactor(
+                            FactorNumber(
+                             2
+                            ) [FactorNumber]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [OneTerm]
+                    ) [Expression]
+                  ) [AssignmentExpression]
+                ) [Assignment]
+              ) [DesignatorStmt]
+            ) [MethodStatements]
+            DesignatorStmt(
+              Assignment(
+                ArrayDesignator(
+                  DesignatorName(
+                   b
+                  ) [DesignatorName]
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorNumber(
+                           3
+                          ) [FactorNumber]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                ) [ArrayDesignator]
+                AssignmentExpression(
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorNumber(
+                           3
+                          ) [FactorNumber]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                ) [AssignmentExpression]
+              ) [Assignment]
+            ) [DesignatorStmt]
+          ) [MethodStatements]
+          DesignatorStmt(
+            Assignment(
+              OneDesignator(
+               a
+              ) [OneDesignator]
+              AssignmentExprError(
+              ) [AssignmentExprError]
+            ) [Assignment]
+          ) [DesignatorStmt]
+        ) [MethodStatements]
+        DesignatorStmt(
+          Assignment(
+            OneDesignator(
+             a
+            ) [OneDesignator]
+            AssignmentExprError(
+            ) [AssignmentExprError]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  02:46:24,503 - ===================================
+INFO  02:46:24,507 - Deklarisana promenljiva x na liniji 2
+INFO  02:46:24,507 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 5
+INFO  02:46:24,507 - Deklarisana promenljiva a na liniji 5
+INFO  02:46:24,507 - Deklarisan niz b na liniji 5
+INFO  02:46:24,507 - Detektovana upotreba simbola x na liniji 6: Var x: int, 0, 0 
+INFO  02:46:24,507 - Detektovana upotreba simbola x na liniji 7: Var x: int, 0, 0 
+INFO  02:46:24,507 - Detektovana upotreba simbola a na liniji 8: Var a: int, 0, 1 
+INFO  02:46:24,507 - Detektovana upotreba simbola b na liniji 9: Var b: Arr of int, 1, 1 
+INFO  02:46:24,507 - Detektovana upotreba simbola b na liniji 10: b: int, -1, -1 
+INFO  02:46:24,507 - Detektovana upotreba simbola b na liniji 11: b: int, -1, -1 
+INFO  02:46:24,507 - Detektovana upotreba simbola b na liniji 12: b: int, -1, -1 
+INFO  02:46:24,507 - Detektovana upotreba simbola b na liniji 13: b: int, -1, -1 
+INFO  02:46:24,508 - Detektovana upotreba simbola a na liniji 14: Var a: int, 0, 1 
+INFO  02:46:24,508 - Detektovana upotreba simbola a na liniji 15: Var a: int, 0, 1 
+INFO  02:46:24,508 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 5
+INFO  02:46:24,508 - ===================================
+ERROR 02:46:24,508 - Parsiranje koda je neuspesno

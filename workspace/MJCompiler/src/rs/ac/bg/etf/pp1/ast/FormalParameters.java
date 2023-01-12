@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 6:6:41
+// 12/0/2023 20:28:55
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class FormalParameters extends FormPars {
 
     private FormPars FormPars;
-    private OneParameter OneParameter;
+    private OneParam OneParam;
 
-    public FormalParameters (FormPars FormPars, OneParameter OneParameter) {
+    public FormalParameters (FormPars FormPars, OneParam OneParam) {
         this.FormPars=FormPars;
         if(FormPars!=null) FormPars.setParent(this);
-        this.OneParameter=OneParameter;
-        if(OneParameter!=null) OneParameter.setParent(this);
+        this.OneParam=OneParam;
+        if(OneParam!=null) OneParam.setParent(this);
     }
 
     public FormPars getFormPars() {
@@ -25,12 +25,12 @@ public class FormalParameters extends FormPars {
         this.FormPars=FormPars;
     }
 
-    public OneParameter getOneParameter() {
-        return OneParameter;
+    public OneParam getOneParam() {
+        return OneParam;
     }
 
-    public void setOneParameter(OneParameter OneParameter) {
-        this.OneParameter=OneParameter;
+    public void setOneParam(OneParam OneParam) {
+        this.OneParam=OneParam;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class FormalParameters extends FormPars {
 
     public void childrenAccept(Visitor visitor) {
         if(FormPars!=null) FormPars.accept(visitor);
-        if(OneParameter!=null) OneParameter.accept(visitor);
+        if(OneParam!=null) OneParam.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(FormPars!=null) FormPars.traverseTopDown(visitor);
-        if(OneParameter!=null) OneParameter.traverseTopDown(visitor);
+        if(OneParam!=null) OneParam.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(FormPars!=null) FormPars.traverseBottomUp(visitor);
-        if(OneParameter!=null) OneParameter.traverseBottomUp(visitor);
+        if(OneParam!=null) OneParam.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class FormalParameters extends FormPars {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(OneParameter!=null)
-            buffer.append(OneParameter.toString("  "+tab));
+        if(OneParam!=null)
+            buffer.append(OneParam.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

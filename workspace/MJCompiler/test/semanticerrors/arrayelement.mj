@@ -1,0 +1,45 @@
+program arrayelement
+	
+	const char slovoa = 'a';  
+	
+	const char slovob = 'b';
+
+	int niz[], niz2[], a, b; 
+	char nizch[];			 
+	
+{
+	int sum(int a, int b)int c;{
+	c = a+b;
+	return c;
+	}
+	
+	
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+		// TESTOVI ZA Factor = "new" Type "[" Expr "]".
+		niz = new int[slovo]; //not ok
+		niz = new int [niz2]; //not ok
+		niz = new int [nizch[1]]; // not ok
+		niz = new int [bt]; //not ok
+		
+		b = 7;
+		niz2 = new int [b];
+		niz = new int [niz2[5]+1]; //ok
+		
+		// TESTOVI ZA Designator = Designator "[" Expr "]"
+		a = b[1]; //not ok b nije niz
+		a = niz [slovoa]; // not ok slovoa nije tipa int
+		a = niz[sum(a,b)+1]; //good;
+		
+		}
+		
+		
+}
+		
+
+

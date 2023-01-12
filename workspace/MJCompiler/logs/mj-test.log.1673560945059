@@ -1,0 +1,1915 @@
+INFO  22:17:21,333 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\ifelse.mj
+INFO  22:17:21,367 - #2 program
+INFO  22:17:21,367 - #47 ifelseconditions
+INFO  22:17:21,367 - #5 const
+INFO  22:17:21,368 - #47 int
+INFO  22:17:21,368 - #47 nula
+INFO  22:17:21,369 - #19 =
+INFO  22:17:21,369 - #49 0
+INFO  22:17:21,369 - #15 ,
+INFO  22:17:21,370 - #47 jedan
+INFO  22:17:21,370 - #19 =
+INFO  22:17:21,370 - #49 1
+INFO  22:17:21,370 - #15 ,
+INFO  22:17:21,370 - #47 pet
+INFO  22:17:21,371 - #19 =
+INFO  22:17:21,371 - #49 5
+INFO  22:17:21,371 - #7 ;
+INFO  22:17:21,371 - #5 const
+INFO  22:17:21,371 - #47 bool
+INFO  22:17:21,371 - #47 radi
+INFO  22:17:21,372 - #19 =
+INFO  22:17:21,374 - #50 true
+INFO  22:17:21,374 - #7 ;
+INFO  22:17:21,375 - #5 const
+INFO  22:17:21,375 - #47 char
+INFO  22:17:21,375 - #47 slovoa
+INFO  22:17:21,375 - #19 =
+INFO  22:17:21,375 - #48 a
+INFO  22:17:21,375 - #7 ;
+INFO  22:17:21,375 - #5 const
+INFO  22:17:21,375 - #47 char
+INFO  22:17:21,375 - #47 slovob
+INFO  22:17:21,375 - #19 =
+INFO  22:17:21,375 - #48 b
+INFO  22:17:21,375 - #7 ;
+INFO  22:17:21,375 - #47 int
+INFO  22:17:21,375 - #47 niz
+INFO  22:17:21,375 - #17 [
+INFO  22:17:21,375 - #18 ]
+INFO  22:17:21,375 - #15 ,
+INFO  22:17:21,376 - #47 niz2
+INFO  22:17:21,376 - #17 [
+INFO  22:17:21,376 - #18 ]
+INFO  22:17:21,376 - #15 ,
+INFO  22:17:21,377 - #47 a
+INFO  22:17:21,377 - #15 ,
+INFO  22:17:21,377 - #47 b
+INFO  22:17:21,377 - #7 ;
+INFO  22:17:21,377 - #47 char
+INFO  22:17:21,377 - #47 nizch
+INFO  22:17:21,377 - #17 [
+INFO  22:17:21,377 - #18 ]
+INFO  22:17:21,377 - #7 ;
+INFO  22:17:21,378 - #47 bool
+INFO  22:17:21,378 - #47 isok
+INFO  22:17:21,378 - #7 ;
+INFO  22:17:21,378 - #3 {
+INFO  22:17:21,378 - #6 void
+INFO  22:17:21,378 - #47 main
+INFO  22:17:21,378 - #13 (
+INFO  22:17:21,378 - #14 )
+INFO  22:17:21,379 - #47 int
+INFO  22:17:21,379 - #47 bodovi
+INFO  22:17:21,379 - #7 ;
+INFO  22:17:21,379 - #47 bool
+INFO  22:17:21,379 - #47 bt
+INFO  22:17:21,379 - #7 ;
+INFO  22:17:21,379 - #47 char
+INFO  22:17:21,379 - #47 slovo
+INFO  22:17:21,380 - #7 ;
+INFO  22:17:21,380 - #47 int
+INFO  22:17:21,380 - #47 broj
+INFO  22:17:21,380 - #7 ;
+INFO  22:17:21,380 - #3 {
+INFO  22:17:21,380 - #33 if
+INFO  22:17:21,381 - #13 (
+INFO  22:17:21,381 - #47 niz
+INFO  22:17:21,381 - #20 ==
+INFO  22:17:21,382 - #47 niz2
+INFO  22:17:21,383 - #14 )
+INFO  22:17:21,383 - #8 read
+INFO  22:17:21,384 - #13 (
+INFO  22:17:21,384 - #47 niz
+INFO  22:17:21,384 - #17 [
+INFO  22:17:21,384 - #49 1
+INFO  22:17:21,384 - #18 ]
+INFO  22:17:21,385 - #14 )
+INFO  22:17:21,385 - #7 ;
+INFO  22:17:21,385 - #33 if
+INFO  22:17:21,385 - #13 (
+INFO  22:17:21,385 - #47 niz
+INFO  22:17:21,385 - #21 !=
+INFO  22:17:21,385 - #47 nizch
+INFO  22:17:21,386 - #14 )
+INFO  22:17:21,386 - #8 read
+INFO  22:17:21,386 - #13 (
+INFO  22:17:21,386 - #47 nizch
+INFO  22:17:21,386 - #17 [
+INFO  22:17:21,386 - #49 2
+INFO  22:17:21,386 - #18 ]
+INFO  22:17:21,386 - #14 )
+INFO  22:17:21,386 - #7 ;
+INFO  22:17:21,386 - #33 if
+INFO  22:17:21,386 - #13 (
+INFO  22:17:21,386 - #47 a
+INFO  22:17:21,387 - #22 >
+INFO  22:17:21,387 - #47 b
+INFO  22:17:21,387 - #14 )
+INFO  22:17:21,387 - #8 read
+INFO  22:17:21,387 - #13 (
+INFO  22:17:21,387 - #47 a
+INFO  22:17:21,387 - #14 )
+INFO  22:17:21,387 - #7 ;
+INFO  22:17:21,387 - #34 else
+INFO  22:17:21,387 - #8 read
+INFO  22:17:21,388 - #13 (
+INFO  22:17:21,388 - #47 b
+INFO  22:17:21,388 - #14 )
+INFO  22:17:21,388 - #7 ;
+INFO  22:17:21,388 - #33 if
+INFO  22:17:21,388 - #13 (
+INFO  22:17:21,389 - #13 (
+INFO  22:17:21,389 - #47 a
+INFO  22:17:21,389 - #28 +
+INFO  22:17:21,389 - #47 b
+INFO  22:17:21,389 - #29 -
+INFO  22:17:21,389 - #49 7
+INFO  22:17:21,390 - #14 )
+INFO  22:17:21,390 - #25 <=
+INFO  22:17:21,390 - #47 a
+INFO  22:17:21,390 - #14 )
+INFO  22:17:21,390 - #47 a
+INFO  22:17:21,390 - #19 =
+INFO  22:17:21,390 - #47 a
+INFO  22:17:21,390 - #28 +
+INFO  22:17:21,391 - #47 b
+INFO  22:17:21,391 - #29 -
+INFO  22:17:21,391 - #49 7
+INFO  22:17:21,391 - #7 ;
+INFO  22:17:21,391 - #34 else
+INFO  22:17:21,391 - #33 if
+INFO  22:17:21,391 - #13 (
+INFO  22:17:21,391 - #47 a
+INFO  22:17:21,391 - #30 *
+INFO  22:17:21,391 - #49 2
+INFO  22:17:21,392 - #29 -
+INFO  22:17:21,392 - #47 jedan
+INFO  22:17:21,392 - #14 )
+INFO  22:17:21,392 - #47 a
+INFO  22:17:21,392 - #19 =
+INFO  22:17:21,392 - #47 a
+INFO  22:17:21,392 - #30 *
+INFO  22:17:21,392 - #49 2
+INFO  22:17:21,392 - #31 /
+INFO  22:17:21,392 - #49 2
+INFO  22:17:21,393 - #7 ;
+INFO  22:17:21,393 - #34 else
+INFO  22:17:21,393 - #33 if
+INFO  22:17:21,393 - #13 (
+INFO  22:17:21,393 - #47 a
+INFO  22:17:21,393 - #30 *
+INFO  22:17:21,393 - #49 2
+INFO  22:17:21,393 - #29 -
+INFO  22:17:21,393 - #47 jedan
+INFO  22:17:21,393 - #23 >=
+INFO  22:17:21,394 - #47 pet
+INFO  22:17:21,394 - #14 )
+INFO  22:17:21,394 - #47 a
+INFO  22:17:21,394 - #19 =
+INFO  22:17:21,395 - #47 pet
+INFO  22:17:21,395 - #30 *
+INFO  22:17:21,395 - #47 nula
+INFO  22:17:21,395 - #29 -
+INFO  22:17:21,395 - #47 b
+INFO  22:17:21,395 - #7 ;
+INFO  22:17:21,395 - #33 if
+INFO  22:17:21,395 - #13 (
+INFO  22:17:21,395 - #47 bodovi
+INFO  22:17:21,395 - #24 <
+INFO  22:17:21,395 - #47 pet
+INFO  22:17:21,395 - #26 &&
+INFO  22:17:21,395 - #47 a
+INFO  22:17:21,395 - #29 -
+INFO  22:17:21,395 - #49 3
+INFO  22:17:21,395 - #23 >=
+INFO  22:17:21,395 - #47 b
+INFO  22:17:21,396 - #14 )
+INFO  22:17:21,396 - #8 read
+INFO  22:17:21,396 - #13 (
+INFO  22:17:21,396 - #47 bodovi
+INFO  22:17:21,396 - #14 )
+INFO  22:17:21,396 - #7 ;
+INFO  22:17:21,396 - #33 if
+INFO  22:17:21,396 - #13 (
+INFO  22:17:21,396 - #47 bodovi
+INFO  22:17:21,396 - #24 <
+INFO  22:17:21,396 - #47 pet
+INFO  22:17:21,396 - #26 &&
+INFO  22:17:21,396 - #47 a
+INFO  22:17:21,396 - #29 -
+INFO  22:17:21,396 - #49 3
+INFO  22:17:21,396 - #14 )
+INFO  22:17:21,396 - #8 read
+INFO  22:17:21,396 - #13 (
+INFO  22:17:21,396 - #47 bodovi
+INFO  22:17:21,396 - #14 )
+INFO  22:17:21,396 - #7 ;
+INFO  22:17:21,396 - #33 if
+INFO  22:17:21,396 - #13 (
+INFO  22:17:21,396 - #47 bodovi
+INFO  22:17:21,396 - #24 <
+INFO  22:17:21,396 - #47 pet
+INFO  22:17:21,396 - #27 ||
+INFO  22:17:21,396 - #47 a
+INFO  22:17:21,397 - #29 -
+INFO  22:17:21,397 - #49 3
+INFO  22:17:21,397 - #14 )
+INFO  22:17:21,397 - #8 read
+INFO  22:17:21,397 - #13 (
+INFO  22:17:21,397 - #47 bodovi
+INFO  22:17:21,397 - #14 )
+INFO  22:17:21,397 - #7 ;
+INFO  22:17:21,397 - #33 if
+INFO  22:17:21,397 - #13 (
+INFO  22:17:21,397 - #47 bodovi
+INFO  22:17:21,397 - #24 <
+INFO  22:17:21,397 - #47 pet
+INFO  22:17:21,397 - #27 ||
+INFO  22:17:21,397 - #47 a
+INFO  22:17:21,397 - #29 -
+INFO  22:17:21,397 - #49 3
+INFO  22:17:21,397 - #23 >=
+INFO  22:17:21,397 - #47 b
+INFO  22:17:21,398 - #26 &&
+INFO  22:17:21,398 - #47 b
+INFO  22:17:21,398 - #24 <
+INFO  22:17:21,398 - #47 a
+INFO  22:17:21,398 - #14 )
+INFO  22:17:21,398 - #8 read
+INFO  22:17:21,398 - #13 (
+INFO  22:17:21,398 - #47 bodovi
+INFO  22:17:21,398 - #14 )
+INFO  22:17:21,398 - #7 ;
+INFO  22:17:21,398 - #33 if
+INFO  22:17:21,398 - #13 (
+INFO  22:17:21,398 - #47 slovoa
+INFO  22:17:21,398 - #24 <
+INFO  22:17:21,398 - #47 slovob
+INFO  22:17:21,398 - #14 )
+INFO  22:17:21,398 - #47 a
+INFO  22:17:21,398 - #19 =
+INFO  22:17:21,398 - #47 a
+INFO  22:17:21,399 - #28 +
+INFO  22:17:21,399 - #47 b
+INFO  22:17:21,399 - #7 ;
+INFO  22:17:21,399 - #33 if
+INFO  22:17:21,399 - #13 (
+INFO  22:17:21,399 - #47 niz
+INFO  22:17:21,399 - #22 >
+INFO  22:17:21,399 - #47 bodovi
+INFO  22:17:21,399 - #14 )
+INFO  22:17:21,399 - #47 a
+INFO  22:17:21,399 - #19 =
+INFO  22:17:21,399 - #47 a
+INFO  22:17:21,399 - #28 +
+INFO  22:17:21,399 - #47 b
+INFO  22:17:21,399 - #7 ;
+INFO  22:17:21,399 - #33 if
+INFO  22:17:21,400 - #13 (
+INFO  22:17:21,400 - #47 niz
+INFO  22:17:21,400 - #20 ==
+INFO  22:17:21,400 - #47 niz2
+INFO  22:17:21,400 - #14 )
+INFO  22:17:21,400 - #47 a
+INFO  22:17:21,400 - #19 =
+INFO  22:17:21,400 - #47 a
+INFO  22:17:21,400 - #28 +
+INFO  22:17:21,400 - #47 b
+INFO  22:17:21,400 - #7 ;
+INFO  22:17:21,400 - #34 else
+INFO  22:17:21,400 - #33 if
+INFO  22:17:21,400 - #13 (
+INFO  22:17:21,400 - #47 niz
+INFO  22:17:21,400 - #17 [
+INFO  22:17:21,400 - #49 2
+INFO  22:17:21,400 - #18 ]
+INFO  22:17:21,400 - #24 <
+INFO  22:17:21,400 - #47 slovoa
+INFO  22:17:21,400 - #14 )
+INFO  22:17:21,400 - #47 a
+INFO  22:17:21,400 - #19 =
+INFO  22:17:21,400 - #47 a
+INFO  22:17:21,400 - #29 -
+INFO  22:17:21,400 - #49 7
+INFO  22:17:21,400 - #7 ;
+INFO  22:17:21,400 - #34 else
+INFO  22:17:21,400 - #33 if
+INFO  22:17:21,400 - #13 (
+INFO  22:17:21,400 - #47 niz
+INFO  22:17:21,401 - #17 [
+INFO  22:17:21,401 - #49 3
+INFO  22:17:21,401 - #18 ]
+INFO  22:17:21,401 - #23 >=
+INFO  22:17:21,401 - #49 15
+INFO  22:17:21,401 - #14 )
+INFO  22:17:21,401 - #47 a
+INFO  22:17:21,401 - #19 =
+INFO  22:17:21,401 - #47 a
+INFO  22:17:21,401 - #29 -
+INFO  22:17:21,401 - #49 9
+INFO  22:17:21,401 - #7 ;
+INFO  22:17:21,401 - #4 }
+INFO  22:17:21,401 - #4 }
+INFO  22:17:21,409 - Program(
+  ProgramIdentificator(
+   ifelseconditions
+  ) [ProgramIdentificator]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          Declarations(
+            Declarations(
+              Declarations(
+                NoDeclarations(
+                ) [NoDeclarations]
+                CnstDeclaration(
+                  ConstDecl(
+                    Type(
+                     int
+                    ) [Type]
+                    Constants(
+                      Constants(
+                        OneConstant(
+                          ConstantDeclaration(
+                           nula
+                            NumberConstant(
+                             0
+                            ) [NumberConstant]
+                          ) [ConstantDeclaration]
+                        ) [OneConstant]
+                        ConstantDeclaration(
+                         jedan
+                          NumberConstant(
+                           1
+                          ) [NumberConstant]
+                        ) [ConstantDeclaration]
+                      ) [Constants]
+                      ConstantDeclaration(
+                       pet
+                        NumberConstant(
+                         5
+                        ) [NumberConstant]
+                      ) [ConstantDeclaration]
+                    ) [Constants]
+                  ) [ConstDecl]
+                ) [CnstDeclaration]
+              ) [Declarations]
+              CnstDeclaration(
+                ConstDecl(
+                  Type(
+                   bool
+                  ) [Type]
+                  OneConstant(
+                    ConstantDeclaration(
+                     radi
+                      BoolConstant(
+                       true
+                      ) [BoolConstant]
+                    ) [ConstantDeclaration]
+                  ) [OneConstant]
+                ) [ConstDecl]
+              ) [CnstDeclaration]
+            ) [Declarations]
+            CnstDeclaration(
+              ConstDecl(
+                Type(
+                 char
+                ) [Type]
+                OneConstant(
+                  ConstantDeclaration(
+                   slovoa
+                    CharConstant(
+                     a
+                    ) [CharConstant]
+                  ) [ConstantDeclaration]
+                ) [OneConstant]
+              ) [ConstDecl]
+            ) [CnstDeclaration]
+          ) [Declarations]
+          CnstDeclaration(
+            ConstDecl(
+              Type(
+               char
+              ) [Type]
+              OneConstant(
+                ConstantDeclaration(
+                 slovob
+                  CharConstant(
+                   b
+                  ) [CharConstant]
+                ) [ConstantDeclaration]
+              ) [OneConstant]
+            ) [ConstDecl]
+          ) [CnstDeclaration]
+        ) [Declarations]
+        VariableDeclaration(
+          VarDeclaration(
+            Type(
+             int
+            ) [Type]
+            Variables(
+              Variables(
+                Variables(
+                  OneVariable(
+                    VariableDecl(
+                     niz
+                      HasArrayBrackets(
+                      ) [HasArrayBrackets]
+                    ) [VariableDecl]
+                  ) [OneVariable]
+                  VariableDecl(
+                   niz2
+                    HasArrayBrackets(
+                    ) [HasArrayBrackets]
+                  ) [VariableDecl]
+                ) [Variables]
+                VariableDecl(
+                 a
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [Variables]
+              VariableDecl(
+               b
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [Variables]
+          ) [VarDeclaration]
+        ) [VariableDeclaration]
+      ) [Declarations]
+      VariableDeclaration(
+        VarDeclaration(
+          Type(
+           char
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             nizch
+              HasArrayBrackets(
+              ) [HasArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [VariableDeclaration]
+    ) [Declarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+         bool
+        ) [Type]
+        OneVariable(
+          VariableDecl(
+           isok
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [VariableDecl]
+        ) [OneVariable]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        MethodVariables(
+          MethodVariables(
+            MethodVariables(
+              NoMethodVariables(
+              ) [NoMethodVariables]
+              VarDeclaration(
+                Type(
+                 int
+                ) [Type]
+                OneVariable(
+                  VariableDecl(
+                   bodovi
+                    NoArrayBrackets(
+                    ) [NoArrayBrackets]
+                  ) [VariableDecl]
+                ) [OneVariable]
+              ) [VarDeclaration]
+            ) [MethodVariables]
+            VarDeclaration(
+              Type(
+               bool
+              ) [Type]
+              OneVariable(
+                VariableDecl(
+                 bt
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [OneVariable]
+            ) [VarDeclaration]
+          ) [MethodVariables]
+          VarDeclaration(
+            Type(
+             char
+            ) [Type]
+            OneVariable(
+              VariableDecl(
+               slovo
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [OneVariable]
+          ) [VarDeclaration]
+        ) [MethodVariables]
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             broj
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        MethodStatements(
+          MethodStatements(
+            MethodStatements(
+              MethodStatements(
+                MethodStatements(
+                  MethodStatements(
+                    MethodStatements(
+                      MethodStatements(
+                        MethodStatements(
+                          MethodStatements(
+                            NoMethodStatements(
+                            ) [NoMethodStatements]
+                            IfStatement(
+                              IfStart(
+                              ) [IfStart]
+                              Then(
+                                OneCondition(
+                                  ConditionTerm(
+                                    ConditionFacts(
+                                      Expression(
+                                        OneTerm(
+                                          Term(
+                                            OneFactor(
+                                              FactorDesignator(
+                                                OneDesignator(
+                                                 niz
+                                                ) [OneDesignator]
+                                              ) [FactorDesignator]
+                                            ) [OneFactor]
+                                          ) [Term]
+                                        ) [OneTerm]
+                                      ) [Expression]
+                                      IsEqual(
+                                      ) [IsEqual]
+                                      Expression(
+                                        OneTerm(
+                                          Term(
+                                            OneFactor(
+                                              FactorDesignator(
+                                                OneDesignator(
+                                                 niz2
+                                                ) [OneDesignator]
+                                              ) [FactorDesignator]
+                                            ) [OneFactor]
+                                          ) [Term]
+                                        ) [OneTerm]
+                                      ) [Expression]
+                                    ) [ConditionFacts]
+                                  ) [ConditionTerm]
+                                ) [OneCondition]
+                              ) [Then]
+                              ReadStatement(
+                                ArrayDesignator(
+                                  DesignatorName(
+                                   niz
+                                  ) [DesignatorName]
+                                  Expression(
+                                    OneTerm(
+                                      Term(
+                                        OneFactor(
+                                          FactorNumber(
+                                           1
+                                          ) [FactorNumber]
+                                        ) [OneFactor]
+                                      ) [Term]
+                                    ) [OneTerm]
+                                  ) [Expression]
+                                ) [ArrayDesignator]
+                              ) [ReadStatement]
+                            ) [IfStatement]
+                          ) [MethodStatements]
+                          IfStatement(
+                            IfStart(
+                            ) [IfStart]
+                            Then(
+                              OneCondition(
+                                ConditionTerm(
+                                  ConditionFacts(
+                                    Expression(
+                                      OneTerm(
+                                        Term(
+                                          OneFactor(
+                                            FactorDesignator(
+                                              OneDesignator(
+                                               niz
+                                              ) [OneDesignator]
+                                            ) [FactorDesignator]
+                                          ) [OneFactor]
+                                        ) [Term]
+                                      ) [OneTerm]
+                                    ) [Expression]
+                                    NotEqual(
+                                    ) [NotEqual]
+                                    Expression(
+                                      OneTerm(
+                                        Term(
+                                          OneFactor(
+                                            FactorDesignator(
+                                              OneDesignator(
+                                               nizch
+                                              ) [OneDesignator]
+                                            ) [FactorDesignator]
+                                          ) [OneFactor]
+                                        ) [Term]
+                                      ) [OneTerm]
+                                    ) [Expression]
+                                  ) [ConditionFacts]
+                                ) [ConditionTerm]
+                              ) [OneCondition]
+                            ) [Then]
+                            ReadStatement(
+                              ArrayDesignator(
+                                DesignatorName(
+                                 nizch
+                                ) [DesignatorName]
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorNumber(
+                                         2
+                                        ) [FactorNumber]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                              ) [ArrayDesignator]
+                            ) [ReadStatement]
+                          ) [IfStatement]
+                        ) [MethodStatements]
+                        IfElseStatement(
+                          IfStart(
+                          ) [IfStart]
+                          Then(
+                            OneCondition(
+                              ConditionTerm(
+                                ConditionFacts(
+                                  Expression(
+                                    OneTerm(
+                                      Term(
+                                        OneFactor(
+                                          FactorDesignator(
+                                            OneDesignator(
+                                             a
+                                            ) [OneDesignator]
+                                          ) [FactorDesignator]
+                                        ) [OneFactor]
+                                      ) [Term]
+                                    ) [OneTerm]
+                                  ) [Expression]
+                                  Greater(
+                                  ) [Greater]
+                                  Expression(
+                                    OneTerm(
+                                      Term(
+                                        OneFactor(
+                                          FactorDesignator(
+                                            OneDesignator(
+                                             b
+                                            ) [OneDesignator]
+                                          ) [FactorDesignator]
+                                        ) [OneFactor]
+                                      ) [Term]
+                                    ) [OneTerm]
+                                  ) [Expression]
+                                ) [ConditionFacts]
+                              ) [ConditionTerm]
+                            ) [OneCondition]
+                          ) [Then]
+                          ReadStatement(
+                            OneDesignator(
+                             a
+                            ) [OneDesignator]
+                          ) [ReadStatement]
+                          ElseStart(
+                          ) [ElseStart]
+                          ElseStatement(
+                            ReadStatement(
+                              OneDesignator(
+                               b
+                              ) [OneDesignator]
+                            ) [ReadStatement]
+                          ) [ElseStatement]
+                        ) [IfElseStatement]
+                      ) [MethodStatements]
+                      IfElseStatement(
+                        IfStart(
+                        ) [IfStart]
+                        Then(
+                          OneCondition(
+                            ConditionTerm(
+                              ConditionFacts(
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        BracketExpression(
+                                          Expression(
+                                            Terms(
+                                              Terms(
+                                                OneTerm(
+                                                  Term(
+                                                    OneFactor(
+                                                      FactorDesignator(
+                                                        OneDesignator(
+                                                         a
+                                                        ) [OneDesignator]
+                                                      ) [FactorDesignator]
+                                                    ) [OneFactor]
+                                                  ) [Term]
+                                                ) [OneTerm]
+                                                Plus(
+                                                ) [Plus]
+                                                Term(
+                                                  OneFactor(
+                                                    FactorDesignator(
+                                                      OneDesignator(
+                                                       b
+                                                      ) [OneDesignator]
+                                                    ) [FactorDesignator]
+                                                  ) [OneFactor]
+                                                ) [Term]
+                                              ) [Terms]
+                                              Minus(
+                                              ) [Minus]
+                                              Term(
+                                                OneFactor(
+                                                  FactorNumber(
+                                                   7
+                                                  ) [FactorNumber]
+                                                ) [OneFactor]
+                                              ) [Term]
+                                            ) [Terms]
+                                          ) [Expression]
+                                        ) [BracketExpression]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                                LessThanEqual(
+                                ) [LessThanEqual]
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           a
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                              ) [ConditionFacts]
+                            ) [ConditionTerm]
+                          ) [OneCondition]
+                        ) [Then]
+                        DesignatorStmt(
+                          Assignment(
+                            OneDesignator(
+                             a
+                            ) [OneDesignator]
+                            AssignmentExpression(
+                              Expression(
+                                Terms(
+                                  Terms(
+                                    OneTerm(
+                                      Term(
+                                        OneFactor(
+                                          FactorDesignator(
+                                            OneDesignator(
+                                             a
+                                            ) [OneDesignator]
+                                          ) [FactorDesignator]
+                                        ) [OneFactor]
+                                      ) [Term]
+                                    ) [OneTerm]
+                                    Plus(
+                                    ) [Plus]
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           b
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [Terms]
+                                  Minus(
+                                  ) [Minus]
+                                  Term(
+                                    OneFactor(
+                                      FactorNumber(
+                                       7
+                                      ) [FactorNumber]
+                                    ) [OneFactor]
+                                  ) [Term]
+                                ) [Terms]
+                              ) [Expression]
+                            ) [AssignmentExpression]
+                          ) [Assignment]
+                        ) [DesignatorStmt]
+                        ElseStart(
+                        ) [ElseStart]
+                        ElseStatement(
+                          IfElseStatement(
+                            IfStart(
+                            ) [IfStart]
+                            Then(
+                              OneCondition(
+                                ConditionTerm(
+                                  ConditionFact(
+                                    Expression(
+                                      Terms(
+                                        OneTerm(
+                                          Term(
+                                            Factors(
+                                              OneFactor(
+                                                FactorDesignator(
+                                                  OneDesignator(
+                                                   a
+                                                  ) [OneDesignator]
+                                                ) [FactorDesignator]
+                                              ) [OneFactor]
+                                              Multiply(
+                                              ) [Multiply]
+                                              FactorNumber(
+                                               2
+                                              ) [FactorNumber]
+                                            ) [Factors]
+                                          ) [Term]
+                                        ) [OneTerm]
+                                        Minus(
+                                        ) [Minus]
+                                        Term(
+                                          OneFactor(
+                                            FactorDesignator(
+                                              OneDesignator(
+                                               jedan
+                                              ) [OneDesignator]
+                                            ) [FactorDesignator]
+                                          ) [OneFactor]
+                                        ) [Term]
+                                      ) [Terms]
+                                    ) [Expression]
+                                  ) [ConditionFact]
+                                ) [ConditionTerm]
+                              ) [OneCondition]
+                            ) [Then]
+                            DesignatorStmt(
+                              Assignment(
+                                OneDesignator(
+                                 a
+                                ) [OneDesignator]
+                                AssignmentExpression(
+                                  Expression(
+                                    OneTerm(
+                                      Term(
+                                        Factors(
+                                          Factors(
+                                            OneFactor(
+                                              FactorDesignator(
+                                                OneDesignator(
+                                                 a
+                                                ) [OneDesignator]
+                                              ) [FactorDesignator]
+                                            ) [OneFactor]
+                                            Multiply(
+                                            ) [Multiply]
+                                            FactorNumber(
+                                             2
+                                            ) [FactorNumber]
+                                          ) [Factors]
+                                          Divide(
+                                          ) [Divide]
+                                          FactorNumber(
+                                           2
+                                          ) [FactorNumber]
+                                        ) [Factors]
+                                      ) [Term]
+                                    ) [OneTerm]
+                                  ) [Expression]
+                                ) [AssignmentExpression]
+                              ) [Assignment]
+                            ) [DesignatorStmt]
+                            ElseStart(
+                            ) [ElseStart]
+                            ElseStatement(
+                              IfStatement(
+                                IfStart(
+                                ) [IfStart]
+                                Then(
+                                  OneCondition(
+                                    ConditionTerm(
+                                      ConditionFacts(
+                                        Expression(
+                                          Terms(
+                                            OneTerm(
+                                              Term(
+                                                Factors(
+                                                  OneFactor(
+                                                    FactorDesignator(
+                                                      OneDesignator(
+                                                       a
+                                                      ) [OneDesignator]
+                                                    ) [FactorDesignator]
+                                                  ) [OneFactor]
+                                                  Multiply(
+                                                  ) [Multiply]
+                                                  FactorNumber(
+                                                   2
+                                                  ) [FactorNumber]
+                                                ) [Factors]
+                                              ) [Term]
+                                            ) [OneTerm]
+                                            Minus(
+                                            ) [Minus]
+                                            Term(
+                                              OneFactor(
+                                                FactorDesignator(
+                                                  OneDesignator(
+                                                   jedan
+                                                  ) [OneDesignator]
+                                                ) [FactorDesignator]
+                                              ) [OneFactor]
+                                            ) [Term]
+                                          ) [Terms]
+                                        ) [Expression]
+                                        GreaterEqual(
+                                        ) [GreaterEqual]
+                                        Expression(
+                                          OneTerm(
+                                            Term(
+                                              OneFactor(
+                                                FactorDesignator(
+                                                  OneDesignator(
+                                                   pet
+                                                  ) [OneDesignator]
+                                                ) [FactorDesignator]
+                                              ) [OneFactor]
+                                            ) [Term]
+                                          ) [OneTerm]
+                                        ) [Expression]
+                                      ) [ConditionFacts]
+                                    ) [ConditionTerm]
+                                  ) [OneCondition]
+                                ) [Then]
+                                DesignatorStmt(
+                                  Assignment(
+                                    OneDesignator(
+                                     a
+                                    ) [OneDesignator]
+                                    AssignmentExpression(
+                                      Expression(
+                                        Terms(
+                                          OneTerm(
+                                            Term(
+                                              Factors(
+                                                OneFactor(
+                                                  FactorDesignator(
+                                                    OneDesignator(
+                                                     pet
+                                                    ) [OneDesignator]
+                                                  ) [FactorDesignator]
+                                                ) [OneFactor]
+                                                Multiply(
+                                                ) [Multiply]
+                                                FactorDesignator(
+                                                  OneDesignator(
+                                                   nula
+                                                  ) [OneDesignator]
+                                                ) [FactorDesignator]
+                                              ) [Factors]
+                                            ) [Term]
+                                          ) [OneTerm]
+                                          Minus(
+                                          ) [Minus]
+                                          Term(
+                                            OneFactor(
+                                              FactorDesignator(
+                                                OneDesignator(
+                                                 b
+                                                ) [OneDesignator]
+                                              ) [FactorDesignator]
+                                            ) [OneFactor]
+                                          ) [Term]
+                                        ) [Terms]
+                                      ) [Expression]
+                                    ) [AssignmentExpression]
+                                  ) [Assignment]
+                                ) [DesignatorStmt]
+                              ) [IfStatement]
+                            ) [ElseStatement]
+                          ) [IfElseStatement]
+                        ) [ElseStatement]
+                      ) [IfElseStatement]
+                    ) [MethodStatements]
+                    IfStatement(
+                      IfStart(
+                      ) [IfStart]
+                      Then(
+                        OneCondition(
+                          ConditionTerms(
+                            ConditionTerm(
+                              ConditionFacts(
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           bodovi
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                                LessThan(
+                                ) [LessThan]
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           pet
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                              ) [ConditionFacts]
+                            ) [ConditionTerm]
+                            ConditionFacts(
+                              Expression(
+                                Terms(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           a
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                  Minus(
+                                  ) [Minus]
+                                  Term(
+                                    OneFactor(
+                                      FactorNumber(
+                                       3
+                                      ) [FactorNumber]
+                                    ) [OneFactor]
+                                  ) [Term]
+                                ) [Terms]
+                              ) [Expression]
+                              GreaterEqual(
+                              ) [GreaterEqual]
+                              Expression(
+                                OneTerm(
+                                  Term(
+                                    OneFactor(
+                                      FactorDesignator(
+                                        OneDesignator(
+                                         b
+                                        ) [OneDesignator]
+                                      ) [FactorDesignator]
+                                    ) [OneFactor]
+                                  ) [Term]
+                                ) [OneTerm]
+                              ) [Expression]
+                            ) [ConditionFacts]
+                          ) [ConditionTerms]
+                        ) [OneCondition]
+                      ) [Then]
+                      ReadStatement(
+                        OneDesignator(
+                         bodovi
+                        ) [OneDesignator]
+                      ) [ReadStatement]
+                    ) [IfStatement]
+                  ) [MethodStatements]
+                  IfStatement(
+                    IfStart(
+                    ) [IfStart]
+                    Then(
+                      OneCondition(
+                        ConditionTerms(
+                          ConditionTerm(
+                            ConditionFacts(
+                              Expression(
+                                OneTerm(
+                                  Term(
+                                    OneFactor(
+                                      FactorDesignator(
+                                        OneDesignator(
+                                         bodovi
+                                        ) [OneDesignator]
+                                      ) [FactorDesignator]
+                                    ) [OneFactor]
+                                  ) [Term]
+                                ) [OneTerm]
+                              ) [Expression]
+                              LessThan(
+                              ) [LessThan]
+                              Expression(
+                                OneTerm(
+                                  Term(
+                                    OneFactor(
+                                      FactorDesignator(
+                                        OneDesignator(
+                                         pet
+                                        ) [OneDesignator]
+                                      ) [FactorDesignator]
+                                    ) [OneFactor]
+                                  ) [Term]
+                                ) [OneTerm]
+                              ) [Expression]
+                            ) [ConditionFacts]
+                          ) [ConditionTerm]
+                          ConditionFact(
+                            Expression(
+                              Terms(
+                                OneTerm(
+                                  Term(
+                                    OneFactor(
+                                      FactorDesignator(
+                                        OneDesignator(
+                                         a
+                                        ) [OneDesignator]
+                                      ) [FactorDesignator]
+                                    ) [OneFactor]
+                                  ) [Term]
+                                ) [OneTerm]
+                                Minus(
+                                ) [Minus]
+                                Term(
+                                  OneFactor(
+                                    FactorNumber(
+                                     3
+                                    ) [FactorNumber]
+                                  ) [OneFactor]
+                                ) [Term]
+                              ) [Terms]
+                            ) [Expression]
+                          ) [ConditionFact]
+                        ) [ConditionTerms]
+                      ) [OneCondition]
+                    ) [Then]
+                    ReadStatement(
+                      OneDesignator(
+                       bodovi
+                      ) [OneDesignator]
+                    ) [ReadStatement]
+                  ) [IfStatement]
+                ) [MethodStatements]
+                IfStatement(
+                  IfStart(
+                  ) [IfStart]
+                  Then(
+                    Conditions(
+                      OneCondition(
+                        ConditionTerm(
+                          ConditionFacts(
+                            Expression(
+                              OneTerm(
+                                Term(
+                                  OneFactor(
+                                    FactorDesignator(
+                                      OneDesignator(
+                                       bodovi
+                                      ) [OneDesignator]
+                                    ) [FactorDesignator]
+                                  ) [OneFactor]
+                                ) [Term]
+                              ) [OneTerm]
+                            ) [Expression]
+                            LessThan(
+                            ) [LessThan]
+                            Expression(
+                              OneTerm(
+                                Term(
+                                  OneFactor(
+                                    FactorDesignator(
+                                      OneDesignator(
+                                       pet
+                                      ) [OneDesignator]
+                                    ) [FactorDesignator]
+                                  ) [OneFactor]
+                                ) [Term]
+                              ) [OneTerm]
+                            ) [Expression]
+                          ) [ConditionFacts]
+                        ) [ConditionTerm]
+                      ) [OneCondition]
+                      Or(
+                      ) [Or]
+                      ConditionTerm(
+                        ConditionFact(
+                          Expression(
+                            Terms(
+                              OneTerm(
+                                Term(
+                                  OneFactor(
+                                    FactorDesignator(
+                                      OneDesignator(
+                                       a
+                                      ) [OneDesignator]
+                                    ) [FactorDesignator]
+                                  ) [OneFactor]
+                                ) [Term]
+                              ) [OneTerm]
+                              Minus(
+                              ) [Minus]
+                              Term(
+                                OneFactor(
+                                  FactorNumber(
+                                   3
+                                  ) [FactorNumber]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [Terms]
+                          ) [Expression]
+                        ) [ConditionFact]
+                      ) [ConditionTerm]
+                    ) [Conditions]
+                  ) [Then]
+                  ReadStatement(
+                    OneDesignator(
+                     bodovi
+                    ) [OneDesignator]
+                  ) [ReadStatement]
+                ) [IfStatement]
+              ) [MethodStatements]
+              IfStatement(
+                IfStart(
+                ) [IfStart]
+                Then(
+                  Conditions(
+                    OneCondition(
+                      ConditionTerm(
+                        ConditionFacts(
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                     bodovi
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                          LessThan(
+                          ) [LessThan]
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                     pet
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                        ) [ConditionFacts]
+                      ) [ConditionTerm]
+                    ) [OneCondition]
+                    Or(
+                    ) [Or]
+                    ConditionTerms(
+                      ConditionTerm(
+                        ConditionFacts(
+                          Expression(
+                            Terms(
+                              OneTerm(
+                                Term(
+                                  OneFactor(
+                                    FactorDesignator(
+                                      OneDesignator(
+                                       a
+                                      ) [OneDesignator]
+                                    ) [FactorDesignator]
+                                  ) [OneFactor]
+                                ) [Term]
+                              ) [OneTerm]
+                              Minus(
+                              ) [Minus]
+                              Term(
+                                OneFactor(
+                                  FactorNumber(
+                                   3
+                                  ) [FactorNumber]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [Terms]
+                          ) [Expression]
+                          GreaterEqual(
+                          ) [GreaterEqual]
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                     b
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                        ) [ConditionFacts]
+                      ) [ConditionTerm]
+                      ConditionFacts(
+                        Expression(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorDesignator(
+                                  OneDesignator(
+                                   b
+                                  ) [OneDesignator]
+                                ) [FactorDesignator]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                        LessThan(
+                        ) [LessThan]
+                        Expression(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorDesignator(
+                                  OneDesignator(
+                                   a
+                                  ) [OneDesignator]
+                                ) [FactorDesignator]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                      ) [ConditionFacts]
+                    ) [ConditionTerms]
+                  ) [Conditions]
+                ) [Then]
+                ReadStatement(
+                  OneDesignator(
+                   bodovi
+                  ) [OneDesignator]
+                ) [ReadStatement]
+              ) [IfStatement]
+            ) [MethodStatements]
+            IfStatement(
+              IfStart(
+              ) [IfStart]
+              Then(
+                OneCondition(
+                  ConditionTerm(
+                    ConditionFacts(
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 slovoa
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                      LessThan(
+                      ) [LessThan]
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 slovob
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                    ) [ConditionFacts]
+                  ) [ConditionTerm]
+                ) [OneCondition]
+              ) [Then]
+              DesignatorStmt(
+                Assignment(
+                  OneDesignator(
+                   a
+                  ) [OneDesignator]
+                  AssignmentExpression(
+                    Expression(
+                      Terms(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 a
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                        Plus(
+                        ) [Plus]
+                        Term(
+                          OneFactor(
+                            FactorDesignator(
+                              OneDesignator(
+                               b
+                              ) [OneDesignator]
+                            ) [FactorDesignator]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [Terms]
+                    ) [Expression]
+                  ) [AssignmentExpression]
+                ) [Assignment]
+              ) [DesignatorStmt]
+            ) [IfStatement]
+          ) [MethodStatements]
+          IfStatement(
+            IfStart(
+            ) [IfStart]
+            Then(
+              OneCondition(
+                ConditionTerm(
+                  ConditionFacts(
+                    Expression(
+                      OneTerm(
+                        Term(
+                          OneFactor(
+                            FactorDesignator(
+                              OneDesignator(
+                               niz
+                              ) [OneDesignator]
+                            ) [FactorDesignator]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [OneTerm]
+                    ) [Expression]
+                    Greater(
+                    ) [Greater]
+                    Expression(
+                      OneTerm(
+                        Term(
+                          OneFactor(
+                            FactorDesignator(
+                              OneDesignator(
+                               bodovi
+                              ) [OneDesignator]
+                            ) [FactorDesignator]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [OneTerm]
+                    ) [Expression]
+                  ) [ConditionFacts]
+                ) [ConditionTerm]
+              ) [OneCondition]
+            ) [Then]
+            DesignatorStmt(
+              Assignment(
+                OneDesignator(
+                 a
+                ) [OneDesignator]
+                AssignmentExpression(
+                  Expression(
+                    Terms(
+                      OneTerm(
+                        Term(
+                          OneFactor(
+                            FactorDesignator(
+                              OneDesignator(
+                               a
+                              ) [OneDesignator]
+                            ) [FactorDesignator]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [OneTerm]
+                      Plus(
+                      ) [Plus]
+                      Term(
+                        OneFactor(
+                          FactorDesignator(
+                            OneDesignator(
+                             b
+                            ) [OneDesignator]
+                          ) [FactorDesignator]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [Terms]
+                  ) [Expression]
+                ) [AssignmentExpression]
+              ) [Assignment]
+            ) [DesignatorStmt]
+          ) [IfStatement]
+        ) [MethodStatements]
+        IfElseStatement(
+          IfStart(
+          ) [IfStart]
+          Then(
+            OneCondition(
+              ConditionTerm(
+                ConditionFacts(
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorDesignator(
+                            OneDesignator(
+                             niz
+                            ) [OneDesignator]
+                          ) [FactorDesignator]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                  IsEqual(
+                  ) [IsEqual]
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorDesignator(
+                            OneDesignator(
+                             niz2
+                            ) [OneDesignator]
+                          ) [FactorDesignator]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                ) [ConditionFacts]
+              ) [ConditionTerm]
+            ) [OneCondition]
+          ) [Then]
+          DesignatorStmt(
+            Assignment(
+              OneDesignator(
+               a
+              ) [OneDesignator]
+              AssignmentExpression(
+                Expression(
+                  Terms(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorDesignator(
+                            OneDesignator(
+                             a
+                            ) [OneDesignator]
+                          ) [FactorDesignator]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                    Plus(
+                    ) [Plus]
+                    Term(
+                      OneFactor(
+                        FactorDesignator(
+                          OneDesignator(
+                           b
+                          ) [OneDesignator]
+                        ) [FactorDesignator]
+                      ) [OneFactor]
+                    ) [Term]
+                  ) [Terms]
+                ) [Expression]
+              ) [AssignmentExpression]
+            ) [Assignment]
+          ) [DesignatorStmt]
+          ElseStart(
+          ) [ElseStart]
+          ElseStatement(
+            IfElseStatement(
+              IfStart(
+              ) [IfStart]
+              Then(
+                OneCondition(
+                  ConditionTerm(
+                    ConditionFacts(
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                ArrayDesignator(
+                                  DesignatorName(
+                                   niz
+                                  ) [DesignatorName]
+                                  Expression(
+                                    OneTerm(
+                                      Term(
+                                        OneFactor(
+                                          FactorNumber(
+                                           2
+                                          ) [FactorNumber]
+                                        ) [OneFactor]
+                                      ) [Term]
+                                    ) [OneTerm]
+                                  ) [Expression]
+                                ) [ArrayDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                      LessThan(
+                      ) [LessThan]
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 slovoa
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                    ) [ConditionFacts]
+                  ) [ConditionTerm]
+                ) [OneCondition]
+              ) [Then]
+              DesignatorStmt(
+                Assignment(
+                  OneDesignator(
+                   a
+                  ) [OneDesignator]
+                  AssignmentExpression(
+                    Expression(
+                      Terms(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 a
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                        Minus(
+                        ) [Minus]
+                        Term(
+                          OneFactor(
+                            FactorNumber(
+                             7
+                            ) [FactorNumber]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [Terms]
+                    ) [Expression]
+                  ) [AssignmentExpression]
+                ) [Assignment]
+              ) [DesignatorStmt]
+              ElseStart(
+              ) [ElseStart]
+              ElseStatement(
+                IfStatement(
+                  IfStart(
+                  ) [IfStart]
+                  Then(
+                    OneCondition(
+                      ConditionTerm(
+                        ConditionFacts(
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    ArrayDesignator(
+                                      DesignatorName(
+                                       niz
+                                      ) [DesignatorName]
+                                      Expression(
+                                        OneTerm(
+                                          Term(
+                                            OneFactor(
+                                              FactorNumber(
+                                               3
+                                              ) [FactorNumber]
+                                            ) [OneFactor]
+                                          ) [Term]
+                                        ) [OneTerm]
+                                      ) [Expression]
+                                    ) [ArrayDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                          GreaterEqual(
+                          ) [GreaterEqual]
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorNumber(
+                                   15
+                                  ) [FactorNumber]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                        ) [ConditionFacts]
+                      ) [ConditionTerm]
+                    ) [OneCondition]
+                  ) [Then]
+                  DesignatorStmt(
+                    Assignment(
+                      OneDesignator(
+                       a
+                      ) [OneDesignator]
+                      AssignmentExpression(
+                        Expression(
+                          Terms(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                     a
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                            Minus(
+                            ) [Minus]
+                            Term(
+                              OneFactor(
+                                FactorNumber(
+                                 9
+                                ) [FactorNumber]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [Terms]
+                        ) [Expression]
+                      ) [AssignmentExpression]
+                    ) [Assignment]
+                  ) [DesignatorStmt]
+                ) [IfStatement]
+              ) [ElseStatement]
+            ) [IfElseStatement]
+          ) [ElseStatement]
+        ) [IfElseStatement]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  22:17:21,411 - ===================================
+INFO  22:17:21,414 - Deklarisana konstanta nula jednaka 0 na liniji 2
+INFO  22:17:21,414 - Deklarisana konstanta jedan jednaka 1 na liniji 2
+INFO  22:17:21,414 - Deklarisana konstanta pet jednaka 5 na liniji 2
+INFO  22:17:21,414 - Deklarisana konstanta radi jednaka true na liniji 4
+INFO  22:17:21,414 - Deklarisana konstanta slovoa jednaka a na liniji 6
+INFO  22:17:21,414 - Deklarisana konstanta slovob jednaka b na liniji 8
+INFO  22:17:21,414 - Deklarisan niz niz na liniji 10
+INFO  22:17:21,414 - Deklarisan niz niz2 na liniji 10
+INFO  22:17:21,414 - Deklarisana promenljiva a na liniji 10
+INFO  22:17:21,414 - Deklarisana promenljiva b na liniji 10
+INFO  22:17:21,414 - Deklarisan niz nizch na liniji 11
+INFO  22:17:21,414 - Deklarisana promenljiva isok na liniji 12
+INFO  22:17:21,414 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 17
+INFO  22:17:21,414 - Deklarisana promenljiva bodovi na liniji 18
+INFO  22:17:21,414 - Deklarisana promenljiva bt na liniji 19
+INFO  22:17:21,414 - Deklarisana promenljiva slovo na liniji 20
+INFO  22:17:21,414 - Deklarisana promenljiva broj na liniji 21
+INFO  22:17:21,414 - Detektovana upotreba simbola niz na liniji 26: Var niz: Arr of int, 0, 0 
+INFO  22:17:21,414 - Detektovana upotreba simbola niz2 na liniji 26: Var niz2: Arr of int, 1, 0 
+INFO  22:17:21,414 - Detektovana upotreba simbola niz na liniji 26: Var niz: Arr of int, 0, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola niz na liniji 27: Var niz: Arr of int, 0, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola nizch na liniji 27: Var nizch: Arr of char, 4, 0 
+ERROR 22:17:21,415 - Semanticka greska na liniji 27: Tipovi oba expressiona moraju biti kompatibilni
+INFO  22:17:21,415 - Detektovana upotreba simbola nizch na liniji 27: Var nizch: Arr of char, 4, 0 
+ERROR 22:17:21,415 - Semanticka greska na liniji 27:  Condition nije tipa bool
+INFO  22:17:21,415 - Detektovana upotreba simbola a na liniji 28: Var a: int, 2, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola b na liniji 28: Var b: int, 3, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola a na liniji 28: Var a: int, 2, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola b na liniji 29: Var b: int, 3, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola a na liniji 30: Var a: int, 2, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola b na liniji 30: Var b: int, 3, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola a na liniji 30: Var a: int, 2, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola a na liniji 30: Var a: int, 2, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola a na liniji 30: Var a: int, 2, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola b na liniji 30: Var b: int, 3, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola a na liniji 31: Var a: int, 2, 0 
+INFO  22:17:21,415 - Detektovana upotreba simbola jedan na liniji 31: Con jedan: int, 1, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 31: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 31: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 32: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola jedan na liniji 32: Con jedan: int, 1, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola pet na liniji 32: Con pet: int, 5, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 32: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola pet na liniji 32: Con pet: int, 5, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola nula na liniji 32: Con nula: int, 0, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola b na liniji 32: Var b: int, 3, 0 
+ERROR 22:17:21,416 - Semanticka greska na liniji 31: Condition nije tipa bool 
+INFO  22:17:21,416 - Detektovana upotreba simbola bodovi na liniji 35: Var bodovi: int, 0, 1 
+INFO  22:17:21,416 - Detektovana upotreba simbola pet na liniji 35: Con pet: int, 5, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 35: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola b na liniji 35: Var b: int, 3, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola bodovi na liniji 35: Var bodovi: int, 0, 1 
+INFO  22:17:21,416 - Detektovana upotreba simbola bodovi na liniji 36: Var bodovi: int, 0, 1 
+INFO  22:17:21,416 - Detektovana upotreba simbola pet na liniji 36: Con pet: int, 5, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 36: Var a: int, 2, 0 
+ERROR 22:17:21,416 - Semanticka greska na liniji 36: U izrazu sa && oba operanda moraju biti tipa boolean
+INFO  22:17:21,416 - Detektovana upotreba simbola bodovi na liniji 36: Var bodovi: int, 0, 1 
+ERROR 22:17:21,416 - Semanticka greska na liniji 36:  Condition nije tipa bool
+INFO  22:17:21,416 - Detektovana upotreba simbola bodovi na liniji 39: Var bodovi: int, 0, 1 
+INFO  22:17:21,416 - Detektovana upotreba simbola pet na liniji 39: Con pet: int, 5, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 39: Var a: int, 2, 0 
+ERROR 22:17:21,416 - Semanticka greska na liniji 39: U izrazu sa || oba operanda moraju biti tipa boolean
+INFO  22:17:21,416 - Detektovana upotreba simbola bodovi na liniji 39: Var bodovi: int, 0, 1 
+ERROR 22:17:21,416 - Semanticka greska na liniji 39:  Condition nije tipa bool
+INFO  22:17:21,416 - Detektovana upotreba simbola bodovi na liniji 40: Var bodovi: int, 0, 1 
+INFO  22:17:21,416 - Detektovana upotreba simbola pet na liniji 40: Con pet: int, 5, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 40: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola b na liniji 40: Var b: int, 3, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola b na liniji 40: Var b: int, 3, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 40: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola bodovi na liniji 40: Var bodovi: int, 0, 1 
+INFO  22:17:21,416 - Detektovana upotreba simbola slovoa na liniji 43: Con slovoa: char, 97, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola slovob na liniji 43: Con slovob: char, 98, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 43: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola a na liniji 43: Var a: int, 2, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola b na liniji 43: Var b: int, 3, 0 
+INFO  22:17:21,416 - Detektovana upotreba simbola niz na liniji 44: Var niz: Arr of int, 0, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola bodovi na liniji 44: Var bodovi: int, 0, 1 
+ERROR 22:17:21,417 - Semanticka greska na liniji 44: Tipovi oba expressiona moraju biti kompatibilni
+INFO  22:17:21,417 - Detektovana upotreba simbola a na liniji 44: Var a: int, 2, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola a na liniji 44: Var a: int, 2, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola b na liniji 44: Var b: int, 3, 0 
+ERROR 22:17:21,417 - Semanticka greska na liniji 44:  Condition nije tipa bool
+INFO  22:17:21,417 - Detektovana upotreba simbola niz na liniji 45: Var niz: Arr of int, 0, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola niz2 na liniji 45: Var niz2: Arr of int, 1, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola a na liniji 45: Var a: int, 2, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola a na liniji 45: Var a: int, 2, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola b na liniji 45: Var b: int, 3, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola niz na liniji 46: Var niz: Arr of int, 0, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola slovoa na liniji 46: Con slovoa: char, 97, 0 
+ERROR 22:17:21,417 - Semanticka greska na liniji 46: Tipovi oba expressiona moraju biti kompatibilni
+INFO  22:17:21,417 - Detektovana upotreba simbola a na liniji 46: Var a: int, 2, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola a na liniji 46: Var a: int, 2, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola niz na liniji 47: Var niz: Arr of int, 0, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
+INFO  22:17:21,417 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
+ERROR 22:17:21,417 - Semanticka greska na liniji 46: Condition nije tipa bool 
+INFO  22:17:21,417 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 17
+INFO  22:17:21,417 - ===================================
+ERROR 22:17:21,417 - Parsiranje koda je neuspesno

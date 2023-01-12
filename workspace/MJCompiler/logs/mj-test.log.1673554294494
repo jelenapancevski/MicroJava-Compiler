@@ -1,0 +1,408 @@
+INFO  21:07:44,806 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\incdec.mj
+INFO  21:07:44,851 - #2 program
+INFO  21:07:44,852 - #47 incdec
+INFO  21:07:44,852 - #5 const
+INFO  21:07:44,853 - #47 char
+INFO  21:07:44,853 - #47 slovoa
+INFO  21:07:44,854 - #19 =
+INFO  21:07:44,854 - #48 a
+INFO  21:07:44,854 - #7 ;
+INFO  21:07:44,855 - #5 const
+INFO  21:07:44,855 - #47 char
+INFO  21:07:44,855 - #47 slovob
+INFO  21:07:44,856 - #19 =
+INFO  21:07:44,856 - #48 b
+INFO  21:07:44,856 - #7 ;
+INFO  21:07:44,856 - #47 int
+INFO  21:07:44,856 - #47 niz
+INFO  21:07:44,856 - #17 [
+INFO  21:07:44,856 - #18 ]
+INFO  21:07:44,856 - #15 ,
+INFO  21:07:44,857 - #47 niz2
+INFO  21:07:44,859 - #17 [
+INFO  21:07:44,859 - #18 ]
+INFO  21:07:44,859 - #15 ,
+INFO  21:07:44,859 - #47 a
+INFO  21:07:44,859 - #15 ,
+INFO  21:07:44,860 - #47 b
+INFO  21:07:44,860 - #7 ;
+INFO  21:07:44,860 - #47 char
+INFO  21:07:44,860 - #47 nizch
+INFO  21:07:44,860 - #17 [
+INFO  21:07:44,860 - #18 ]
+INFO  21:07:44,860 - #7 ;
+INFO  21:07:44,860 - #5 const
+INFO  21:07:44,861 - #47 bool
+INFO  21:07:44,861 - #47 radi
+INFO  21:07:44,861 - #19 =
+INFO  21:07:44,861 - #50 true
+INFO  21:07:44,861 - #7 ;
+INFO  21:07:44,861 - #47 bool
+INFO  21:07:44,861 - #47 isok
+INFO  21:07:44,861 - #7 ;
+INFO  21:07:44,861 - #3 {
+INFO  21:07:44,861 - #6 void
+INFO  21:07:44,862 - #47 main
+INFO  21:07:44,862 - #13 (
+INFO  21:07:44,862 - #14 )
+INFO  21:07:44,862 - #47 int
+INFO  21:07:44,863 - #47 bodovi
+INFO  21:07:44,863 - #7 ;
+INFO  21:07:44,863 - #47 bool
+INFO  21:07:44,863 - #47 bt
+INFO  21:07:44,863 - #7 ;
+INFO  21:07:44,863 - #47 char
+INFO  21:07:44,863 - #47 slovo
+INFO  21:07:44,863 - #7 ;
+INFO  21:07:44,864 - #47 int
+INFO  21:07:44,864 - #47 broj
+INFO  21:07:44,864 - #7 ;
+INFO  21:07:44,864 - #3 {
+INFO  21:07:44,864 - #47 slovob
+INFO  21:07:44,864 - #10 ++
+INFO  21:07:44,864 - #7 ;
+INFO  21:07:44,865 - #47 radi
+INFO  21:07:44,865 - #11 --
+INFO  21:07:44,865 - #7 ;
+INFO  21:07:44,865 - #47 niz
+INFO  21:07:44,865 - #10 ++
+INFO  21:07:44,865 - #7 ;
+INFO  21:07:44,865 - #47 nizch
+INFO  21:07:44,865 - #17 [
+INFO  21:07:44,866 - #49 2
+INFO  21:07:44,866 - #18 ]
+INFO  21:07:44,867 - #11 --
+INFO  21:07:44,867 - #7 ;
+INFO  21:07:44,867 - #47 niz
+INFO  21:07:44,867 - #17 [
+INFO  21:07:44,867 - #49 1
+INFO  21:07:44,867 - #18 ]
+INFO  21:07:44,867 - #10 ++
+INFO  21:07:44,867 - #7 ;
+INFO  21:07:44,867 - #47 niz
+INFO  21:07:44,867 - #17 [
+INFO  21:07:44,867 - #49 2
+INFO  21:07:44,867 - #18 ]
+INFO  21:07:44,867 - #11 --
+INFO  21:07:44,867 - #7 ;
+INFO  21:07:44,868 - #4 }
+INFO  21:07:44,868 - #4 }
+INFO  21:07:44,875 - Program(
+  ProgramIdentificator(
+   incdec
+  ) [ProgramIdentificator]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          Declarations(
+            Declarations(
+              NoDeclarations(
+              ) [NoDeclarations]
+              CnstDeclaration(
+                ConstDecl(
+                  Type(
+                   char
+                  ) [Type]
+                  OneConstant(
+                    ConstantDeclaration(
+                     slovoa
+                      CharConstant(
+                       a
+                      ) [CharConstant]
+                    ) [ConstantDeclaration]
+                  ) [OneConstant]
+                ) [ConstDecl]
+              ) [CnstDeclaration]
+            ) [Declarations]
+            CnstDeclaration(
+              ConstDecl(
+                Type(
+                 char
+                ) [Type]
+                OneConstant(
+                  ConstantDeclaration(
+                   slovob
+                    CharConstant(
+                     b
+                    ) [CharConstant]
+                  ) [ConstantDeclaration]
+                ) [OneConstant]
+              ) [ConstDecl]
+            ) [CnstDeclaration]
+          ) [Declarations]
+          VariableDeclaration(
+            VarDeclaration(
+              Type(
+               int
+              ) [Type]
+              Variables(
+                Variables(
+                  Variables(
+                    OneVariable(
+                      VariableDecl(
+                       niz
+                        HasArrayBrackets(
+                        ) [HasArrayBrackets]
+                      ) [VariableDecl]
+                    ) [OneVariable]
+                    VariableDecl(
+                     niz2
+                      HasArrayBrackets(
+                      ) [HasArrayBrackets]
+                    ) [VariableDecl]
+                  ) [Variables]
+                  VariableDecl(
+                   a
+                    NoArrayBrackets(
+                    ) [NoArrayBrackets]
+                  ) [VariableDecl]
+                ) [Variables]
+                VariableDecl(
+                 b
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [Variables]
+            ) [VarDeclaration]
+          ) [VariableDeclaration]
+        ) [Declarations]
+        VariableDeclaration(
+          VarDeclaration(
+            Type(
+             char
+            ) [Type]
+            OneVariable(
+              VariableDecl(
+               nizch
+                HasArrayBrackets(
+                ) [HasArrayBrackets]
+              ) [VariableDecl]
+            ) [OneVariable]
+          ) [VarDeclaration]
+        ) [VariableDeclaration]
+      ) [Declarations]
+      CnstDeclaration(
+        ConstDecl(
+          Type(
+           bool
+          ) [Type]
+          OneConstant(
+            ConstantDeclaration(
+             radi
+              BoolConstant(
+               true
+              ) [BoolConstant]
+            ) [ConstantDeclaration]
+          ) [OneConstant]
+        ) [ConstDecl]
+      ) [CnstDeclaration]
+    ) [Declarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+         bool
+        ) [Type]
+        OneVariable(
+          VariableDecl(
+           isok
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [VariableDecl]
+        ) [OneVariable]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        MethodVariables(
+          MethodVariables(
+            MethodVariables(
+              NoMethodVariables(
+              ) [NoMethodVariables]
+              VarDeclaration(
+                Type(
+                 int
+                ) [Type]
+                OneVariable(
+                  VariableDecl(
+                   bodovi
+                    NoArrayBrackets(
+                    ) [NoArrayBrackets]
+                  ) [VariableDecl]
+                ) [OneVariable]
+              ) [VarDeclaration]
+            ) [MethodVariables]
+            VarDeclaration(
+              Type(
+               bool
+              ) [Type]
+              OneVariable(
+                VariableDecl(
+                 bt
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [OneVariable]
+            ) [VarDeclaration]
+          ) [MethodVariables]
+          VarDeclaration(
+            Type(
+             char
+            ) [Type]
+            OneVariable(
+              VariableDecl(
+               slovo
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [OneVariable]
+          ) [VarDeclaration]
+        ) [MethodVariables]
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             broj
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        MethodStatements(
+          MethodStatements(
+            MethodStatements(
+              MethodStatements(
+                MethodStatements(
+                  NoMethodStatements(
+                  ) [NoMethodStatements]
+                  DesignatorStmt(
+                    ValueIncrement(
+                      OneDesignator(
+                       slovob
+                      ) [OneDesignator]
+                    ) [ValueIncrement]
+                  ) [DesignatorStmt]
+                ) [MethodStatements]
+                DesignatorStmt(
+                  ValueDecrement(
+                    OneDesignator(
+                     radi
+                    ) [OneDesignator]
+                  ) [ValueDecrement]
+                ) [DesignatorStmt]
+              ) [MethodStatements]
+              DesignatorStmt(
+                ValueIncrement(
+                  OneDesignator(
+                   niz
+                  ) [OneDesignator]
+                ) [ValueIncrement]
+              ) [DesignatorStmt]
+            ) [MethodStatements]
+            DesignatorStmt(
+              ValueDecrement(
+                ArrayDesignator(
+                  DesignatorName(
+                   nizch
+                  ) [DesignatorName]
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorNumber(
+                           2
+                          ) [FactorNumber]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                ) [ArrayDesignator]
+              ) [ValueDecrement]
+            ) [DesignatorStmt]
+          ) [MethodStatements]
+          DesignatorStmt(
+            ValueIncrement(
+              ArrayDesignator(
+                DesignatorName(
+                 niz
+                ) [DesignatorName]
+                Expression(
+                  OneTerm(
+                    Term(
+                      OneFactor(
+                        FactorNumber(
+                         1
+                        ) [FactorNumber]
+                      ) [OneFactor]
+                    ) [Term]
+                  ) [OneTerm]
+                ) [Expression]
+              ) [ArrayDesignator]
+            ) [ValueIncrement]
+          ) [DesignatorStmt]
+        ) [MethodStatements]
+        DesignatorStmt(
+          ValueDecrement(
+            ArrayDesignator(
+              DesignatorName(
+               niz
+              ) [DesignatorName]
+              Expression(
+                OneTerm(
+                  Term(
+                    OneFactor(
+                      FactorNumber(
+                       2
+                      ) [FactorNumber]
+                    ) [OneFactor]
+                  ) [Term]
+                ) [OneTerm]
+              ) [Expression]
+            ) [ArrayDesignator]
+          ) [ValueDecrement]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  21:07:44,875 - ===================================
+INFO  21:07:44,879 - Deklarisana konstanta slovoa jednaka a na liniji 3
+INFO  21:07:44,879 - Deklarisana konstanta slovob jednaka b na liniji 5
+INFO  21:07:44,879 - Deklarisan niz niz na liniji 7
+INFO  21:07:44,879 - Deklarisan niz niz2 na liniji 7
+INFO  21:07:44,879 - Deklarisana promenljiva a na liniji 7
+INFO  21:07:44,879 - Deklarisana promenljiva b na liniji 7
+INFO  21:07:44,879 - Deklarisan niz nizch na liniji 8
+INFO  21:07:44,879 - Deklarisana konstanta radi jednaka true na liniji 10
+INFO  21:07:44,879 - Deklarisana promenljiva isok na liniji 12
+INFO  21:07:44,880 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 16
+INFO  21:07:44,880 - Deklarisana promenljiva bodovi na liniji 17
+INFO  21:07:44,880 - Deklarisana promenljiva bt na liniji 18
+INFO  21:07:44,880 - Deklarisana promenljiva slovo na liniji 19
+INFO  21:07:44,880 - Deklarisana promenljiva broj na liniji 20
+INFO  21:07:44,880 - Detektovana upotreba simbola slovob na liniji 24: Con slovob: char, 98, 0 
+ERROR 21:07:44,880 - Semanticka greska na liniji 24: Designator mora predstavljati promenljivu ili element niza
+INFO  21:07:44,880 - Detektovana upotreba simbola radi na liniji 25: Con radi: , 1, 0 
+ERROR 21:07:44,880 - Semanticka greska na liniji 25: Designator mora predstavljati promenljivu ili element niza
+INFO  21:07:44,880 - Detektovana upotreba simbola niz na liniji 26: Var niz: Arr of int, 0, 0 
+ERROR 21:07:44,880 - Semanticka greska na liniji 26: Designator mora predstavljati promenljivu ili element niza
+INFO  21:07:44,880 - Detektovana upotreba simbola nizch na liniji 27: Var nizch: Arr of char, 4, 0 
+ERROR 21:07:44,880 - Semanticka greska na liniji 27: Designator mora biti tipa int
+INFO  21:07:44,881 - Detektovana upotreba simbola niz na liniji 29: Var niz: Arr of int, 0, 0 
+INFO  21:07:44,881 - Detektovana upotreba simbola niz na liniji 30: Var niz: Arr of int, 0, 0 
+INFO  21:07:44,881 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 16
+INFO  21:07:44,881 - ===================================
+ERROR 21:07:44,881 - Parsiranje koda je neuspesno

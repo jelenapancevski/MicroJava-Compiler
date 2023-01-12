@@ -1,0 +1,77 @@
+program functioncall
+	
+	const char slovoa = 'a';  
+	
+	const char slovob = 'b';
+
+	int niz[], niz2[], a, b; 
+	char nizch[];			
+	
+	NIJETIP promenljiva1; //nije ok 
+	nizch promenljiva2 ; // nije ok 
+	
+{
+	int sum(int a, int b)int c;{
+	c = a+b;
+	return c;
+	}
+	
+	int funca(char a, char b){
+	print(a);
+	print(b);
+	return 1;
+	}
+	
+	bool samearray(int arr1[], int arr2[])bool is;{
+		 if (arr1 == arr2) is=true;
+		 else is = false;
+		 return is; 
+	}
+	// RETURN STMT TEST
+	
+	int functionret ()char a; bool c;{
+	return a; //not ok
+	return c; //not ok
+	return 1; //ok 
+	}
+	
+	bool noreturn(int a){
+	a=5;
+	}
+	
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+		// TESTOVI ZA DesignatorStatement = Designator "(" [ActPars] ")" ";"
+		
+		funcb(); //not ok ne postoji
+		niz(2); // not ok nije u pitanju funkcija
+		funca(1); //not ok char su argumenti i dva argumenta potrebna
+		funca(1,2); //not ok char treba da budu argumenti
+		funca(slovob,2); //not ok
+		
+		funca(slovoa,slovob); //ok
+		samearray(nizch, niz); // not ok
+		samearray(null,niz); //ok
+		samearray(2,niz2); //not ok 
+		
+		// TESTOVI ZA FormPars = Type ident ["[" "]"] {"," Type ident ["[" "]"]}.
+		samearray(a,b);	//not ok
+		samearray(niz,nizch); // not ok
+		samearray(niz, niz2); //ok
+		
+		// TESTOVI ZA ActPars = Expr {"," Expr}.
+		a=sum(7,b); //ok
+		b = sum(14-8+b,a%2); //ok
+		b=sum(slovoa,a); //not ok
+		b= sum(a,b);
+		
+		}
+		
+		
+}
+		

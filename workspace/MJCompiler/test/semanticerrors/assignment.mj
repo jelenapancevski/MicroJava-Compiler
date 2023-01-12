@@ -1,0 +1,46 @@
+program assignment
+	
+	int niz[], niz2[], a, b; 
+	char nizch[];			
+	const int jedan = 1, dvanaest = 12, pet=5;
+	const bool radi = true;
+	const char slovoa = 'a'; 
+	const char slovob = 'b';
+	bool isok;
+{	
+	
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+		
+		// TESTOVI ZA DesignatorStatement = Designator Assignop Expr ";"
+		
+		radi = false ; // not ok jer je constanta
+		niz = 5; //not ok jer nije element niza
+		niz[5] = nizch[2]; //not ok nekompatibilni tipovi 
+		niz[5]= 'a'; // not ok nekompatibilni tipovi;
+		a = 7 + dvanaest; //ok
+		b = (a+1)/2; //ok
+		niz[5] = a+ b%2 - jedan; //ok
+		
+		 a = 12 * (pet+niz[1]) ; //ok
+		 b = slovoa + jedan; //not ok
+		 slovoa = slovob;    // not ok
+		 nizch = slovoa;  //not ok
+		 nizch [2] = slovob; //ok
+		 isok = true;
+	
+	}
+		
+		
+}
+		
+
+
+
+
+

@@ -1,0 +1,31 @@
+program readstmt
+	
+	const char slovoa = 'a';  
+	
+	const char slovob = 'b';
+
+	int niz[], niz2[], a, b; 
+	char nizch[];			
+	
+{
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+		// TESTOVI ZA Statement = "read" "(" Designator ")" ";".
+		read(a);   //ok	
+		read(slovoa);	//not ok
+		read(niz);	//not ok
+		read(nizch[1]); //ok
+		read(niz[5]); //ok
+		read(bt); //ok
+	}
+}
+		
+
+
+
+

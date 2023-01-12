@@ -192,7 +192,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  /* DECLARATION OF VARIABLES */
 	  
 	  // Variable - IDENT:varName ArrayBrackets:isArray 
-	  public void visit (Variable variable) {
+	  public void visit (VariableDecl variable) {
 		  // Check if variable name is taken
 		  if( Tab.currentScope().findSymbol(variable.getVarName())!=null) {
 			  // Variable is already declared error
@@ -201,7 +201,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			  return;
 		  }
 		  
-		 if(currentType.struct == Tab.noType) {
+		 if( (currentType == null) || (currentType.struct) == Tab.noType) {
 			 variable.obj = Tab.noObj;
 			 return;
 		 }
@@ -358,6 +358,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  // Check if designator is type array 
 		  if (multipleAssignment.getDesignator().obj.getType().getKind()!=Struct.Array) {
 			  report_error("Semanticka greska na liniji " + multipleAssignment.getLine() + ": Designator "+multipleAssignment.getDesignator().obj.getName()+ " mora predstavljati niz", null);
+			  designatorList=null;
 			  return;
 		  }
 		  Struct elemType = multipleAssignment.getDesignator().obj.getType().getElemType();
@@ -370,6 +371,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 				  report_error("Semanticka greska na liniji " + multipleAssignment.getLine() + ": Tip designatora "+designator.getDesignator().obj.getName()+ " nije kompatibilan sa tipom elementa niza "+multipleAssignment.getDesignator().obj.getName(), null);
 			  }
 		  }
+		  designatorList=null;
 		  
 	  }
 	  public void checkPostOp(Designator designator, SyntaxNode node) {
@@ -453,6 +455,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  }
 	  
 	  /* STATEMENTS */
+	  
 	  
 	  //(IfElseStatement) IF LPAREN Condition RPAREN Statement ELSE Statement
 	  public void visit (IfElseStatement ifElseStatement) {
@@ -598,7 +601,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  
 	  // (Conditions) Condition OR CondTerm 
 	  public void visit (Conditions conditions) {
-		  if ((!conditions.getCondition().struct.equals(boolType)) || (!conditions.getCondTerm().struct.equals(boolType))){
+		  if ((conditions.getCondition().struct==null)||(!conditions.getCondition().struct.equals(boolType)) || (!conditions.getCondTerm().struct.equals(boolType))){
 			  report_error("Semanticka greska na liniji " + conditions.getLine() + ": U izrazu sa || oba operanda moraju biti tipa boolean", null);
 			  conditions.struct = Tab.noType;
 			  return;
@@ -606,6 +609,10 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  
 		  conditions.struct = boolType;
 		  
+	  }
+	  
+	  public void visit (ConditionError conditionError) {
+		  conditionError.struct=Tab.noType;
 	  }
 	  
 	  //(OneCondition) CondTerm 
@@ -632,7 +639,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  
 	  //(ConditionFact) Expr
 	  public void visit (ConditionFact conditionFact) {
-		  if (!conditionFact.getExpr().struct.equals(boolType)) {
+		  if (!conditionFact.getExpr().struct.equals(boolType) && !conditionFact.getExpr().struct.equals(Tab.intType)) {
 			  conditionFact.struct = Tab.noType;
 			  return;
 		  }
@@ -740,7 +747,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  arrayDesignator.obj = new Obj(Obj.Elem,designator.getName(),designator.getType().getElemType());
 
 		  // ?
-				  //designator;
+		  report_detection(designator,arrayDesignator);
 	  }
 	  
 	  //(OneDesignator) IDENT:designatorName 
@@ -788,7 +795,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  else {*/
 			  factorDesignator.struct = factorDesignator.getDesignator().obj.getType();
 			  /*}*/
-		  
+			 // report_detection(factorDesignator.getDesignator().obj,factorDesignator);
 	  }
 	  
 	  //(ArrayCreation) NEW Type LBRACKET Expr RBRACKET
@@ -796,7 +803,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		  arrayCreation.struct = new Struct(Struct.Array, arrayCreation.getType().struct);
 		  // Check if Expr is intType
 		  if(!arrayCreation.getExpr().struct.equals(Tab.intType)) {
-				report_error("Semanticka greska na liniji " + arrayCreation.getLine() + ": Expr za indeksiranje elementa niza nije tipa int", null);
+				report_error("Semanticka greska na liniji " + arrayCreation.getLine() + ": Expr za kreiranje niza nije tipa int", null);
 				//arrayCreation.struct = Tab.noType; ***
 				return;
 		  }

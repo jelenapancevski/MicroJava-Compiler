@@ -1,0 +1,71 @@
+program loops
+
+	const int nula = 0, jedan = 1, pet = 5; 
+	
+	const bool radi = true; 
+	
+	const char slovoa = 'a';
+	
+	const char slovob = 'b';
+
+	int niz[], niz2[], a, b; 
+	char nizch[];				
+	bool isok;
+	
+	
+{
+	
+	void foreachfunc()int broj; char slovo;{
+		slovo.foreach(slovoa=>print(slovo);); // not ok
+		
+		niz.foreach(broj=>{			//ok
+		print(broj);
+		});
+		
+		nizch.foreach(slovo=>{
+		if(slovo=='d') continue;						//ok
+		print(slovo,2);
+		if(slovo=='a') break;
+		
+		});
+		
+		niz.foreach(slovo=>{			//not ok
+		print(slovo);
+		});
+	}
+	
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+
+		// TESTOVI ZA Statement = "while" "(" Condition ")" Statement .
+		 while (slovoa>slovob) {	//ok
+		 a=a+5;
+		 if(a>7) break;
+		 }
+		 while (slovoa || slovob){ // not ok
+		 a=a-2;
+		 }
+
+
+		// TESTOVI ZA Statement = Designator "." "foreach" "(" ident "=>" Statement ")" ";". 
+		 foreachfunc();		 
+		 
+		
+		// TESTOVI ZA DesignatorStatement = "[" [Designator] {"," [Designator]}"]" "=" Designator
+		[] = niz; //  ok
+		[slovoa,,slovob] = niz; //not ok slovoa i slovob constants
+		[slovoa,,slovob] = nizch; // not ok slovoa i slovob constants
+		[a,,b] = nizch; //nizch char a a i b int not ok
+		[,,a,b] = niz ; //ok
+		[niz[1],,a,niz[2]] = niz2; //ok
+		
+		
+	}
+
+
+}		

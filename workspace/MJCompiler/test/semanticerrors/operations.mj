@@ -1,0 +1,69 @@
+program operations
+	
+	const char slovoa = 'a';  
+	
+	const char slovob = 'b';
+	
+	const int jedan = 1, pet=5;
+	
+	int niz[], niz2[], a, b; 
+	char nizch[];			
+	
+	
+{
+	int sum(int a, int b)int c;{
+	c = a+b;
+	return c;
+	}
+	
+	int funca(char a, char b){
+	print(a);
+	print(b);
+	return 1;
+	}
+	
+	bool samearray(int arr1[], int arr2[])bool is;{
+		 if (arr1 == arr2) is=true;
+		 else is = false;
+		 return is; 
+	}
+	
+	
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+		a = 5;
+		b = 7;
+		niz  = new int [a];
+		niz2 = new int [b];
+		
+		// TESTOVI ZA Expr = Expr Addop Term. 
+		b = 5 + slovoa; //not ok
+		b = b + pet + a - jedan; //ok 
+		a = samearray(niz,niz2)+1; // not ok
+		a = sum(pet,b) + jedan - pet/2;
+		
+		// TESTOVI ZA Term = Term Mulop Factor.
+		a = b* funca(slovoa,slovob) ; //ok
+		a = b *  slovoa ; // not ok
+		a = sum(a,b) % 2; //ok
+		b = a / 1; //ok
+		b = samearray(niz,niz2) %3; //not ok
+		
+		// TESTOVI ZA Expr = "-" Term.
+		b = - slovoa; //not ok
+		b = -jedan; // ok
+		a = - sum(pet,b) + jedan - pet/2; //ok 
+		}
+		
+		
+		
+		
+		
+}
+		
+

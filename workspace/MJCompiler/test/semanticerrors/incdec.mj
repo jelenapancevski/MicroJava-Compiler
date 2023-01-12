@@ -1,0 +1,34 @@
+program incdec
+	
+	const char slovoa = 'a';  
+	
+	const char slovob = 'b';
+
+	int niz[], niz2[], a, b; 
+	char nizch[];			
+	
+	const bool radi = true; 
+	
+	bool isok;
+	
+{
+	
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+		// TESTOVI ZA DesignatorStatement = Designator ("++" | "--") ";"
+		slovob++; //not ok - constanta
+		radi--; //not ok - constanta
+		niz++; // not ok niz je u pitanju
+		nizch[2]--; // not ok niz je tipa boolean 
+		
+		niz[1]++; //ok
+		niz[2]--; // ok
+		
+}
+}
+		

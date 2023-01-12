@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.Reader;
 
 import org.apache.log4j.Logger;
@@ -35,7 +36,6 @@ public class Compiler {
 		
 		Reader br = null;
 		try {
-			
 
 			if(args.length<2) {
 				log.error("Potrebno je uneti naziv ulaznog file-a");
@@ -74,14 +74,6 @@ public class Compiler {
 				
 				CodeGenerator codeGen = new CodeGenerator();
 				prog.traverseBottomUp(codeGen);
-				
-				/*while (codeGen.ifelseConditions.size()>0) {
-					IfElseCondition cnd = codeGen.ifelseConditions.pop()  ;
-					System.out.println("\n\nIF STATEMENT");
-					System.out.println("ThenAddress "+cnd.ThenAddress);
-					System.out.println("ElseAddress "+cnd.ElseAddress);
-					System.out.println("EndIfStmtAddress "+cnd.EndIfStmtAddress);
-					}*/
 				Code.dataSize = v.nVars;
 				Code.mainPc = codeGen.getMainPC();
 				Code.write(new FileOutputStream(objFile));

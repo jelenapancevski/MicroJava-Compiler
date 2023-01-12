@@ -1,0 +1,364 @@
+INFO  22:39:21,245 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\sintaksne_greske\globalvariables.mj
+INFO  22:39:21,287 - #2 program
+INFO  22:39:21,287 - #47 globalvariables
+INFO  22:39:21,287 - #47 char
+INFO  22:39:21,288 - #47 slovoa
+INFO  22:39:21,289 - #15 ,
+INFO  22:39:21,290 - #47 char
+INFO  22:39:21,290 - #47 char
+ERROR 22:39:21,290 - 
+Sintaksna greska na liniji 2
+INFO  22:39:21,290 - #47 slovob
+INFO  22:39:21,290 - #7 ;
+INFO  22:39:21,291 - #47 int
+INFO  22:39:21,291 - #47 x
+INFO  22:39:21,291 - #15 ,
+INFO  22:39:21,292 - #47 int
+INFO  22:39:21,292 - #47 int
+ERROR 22:39:21,292 - 
+Sintaksna greska na liniji 3
+INFO  22:39:21,292 - #15 ,
+INFO  22:39:21,292 - #47 y
+INFO  22:39:21,292 - #7 ;
+INFO  22:39:21,292 - #47 int
+INFO  22:39:21,293 - #47 a
+INFO  22:39:21,293 - #17 [
+INFO  22:39:21,293 - #18 ]
+INFO  22:39:21,293 - #15 ,
+INFO  22:39:21,293 - #28 +
+ERROR 22:39:21,293 - 
+Sintaksna greska na liniji 5
+INFO  22:39:21,293 - #47 abc
+INFO  22:39:21,293 - #15 ,
+INFO  22:39:21,294 - #47 length
+INFO  22:39:21,294 - #15 ,
+INFO  22:39:21,294 - #47 b
+INFO  22:39:21,294 - #17 [
+INFO  22:39:21,294 - #18 ]
+INFO  22:39:21,294 - #7 ;
+INFO  22:39:21,294 - #3 {
+INFO  22:39:21,294 - #6 void
+INFO  22:39:21,295 - #47 main
+INFO  22:39:21,295 - #13 (
+INFO  22:39:21,295 - #14 )
+INFO  22:39:21,296 - #47 int
+INFO  22:39:21,297 - #47 az
+INFO  22:39:21,297 - #7 ;
+INFO  22:39:21,297 - #7 ;
+ERROR 22:39:21,297 - 
+Sintaksna greska na liniji 7
+INFO  22:39:21,297 - #3 {
+INFO  22:39:21,297 - #47 slovoa
+INFO  22:39:21,297 - #19 =
+INFO  22:39:21,298 - #48 a
+INFO  22:39:21,298 - #7 ;
+INFO  22:39:21,299 - #47 x
+INFO  22:39:21,299 - #19 =
+INFO  22:39:21,299 - #49 1
+INFO  22:39:21,299 - #7 ;
+INFO  22:39:21,299 - #47 y
+INFO  22:39:21,299 - #19 =
+INFO  22:39:21,299 - #47 x
+INFO  22:39:21,299 - #28 +
+INFO  22:39:21,299 - #49 5
+INFO  22:39:21,300 - #7 ;
+INFO  22:39:21,300 - #47 length
+INFO  22:39:21,300 - #19 =
+INFO  22:39:21,301 - #49 10
+INFO  22:39:21,301 - #7 ;
+INFO  22:39:21,301 - #47 a
+INFO  22:39:21,301 - #19 =
+INFO  22:39:21,301 - #12 new
+INFO  22:39:21,301 - #47 int
+INFO  22:39:21,301 - #17 [
+INFO  22:39:21,301 - #47 length
+INFO  22:39:21,302 - #18 ]
+INFO  22:39:21,302 - #7 ;
+INFO  22:39:21,302 - #47 b
+INFO  22:39:21,302 - #19 =
+INFO  22:39:21,302 - #12 new
+INFO  22:39:21,302 - #47 int
+INFO  22:39:21,303 - #17 [
+INFO  22:39:21,303 - #47 y
+INFO  22:39:21,303 - #18 ]
+INFO  22:39:21,303 - #7 ;
+INFO  22:39:21,303 - #4 }
+INFO  22:39:21,303 - #4 }
+INFO  22:39:21,310 - Program(
+  ProgramIdentificator(
+   globalvariables
+  ) [ProgramIdentificator]
+  Declarations(
+    Declarations(
+      Declarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VariableDeclaration(
+          VarDeclaration(
+            Type(
+             char
+            ) [Type]
+            ErrorVariableComma(
+            ) [ErrorVariableComma]
+          ) [VarDeclaration]
+        ) [VariableDeclaration]
+      ) [Declarations]
+      VariableDeclaration(
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          Variables(
+            ErrorVariableComma(
+            ) [ErrorVariableComma]
+            Variable(
+             y
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [Variable]
+          ) [Variables]
+        ) [VarDeclaration]
+      ) [VariableDeclaration]
+    ) [Declarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+         int
+        ) [Type]
+        Variables(
+          Variables(
+            ErrorVariableComma(
+            ) [ErrorVariableComma]
+            Variable(
+             length
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [Variable]
+          ) [Variables]
+          Variable(
+           b
+            HasArrayBrackets(
+            ) [HasArrayBrackets]
+          ) [Variable]
+        ) [Variables]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          ErrorVariableComma(
+          ) [ErrorVariableComma]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        MethodStatements(
+          MethodStatements(
+            MethodStatements(
+              MethodStatements(
+                MethodStatements(
+                  NoMethodStatements(
+                  ) [NoMethodStatements]
+                  DesignatorStmt(
+                    Assignment(
+                      OneDesignator(
+                       slovoa
+                      ) [OneDesignator]
+                      AssignmentExpression(
+                        Expression(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorCharacter(
+                                 a
+                                ) [FactorCharacter]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                      ) [AssignmentExpression]
+                    ) [Assignment]
+                  ) [DesignatorStmt]
+                ) [MethodStatements]
+                DesignatorStmt(
+                  Assignment(
+                    OneDesignator(
+                     x
+                    ) [OneDesignator]
+                    AssignmentExpression(
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorNumber(
+                               1
+                              ) [FactorNumber]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                    ) [AssignmentExpression]
+                  ) [Assignment]
+                ) [DesignatorStmt]
+              ) [MethodStatements]
+              DesignatorStmt(
+                Assignment(
+                  OneDesignator(
+                   y
+                  ) [OneDesignator]
+                  AssignmentExpression(
+                    Expression(
+                      Terms(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 x
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                        Plus(
+                        ) [Plus]
+                        Term(
+                          OneFactor(
+                            FactorNumber(
+                             5
+                            ) [FactorNumber]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [Terms]
+                    ) [Expression]
+                  ) [AssignmentExpression]
+                ) [Assignment]
+              ) [DesignatorStmt]
+            ) [MethodStatements]
+            DesignatorStmt(
+              Assignment(
+                OneDesignator(
+                 length
+                ) [OneDesignator]
+                AssignmentExpression(
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorNumber(
+                           10
+                          ) [FactorNumber]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                ) [AssignmentExpression]
+              ) [Assignment]
+            ) [DesignatorStmt]
+          ) [MethodStatements]
+          DesignatorStmt(
+            Assignment(
+              OneDesignator(
+               a
+              ) [OneDesignator]
+              AssignmentExpression(
+                Expression(
+                  OneTerm(
+                    Term(
+                      OneFactor(
+                        ArrayCreation(
+                          Type(
+                           int
+                          ) [Type]
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                     length
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                        ) [ArrayCreation]
+                      ) [OneFactor]
+                    ) [Term]
+                  ) [OneTerm]
+                ) [Expression]
+              ) [AssignmentExpression]
+            ) [Assignment]
+          ) [DesignatorStmt]
+        ) [MethodStatements]
+        DesignatorStmt(
+          Assignment(
+            OneDesignator(
+             b
+            ) [OneDesignator]
+            AssignmentExpression(
+              Expression(
+                OneTerm(
+                  Term(
+                    OneFactor(
+                      ArrayCreation(
+                        Type(
+                         int
+                        ) [Type]
+                        Expression(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorDesignator(
+                                  OneDesignator(
+                                   y
+                                  ) [OneDesignator]
+                                ) [FactorDesignator]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                      ) [ArrayCreation]
+                    ) [OneFactor]
+                  ) [Term]
+                ) [OneTerm]
+              ) [Expression]
+            ) [AssignmentExpression]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  22:39:21,310 - ===================================
+INFO  22:39:21,313 - Deklarisana promenljiva y na liniji 3
+INFO  22:39:21,313 - Deklarisana promenljiva length na liniji 5
+INFO  22:39:21,313 - Deklarisan niz b na liniji 5
+INFO  22:39:21,313 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 7
+ERROR 22:39:21,313 - Semanticka greska na liniji 8: Promenljiva slovoa nije deklarisana!
+ERROR 22:39:21,314 - Semanticka greska na liniji 9: Promenljiva x nije deklarisana!
+INFO  22:39:21,314 - Detektovana upotreba simbola y na liniji 10: Var y: int, 0, 0 
+ERROR 22:39:21,314 - Semanticka greska na liniji 10: Promenljiva x nije deklarisana!
+ERROR 22:39:21,314 - Semanticka greska na liniji 10: Operacije + i - iziskuju da oba argumenta budu tipa int
+INFO  22:39:21,314 - Detektovana upotreba simbola length na liniji 11: Var length: int, 1, 0 
+ERROR 22:39:21,314 - Semanticka greska na liniji 12: Promenljiva a nije deklarisana!
+INFO  22:39:21,314 - Detektovana upotreba simbola length na liniji 12: Var length: int, 1, 0 
+INFO  22:39:21,314 - Detektovana upotreba simbola b na liniji 13: Var b: Arr of int, 2, 0 
+INFO  22:39:21,314 - Detektovana upotreba simbola y na liniji 13: Var y: int, 0, 0 
+INFO  22:39:21,315 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 7
+INFO  22:39:21,315 - ===================================
+ERROR 22:39:21,315 - Parsiranje koda je neuspesno

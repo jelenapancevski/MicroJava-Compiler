@@ -1,0 +1,53 @@
+program ifelseconditions
+const int nula = 0, jedan = 1, pet = 5; 
+	
+	const bool radi = true; 
+	
+	const char slovoa = 'a';  
+	
+	const char slovob = 'b';
+
+	int niz[], niz2[], a, b; 
+	char nizch[];			
+	bool isok;
+	
+	
+{	
+
+	void main()	
+		int bodovi;
+		bool bt;
+		char slovo;
+		int broj;
+		
+	{
+
+		// TESTOVI ZA CondFact = Expr Relop Expr.
+		if( niz == niz2) read(niz[1]); // ok
+		if( niz != nizch) read(nizch[2]); //not ok
+		if( a > b) read(a); 		//ok
+		else read(b);
+		if((a+b-7) <= a) a= a+b-7; //ok
+		else if(a*2-jedan) a = a*2/2; // ok    
+		else if (a*2-jedan>=pet) a=pet*nula-b; //ok
+		
+		// TESTOVI ZA CondTerm = CondFact {"&&" CondFact}
+		if ( bodovi < pet && a-3>=b) read(bodovi); //ok
+			if ( bodovi < pet &&  a-3) read(bodovi); // ok 
+		
+		// TESTOVI ZA Condition = CondTerm {"||" CondTerm}
+		if ( bodovi < pet ||  a-3) read(bodovi); //not ok ?
+		if ( bodovi < pet ||  a-3>=b && b<a) read(bodovi); //ok
+		
+		// TESTOVI ZA Statement = "if" "(" Condition ")" Statement ["else" Statement].
+		 if (slovoa < slovob) a=a+b; //ok
+		 if (niz > bodovi) a=a+b; // not ok
+		 if (niz == niz2) a = a+b; // ok
+		 else if (niz[2]<slovoa) a = a-7; //not ok
+		 else if (niz[3] >= 15) a = a-9;	//ok
+		 
+		 
+		 }
+		 
+		 
+}
