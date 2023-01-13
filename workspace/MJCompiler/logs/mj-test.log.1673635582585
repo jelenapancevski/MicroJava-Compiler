@@ -6,53 +6,71 @@ INFO  19:43:11,659 - #47 slovoa
 INFO  19:43:11,660 - #15 ,
 INFO  19:43:11,662 - #47 char
 INFO  19:43:11,662 - #47 char
+ERROR 19:43:11,662 - 
+Sintaksna greska na liniji 2
 INFO  19:43:11,662 - #47 slovob
 INFO  19:43:11,663 - #7 ;
 INFO  19:43:11,663 - #47 int
 INFO  19:43:11,664 - #47 x
 INFO  19:43:11,664 - #15 ,
+ERROR 19:43:11,664 - Greska kod deklaracije promenljive.
 INFO  19:43:11,666 - #47 int
 INFO  19:43:11,666 - #47 int
+ERROR 19:43:11,666 - 
+Sintaksna greska na liniji 3
 INFO  19:43:11,666 - #15 ,
 INFO  19:43:11,667 - #47 y
 INFO  19:43:11,667 - #7 ;
 INFO  19:43:11,667 - #47 int
+ERROR 19:43:11,667 - Greska kod deklaracije promenljive.
 INFO  19:43:11,667 - #47 a
 INFO  19:43:11,667 - #17 [
 INFO  19:43:11,667 - #18 ]
 INFO  19:43:11,667 - #15 ,
 INFO  19:43:11,668 - #28 +
+ERROR 19:43:11,668 - 
+Sintaksna greska na liniji 5
 INFO  19:43:11,668 - #47 abc
 INFO  19:43:11,668 - #15 ,
 INFO  19:43:11,668 - #47 length
 INFO  19:43:11,669 - #15 ,
 INFO  19:43:11,669 - #47 b
+ERROR 19:43:11,669 - Greska kod deklaracije promenljive.
 INFO  19:43:11,669 - #17 [
 INFO  19:43:11,669 - #18 ]
 INFO  19:43:11,669 - #7 ;
 INFO  19:43:11,669 - #47 bool
 INFO  19:43:11,669 - #47 a
 INFO  19:43:11,669 - #47 a
+ERROR 19:43:11,669 - 
+Sintaksna greska na liniji 6
 INFO  19:43:11,669 - #15 ,
 INFO  19:43:11,669 - #47 boll
 INFO  19:43:11,670 - #7 ;
 INFO  19:43:11,670 - #47 bool
+ERROR 19:43:11,670 - Greska kod deklaracije promenljive.
 INFO  19:43:11,670 - #47 d
 INFO  19:43:11,670 - #47 f
+ERROR 19:43:11,670 - 
+Sintaksna greska na liniji 7
 INFO  19:43:11,670 - #47 g
 INFO  19:43:11,670 - #7 ;
 INFO  19:43:11,670 - #3 {
 INFO  19:43:11,670 - #6 void
 INFO  19:43:11,671 - #47 main
+ERROR 19:43:11,671 - Greska kod deklaracije promenljive.
 INFO  19:43:11,672 - #13 (
 INFO  19:43:11,672 - #14 )
 INFO  19:43:11,673 - #47 int
 INFO  19:43:11,674 - #47 az
 INFO  19:43:11,674 - #7 ;
 INFO  19:43:11,674 - #7 ;
+ERROR 19:43:11,674 - 
+Sintaksna greska na liniji 9
 INFO  19:43:11,674 - #47 int
 INFO  19:43:11,675 - #47 bz
 INFO  19:43:11,675 - #7 ;
+ERROR 19:43:11,675 - Greska kod deklaracije promenljive.
 INFO  19:43:11,675 - #3 {
 INFO  19:43:11,675 - #47 slovoa
 INFO  19:43:11,676 - #19 =
@@ -447,29 +465,4 @@ INFO  19:43:11,699 - Detektovana upotreba simbola b na liniji 15: Var b: Arr of 
 INFO  19:43:11,699 - Detektovana upotreba simbola y na liniji 15: Var y: int, 2, 0 
 INFO  19:43:11,699 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 9
 INFO  19:43:11,699 - ===================================
-=====================SYMBOL TABLE DUMP=========================
-Type int: int, -1, -1 
-Type char: char, -1, -1 
-Con eol: char, 10, 0 
-Con null: Class [], 0, 0 
-Meth chr: char, 0, 1 
-   Var i: int, 0, 1 
-
-Meth ord: int, 0, 1 
-   Var ch: char, 0, 1 
-
-Meth len: int, 0, 1 
-   Var arr: Arr of notype, 0, 1 
-
-Type bool: , -1, -1 
-Prog globalvariables: notype, 0, 1 
-   Var slovoa: char, 0, 0 
-   Var x: int, 1, 0 
-   Var y: int, 2, 0 
-   Var a: Arr of int, 3, 0 
-   Var length: int, 4, 0 
-   Var b: Arr of int, 5, 0 
-   Var boll: , 6, 0 
-   Meth main: notype, 0, 0 
-      Var bz: int, 0, 1 
-
+ERROR 19:43:11,699 - Parsiranje koda je neuspesno

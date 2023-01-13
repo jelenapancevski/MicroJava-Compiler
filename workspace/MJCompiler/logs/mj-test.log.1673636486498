@@ -1,0 +1,265 @@
+INFO  19:59:21,865 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\constants.mj
+INFO  19:59:21,909 - #2 program
+INFO  19:59:21,910 - #47 constants
+INFO  19:59:21,910 - #5 const
+INFO  19:59:21,911 - #47 int
+INFO  19:59:21,911 - #47 nula
+INFO  19:59:21,911 - #19 =
+INFO  19:59:21,911 - #49 0
+INFO  19:59:21,911 - #15 ,
+INFO  19:59:21,912 - #47 jedan
+INFO  19:59:21,912 - #19 =
+INFO  19:59:21,912 - #49 1
+INFO  19:59:21,912 - #15 ,
+INFO  19:59:21,912 - #47 pet
+INFO  19:59:21,912 - #19 =
+INFO  19:59:21,913 - #49 5
+INFO  19:59:21,913 - #7 ;
+INFO  19:59:21,913 - #5 const
+INFO  19:59:21,913 - #47 bool
+INFO  19:59:21,914 - #47 radi
+INFO  19:59:21,914 - #19 =
+INFO  19:59:21,914 - #50 true
+INFO  19:59:21,914 - #15 ,
+INFO  19:59:21,914 - #47 neradi
+INFO  19:59:21,914 - #19 =
+INFO  19:59:21,914 - #49 2
+INFO  19:59:21,914 - #7 ;
+INFO  19:59:21,914 - #5 const
+INFO  19:59:21,914 - #47 char
+INFO  19:59:21,914 - #47 slovoa
+INFO  19:59:21,914 - #19 =
+INFO  19:59:21,914 - #48 a
+INFO  19:59:21,915 - #15 ,
+INFO  19:59:21,915 - #47 slovob
+INFO  19:59:21,915 - #19 =
+INFO  19:59:21,915 - #49 15
+INFO  19:59:21,915 - #7 ;
+INFO  19:59:21,915 - #5 const
+INFO  19:59:21,915 - #47 int
+INFO  19:59:21,915 - #47 tri
+INFO  19:59:21,915 - #19 =
+INFO  19:59:21,915 - #48 v
+INFO  19:59:21,915 - #7 ;
+INFO  19:59:21,915 - #5 const
+INFO  19:59:21,915 - #47 char
+INFO  19:59:21,915 - #47 slovob
+INFO  19:59:21,915 - #19 =
+INFO  19:59:21,915 - #48 b
+INFO  19:59:21,915 - #7 ;
+INFO  19:59:21,916 - #3 {
+INFO  19:59:21,916 - #6 void
+INFO  19:59:21,916 - #47 main
+INFO  19:59:21,916 - #13 (
+INFO  19:59:21,916 - #14 )
+INFO  19:59:21,917 - #3 {
+INFO  19:59:21,917 - #47 nula
+INFO  19:59:21,918 - #19 =
+INFO  19:59:21,918 - #49 7
+INFO  19:59:21,918 - #7 ;
+INFO  19:59:21,919 - #47 tri
+INFO  19:59:21,919 - #19 =
+INFO  19:59:21,919 - #49 3
+INFO  19:59:21,919 - #7 ;
+INFO  19:59:21,919 - #4 }
+INFO  19:59:21,919 - #4 }
+INFO  19:59:21,924 - Program(
+  ProgramIdentificator(
+   constants
+  ) [ProgramIdentificator]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          Declarations(
+            NoDeclarations(
+            ) [NoDeclarations]
+            CnstDeclaration(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                Constants(
+                  Constants(
+                    OneConstant(
+                      ConstantDeclaration(
+                       nula
+                        NumberConstant(
+                         0
+                        ) [NumberConstant]
+                      ) [ConstantDeclaration]
+                    ) [OneConstant]
+                    ConstantDeclaration(
+                     jedan
+                      NumberConstant(
+                       1
+                      ) [NumberConstant]
+                    ) [ConstantDeclaration]
+                  ) [Constants]
+                  ConstantDeclaration(
+                   pet
+                    NumberConstant(
+                     5
+                    ) [NumberConstant]
+                  ) [ConstantDeclaration]
+                ) [Constants]
+              ) [ConstDecl]
+            ) [CnstDeclaration]
+          ) [Declarations]
+          CnstDeclaration(
+            ConstDecl(
+              Type(
+               bool
+              ) [Type]
+              Constants(
+                OneConstant(
+                  ConstantDeclaration(
+                   radi
+                    BoolConstant(
+                     true
+                    ) [BoolConstant]
+                  ) [ConstantDeclaration]
+                ) [OneConstant]
+                ConstantDeclaration(
+                 neradi
+                  NumberConstant(
+                   2
+                  ) [NumberConstant]
+                ) [ConstantDeclaration]
+              ) [Constants]
+            ) [ConstDecl]
+          ) [CnstDeclaration]
+        ) [Declarations]
+        CnstDeclaration(
+          ConstDecl(
+            Type(
+             char
+            ) [Type]
+            Constants(
+              OneConstant(
+                ConstantDeclaration(
+                 slovoa
+                  CharConstant(
+                   a
+                  ) [CharConstant]
+                ) [ConstantDeclaration]
+              ) [OneConstant]
+              ConstantDeclaration(
+               slovob
+                NumberConstant(
+                 15
+                ) [NumberConstant]
+              ) [ConstantDeclaration]
+            ) [Constants]
+          ) [ConstDecl]
+        ) [CnstDeclaration]
+      ) [Declarations]
+      CnstDeclaration(
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          OneConstant(
+            ConstantDeclaration(
+             tri
+              CharConstant(
+               v
+              ) [CharConstant]
+            ) [ConstantDeclaration]
+          ) [OneConstant]
+        ) [ConstDecl]
+      ) [CnstDeclaration]
+    ) [Declarations]
+    CnstDeclaration(
+      ConstDecl(
+        Type(
+         char
+        ) [Type]
+        OneConstant(
+          ConstantDeclaration(
+           slovob
+            CharConstant(
+             b
+            ) [CharConstant]
+          ) [ConstantDeclaration]
+        ) [OneConstant]
+      ) [ConstDecl]
+    ) [CnstDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      MethodStatements(
+        MethodStatements(
+          NoMethodStatements(
+          ) [NoMethodStatements]
+          DesignatorStmt(
+            Assignment(
+              OneDesignator(
+               nula
+              ) [OneDesignator]
+              AssignmentExpression(
+                Expression(
+                  OneTerm(
+                    Term(
+                      OneFactor(
+                        FactorNumber(
+                         7
+                        ) [FactorNumber]
+                      ) [OneFactor]
+                    ) [Term]
+                  ) [OneTerm]
+                ) [Expression]
+              ) [AssignmentExpression]
+            ) [Assignment]
+          ) [DesignatorStmt]
+        ) [MethodStatements]
+        DesignatorStmt(
+          Assignment(
+            OneDesignator(
+             tri
+            ) [OneDesignator]
+            AssignmentExpression(
+              Expression(
+                OneTerm(
+                  Term(
+                    OneFactor(
+                      FactorNumber(
+                       3
+                      ) [FactorNumber]
+                    ) [OneFactor]
+                  ) [Term]
+                ) [OneTerm]
+              ) [Expression]
+            ) [AssignmentExpression]
+          ) [Assignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  19:59:21,924 - ===================================
+INFO  19:59:21,927 - Deklarisana konstanta nula jednaka 0 na liniji 3
+INFO  19:59:21,927 - Deklarisana konstanta jedan jednaka 1 na liniji 3
+INFO  19:59:21,927 - Deklarisana konstanta pet jednaka 5 na liniji 3
+INFO  19:59:21,927 - Deklarisana konstanta radi jednaka true na liniji 5
+ERROR 19:59:21,927 - Greska na liniji 5 : promenljiva sa nazivom neradi nije kompatibilnog tipa sa dodeljenom vrednoscu
+INFO  19:59:21,927 - Deklarisana konstanta slovoa jednaka a na liniji 7
+ERROR 19:59:21,927 - Greska na liniji 7 : promenljiva sa nazivom slovob nije kompatibilnog tipa sa dodeljenom vrednoscu
+ERROR 19:59:21,927 - Greska na liniji 9 : promenljiva sa nazivom tri nije kompatibilnog tipa sa dodeljenom vrednoscu
+INFO  19:59:21,927 - Deklarisana konstanta slovob jednaka b na liniji 11
+INFO  19:59:21,927 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 14
+INFO  19:59:21,928 - Detektovana upotreba simbola nula na liniji 16: Con nula: int, 0, 0 
+ERROR 19:59:21,928 - Semanticka greska na liniji 16: Designator mora predstavljati promenljivu ili element niza
+ERROR 19:59:21,928 - Semanticka greska na liniji 18: Promenljiva tri nije deklarisana!
+INFO  19:59:21,928 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 14
+INFO  19:59:21,928 - ===================================
+ERROR 19:59:21,929 - Parsiranje koda je neuspesno

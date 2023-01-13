@@ -1,0 +1,66 @@
+ERROR 20:22:03,038 - 
+Sintaksna greska na liniji 35
+ERROR 20:22:03,041 - Greska kod deklaracije formalnog parametra funkcije. 
+ERROR 20:22:03,082 - 
+Sintaksna greska na liniji 183
+ERROR 20:22:03,082 - Greska kod konstrukcije iskaza dodele. 
+ERROR 20:22:03,682 - Greska na liniji 7 : promenljiva sa nazivom neradi nije kompatibilnog tipa sa dodeljenom vrednoscu
+ERROR 20:22:03,682 - Greska na liniji 9 : promenljiva sa nazivom slovob nije kompatibilnog tipa sa dodeljenom vrednoscu
+ERROR 20:22:03,682 - Greska na liniji 17 : tip sa nazivom LEPO ne postoji
+ERROR 20:22:03,682 - Greska na liniji 18 : promenljiva sa nazivom nizch ne predstavlja tip
+ERROR 20:22:03,683 - Semanticka greska na liniji 27: Expr za kreiranje niza nije tipa int
+ERROR 20:22:03,683 - Semanticka greska na liniji 28: Expr nije kompatibilan sa tipom designator-a pri dodeli vrednosti
+ERROR 20:22:03,683 - Semanticka greska na liniji 39: Designator mora predstavljati niz
+ERROR 20:22:03,683 - Semanticka greska na liniji 52: Promenljiva ident u foreach petlji mora biti istog tipa kao tip elementa niza Designator
+ERROR 20:22:03,683 - Semanticka greska na liniji 34: funkcija samearray nema return iskaz!
+ERROR 20:22:03,684 - Semanticka greska na liniji 66: Promenljiva funcb nije deklarisana!
+ERROR 20:22:03,684 - Semanticka greska na liniji 67: Promenljiva niz nije funkcija!
+ERROR 20:22:03,684 - Semanticka greska na liniji 68: Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta a
+ERROR 20:22:03,684 - Semanticka greska na liniji 68: Broj formalnih i stvarnih argumenata metode funca nije isti!
+ERROR 20:22:03,684 - Semanticka greska na liniji 69: Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta a
+ERROR 20:22:03,684 - Semanticka greska na liniji 69: Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta b
+ERROR 20:22:03,684 - Semanticka greska na liniji 70: Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta b
+ERROR 20:22:03,684 - Semanticka greska na liniji 77: Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta b
+ERROR 20:22:03,815 - Semanticka greska na liniji 80: Designator mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,815 - Semanticka greska na liniji 81: Designator mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,815 - Semanticka greska na liniji 82: Designator mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,815 - Semanticka greska na liniji 83: Designator mora biti tipa int
+ERROR 20:22:03,815 - Semanticka greska na liniji 0: iskaz break moze biti samo u foreach ili while petlji 
+ERROR 20:22:03,815 - Semanticka greska na liniji 92: Designator mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,815 - Semanticka greska na liniji 93: Expr nije kompatibilan sa tipom designator-a pri dodeli vrednosti
+ERROR 20:22:03,816 - Semanticka greska na liniji 97: Promenljiva b nije nizovnog tipa
+ERROR 20:22:03,816 - Semanticka greska na liniji 98: Expr nije tipa int 
+ERROR 20:22:03,816 - Semanticka greska na liniji 103: Operacije *, /, % iziskuju da oba argumenta budu tipa int
+ERROR 20:22:03,817 - Semanticka greska na liniji 108: Operacije + i - iziskuju da oba argumenta budu tipa int 
+ERROR 20:22:03,817 - Semanticka greska na liniji 112: Operacija - podrzava samo tip int 
+ERROR 20:22:03,817 - Semanticka greska na liniji 118: Tip stvarnog argumenta nije kompatibilan sa tipom formalnog argumenta a 
+ERROR 20:22:03,818 - Semanticka greska na liniji 122: Expr unutar PRINT Statment mora biti tipa int, char ili bool 
+ERROR 20:22:03,818 - Semanticka greska na liniji 127: Designator mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,818 - Semanticka greska na liniji 128: Designator mora biti tipa int, char ili bool 
+ERROR 20:22:03,818 - Semanticka greska na liniji 133: Tipovi oba expressiona moraju biti kompatibilni 
+ERROR 20:22:03,818 - Semanticka greska na liniji 133:  Condition nije tipa bool 
+ERROR 20:22:03,820 - Semanticka greska na liniji 0: iskaz break moze biti samo u foreach ili while petlji 
+ERROR 20:22:03,820 - Semanticka greska na liniji 0: iskaz continue moze biti samo u foreach ili while petlji 
+ERROR 20:22:03,821 - Semanticka greska na liniji 160: Tipovi oba expressiona moraju biti kompatibilni
+ERROR 20:22:03,821 - Semanticka greska na liniji 160:  Condition nije tipa bool
+ERROR 20:22:03,821 - Semanticka greska na liniji 162: Tipovi oba expressiona moraju biti kompatibilni
+ERROR 20:22:03,821 - Semanticka greska na liniji 162: Condition nije tipa bool 
+ERROR 20:22:03,821 - Semanticka greska na liniji 174: Promenljiva foreachfunc nije deklarisana!
+ERROR 20:22:03,822 - Semanticka greska na liniji 179: Operacije + i - iziskuju da oba argumenta budu tipa int
+ERROR 20:22:03,822 - Semanticka greska na liniji 180: Designator mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,822 - Semanticka greska na liniji 181: Expr nije kompatibilan sa tipom designator-a pri dodeli vrednosti
+ERROR 20:22:03,822 - Semanticka greska na liniji 187: Broj formalnih i stvarnih argumenata metode samearray nije isti!
+ERROR 20:22:03,822 - Semanticka greska na liniji 187: Broj formalnih i stvarnih argumenata metode samearray nije isti!
+ERROR 20:22:03,822 - Semanticka greska na liniji 188: Broj formalnih i stvarnih argumenata metode samearray nije isti! 
+ERROR 20:22:03,822 - Semanticka greska na liniji 188: Broj formalnih i stvarnih argumenata metode samearray nije isti!
+ERROR 20:22:03,823 - Semanticka greska na liniji 189: Broj formalnih i stvarnih argumenata metode samearray nije isti!
+ERROR 20:22:03,823 - Semanticka greska na liniji 189: Broj formalnih i stvarnih argumenata metode samearray nije isti!
+ERROR 20:22:03,823 - Semanticka greska na liniji 193: Designator slovoa mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,823 - Semanticka greska na liniji 193: Designator slovob mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,823 - Semanticka greska na liniji 193: Tip designatora slovoa nije kompatibilan sa tipom elementa niza niz
+ERROR 20:22:03,823 - Semanticka greska na liniji 193: Tip designatora slovob nije kompatibilan sa tipom elementa niza niz
+ERROR 20:22:03,823 - Semanticka greska na liniji 194: Designator slovoa mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,823 - Semanticka greska na liniji 194: Designator slovob mora predstavljati promenljivu ili element niza
+ERROR 20:22:03,823 - Semanticka greska na liniji 195: Tip designatora a nije kompatibilan sa tipom elementa niza nizch
+ERROR 20:22:03,823 - Semanticka greska na liniji 195: Tip designatora b nije kompatibilan sa tipom elementa niza nizch
+ERROR 20:22:03,827 - Parsiranje koda je neuspesno

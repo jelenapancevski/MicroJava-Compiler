@@ -4,6 +4,7 @@ program test
 	const int nula = 0;
 	const int jedan = 1;
 	const int pet = 5;
+	const int dva= 2;
 	
 	const bool isok = true, notok = false;
 	const char chara= 'a';
@@ -28,7 +29,7 @@ program test
 	
 	void printchararray(char array []) char arr;{
 	array.foreach(arr=>{
-	print(arr,2);
+	print(arr);
 	});
 	print(eol);
 	}
@@ -42,11 +43,13 @@ program test
 	
 	}
 	void main()	
-		int bodovi;
+		int same;
 		int counter;
 		int arr;
 		char message [];
 		bool equal;
+		int mod3;
+		int mod4;
 	{
 	
 		read(length1);
@@ -90,31 +93,27 @@ program test
 		counter = 0;
 		b=0;
 		nizch = new char [length1];
-		
+		a=0;
 		equal = isequal(niz,niz2);
 		
 		print(equal);
 		print(eol);
+		same = 0;
+		if(equal!=true)
 		while (counter<length1){
-		
-		while(b<length2){
-			if(niz[counter]==niz2[b]) {
-			nizch[counter]= chr(niz[counter]);
-			break;
-			}
-			else if(niz[counter]<niz2[b] && counter==b){
-			arr = niz[counter];
-			niz[counter]= niz2[b];  
-			niz2[b]=arr;
-			} 
-			else if(b!=0 && counter%b || counter!=0 && b%counter){
-			niz2[b]=niz[counter]+pet;
-			} 
-			b++;
+		if (counter>=length2) break;
+		if(niz[counter]==niz2[counter]) {
+		same++;
+		continue;
 		}
-			
-			counter++;
-			b=0;
+		else {
+		if(a<length1) {
+			nizch[a] = chr(niz2[counter]);
+			a++;
+		}
+		niz2[counter] = niz[counter];
+		}
+		counter++;
 		}
 		
 		message[3]='c';
@@ -139,13 +138,30 @@ program test
 		print('>');
 		printintarray(niz2);
 		
-		[niz2[0],,,niz2[1],,,niz2[2]] = niz;
+		
+		[niz2[length2-1],,,,,niz2[length2/2],,,,niz2[0]] = niz;
 		
 		message[3] ='2';
 		printmsg(message,4);
 		print('-');
 		print('>');
 		printintarray(niz2);
+		
+		counter=0;
+		same = 0;
+		print('a');
+		
+		while(counter < len(niz2)){
+		if (counter>= len(niz)) break;
+		if(niz2[counter] == niz[counter]) same++;
+		if ((counter+1)%3==0 || niz2[counter]%3==0 || niz[counter]%3==0) mod3++;
+		else if ((counter+1)%4==0 || niz2[counter]%4==0 || niz[counter]%4==0) mod4++;
+		counter++;
+		}
+		print(same);
+		print(mod3);
+		print(mod4);
+		
 		
 	}
 }

@@ -1,0 +1,346 @@
+INFO  20:20:30,989 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\read.mj
+INFO  20:20:31,031 - #2 program
+INFO  20:20:31,031 - #47 readstmt
+INFO  20:20:31,031 - #5 const
+INFO  20:20:31,032 - #47 char
+INFO  20:20:31,032 - #47 slovoa
+INFO  20:20:31,033 - #19 =
+INFO  20:20:31,033 - #48 a
+INFO  20:20:31,033 - #7 ;
+INFO  20:20:31,033 - #5 const
+INFO  20:20:31,034 - #47 char
+INFO  20:20:31,034 - #47 slovob
+INFO  20:20:31,034 - #19 =
+INFO  20:20:31,034 - #48 b
+INFO  20:20:31,034 - #7 ;
+INFO  20:20:31,034 - #47 int
+INFO  20:20:31,034 - #47 niz
+INFO  20:20:31,034 - #17 [
+INFO  20:20:31,034 - #18 ]
+INFO  20:20:31,034 - #15 ,
+INFO  20:20:31,035 - #47 niz2
+INFO  20:20:31,036 - #17 [
+INFO  20:20:31,036 - #18 ]
+INFO  20:20:31,036 - #15 ,
+INFO  20:20:31,036 - #47 a
+INFO  20:20:31,036 - #15 ,
+INFO  20:20:31,036 - #47 b
+INFO  20:20:31,036 - #7 ;
+INFO  20:20:31,036 - #47 char
+INFO  20:20:31,037 - #47 nizch
+INFO  20:20:31,037 - #17 [
+INFO  20:20:31,037 - #18 ]
+INFO  20:20:31,037 - #7 ;
+INFO  20:20:31,037 - #3 {
+INFO  20:20:31,037 - #6 void
+INFO  20:20:31,038 - #47 main
+INFO  20:20:31,038 - #13 (
+INFO  20:20:31,038 - #14 )
+INFO  20:20:31,038 - #47 int
+INFO  20:20:31,038 - #47 bodovi
+INFO  20:20:31,039 - #7 ;
+INFO  20:20:31,039 - #47 bool
+INFO  20:20:31,039 - #47 bt
+INFO  20:20:31,039 - #7 ;
+INFO  20:20:31,039 - #47 char
+INFO  20:20:31,039 - #47 slovo
+INFO  20:20:31,039 - #7 ;
+INFO  20:20:31,039 - #47 int
+INFO  20:20:31,039 - #47 broj
+INFO  20:20:31,039 - #7 ;
+INFO  20:20:31,039 - #3 {
+INFO  20:20:31,039 - #8 read
+INFO  20:20:31,040 - #13 (
+INFO  20:20:31,040 - #47 a
+INFO  20:20:31,040 - #14 )
+INFO  20:20:31,040 - #7 ;
+INFO  20:20:31,040 - #8 read
+INFO  20:20:31,040 - #13 (
+INFO  20:20:31,040 - #47 slovoa
+INFO  20:20:31,040 - #14 )
+INFO  20:20:31,040 - #7 ;
+INFO  20:20:31,040 - #8 read
+INFO  20:20:31,040 - #13 (
+INFO  20:20:31,040 - #47 niz
+INFO  20:20:31,040 - #14 )
+INFO  20:20:31,040 - #7 ;
+INFO  20:20:31,040 - #8 read
+INFO  20:20:31,041 - #13 (
+INFO  20:20:31,041 - #47 nizch
+INFO  20:20:31,041 - #17 [
+INFO  20:20:31,041 - #49 1
+INFO  20:20:31,041 - #18 ]
+INFO  20:20:31,042 - #14 )
+INFO  20:20:31,042 - #7 ;
+INFO  20:20:31,042 - #8 read
+INFO  20:20:31,042 - #13 (
+INFO  20:20:31,042 - #47 niz
+INFO  20:20:31,042 - #17 [
+INFO  20:20:31,042 - #49 5
+INFO  20:20:31,042 - #18 ]
+INFO  20:20:31,042 - #14 )
+INFO  20:20:31,042 - #7 ;
+INFO  20:20:31,042 - #8 read
+INFO  20:20:31,042 - #13 (
+INFO  20:20:31,042 - #47 bt
+INFO  20:20:31,042 - #14 )
+INFO  20:20:31,042 - #7 ;
+INFO  20:20:31,042 - #4 }
+INFO  20:20:31,042 - #4 }
+INFO  20:20:31,047 - Program(
+  ProgramIdentificator(
+   readstmt
+  ) [ProgramIdentificator]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          NoDeclarations(
+          ) [NoDeclarations]
+          CnstDeclaration(
+            ConstDecl(
+              Type(
+               char
+              ) [Type]
+              OneConstant(
+                ConstantDeclaration(
+                 slovoa
+                  CharConstant(
+                   a
+                  ) [CharConstant]
+                ) [ConstantDeclaration]
+              ) [OneConstant]
+            ) [ConstDecl]
+          ) [CnstDeclaration]
+        ) [Declarations]
+        CnstDeclaration(
+          ConstDecl(
+            Type(
+             char
+            ) [Type]
+            OneConstant(
+              ConstantDeclaration(
+               slovob
+                CharConstant(
+                 b
+                ) [CharConstant]
+              ) [ConstantDeclaration]
+            ) [OneConstant]
+          ) [ConstDecl]
+        ) [CnstDeclaration]
+      ) [Declarations]
+      VariableDeclaration(
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          Variables(
+            Variables(
+              Variables(
+                OneVariable(
+                  VariableDecl(
+                   niz
+                    HasArrayBrackets(
+                    ) [HasArrayBrackets]
+                  ) [VariableDecl]
+                ) [OneVariable]
+                VariableDecl(
+                 niz2
+                  HasArrayBrackets(
+                  ) [HasArrayBrackets]
+                ) [VariableDecl]
+              ) [Variables]
+              VariableDecl(
+               a
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [Variables]
+            VariableDecl(
+             b
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [VariableDecl]
+          ) [Variables]
+        ) [VarDeclaration]
+      ) [VariableDeclaration]
+    ) [Declarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+         char
+        ) [Type]
+        OneVariable(
+          VariableDecl(
+           nizch
+            HasArrayBrackets(
+            ) [HasArrayBrackets]
+          ) [VariableDecl]
+        ) [OneVariable]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        MethodVariables(
+          MethodVariables(
+            MethodVariables(
+              NoMethodVariables(
+              ) [NoMethodVariables]
+              VarDeclaration(
+                Type(
+                 int
+                ) [Type]
+                OneVariable(
+                  VariableDecl(
+                   bodovi
+                    NoArrayBrackets(
+                    ) [NoArrayBrackets]
+                  ) [VariableDecl]
+                ) [OneVariable]
+              ) [VarDeclaration]
+            ) [MethodVariables]
+            VarDeclaration(
+              Type(
+               bool
+              ) [Type]
+              OneVariable(
+                VariableDecl(
+                 bt
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [OneVariable]
+            ) [VarDeclaration]
+          ) [MethodVariables]
+          VarDeclaration(
+            Type(
+             char
+            ) [Type]
+            OneVariable(
+              VariableDecl(
+               slovo
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [OneVariable]
+          ) [VarDeclaration]
+        ) [MethodVariables]
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             broj
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        MethodStatements(
+          MethodStatements(
+            MethodStatements(
+              MethodStatements(
+                MethodStatements(
+                  NoMethodStatements(
+                  ) [NoMethodStatements]
+                  ReadStatement(
+                    OneDesignator(
+                     a
+                    ) [OneDesignator]
+                  ) [ReadStatement]
+                ) [MethodStatements]
+                ReadStatement(
+                  OneDesignator(
+                   slovoa
+                  ) [OneDesignator]
+                ) [ReadStatement]
+              ) [MethodStatements]
+              ReadStatement(
+                OneDesignator(
+                 niz
+                ) [OneDesignator]
+              ) [ReadStatement]
+            ) [MethodStatements]
+            ReadStatement(
+              ArrayDesignator(
+                DesignatorName(
+                 nizch
+                ) [DesignatorName]
+                Expression(
+                  OneTerm(
+                    Term(
+                      OneFactor(
+                        FactorNumber(
+                         1
+                        ) [FactorNumber]
+                      ) [OneFactor]
+                    ) [Term]
+                  ) [OneTerm]
+                ) [Expression]
+              ) [ArrayDesignator]
+            ) [ReadStatement]
+          ) [MethodStatements]
+          ReadStatement(
+            ArrayDesignator(
+              DesignatorName(
+               niz
+              ) [DesignatorName]
+              Expression(
+                OneTerm(
+                  Term(
+                    OneFactor(
+                      FactorNumber(
+                       5
+                      ) [FactorNumber]
+                    ) [OneFactor]
+                  ) [Term]
+                ) [OneTerm]
+              ) [Expression]
+            ) [ArrayDesignator]
+          ) [ReadStatement]
+        ) [MethodStatements]
+        ReadStatement(
+          OneDesignator(
+           bt
+          ) [OneDesignator]
+        ) [ReadStatement]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  20:20:31,047 - ===================================
+INFO  20:20:31,049 - Deklarisana konstanta slovoa jednaka a na liniji 3
+INFO  20:20:31,050 - Deklarisana konstanta slovob jednaka b na liniji 5
+INFO  20:20:31,050 - Deklarisan niz niz na liniji 7
+INFO  20:20:31,050 - Deklarisan niz niz2 na liniji 7
+INFO  20:20:31,050 - Deklarisana promenljiva a na liniji 7
+INFO  20:20:31,050 - Deklarisana promenljiva b na liniji 7
+INFO  20:20:31,050 - Deklarisan niz nizch na liniji 8
+INFO  20:20:31,050 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 11
+INFO  20:20:31,050 - Deklarisana promenljiva bodovi na liniji 12
+INFO  20:20:31,050 - Deklarisana promenljiva bt na liniji 13
+INFO  20:20:31,050 - Deklarisana promenljiva slovo na liniji 14
+INFO  20:20:31,050 - Deklarisana promenljiva broj na liniji 15
+INFO  20:20:31,050 - Detektovana upotreba simbola a na liniji 19: Var a: int, 2, 0 
+INFO  20:20:31,050 - Detektovana upotreba simbola slovoa na liniji 20: Con slovoa: char, 97, 0 
+ERROR 20:20:31,050 - Semanticka greska na liniji 20: Designator mora predstavljati promenljivu ili element niza
+INFO  20:20:31,050 - Detektovana upotreba simbola niz na liniji 21: Var niz: Arr of int, 0, 0 
+ERROR 20:20:31,051 - Semanticka greska na liniji 21: Designator mora biti tipa int, char ili bool 
+INFO  20:20:31,051 - Detektovana upotreba simbola nizch na liniji 22: Var nizch: Arr of char, 4, 0 
+INFO  20:20:31,051 - Detektovana upotreba simbola niz na liniji 23: Var niz: Arr of int, 0, 0 
+INFO  20:20:31,051 - Detektovana upotreba simbola bt na liniji 24: Var bt: , 1, 1 
+INFO  20:20:31,051 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 11
+INFO  20:20:31,051 - ===================================
+ERROR 20:20:31,051 - Parsiranje koda je neuspesno

@@ -1,0 +1,509 @@
+INFO  19:46:22,589 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\syntaxerrors\ifconditions.mj
+INFO  19:46:22,630 - #2 program
+INFO  19:46:22,630 - #47 ifconditions
+INFO  19:46:22,630 - #47 char
+INFO  19:46:22,631 - #47 slovoa
+INFO  19:46:22,632 - #7 ;
+INFO  19:46:22,632 - #47 int
+INFO  19:46:22,633 - #47 x
+INFO  19:46:22,633 - #15 ,
+INFO  19:46:22,633 - #47 y
+INFO  19:46:22,633 - #15 ,
+INFO  19:46:22,633 - #47 z
+INFO  19:46:22,633 - #7 ;
+INFO  19:46:22,633 - #47 int
+INFO  19:46:22,633 - #47 i
+INFO  19:46:22,633 - #7 ;
+INFO  19:46:22,634 - #5 const
+INFO  19:46:22,634 - #47 int
+INFO  19:46:22,634 - #47 jedan
+INFO  19:46:22,634 - #19 =
+INFO  19:46:22,634 - #49 1
+INFO  19:46:22,634 - #15 ,
+INFO  19:46:22,635 - #47 dva
+INFO  19:46:22,635 - #19 =
+INFO  19:46:22,635 - #49 2
+INFO  19:46:22,635 - #15 ,
+INFO  19:46:22,636 - #47 tri
+INFO  19:46:22,636 - #19 =
+INFO  19:46:22,636 - #49 3
+INFO  19:46:22,636 - #7 ;
+INFO  19:46:22,636 - #3 {
+INFO  19:46:22,637 - #6 void
+INFO  19:46:22,637 - #47 main
+INFO  19:46:22,637 - #13 (
+INFO  19:46:22,637 - #14 )
+INFO  19:46:22,638 - #3 {
+INFO  19:46:22,639 - #47 i
+INFO  19:46:22,639 - #19 =
+INFO  19:46:22,639 - #49 0
+INFO  19:46:22,640 - #7 ;
+INFO  19:46:22,640 - #47 x
+INFO  19:46:22,640 - #19 =
+INFO  19:46:22,641 - #47 dva
+INFO  19:46:22,641 - #30 *
+INFO  19:46:22,641 - #47 tri
+INFO  19:46:22,641 - #29 -
+INFO  19:46:22,642 - #47 jedan
+INFO  19:46:22,642 - #7 ;
+INFO  19:46:22,642 - #33 if
+INFO  19:46:22,642 - #13 (
+INFO  19:46:22,643 - #47 x
+INFO  19:46:22,643 - #22 >
+INFO  19:46:22,643 - #22 >
+INFO  19:46:22,643 - #47 slovoa
+INFO  19:46:22,643 - #14 )
+INFO  19:46:22,643 - #3 {
+INFO  19:46:22,644 - #47 x
+INFO  19:46:22,644 - #19 =
+INFO  19:46:22,645 - #49 1
+INFO  19:46:22,645 - #7 ;
+INFO  19:46:22,645 - #4 }
+INFO  19:46:22,645 - #34 else
+INFO  19:46:22,645 - #33 if
+INFO  19:46:22,646 - #13 (
+INFO  19:46:22,646 - #47 x
+INFO  19:46:22,646 - #22 >
+INFO  19:46:22,646 - #47 y
+INFO  19:46:22,646 - #14 )
+INFO  19:46:22,647 - #3 {
+INFO  19:46:22,647 - #47 y
+INFO  19:46:22,647 - #19 =
+INFO  19:46:22,647 - #47 x
+INFO  19:46:22,647 - #31 /
+INFO  19:46:22,647 - #49 2
+INFO  19:46:22,647 - #7 ;
+INFO  19:46:22,647 - #4 }
+INFO  19:46:22,647 - #34 else
+INFO  19:46:22,647 - #33 if
+INFO  19:46:22,647 - #13 (
+INFO  19:46:22,647 - #47 x
+INFO  19:46:22,647 - #21 !=
+INFO  19:46:22,647 - #47 z
+INFO  19:46:22,648 - #47 x
+INFO  19:46:22,648 - #27 ||
+INFO  19:46:22,648 - #47 x
+INFO  19:46:22,648 - #20 ==
+INFO  19:46:22,648 - #47 i
+INFO  19:46:22,649 - #14 )
+INFO  19:46:22,649 - #3 {
+INFO  19:46:22,649 - #47 x
+INFO  19:46:22,649 - #10 ++
+INFO  19:46:22,649 - #7 ;
+INFO  19:46:22,649 - #4 }
+INFO  19:46:22,649 - #4 }
+INFO  19:46:22,650 - #4 }
+INFO  19:46:22,655 - Program(
+  ProgramIdentificator(
+   ifconditions
+  ) [ProgramIdentificator]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          NoDeclarations(
+          ) [NoDeclarations]
+          VariableDeclaration(
+            VarDeclaration(
+              Type(
+               char
+              ) [Type]
+              OneVariable(
+                VariableDecl(
+                 slovoa
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [OneVariable]
+            ) [VarDeclaration]
+          ) [VariableDeclaration]
+        ) [Declarations]
+        VariableDeclaration(
+          VarDeclaration(
+            Type(
+             int
+            ) [Type]
+            Variables(
+              Variables(
+                OneVariable(
+                  VariableDecl(
+                   x
+                    NoArrayBrackets(
+                    ) [NoArrayBrackets]
+                  ) [VariableDecl]
+                ) [OneVariable]
+                VariableDecl(
+                 y
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [Variables]
+              VariableDecl(
+               z
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [Variables]
+          ) [VarDeclaration]
+        ) [VariableDeclaration]
+      ) [Declarations]
+      VariableDeclaration(
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             i
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [VariableDeclaration]
+    ) [Declarations]
+    CnstDeclaration(
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        Constants(
+          Constants(
+            OneConstant(
+              ConstantDeclaration(
+               jedan
+                NumberConstant(
+                 1
+                ) [NumberConstant]
+              ) [ConstantDeclaration]
+            ) [OneConstant]
+            ConstantDeclaration(
+             dva
+              NumberConstant(
+               2
+              ) [NumberConstant]
+            ) [ConstantDeclaration]
+          ) [Constants]
+          ConstantDeclaration(
+           tri
+            NumberConstant(
+             3
+            ) [NumberConstant]
+          ) [ConstantDeclaration]
+        ) [Constants]
+      ) [ConstDecl]
+    ) [CnstDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethods(
+    ) [NoMethods]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      MethodStatements(
+        MethodStatements(
+          MethodStatements(
+            NoMethodStatements(
+            ) [NoMethodStatements]
+            DesignatorStmt(
+              Assignment(
+                OneDesignator(
+                 i
+                ) [OneDesignator]
+                AssignmentExpression(
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorNumber(
+                           0
+                          ) [FactorNumber]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                ) [AssignmentExpression]
+              ) [Assignment]
+            ) [DesignatorStmt]
+          ) [MethodStatements]
+          DesignatorStmt(
+            Assignment(
+              OneDesignator(
+               x
+              ) [OneDesignator]
+              AssignmentExpression(
+                Expression(
+                  Terms(
+                    OneTerm(
+                      Term(
+                        Factors(
+                          OneFactor(
+                            FactorDesignator(
+                              OneDesignator(
+                               dva
+                              ) [OneDesignator]
+                            ) [FactorDesignator]
+                          ) [OneFactor]
+                          Multiply(
+                          ) [Multiply]
+                          FactorDesignator(
+                            OneDesignator(
+                             tri
+                            ) [OneDesignator]
+                          ) [FactorDesignator]
+                        ) [Factors]
+                      ) [Term]
+                    ) [OneTerm]
+                    Minus(
+                    ) [Minus]
+                    Term(
+                      OneFactor(
+                        FactorDesignator(
+                          OneDesignator(
+                           jedan
+                          ) [OneDesignator]
+                        ) [FactorDesignator]
+                      ) [OneFactor]
+                    ) [Term]
+                  ) [Terms]
+                ) [Expression]
+              ) [AssignmentExpression]
+            ) [Assignment]
+          ) [DesignatorStmt]
+        ) [MethodStatements]
+        IfElseStatement(
+          IfStart(
+          ) [IfStart]
+          Then(
+            ConditionError(
+            ) [ConditionError]
+          ) [Then]
+          MultipleStatements(
+            Statements(
+              NoStatement(
+              ) [NoStatement]
+              DesignatorStmt(
+                Assignment(
+                  OneDesignator(
+                   x
+                  ) [OneDesignator]
+                  AssignmentExpression(
+                    Expression(
+                      OneTerm(
+                        Term(
+                          OneFactor(
+                            FactorNumber(
+                             1
+                            ) [FactorNumber]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [OneTerm]
+                    ) [Expression]
+                  ) [AssignmentExpression]
+                ) [Assignment]
+              ) [DesignatorStmt]
+            ) [Statements]
+          ) [MultipleStatements]
+          ElseStart(
+          ) [ElseStart]
+          ElseStatement(
+            IfElseStatement(
+              IfStart(
+              ) [IfStart]
+              Then(
+                OneCondition(
+                  ConditionTerm(
+                    ConditionFacts(
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 x
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                      Greater(
+                      ) [Greater]
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 y
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                    ) [ConditionFacts]
+                  ) [ConditionTerm]
+                ) [OneCondition]
+              ) [Then]
+              MultipleStatements(
+                Statements(
+                  NoStatement(
+                  ) [NoStatement]
+                  DesignatorStmt(
+                    Assignment(
+                      OneDesignator(
+                       y
+                      ) [OneDesignator]
+                      AssignmentExpression(
+                        Expression(
+                          OneTerm(
+                            Term(
+                              Factors(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                     x
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                                Divide(
+                                ) [Divide]
+                                FactorNumber(
+                                 2
+                                ) [FactorNumber]
+                              ) [Factors]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                      ) [AssignmentExpression]
+                    ) [Assignment]
+                  ) [DesignatorStmt]
+                ) [Statements]
+              ) [MultipleStatements]
+              ElseStart(
+              ) [ElseStart]
+              ElseStatement(
+                IfStatement(
+                  IfStart(
+                  ) [IfStart]
+                  Then(
+                    Conditions(
+                      ConditionError(
+                      ) [ConditionError]
+                      Or(
+                      ) [Or]
+                      ConditionTerm(
+                        ConditionFacts(
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                     x
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                          IsEqual(
+                          ) [IsEqual]
+                          Expression(
+                            OneTerm(
+                              Term(
+                                OneFactor(
+                                  FactorDesignator(
+                                    OneDesignator(
+                                     i
+                                    ) [OneDesignator]
+                                  ) [FactorDesignator]
+                                ) [OneFactor]
+                              ) [Term]
+                            ) [OneTerm]
+                          ) [Expression]
+                        ) [ConditionFacts]
+                      ) [ConditionTerm]
+                    ) [Conditions]
+                  ) [Then]
+                  MultipleStatements(
+                    Statements(
+                      NoStatement(
+                      ) [NoStatement]
+                      DesignatorStmt(
+                        ValueIncrement(
+                          OneDesignator(
+                           x
+                          ) [OneDesignator]
+                        ) [ValueIncrement]
+                      ) [DesignatorStmt]
+                    ) [Statements]
+                  ) [MultipleStatements]
+                ) [IfStatement]
+              ) [ElseStatement]
+            ) [IfElseStatement]
+          ) [ElseStatement]
+        ) [IfElseStatement]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  19:46:22,655 - ===================================
+INFO  19:46:22,659 - Deklarisana promenljiva slovoa na liniji 2
+INFO  19:46:22,659 - Deklarisana promenljiva x na liniji 3
+INFO  19:46:22,659 - Deklarisana promenljiva y na liniji 3
+INFO  19:46:22,659 - Deklarisana promenljiva z na liniji 3
+INFO  19:46:22,659 - Deklarisana promenljiva i na liniji 4
+INFO  19:46:22,659 - Deklarisana konstanta jedan jednaka 1 na liniji 5
+INFO  19:46:22,659 - Deklarisana konstanta dva jednaka 2 na liniji 5
+INFO  19:46:22,659 - Deklarisana konstanta tri jednaka 3 na liniji 5
+INFO  19:46:22,659 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 7
+INFO  19:46:22,660 - Detektovana upotreba simbola i na liniji 8: Var i: int, 4, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola x na liniji 9: Var x: int, 1, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola dva na liniji 9: Con dva: int, 2, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola tri na liniji 9: Con tri: int, 3, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola jedan na liniji 9: Con jedan: int, 1, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola x na liniji 11: Var x: int, 1, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola x na liniji 12: Var x: int, 1, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola y na liniji 12: Var y: int, 2, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola y na liniji 13: Var y: int, 2, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola x na liniji 13: Var x: int, 1, 0 
+INFO  19:46:22,660 - Detektovana upotreba simbola x na liniji 15: Var x: int, 1, 0 
+INFO  19:46:22,661 - Detektovana upotreba simbola i na liniji 15: Var i: int, 4, 0 
+INFO  19:46:22,661 - Detektovana upotreba simbola x na liniji 16: Var x: int, 1, 0 
+INFO  19:46:22,661 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 7
+INFO  19:46:22,661 - ===================================
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: Class [], 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: , -1, -1 
+Prog ifconditions: notype, 0, 1 
+   Var slovoa: char, 0, 0 
+   Var x: int, 1, 0 
+   Var y: int, 2, 0 
+   Var z: int, 3, 0 
+   Var i: int, 4, 0 
+   Con jedan: int, 1, 0 
+   Con dva: int, 2, 0 
+   Con tri: int, 3, 0 
+   Meth main: notype, 0, 0 
+
+
+

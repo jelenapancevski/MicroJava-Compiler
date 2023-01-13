@@ -137,7 +137,8 @@ public class CodeGenerator extends VisitorAdaptor {
 			if (designator != null) {
 				Code.load(multipleAssignment.getDesignator().obj);
 				Code.loadConst(index);
-				Code.put(Code.aload);
+				if(multipleAssignment.getDesignator().obj.getType().getElemType()!=Tab.charType)Code.put(Code.aload);
+				else Code.put(Code.baload);
 				Code.store(designator);
 			}
 			index--;
@@ -206,7 +207,8 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.loadConst(0);
 		ifelseConditions.peek().ForEachStmtStart = Code.pc;// Save address -> FOREACHSTART
 		Code.put(Code.dup2); // duplicate designator and counter
-		Code.put(Code.aload);
+		if(ident.getType()!=Tab.charType)Code.put(Code.aload);
+		else Code.put(Code.baload);
 		Code.store(ident);
 		// Statements
 	}

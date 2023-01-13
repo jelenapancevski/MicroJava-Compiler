@@ -1,0 +1,199 @@
+INFO  19:38:30,291 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\syntaxerrors\formalparameters.mj
+INFO  19:38:30,337 - #2 program
+INFO  19:38:30,337 - #47 formalparameters
+INFO  19:38:30,337 - #47 int
+INFO  19:38:30,338 - #47 abc
+INFO  19:38:30,339 - #17 [
+INFO  19:38:30,339 - #18 ]
+INFO  19:38:30,339 - #15 ,
+INFO  19:38:30,340 - #47 pq
+INFO  19:38:30,340 - #7 ;
+INFO  19:38:30,340 - #47 int
+INFO  19:38:30,341 - #47 a
+INFO  19:38:30,341 - #7 ;
+INFO  19:38:30,341 - #47 bool
+INFO  19:38:30,341 - #47 c
+INFO  19:38:30,341 - #7 ;
+INFO  19:38:30,341 - #3 {
+INFO  19:38:30,341 - #6 void
+INFO  19:38:30,342 - #47 fja
+INFO  19:38:30,342 - #13 (
+INFO  19:38:30,342 - #47 int
+INFO  19:38:30,342 - #47 a
+INFO  19:38:30,342 - #15 ,
+INFO  19:38:30,342 - #47 int
+INFO  19:38:30,342 - #47 p
+INFO  19:38:30,342 - #47 q
+INFO  19:38:30,343 - #15 ,
+INFO  19:38:30,343 - #47 bool
+INFO  19:38:30,343 - #47 c
+INFO  19:38:30,343 - #14 )
+INFO  19:38:30,344 - #3 {
+INFO  19:38:30,344 - #4 }
+INFO  19:38:30,345 - #6 void
+INFO  19:38:30,345 - #47 main
+INFO  19:38:30,346 - #13 (
+INFO  19:38:30,346 - #47 int
+INFO  19:38:30,346 - #47 a
+INFO  19:38:30,346 - #47 c
+INFO  19:38:30,346 - #47 d
+INFO  19:38:30,346 - #14 )
+INFO  19:38:30,346 - #3 {
+INFO  19:38:30,346 - #4 }
+INFO  19:38:30,346 - #4 } 
+INFO  19:38:30,353 - Program(
+  ProgramIdentificator(
+   formalparameters
+  ) [ProgramIdentificator]
+  Declarations(
+    Declarations(
+      Declarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VariableDeclaration(
+          VarDeclaration(
+            Type(
+             int
+            ) [Type]
+            Variables(
+              OneVariable(
+                VariableDecl(
+                 abc
+                  HasArrayBrackets(
+                  ) [HasArrayBrackets]
+                ) [VariableDecl]
+              ) [OneVariable]
+              VariableDecl(
+               pq
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [Variables]
+          ) [VarDeclaration]
+        ) [VariableDeclaration]
+      ) [Declarations]
+      VariableDeclaration(
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             a
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [VariableDeclaration]
+    ) [Declarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+         bool
+        ) [Type]
+        OneVariable(
+          VariableDecl(
+           c
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [VariableDecl]
+        ) [OneVariable]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethods(
+      ) [NoMethods]
+      MethodDecl(
+        VoidMethod(
+         fja
+        ) [VoidMethod]
+        MethodParameters(
+          FormalParameters(
+            FormalParameters(
+              OneFormalParameter(
+                OneParameter(
+                  Type(
+                   int
+                  ) [Type]
+                 a
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [OneParameter]
+              ) [OneFormalParameter]
+              OneParameterError(
+              ) [OneParameterError]
+            ) [FormalParameters]
+            OneParameter(
+              Type(
+               bool
+              ) [Type]
+             c
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [OneParameter]
+          ) [FormalParameters]
+        ) [MethodParameters]
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        NoMethodStatements(
+        ) [NoMethodStatements]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      MethodParameters(
+        OneFormalParameter(
+          OneParameterError(
+          ) [OneParameterError]
+        ) [OneFormalParameter]
+      ) [MethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodStatements(
+      ) [NoMethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  19:38:30,353 - ===================================
+INFO  19:38:30,355 - Deklarisan niz abc na liniji 2
+INFO  19:38:30,355 - Deklarisana promenljiva pq na liniji 2
+INFO  19:38:30,355 - Deklarisana promenljiva a na liniji 3
+INFO  19:38:30,356 - Deklarisana promenljiva c na liniji 4
+INFO  19:38:30,356 - Deklarisana funkcija fja povratna vrednost je tipa VOID na liniji 6
+INFO  19:38:30,356 - 1. argument a tipa int na liniji 6
+INFO  19:38:30,356 - 2. argument c tipa bool na liniji 6
+INFO  19:38:30,356 - Deklarisana funkcija fja sa 2 ulazna parametra na liniji 6
+INFO  19:38:30,356 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 9
+INFO  19:38:30,356 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 9
+INFO  19:38:30,356 - ===================================
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: Class [], 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: , -1, -1 
+Prog formalparameters: notype, 0, 1 
+   Var abc: Arr of int, 0, 0 
+   Var pq: int, 1, 0 
+   Var a: int, 2, 0 
+   Var c: , 3, 0 
+   Meth fja: notype, 0, 2 
+      Var a: int, 0, 1 
+      Var c: , 1, 1 
+
+   Meth main: notype, 0, 0 
+

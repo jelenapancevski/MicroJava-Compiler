@@ -4890,4 +4890,63 @@ INFO  20:35:34,220 - Detektovana upotreba simbola mod3 na liniji 162: Var mod3: 
 INFO  20:35:34,220 - Detektovana upotreba simbola mod4 na liniji 163: Var mod4: int, 6, 1 
 INFO  20:35:34,220 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 45
 INFO  20:35:34,220 - ===================================
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: Class [], 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: , -1, -1 
+Prog test: notype, 0, 1 
+   Con nula: int, 0, 0 
+   Con jedan: int, 1, 0 
+   Con pet: int, 5, 0 
+   Con dva: int, 2, 0 
+   Con isok: , 1, 0 
+   Con notok: , 0, 0 
+   Con chara: char, 97, 0 
+   Var niz: Arr of int, 0, 0 
+   Var niz2: Arr of int, 1, 0 
+   Var a: int, 2, 0 
+   Var b: int, 3, 0 
+   Var length1: int, 4, 0 
+   Var length2: int, 5, 0 
+   Var nizch: Arr of char, 6, 0 
+   Meth isequal: , 0, 2 
+      Var arr1: Arr of int, 0, 1 
+      Var arr2: Arr of int, 1, 1 
+      Var isequal: , 2, 1 
+
+   Meth printintarray: notype, 0, 1 
+      Var array: Arr of int, 0, 1 
+      Var arr: int, 1, 1 
+
+   Meth printchararray: notype, 0, 1 
+      Var array: Arr of char, 0, 1 
+      Var arr: char, 1, 1 
+
+   Meth printmsg: notype, 0, 2 
+      Var msg: Arr of char, 0, 1 
+      Var len: int, 1, 1 
+      Var cnt: int, 2, 1 
+
+   Meth main: notype, 0, 0 
+      Var same: int, 0, 1 
+      Var counter: int, 1, 1 
+      Var arr: int, 2, 1 
+      Var message: Arr of char, 3, 1 
+      Var equal: , 4, 1 
+      Var mod3: int, 5, 1 
+      Var mod4: int, 6, 1 
+
+
+
 INFO  20:35:34,225 - Parsiranje koda je uspesno
