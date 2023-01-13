@@ -48,6 +48,8 @@ public class CodeGenerator extends VisitorAdaptor {
 		chrfunc.setAdr(Code.pc);
 		generateEnterInstruction(chrfunc);
 		Code.put(Code.load_n + 0);
+		Code.loadConst(256);
+		Code.put(Code.rem);
 		generateExitInstruction();
 	}
 
@@ -121,14 +123,14 @@ public class CodeGenerator extends VisitorAdaptor {
 	// (MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL Designator
 	public void visit(MultipleAssignment multipleAssignment) {
 		//Check if length of designator is greater or equal of designatorlist length
-		Code.loadConst(designatorList.size());
+		/*Code.loadConst(designatorList.size());
 		Code.load(multipleAssignment.getDesignator().obj);
 		Code.put(Code.arraylength);
 		int jmp = Code.pc;
 		Code.putFalseJump(Code.gt, 0);
 		Code.put(Code.trap);
 		Code.put(0);
-		Code.fixup(jmp+1);
+		Code.fixup(jmp+1);*/
 		int index = designatorList.size() - 1;
 		while (!designatorList.empty()) {
 			Obj designator = designatorList.pop();
@@ -559,7 +561,8 @@ public class CodeGenerator extends VisitorAdaptor {
 					} else {
 						// others to NEXTCONDITION
 						Code.pc = NextConditionAdr;
-						Code.fixup(Code.pc + 1);
+						Code.fixup(address.address + 1);
+						
 					}
 					Code.pc = pc;
 
@@ -606,7 +609,7 @@ public class CodeGenerator extends VisitorAdaptor {
 					} else {
 						// others to NEXTCONDITION
 						Code.pc = NextConditionAdr;
-						Code.fixup(Code.pc + 1);
+						Code.fixup(address.address + 1);
 					}
 					Code.pc = pc;
 

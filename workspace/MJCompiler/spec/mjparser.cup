@@ -195,7 +195,7 @@ Statement ::= (DesignatorStmt) DesignatorStatement SEMICOLON
 			 	|
 			 	(ReturnExpression) RETURN Expr SEMICOLON
 			 	|
-			 	(ForEachStatement) Designator DOT ForEach ARROW ForStatements RPAREN SEMICOLON
+			 	(ForEachStatement) Designator DOT ForEach ARROW Statement RPAREN SEMICOLON
 			 	|
 			 	(MultipleStatements) LBRACE StatementsList RBRACE
 			 	;

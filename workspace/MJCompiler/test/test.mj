@@ -1,0 +1,153 @@
+
+program test
+
+	const int nula = 0;
+	const int jedan = 1;
+	const int pet = 5;
+	
+	const bool isok = true, notok = false;
+	const char chara= 'a';
+
+	int niz[], niz2[], a, b;
+	int length1,length2;
+	char nizch[];
+	
+{
+	bool isequal(int arr1[],int arr2[]) bool isequal;{
+		if(arr1==arr2) isequal=true;
+		else isequal=false;
+		return isequal;
+	}
+	
+	void printintarray (int array [])int arr;{
+	array.foreach(arr=>{
+	print(arr);
+	});
+	print(eol);
+	}
+	
+	void printchararray(char array []) char arr;{
+	array.foreach(arr=>{
+	print(arr,2);
+	});
+	print(eol);
+	}
+	void printmsg (char msg[], int len)int cnt;{
+		cnt = 0;
+		while (cnt<len){
+		print(msg[cnt]);
+		cnt++;
+		}
+		
+	
+	}
+	void main()	
+		int bodovi;
+		int counter;
+		int arr;
+		char message [];
+		bool equal;
+	{
+	
+		read(length1);
+		read(length2);
+		
+		niz = new int [length1];
+		niz2 = new int [length2];
+		message = new char [10];
+		
+		counter = 0;
+		a = ord(chara);
+		while(counter < len(niz)){
+		niz[counter] = a;
+		a++;
+		counter++;
+		}
+		message[0] ='n';
+		message[1] ='i';
+		message[2] ='z';
+		
+		printmsg(message,3);
+		print('-');
+		print('>');
+		niz.foreach(arr=>{
+		print(chr(arr),2);
+		});
+		print(eol);
+		b = 100;
+		counter--;
+		while (counter>=0){
+		niz2[counter]=b;
+		b--;
+		counter--;
+		}
+		message[3] ='2';
+		printmsg(message,4);
+		print('-');
+		print('>');
+		printintarray(niz2);
+		
+		counter = 0;
+		b=0;
+		nizch = new char [length1];
+		
+		equal = isequal(niz,niz2);
+		
+		print(equal);
+		print(eol);
+		while (counter<length1){
+		
+		while(b<length2){
+			if(niz[counter]==niz2[b]) {
+			nizch[counter]= chr(niz[counter]);
+			break;
+			}
+			else if(niz[counter]<niz2[b] && counter==b){
+			arr = niz[counter];
+			niz[counter]= niz2[b];  
+			niz2[b]=arr;
+			} 
+			else if(b!=0 && counter%b || counter!=0 && b%counter){
+			niz2[b]=niz[counter]+pet;
+			} 
+			b++;
+		}
+			
+			counter++;
+			b=0;
+		}
+		
+		message[3]='c';
+		message[4]='h';
+		printmsg(message,5);
+		print('-');
+		print('>');
+		printchararray(nizch);
+		
+		message[0] ='n';
+		message[1] ='i';
+		message[2] ='z';
+		
+		printmsg(message,3);
+		print('-');
+		print('>');
+		printintarray(niz);
+		
+		message[3] ='2';
+		printmsg(message,4);
+		print('-');
+		print('>');
+		printintarray(niz2);
+		
+		[niz2[0],,,niz2[1],,,niz2[2]] = niz;
+		
+		message[3] ='2';
+		printmsg(message,4);
+		print('-');
+		print('>');
+		printintarray(niz2);
+		
+	}
+}
+
+
