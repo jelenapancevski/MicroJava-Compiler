@@ -1,267 +1,267 @@
-INFO  20:13:16,344 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\loops.mj
-INFO  20:13:16,386 - #2 program
-INFO  20:13:16,386 - #47 loops
-INFO  20:13:16,386 - #5 const
-INFO  20:13:16,387 - #47 int
-INFO  20:13:16,387 - #47 nula
-INFO  20:13:16,388 - #19 =
-INFO  20:13:16,388 - #49 0
-INFO  20:13:16,388 - #15 ,
-INFO  20:13:16,389 - #47 jedan
-INFO  20:13:16,389 - #19 =
-INFO  20:13:16,389 - #49 1
-INFO  20:13:16,389 - #15 ,
-INFO  20:13:16,389 - #47 pet
-INFO  20:13:16,389 - #19 =
-INFO  20:13:16,389 - #49 5
-INFO  20:13:16,389 - #7 ;
-INFO  20:13:16,389 - #5 const
-INFO  20:13:16,390 - #47 bool
-INFO  20:13:16,390 - #47 radi
-INFO  20:13:16,390 - #19 =
-INFO  20:13:16,390 - #50 true
-INFO  20:13:16,390 - #7 ;
-INFO  20:13:16,390 - #5 const
-INFO  20:13:16,390 - #47 char
-INFO  20:13:16,391 - #47 slovoa
-INFO  20:13:16,391 - #19 =
-INFO  20:13:16,391 - #48 a
-INFO  20:13:16,391 - #7 ;
-INFO  20:13:16,391 - #5 const
-INFO  20:13:16,391 - #47 char
-INFO  20:13:16,391 - #47 slovob
-INFO  20:13:16,391 - #19 =
-INFO  20:13:16,391 - #48 b
-INFO  20:13:16,391 - #7 ;
-INFO  20:13:16,391 - #47 int
-INFO  20:13:16,391 - #47 niz
-INFO  20:13:16,391 - #17 [
-INFO  20:13:16,391 - #18 ]
-INFO  20:13:16,391 - #15 ,
-INFO  20:13:16,392 - #47 niz2
-INFO  20:13:16,393 - #17 [
-INFO  20:13:16,393 - #18 ]
-INFO  20:13:16,393 - #15 ,
-INFO  20:13:16,393 - #47 a
-INFO  20:13:16,393 - #15 ,
-INFO  20:13:16,393 - #47 b
-INFO  20:13:16,393 - #7 ;
-INFO  20:13:16,393 - #47 char
-INFO  20:13:16,394 - #47 nizch
-INFO  20:13:16,394 - #17 [
-INFO  20:13:16,394 - #18 ]
-INFO  20:13:16,394 - #7 ;
-INFO  20:13:16,394 - #47 bool
-INFO  20:13:16,394 - #47 isok
-INFO  20:13:16,394 - #7 ;
-INFO  20:13:16,394 - #3 {
-INFO  20:13:16,394 - #6 void
-INFO  20:13:16,394 - #47 foreachfunc
-INFO  20:13:16,395 - #13 (
-INFO  20:13:16,395 - #14 )
-INFO  20:13:16,395 - #47 int
-INFO  20:13:16,395 - #47 broj
-INFO  20:13:16,396 - #7 ;
-INFO  20:13:16,396 - #47 char
-INFO  20:13:16,396 - #47 slovo
-INFO  20:13:16,396 - #7 ;
-INFO  20:13:16,396 - #3 {
-INFO  20:13:16,396 - #47 slovo
-INFO  20:13:16,396 - #16 .
-INFO  20:13:16,397 - #39 foreach
-INFO  20:13:16,397 - #13 (
-INFO  20:13:16,397 - #47 slovoa
-INFO  20:13:16,397 - #40 =>
-INFO  20:13:16,397 - #9 print
-INFO  20:13:16,397 - #13 (
-INFO  20:13:16,397 - #47 slovo
-INFO  20:13:16,397 - #14 )
-INFO  20:13:16,398 - #7 ;
-INFO  20:13:16,398 - #14 )
-INFO  20:13:16,398 - #7 ;
-INFO  20:13:16,398 - #47 niz
-INFO  20:13:16,399 - #16 .
-INFO  20:13:16,399 - #39 foreach
-INFO  20:13:16,399 - #13 (
-INFO  20:13:16,399 - #47 broj
-INFO  20:13:16,399 - #40 =>
-INFO  20:13:16,399 - #3 {
-INFO  20:13:16,399 - #9 print
-INFO  20:13:16,399 - #13 (
-INFO  20:13:16,399 - #47 broj
-INFO  20:13:16,400 - #14 )
-INFO  20:13:16,400 - #7 ;
-INFO  20:13:16,400 - #4 }
-INFO  20:13:16,400 - #14 )
-INFO  20:13:16,400 - #7 ;
-INFO  20:13:16,400 - #47 nizch
-INFO  20:13:16,400 - #16 .
-INFO  20:13:16,400 - #39 foreach
-INFO  20:13:16,400 - #13 (
-INFO  20:13:16,400 - #47 slovo
-INFO  20:13:16,400 - #40 =>
-INFO  20:13:16,400 - #3 {
-INFO  20:13:16,400 - #33 if
-INFO  20:13:16,400 - #13 (
-INFO  20:13:16,401 - #47 slovo
-INFO  20:13:16,401 - #20 ==
-INFO  20:13:16,401 - #48 d
-INFO  20:13:16,402 - #14 )
-INFO  20:13:16,402 - #37 continue
-INFO  20:13:16,402 - #7 ;
-INFO  20:13:16,402 - #9 print
-INFO  20:13:16,403 - #13 (
-INFO  20:13:16,403 - #47 slovo
-INFO  20:13:16,403 - #15 ,
-INFO  20:13:16,403 - #49 2
-INFO  20:13:16,403 - #14 )
-INFO  20:13:16,403 - #7 ;
-INFO  20:13:16,403 - #33 if
-INFO  20:13:16,403 - #13 (
-INFO  20:13:16,403 - #47 slovo
-INFO  20:13:16,404 - #20 ==
-INFO  20:13:16,404 - #48 a
-INFO  20:13:16,404 - #14 )
-INFO  20:13:16,404 - #36 break
-INFO  20:13:16,404 - #7 ;
-INFO  20:13:16,404 - #4 }
-INFO  20:13:16,404 - #14 )
-INFO  20:13:16,404 - #7 ;
-INFO  20:13:16,404 - #47 niz
-INFO  20:13:16,405 - #16 .
-INFO  20:13:16,405 - #39 foreach
-INFO  20:13:16,405 - #13 (
-INFO  20:13:16,405 - #47 slovo
-INFO  20:13:16,405 - #40 =>
-INFO  20:13:16,405 - #3 {
-INFO  20:13:16,405 - #9 print
-INFO  20:13:16,405 - #13 (
-INFO  20:13:16,405 - #47 slovo
-INFO  20:13:16,405 - #14 )
-INFO  20:13:16,405 - #7 ;
-INFO  20:13:16,405 - #4 }
-INFO  20:13:16,405 - #14 )
-INFO  20:13:16,405 - #7 ;
-INFO  20:13:16,405 - #4 }
-INFO  20:13:16,405 - #6 void
-INFO  20:13:16,406 - #47 main
-INFO  20:13:16,406 - #13 (
-INFO  20:13:16,406 - #14 )
-INFO  20:13:16,406 - #47 int
-INFO  20:13:16,406 - #47 bodovi
-INFO  20:13:16,406 - #7 ;
-INFO  20:13:16,406 - #47 bool
-INFO  20:13:16,406 - #47 bt
-INFO  20:13:16,406 - #7 ;
-INFO  20:13:16,406 - #47 char
-INFO  20:13:16,406 - #47 slovo
-INFO  20:13:16,406 - #7 ;
-INFO  20:13:16,406 - #47 int
-INFO  20:13:16,406 - #47 broj
-INFO  20:13:16,407 - #7 ;
-INFO  20:13:16,407 - #3 {
-INFO  20:13:16,407 - #35 while
-INFO  20:13:16,407 - #13 (
-INFO  20:13:16,407 - #47 slovoa
-INFO  20:13:16,409 - #22 >
-INFO  20:13:16,409 - #47 slovob
-INFO  20:13:16,409 - #14 )
-INFO  20:13:16,409 - #3 {
-INFO  20:13:16,409 - #47 a
-INFO  20:13:16,409 - #19 =
-INFO  20:13:16,409 - #47 a
-INFO  20:13:16,409 - #28 +
-INFO  20:13:16,410 - #49 5
-INFO  20:13:16,410 - #7 ;
-INFO  20:13:16,410 - #33 if
-INFO  20:13:16,411 - #13 (
-INFO  20:13:16,411 - #47 a
-INFO  20:13:16,411 - #22 >
-INFO  20:13:16,411 - #49 7
-INFO  20:13:16,411 - #14 )
-INFO  20:13:16,411 - #36 break
-INFO  20:13:16,411 - #7 ;
-INFO  20:13:16,411 - #4 }
-INFO  20:13:16,411 - #35 while
-INFO  20:13:16,411 - #13 (
-INFO  20:13:16,411 - #47 slovoa
-INFO  20:13:16,411 - #27 ||
-INFO  20:13:16,412 - #47 slovob
-INFO  20:13:16,412 - #14 )
-INFO  20:13:16,412 - #3 {
-INFO  20:13:16,412 - #47 a
-INFO  20:13:16,412 - #19 =
-INFO  20:13:16,412 - #47 a
-INFO  20:13:16,412 - #29 -
-INFO  20:13:16,412 - #49 2
-INFO  20:13:16,413 - #7 ;
-INFO  20:13:16,413 - #4 }
-INFO  20:13:16,413 - #47 foreachfunc
-INFO  20:13:16,413 - #13 (
-INFO  20:13:16,413 - #14 )
-INFO  20:13:16,414 - #7 ;
-INFO  20:13:16,414 - #17 [
-INFO  20:13:16,414 - #18 ]
-INFO  20:13:16,415 - #19 =
-INFO  20:13:16,415 - #47 niz
-INFO  20:13:16,415 - #7 ;
-INFO  20:13:16,415 - #17 [
-INFO  20:13:16,415 - #47 slovoa
-INFO  20:13:16,415 - #15 ,
-INFO  20:13:16,415 - #15 ,
-INFO  20:13:16,415 - #47 slovob
-INFO  20:13:16,415 - #18 ]
-INFO  20:13:16,415 - #19 =
-INFO  20:13:16,415 - #47 niz
-INFO  20:13:16,415 - #7 ;
-INFO  20:13:16,415 - #17 [
-INFO  20:13:16,415 - #47 slovoa
-INFO  20:13:16,415 - #15 ,
-INFO  20:13:16,415 - #15 ,
-INFO  20:13:16,416 - #47 slovob
-INFO  20:13:16,416 - #18 ]
-INFO  20:13:16,416 - #19 =
-INFO  20:13:16,416 - #47 nizch
-INFO  20:13:16,416 - #7 ;
-INFO  20:13:16,416 - #17 [
-INFO  20:13:16,416 - #47 a
-INFO  20:13:16,416 - #15 ,
-INFO  20:13:16,416 - #15 ,
-INFO  20:13:16,416 - #47 b
-INFO  20:13:16,416 - #18 ]
-INFO  20:13:16,416 - #19 =
-INFO  20:13:16,416 - #47 nizch
-INFO  20:13:16,416 - #7 ;
-INFO  20:13:16,416 - #17 [
-INFO  20:13:16,416 - #15 ,
-INFO  20:13:16,416 - #15 ,
-INFO  20:13:16,416 - #47 a
-INFO  20:13:16,416 - #15 ,
-INFO  20:13:16,416 - #47 b
-INFO  20:13:16,416 - #18 ]
-INFO  20:13:16,416 - #19 =
-INFO  20:13:16,416 - #47 niz
-INFO  20:13:16,416 - #7 ;
-INFO  20:13:16,416 - #17 [
-INFO  20:13:16,416 - #47 niz
-INFO  20:13:16,416 - #17 [
-INFO  20:13:16,417 - #49 1
-INFO  20:13:16,417 - #18 ]
-INFO  20:13:16,417 - #15 ,
-INFO  20:13:16,417 - #15 ,
-INFO  20:13:16,417 - #47 a
-INFO  20:13:16,417 - #15 ,
-INFO  20:13:16,417 - #47 niz
-INFO  20:13:16,417 - #17 [
-INFO  20:13:16,417 - #49 2
-INFO  20:13:16,417 - #18 ]
-INFO  20:13:16,418 - #18 ]
-INFO  20:13:16,418 - #19 =
-INFO  20:13:16,418 - #47 niz2
-INFO  20:13:16,418 - #7 ;
-INFO  20:13:16,418 - #4 }
-INFO  20:13:16,418 - #4 }
-INFO  20:13:16,424 - Program(
+INFO  15:34:00,088 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\loops.mj
+INFO  15:34:00,124 - #2 program
+INFO  15:34:00,125 - #47 loops
+INFO  15:34:00,125 - #5 const
+INFO  15:34:00,125 - #47 int
+INFO  15:34:00,125 - #47 nula
+INFO  15:34:00,126 - #19 =
+INFO  15:34:00,126 - #49 0
+INFO  15:34:00,126 - #15 ,
+INFO  15:34:00,127 - #47 jedan
+INFO  15:34:00,127 - #19 =
+INFO  15:34:00,127 - #49 1
+INFO  15:34:00,127 - #15 ,
+INFO  15:34:00,127 - #47 pet
+INFO  15:34:00,127 - #19 =
+INFO  15:34:00,127 - #49 5
+INFO  15:34:00,127 - #7 ;
+INFO  15:34:00,127 - #5 const
+INFO  15:34:00,128 - #47 bool
+INFO  15:34:00,128 - #47 radi
+INFO  15:34:00,128 - #19 =
+INFO  15:34:00,128 - #50 true
+INFO  15:34:00,128 - #7 ;
+INFO  15:34:00,128 - #5 const
+INFO  15:34:00,129 - #47 char
+INFO  15:34:00,129 - #47 slovoa
+INFO  15:34:00,129 - #19 =
+INFO  15:34:00,129 - #48 a
+INFO  15:34:00,129 - #7 ;
+INFO  15:34:00,129 - #5 const
+INFO  15:34:00,129 - #47 char
+INFO  15:34:00,129 - #47 slovob
+INFO  15:34:00,129 - #19 =
+INFO  15:34:00,129 - #48 b
+INFO  15:34:00,129 - #7 ;
+INFO  15:34:00,129 - #47 int
+INFO  15:34:00,129 - #47 niz
+INFO  15:34:00,129 - #17 [
+INFO  15:34:00,129 - #18 ]
+INFO  15:34:00,129 - #15 ,
+INFO  15:34:00,130 - #47 niz2
+INFO  15:34:00,130 - #17 [
+INFO  15:34:00,130 - #18 ]
+INFO  15:34:00,130 - #15 ,
+INFO  15:34:00,131 - #47 a
+INFO  15:34:00,131 - #15 ,
+INFO  15:34:00,131 - #47 b
+INFO  15:34:00,131 - #7 ;
+INFO  15:34:00,131 - #47 char
+INFO  15:34:00,131 - #47 nizch
+INFO  15:34:00,131 - #17 [
+INFO  15:34:00,131 - #18 ]
+INFO  15:34:00,131 - #7 ;
+INFO  15:34:00,131 - #47 bool
+INFO  15:34:00,131 - #47 isok
+INFO  15:34:00,132 - #7 ;
+INFO  15:34:00,132 - #3 {
+INFO  15:34:00,132 - #6 void
+INFO  15:34:00,132 - #47 foreachfunc
+INFO  15:34:00,132 - #13 (
+INFO  15:34:00,132 - #14 )
+INFO  15:34:00,132 - #47 int
+INFO  15:34:00,133 - #47 broj
+INFO  15:34:00,133 - #7 ;
+INFO  15:34:00,133 - #47 char
+INFO  15:34:00,133 - #47 slovo
+INFO  15:34:00,133 - #7 ;
+INFO  15:34:00,133 - #3 {
+INFO  15:34:00,133 - #47 slovo
+INFO  15:34:00,134 - #16 .
+INFO  15:34:00,134 - #39 foreach
+INFO  15:34:00,134 - #13 (
+INFO  15:34:00,134 - #47 slovoa
+INFO  15:34:00,134 - #40 =>
+INFO  15:34:00,134 - #9 print
+INFO  15:34:00,134 - #13 (
+INFO  15:34:00,134 - #47 slovo
+INFO  15:34:00,134 - #14 )
+INFO  15:34:00,135 - #7 ;
+INFO  15:34:00,135 - #14 )
+INFO  15:34:00,135 - #7 ;
+INFO  15:34:00,135 - #47 niz
+INFO  15:34:00,136 - #16 .
+INFO  15:34:00,136 - #39 foreach
+INFO  15:34:00,136 - #13 (
+INFO  15:34:00,136 - #47 broj
+INFO  15:34:00,136 - #40 =>
+INFO  15:34:00,136 - #3 {
+INFO  15:34:00,136 - #9 print
+INFO  15:34:00,137 - #13 (
+INFO  15:34:00,137 - #47 broj
+INFO  15:34:00,137 - #14 )
+INFO  15:34:00,137 - #7 ;
+INFO  15:34:00,137 - #4 }
+INFO  15:34:00,137 - #14 )
+INFO  15:34:00,137 - #7 ;
+INFO  15:34:00,137 - #47 nizch
+INFO  15:34:00,137 - #16 .
+INFO  15:34:00,137 - #39 foreach
+INFO  15:34:00,137 - #13 (
+INFO  15:34:00,137 - #47 slovo
+INFO  15:34:00,137 - #40 =>
+INFO  15:34:00,137 - #3 {
+INFO  15:34:00,137 - #33 if
+INFO  15:34:00,137 - #13 (
+INFO  15:34:00,138 - #47 slovo
+INFO  15:34:00,138 - #20 ==
+INFO  15:34:00,138 - #48 d
+INFO  15:34:00,139 - #14 )
+INFO  15:34:00,139 - #37 continue
+INFO  15:34:00,139 - #7 ;
+INFO  15:34:00,139 - #9 print
+INFO  15:34:00,140 - #13 (
+INFO  15:34:00,140 - #47 slovo
+INFO  15:34:00,140 - #15 ,
+INFO  15:34:00,140 - #49 2
+INFO  15:34:00,140 - #14 )
+INFO  15:34:00,140 - #7 ;
+INFO  15:34:00,140 - #33 if
+INFO  15:34:00,140 - #13 (
+INFO  15:34:00,140 - #47 slovo
+INFO  15:34:00,140 - #20 ==
+INFO  15:34:00,140 - #48 a
+INFO  15:34:00,140 - #14 )
+INFO  15:34:00,140 - #36 break
+INFO  15:34:00,140 - #7 ;
+INFO  15:34:00,140 - #4 }
+INFO  15:34:00,141 - #14 )
+INFO  15:34:00,141 - #7 ;
+INFO  15:34:00,141 - #47 niz
+INFO  15:34:00,141 - #16 .
+INFO  15:34:00,141 - #39 foreach
+INFO  15:34:00,141 - #13 (
+INFO  15:34:00,141 - #47 slovo
+INFO  15:34:00,141 - #40 =>
+INFO  15:34:00,141 - #3 {
+INFO  15:34:00,141 - #9 print
+INFO  15:34:00,141 - #13 (
+INFO  15:34:00,141 - #47 slovo
+INFO  15:34:00,141 - #14 )
+INFO  15:34:00,141 - #7 ;
+INFO  15:34:00,141 - #4 }
+INFO  15:34:00,141 - #14 )
+INFO  15:34:00,141 - #7 ;
+INFO  15:34:00,141 - #4 }
+INFO  15:34:00,142 - #6 void
+INFO  15:34:00,142 - #47 main
+INFO  15:34:00,142 - #13 (
+INFO  15:34:00,142 - #14 )
+INFO  15:34:00,142 - #47 int
+INFO  15:34:00,142 - #47 bodovi
+INFO  15:34:00,142 - #7 ;
+INFO  15:34:00,142 - #47 bool
+INFO  15:34:00,142 - #47 bt
+INFO  15:34:00,142 - #7 ;
+INFO  15:34:00,142 - #47 char
+INFO  15:34:00,142 - #47 slovo
+INFO  15:34:00,143 - #7 ;
+INFO  15:34:00,143 - #47 int
+INFO  15:34:00,143 - #47 broj
+INFO  15:34:00,143 - #7 ;
+INFO  15:34:00,143 - #3 {
+INFO  15:34:00,143 - #35 while
+INFO  15:34:00,143 - #13 (
+INFO  15:34:00,143 - #47 slovoa
+INFO  15:34:00,145 - #22 >
+INFO  15:34:00,145 - #47 slovob
+INFO  15:34:00,145 - #14 )
+INFO  15:34:00,145 - #3 {
+INFO  15:34:00,145 - #47 a
+INFO  15:34:00,145 - #19 =
+INFO  15:34:00,145 - #47 a
+INFO  15:34:00,145 - #28 +
+INFO  15:34:00,145 - #49 5
+INFO  15:34:00,146 - #7 ;
+INFO  15:34:00,146 - #33 if
+INFO  15:34:00,147 - #13 (
+INFO  15:34:00,147 - #47 a
+INFO  15:34:00,147 - #22 >
+INFO  15:34:00,147 - #49 7
+INFO  15:34:00,147 - #14 )
+INFO  15:34:00,147 - #36 break
+INFO  15:34:00,147 - #7 ;
+INFO  15:34:00,147 - #4 }
+INFO  15:34:00,147 - #35 while
+INFO  15:34:00,147 - #13 (
+INFO  15:34:00,147 - #47 slovoa
+INFO  15:34:00,147 - #27 ||
+INFO  15:34:00,147 - #47 slovob
+INFO  15:34:00,148 - #14 )
+INFO  15:34:00,148 - #3 {
+INFO  15:34:00,148 - #47 a
+INFO  15:34:00,148 - #19 =
+INFO  15:34:00,148 - #47 a
+INFO  15:34:00,148 - #29 -
+INFO  15:34:00,148 - #49 2
+INFO  15:34:00,149 - #7 ;
+INFO  15:34:00,149 - #4 }
+INFO  15:34:00,149 - #47 foreachfunc
+INFO  15:34:00,149 - #13 (
+INFO  15:34:00,149 - #14 )
+INFO  15:34:00,150 - #7 ;
+INFO  15:34:00,150 - #17 [
+INFO  15:34:00,150 - #18 ]
+INFO  15:34:00,150 - #19 =
+INFO  15:34:00,150 - #47 niz
+INFO  15:34:00,150 - #7 ;
+INFO  15:34:00,150 - #17 [
+INFO  15:34:00,150 - #47 slovoa
+INFO  15:34:00,150 - #15 ,
+INFO  15:34:00,150 - #15 ,
+INFO  15:34:00,151 - #47 slovob
+INFO  15:34:00,151 - #18 ]
+INFO  15:34:00,151 - #19 =
+INFO  15:34:00,151 - #47 niz
+INFO  15:34:00,151 - #7 ;
+INFO  15:34:00,151 - #17 [
+INFO  15:34:00,151 - #47 slovoa
+INFO  15:34:00,151 - #15 ,
+INFO  15:34:00,151 - #15 ,
+INFO  15:34:00,151 - #47 slovob
+INFO  15:34:00,151 - #18 ]
+INFO  15:34:00,151 - #19 =
+INFO  15:34:00,151 - #47 nizch
+INFO  15:34:00,151 - #7 ;
+INFO  15:34:00,151 - #17 [
+INFO  15:34:00,151 - #47 a
+INFO  15:34:00,151 - #15 ,
+INFO  15:34:00,151 - #15 ,
+INFO  15:34:00,151 - #47 b
+INFO  15:34:00,151 - #18 ]
+INFO  15:34:00,151 - #19 =
+INFO  15:34:00,151 - #47 nizch
+INFO  15:34:00,151 - #7 ;
+INFO  15:34:00,151 - #17 [
+INFO  15:34:00,151 - #15 ,
+INFO  15:34:00,151 - #15 ,
+INFO  15:34:00,151 - #47 a
+INFO  15:34:00,151 - #15 ,
+INFO  15:34:00,151 - #47 b
+INFO  15:34:00,151 - #18 ]
+INFO  15:34:00,151 - #19 =
+INFO  15:34:00,151 - #47 niz
+INFO  15:34:00,151 - #7 ;
+INFO  15:34:00,151 - #17 [
+INFO  15:34:00,152 - #47 niz
+INFO  15:34:00,152 - #17 [
+INFO  15:34:00,152 - #49 1
+INFO  15:34:00,152 - #18 ]
+INFO  15:34:00,152 - #15 ,
+INFO  15:34:00,152 - #15 ,
+INFO  15:34:00,152 - #47 a
+INFO  15:34:00,152 - #15 ,
+INFO  15:34:00,152 - #47 niz
+INFO  15:34:00,152 - #17 [
+INFO  15:34:00,152 - #49 2
+INFO  15:34:00,153 - #18 ]
+INFO  15:34:00,153 - #18 ]
+INFO  15:34:00,153 - #19 =
+INFO  15:34:00,153 - #47 niz2
+INFO  15:34:00,153 - #7 ;
+INFO  15:34:00,153 - #4 }
+INFO  15:34:00,153 - #4 }
+INFO  15:34:00,159 - Program(
   ProgramIdentificator(
    loops
   ) [ProgramIdentificator]
@@ -972,9 +972,11 @@ INFO  20:13:16,424 - Program(
                         NoDesignatorElement(
                         ) [NoDesignatorElement]
                       ) [OneDesignatorListElement]
-                      OneDesignator(
-                       niz
-                      ) [OneDesignator]
+                      MultipleAssignmentDesignator(
+                        OneDesignator(
+                         niz
+                        ) [OneDesignator]
+                      ) [MultipleAssignmentDesignator]
                     ) [MultipleAssignment]
                   ) [DesignatorStmt]
                 ) [MethodStatements]
@@ -998,9 +1000,11 @@ INFO  20:13:16,424 - Program(
                         ) [OneDesignator]
                       ) [OneDesignatorElement]
                     ) [Designators]
-                    OneDesignator(
-                     niz
-                    ) [OneDesignator]
+                    MultipleAssignmentDesignator(
+                      OneDesignator(
+                       niz
+                      ) [OneDesignator]
+                    ) [MultipleAssignmentDesignator]
                   ) [MultipleAssignment]
                 ) [DesignatorStmt]
               ) [MethodStatements]
@@ -1024,9 +1028,11 @@ INFO  20:13:16,424 - Program(
                       ) [OneDesignator]
                     ) [OneDesignatorElement]
                   ) [Designators]
-                  OneDesignator(
-                   nizch
-                  ) [OneDesignator]
+                  MultipleAssignmentDesignator(
+                    OneDesignator(
+                     nizch
+                    ) [OneDesignator]
+                  ) [MultipleAssignmentDesignator]
                 ) [MultipleAssignment]
               ) [DesignatorStmt]
             ) [MethodStatements]
@@ -1050,9 +1056,11 @@ INFO  20:13:16,424 - Program(
                     ) [OneDesignator]
                   ) [OneDesignatorElement]
                 ) [Designators]
-                OneDesignator(
-                 nizch
-                ) [OneDesignator]
+                MultipleAssignmentDesignator(
+                  OneDesignator(
+                   nizch
+                  ) [OneDesignator]
+                ) [MultipleAssignmentDesignator]
               ) [MultipleAssignment]
             ) [DesignatorStmt]
           ) [MethodStatements]
@@ -1080,9 +1088,11 @@ INFO  20:13:16,424 - Program(
                   ) [OneDesignator]
                 ) [OneDesignatorElement]
               ) [Designators]
-              OneDesignator(
-               niz
-              ) [OneDesignator]
+              MultipleAssignmentDesignator(
+                OneDesignator(
+                 niz
+                ) [OneDesignator]
+              ) [MultipleAssignmentDesignator]
             ) [MultipleAssignment]
           ) [DesignatorStmt]
         ) [MethodStatements]
@@ -1139,79 +1149,81 @@ INFO  20:13:16,424 - Program(
                 ) [ArrayDesignator]
               ) [OneDesignatorElement]
             ) [Designators]
-            OneDesignator(
-             niz2
-            ) [OneDesignator]
+            MultipleAssignmentDesignator(
+              OneDesignator(
+               niz2
+              ) [OneDesignator]
+            ) [MultipleAssignmentDesignator]
           ) [MultipleAssignment]
         ) [DesignatorStmt]
       ) [MethodStatements]
     ) [MethodDecl]
   ) [MethodDeclarations]
 ) [Program]
-INFO  20:13:16,425 - ===================================
-INFO  20:13:16,428 - Deklarisana konstanta nula jednaka 0 na liniji 3
-INFO  20:13:16,428 - Deklarisana konstanta jedan jednaka 1 na liniji 3
-INFO  20:13:16,428 - Deklarisana konstanta pet jednaka 5 na liniji 3
-INFO  20:13:16,428 - Deklarisana konstanta radi jednaka true na liniji 5
-INFO  20:13:16,428 - Deklarisana konstanta slovoa jednaka a na liniji 7
-INFO  20:13:16,428 - Deklarisana konstanta slovob jednaka b na liniji 9
-INFO  20:13:16,428 - Deklarisan niz niz na liniji 11
-INFO  20:13:16,428 - Deklarisan niz niz2 na liniji 11
-INFO  20:13:16,428 - Deklarisana promenljiva a na liniji 11
-INFO  20:13:16,428 - Deklarisana promenljiva b na liniji 11
-INFO  20:13:16,428 - Deklarisan niz nizch na liniji 12
-INFO  20:13:16,428 - Deklarisana promenljiva isok na liniji 13
-INFO  20:13:16,429 - Deklarisana funkcija foreachfunc povratna vrednost je tipa VOID na liniji 18
-INFO  20:13:16,429 - Deklarisana promenljiva broj na liniji 18
-INFO  20:13:16,429 - Deklarisana promenljiva slovo na liniji 18
-INFO  20:13:16,429 - Detektovana upotreba simbola slovo na liniji 19: Var slovo: char, 1, 1 
-INFO  20:13:16,429 - Detektovana upotreba simbola slovo na liniji 19: Var slovo: char, 1, 1 
-INFO  20:13:16,429 - Detektovana upotreba simbola niz na liniji 21: Var niz: Arr of int, 0, 0 
-INFO  20:13:16,429 - Detektovana upotreba simbola broj na liniji 22: Var broj: int, 0, 1 
-INFO  20:13:16,429 - Detektovana upotreba simbola nizch na liniji 25: Var nizch: Arr of char, 4, 0 
-INFO  20:13:16,429 - Detektovana upotreba simbola slovo na liniji 26: Var slovo: char, 1, 1 
-INFO  20:13:16,429 - Detektovana upotreba simbola slovo na liniji 27: Var slovo: char, 1, 1 
-INFO  20:13:16,429 - Detektovana upotreba simbola slovo na liniji 28: Var slovo: char, 1, 1 
-INFO  20:13:16,430 - Detektovana upotreba simbola niz na liniji 32: Var niz: Arr of int, 0, 0 
-INFO  20:13:16,430 - Detektovana upotreba simbola slovo na liniji 33: Var slovo: char, 1, 1 
-INFO  20:13:16,430 - Deklarisana funkcija foreachfunc sa 0 ulazna parametra na liniji 18
-INFO  20:13:16,430 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 37
-INFO  20:13:16,430 - Deklarisana promenljiva bodovi na liniji 38
-INFO  20:13:16,430 - Deklarisana promenljiva bt na liniji 39
-INFO  20:13:16,430 - Deklarisana promenljiva slovo na liniji 40
-INFO  20:13:16,430 - Deklarisana promenljiva broj na liniji 41
-INFO  20:13:16,430 - Detektovana upotreba simbola slovoa na liniji 46: Con slovoa: char, 97, 0 
-INFO  20:13:16,430 - Detektovana upotreba simbola slovob na liniji 46: Con slovob: char, 98, 0 
-INFO  20:13:16,430 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
-INFO  20:13:16,430 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
-INFO  20:13:16,430 - Detektovana upotreba simbola a na liniji 48: Var a: int, 2, 0 
-INFO  20:13:16,431 - Detektovana upotreba simbola slovoa na liniji 50: Con slovoa: char, 97, 0 
-INFO  20:13:16,431 - Detektovana upotreba simbola slovob na liniji 50: Con slovob: char, 98, 0 
-INFO  20:13:16,431 - Detektovana upotreba simbola a na liniji 51: Var a: int, 2, 0 
-INFO  20:13:16,431 - Detektovana upotreba simbola a na liniji 51: Var a: int, 2, 0 
-INFO  20:13:16,431 - Detektovana upotreba simbola foreachfunc na liniji 56: Meth foreachfunc: notype, 0, 0 
+INFO  15:34:00,160 - ===================================
+INFO  15:34:00,162 - Deklarisana konstanta nula jednaka 0 na liniji 3
+INFO  15:34:00,162 - Deklarisana konstanta jedan jednaka 1 na liniji 3
+INFO  15:34:00,162 - Deklarisana konstanta pet jednaka 5 na liniji 3
+INFO  15:34:00,162 - Deklarisana konstanta radi jednaka true na liniji 5
+INFO  15:34:00,163 - Deklarisana konstanta slovoa jednaka a na liniji 7
+INFO  15:34:00,163 - Deklarisana konstanta slovob jednaka b na liniji 9
+INFO  15:34:00,163 - Deklarisan niz niz na liniji 11
+INFO  15:34:00,163 - Deklarisan niz niz2 na liniji 11
+INFO  15:34:00,163 - Deklarisana promenljiva a na liniji 11
+INFO  15:34:00,163 - Deklarisana promenljiva b na liniji 11
+INFO  15:34:00,163 - Deklarisan niz nizch na liniji 12
+INFO  15:34:00,163 - Deklarisana promenljiva isok na liniji 13
+INFO  15:34:00,163 - Deklarisana funkcija foreachfunc povratna vrednost je tipa VOID na liniji 18
+INFO  15:34:00,163 - Deklarisana promenljiva broj na liniji 18
+INFO  15:34:00,163 - Deklarisana promenljiva slovo na liniji 18
+INFO  15:34:00,163 - Detektovana upotreba simbola slovo na liniji 19: Var slovo: char, 1, 1 
+INFO  15:34:00,163 - Detektovana upotreba simbola slovo na liniji 19: Var slovo: char, 1, 1 
+INFO  15:34:00,163 - Detektovana upotreba simbola niz na liniji 21: Var niz: Arr of int, 0, 0 
+INFO  15:34:00,163 - Detektovana upotreba simbola broj na liniji 22: Var broj: int, 0, 1 
+INFO  15:34:00,163 - Detektovana upotreba simbola nizch na liniji 25: Var nizch: Arr of char, 4, 0 
+INFO  15:34:00,163 - Detektovana upotreba simbola slovo na liniji 26: Var slovo: char, 1, 1 
+INFO  15:34:00,163 - Detektovana upotreba simbola slovo na liniji 27: Var slovo: char, 1, 1 
+INFO  15:34:00,163 - Detektovana upotreba simbola slovo na liniji 28: Var slovo: char, 1, 1 
+INFO  15:34:00,164 - Detektovana upotreba simbola niz na liniji 32: Var niz: Arr of int, 0, 0 
+INFO  15:34:00,164 - Detektovana upotreba simbola slovo na liniji 33: Var slovo: char, 1, 1 
+INFO  15:34:00,164 - Deklarisana funkcija foreachfunc sa 0 ulazna parametra na liniji 18
+INFO  15:34:00,164 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 37
+INFO  15:34:00,164 - Deklarisana promenljiva bodovi na liniji 38
+INFO  15:34:00,164 - Deklarisana promenljiva bt na liniji 39
+INFO  15:34:00,164 - Deklarisana promenljiva slovo na liniji 40
+INFO  15:34:00,164 - Deklarisana promenljiva broj na liniji 41
+INFO  15:34:00,164 - Detektovana upotreba simbola slovoa na liniji 46: Con slovoa: char, 97, 0 
+INFO  15:34:00,164 - Detektovana upotreba simbola slovob na liniji 46: Con slovob: char, 98, 0 
+INFO  15:34:00,164 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
+INFO  15:34:00,164 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
+INFO  15:34:00,164 - Detektovana upotreba simbola a na liniji 48: Var a: int, 2, 0 
+INFO  15:34:00,164 - Detektovana upotreba simbola slovoa na liniji 50: Con slovoa: char, 97, 0 
+INFO  15:34:00,165 - Detektovana upotreba simbola slovob na liniji 50: Con slovob: char, 98, 0 
+INFO  15:34:00,165 - Detektovana upotreba simbola a na liniji 51: Var a: int, 2, 0 
+INFO  15:34:00,165 - Detektovana upotreba simbola a na liniji 51: Var a: int, 2, 0 
+INFO  15:34:00,165 - Detektovana upotreba simbola foreachfunc na liniji 56: Meth foreachfunc: notype, 0, 0 
    Var broj: int, 0, 1 
    Var slovo: char, 1, 1 
 
-INFO  20:13:16,431 - Detektovana upotreba simbola niz na liniji 60: Var niz: Arr of int, 0, 0 
-INFO  20:13:16,431 - Detektovana upotreba simbola slovoa na liniji 61: Con slovoa: char, 97, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola slovob na liniji 61: Con slovob: char, 98, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola niz na liniji 61: Var niz: Arr of int, 0, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola slovoa na liniji 62: Con slovoa: char, 97, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola slovob na liniji 62: Con slovob: char, 98, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola nizch na liniji 62: Var nizch: Arr of char, 4, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola a na liniji 63: Var a: int, 2, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola b na liniji 63: Var b: int, 3, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola nizch na liniji 63: Var nizch: Arr of char, 4, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola a na liniji 64: Var a: int, 2, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola b na liniji 64: Var b: int, 3, 0 
-INFO  20:13:16,432 - Detektovana upotreba simbola niz na liniji 64: Var niz: Arr of int, 0, 0 
-INFO  20:13:16,433 - Detektovana upotreba simbola niz na liniji 65: Var niz: Arr of int, 0, 0 
-INFO  20:13:16,433 - Detektovana upotreba simbola a na liniji 65: Var a: int, 2, 0 
-INFO  20:13:16,433 - Detektovana upotreba simbola niz na liniji 65: Var niz: Arr of int, 0, 0 
-INFO  20:13:16,433 - Detektovana upotreba simbola niz2 na liniji 65: Var niz2: Arr of int, 1, 0 
-INFO  20:13:16,433 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 37
-INFO  20:13:16,433 - ===================================
+INFO  15:34:00,165 - Detektovana upotreba simbola niz na liniji 60: Var niz: Arr of int, 0, 0 
+INFO  15:34:00,165 - Detektovana upotreba simbola slovoa na liniji 61: Con slovoa: char, 97, 0 
+INFO  15:34:00,165 - Detektovana upotreba simbola slovob na liniji 61: Con slovob: char, 98, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola niz na liniji 61: Var niz: Arr of int, 0, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola slovoa na liniji 62: Con slovoa: char, 97, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola slovob na liniji 62: Con slovob: char, 98, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola nizch na liniji 62: Var nizch: Arr of char, 4, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola a na liniji 63: Var a: int, 2, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola b na liniji 63: Var b: int, 3, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola nizch na liniji 63: Var nizch: Arr of char, 4, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola a na liniji 64: Var a: int, 2, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola b na liniji 64: Var b: int, 3, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola niz na liniji 64: Var niz: Arr of int, 0, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola niz na liniji 65: Var niz: Arr of int, 0, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola a na liniji 65: Var a: int, 2, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola niz na liniji 65: Var niz: Arr of int, 0, 0 
+INFO  15:34:00,166 - Detektovana upotreba simbola niz2 na liniji 65: Var niz2: Arr of int, 1, 0 
+INFO  15:34:00,166 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 37
+INFO  15:34:00,166 - ===================================
 =====================SYMBOL TABLE DUMP=========================
 Type int: int, -1, -1 
 Type char: char, -1, -1 
@@ -1249,5 +1261,6 @@ Prog loops: notype, 0, 1
       Var bt: , 1, 1 
       Var slovo: char, 2, 1 
       Var broj: int, 3, 1 
+
 
 

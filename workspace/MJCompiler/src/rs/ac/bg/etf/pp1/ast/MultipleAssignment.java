@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 13/0/2023 5:23:51
+// 15/0/2023 16:5:54
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class MultipleAssignment extends DesignatorStatement {
 
     private DesignatorList DesignatorList;
-    private Designator Designator;
+    private MultipleDesignator MultipleDesignator;
 
-    public MultipleAssignment (DesignatorList DesignatorList, Designator Designator) {
+    public MultipleAssignment (DesignatorList DesignatorList, MultipleDesignator MultipleDesignator) {
         this.DesignatorList=DesignatorList;
         if(DesignatorList!=null) DesignatorList.setParent(this);
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
+        this.MultipleDesignator=MultipleDesignator;
+        if(MultipleDesignator!=null) MultipleDesignator.setParent(this);
     }
 
     public DesignatorList getDesignatorList() {
@@ -25,12 +25,12 @@ public class MultipleAssignment extends DesignatorStatement {
         this.DesignatorList=DesignatorList;
     }
 
-    public Designator getDesignator() {
-        return Designator;
+    public MultipleDesignator getMultipleDesignator() {
+        return MultipleDesignator;
     }
 
-    public void setDesignator(Designator Designator) {
-        this.Designator=Designator;
+    public void setMultipleDesignator(MultipleDesignator MultipleDesignator) {
+        this.MultipleDesignator=MultipleDesignator;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class MultipleAssignment extends DesignatorStatement {
 
     public void childrenAccept(Visitor visitor) {
         if(DesignatorList!=null) DesignatorList.accept(visitor);
-        if(Designator!=null) Designator.accept(visitor);
+        if(MultipleDesignator!=null) MultipleDesignator.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(DesignatorList!=null) DesignatorList.traverseTopDown(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
+        if(MultipleDesignator!=null) MultipleDesignator.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(DesignatorList!=null) DesignatorList.traverseBottomUp(visitor);
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
+        if(MultipleDesignator!=null) MultipleDesignator.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class MultipleAssignment extends DesignatorStatement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
+        if(MultipleDesignator!=null)
+            buffer.append(MultipleDesignator.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

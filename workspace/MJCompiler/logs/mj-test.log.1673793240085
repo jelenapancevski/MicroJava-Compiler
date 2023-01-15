@@ -1,0 +1,1239 @@
+INFO  15:32:16,961 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\loops.mj
+INFO  15:32:17,007 - #2 program
+INFO  15:32:17,008 - #47 loops
+INFO  15:32:17,008 - #5 const
+INFO  15:32:17,009 - #47 int
+INFO  15:32:17,009 - #47 nula
+INFO  15:32:17,009 - #19 =
+INFO  15:32:17,009 - #49 0
+INFO  15:32:17,010 - #15 ,
+INFO  15:32:17,010 - #47 jedan
+INFO  15:32:17,010 - #19 =
+INFO  15:32:17,010 - #49 1
+INFO  15:32:17,010 - #15 ,
+INFO  15:32:17,010 - #47 pet
+INFO  15:32:17,011 - #19 =
+INFO  15:32:17,011 - #49 5
+INFO  15:32:17,011 - #7 ;
+INFO  15:32:17,011 - #5 const
+INFO  15:32:17,011 - #47 bool
+INFO  15:32:17,011 - #47 radi
+INFO  15:32:17,011 - #19 =
+INFO  15:32:17,012 - #50 true
+INFO  15:32:17,012 - #7 ;
+INFO  15:32:17,012 - #5 const
+INFO  15:32:17,012 - #47 char
+INFO  15:32:17,012 - #47 slovoa
+INFO  15:32:17,012 - #19 =
+INFO  15:32:17,012 - #48 a
+INFO  15:32:17,012 - #7 ;
+INFO  15:32:17,012 - #5 const
+INFO  15:32:17,013 - #47 char
+INFO  15:32:17,013 - #47 slovob
+INFO  15:32:17,013 - #19 =
+INFO  15:32:17,013 - #48 b
+INFO  15:32:17,013 - #7 ;
+INFO  15:32:17,013 - #47 int
+INFO  15:32:17,013 - #47 niz
+INFO  15:32:17,013 - #17 [
+INFO  15:32:17,013 - #18 ]
+INFO  15:32:17,013 - #15 ,
+INFO  15:32:17,014 - #47 niz2
+INFO  15:32:17,014 - #17 [
+INFO  15:32:17,014 - #18 ]
+INFO  15:32:17,014 - #15 ,
+INFO  15:32:17,014 - #47 a
+INFO  15:32:17,014 - #15 ,
+INFO  15:32:17,015 - #47 b
+INFO  15:32:17,015 - #7 ;
+INFO  15:32:17,015 - #47 char
+INFO  15:32:17,015 - #47 nizch
+INFO  15:32:17,015 - #17 [
+INFO  15:32:17,015 - #18 ]
+INFO  15:32:17,015 - #7 ;
+INFO  15:32:17,016 - #47 bool
+INFO  15:32:17,016 - #47 isok
+INFO  15:32:17,016 - #7 ;
+INFO  15:32:17,016 - #3 {
+INFO  15:32:17,016 - #6 void
+INFO  15:32:17,016 - #47 foreachfunc
+INFO  15:32:17,016 - #13 (
+INFO  15:32:17,016 - #14 )
+INFO  15:32:17,017 - #47 int
+INFO  15:32:17,017 - #47 broj
+INFO  15:32:17,017 - #7 ;
+INFO  15:32:17,017 - #47 char
+INFO  15:32:17,017 - #47 slovo
+INFO  15:32:17,018 - #7 ;
+INFO  15:32:17,018 - #3 {
+INFO  15:32:17,018 - #47 slovo
+INFO  15:32:17,018 - #16 .
+INFO  15:32:17,018 - #39 foreach
+INFO  15:32:17,018 - #13 (
+INFO  15:32:17,018 - #47 slovoa
+INFO  15:32:17,018 - #40 =>
+INFO  15:32:17,018 - #9 print
+INFO  15:32:17,019 - #13 (
+INFO  15:32:17,019 - #47 slovo
+INFO  15:32:17,019 - #14 )
+INFO  15:32:17,020 - #7 ;
+INFO  15:32:17,020 - #14 )
+INFO  15:32:17,020 - #7 ;
+INFO  15:32:17,020 - #47 niz
+INFO  15:32:17,020 - #16 .
+INFO  15:32:17,020 - #39 foreach
+INFO  15:32:17,020 - #13 (
+INFO  15:32:17,020 - #47 broj
+INFO  15:32:17,020 - #40 =>
+INFO  15:32:17,020 - #3 {
+INFO  15:32:17,020 - #9 print
+INFO  15:32:17,026 - #13 (
+INFO  15:32:17,026 - #47 broj
+INFO  15:32:17,026 - #14 )
+INFO  15:32:17,026 - #7 ;
+INFO  15:32:17,026 - #4 }
+INFO  15:32:17,027 - #14 )
+INFO  15:32:17,027 - #7 ;
+INFO  15:32:17,027 - #47 nizch
+INFO  15:32:17,027 - #16 .
+INFO  15:32:17,027 - #39 foreach
+INFO  15:32:17,027 - #13 (
+INFO  15:32:17,027 - #47 slovo
+INFO  15:32:17,027 - #40 =>
+INFO  15:32:17,027 - #3 {
+INFO  15:32:17,027 - #33 if
+INFO  15:32:17,027 - #13 (
+INFO  15:32:17,027 - #47 slovo
+INFO  15:32:17,028 - #20 ==
+INFO  15:32:17,028 - #48 d
+INFO  15:32:17,028 - #14 )
+INFO  15:32:17,029 - #37 continue
+INFO  15:32:17,029 - #7 ;
+INFO  15:32:17,029 - #9 print
+INFO  15:32:17,035 - #13 (
+INFO  15:32:17,035 - #47 slovo
+INFO  15:32:17,035 - #15 ,
+INFO  15:32:17,035 - #49 2
+INFO  15:32:17,035 - #14 )
+INFO  15:32:17,035 - #7 ;
+INFO  15:32:17,035 - #33 if
+INFO  15:32:17,035 - #13 (
+INFO  15:32:17,035 - #47 slovo
+INFO  15:32:17,035 - #20 ==
+INFO  15:32:17,035 - #48 a
+INFO  15:32:17,035 - #14 )
+INFO  15:32:17,035 - #36 break
+INFO  15:32:17,035 - #7 ;
+INFO  15:32:17,035 - #4 }
+INFO  15:32:17,036 - #14 )
+INFO  15:32:17,036 - #7 ;
+INFO  15:32:17,036 - #47 niz
+INFO  15:32:17,036 - #16 .
+INFO  15:32:17,036 - #39 foreach
+INFO  15:32:17,037 - #13 (
+INFO  15:32:17,037 - #47 slovo
+INFO  15:32:17,037 - #40 =>
+INFO  15:32:17,037 - #3 {
+INFO  15:32:17,037 - #9 print
+INFO  15:32:17,037 - #13 (
+INFO  15:32:17,037 - #47 slovo
+INFO  15:32:17,037 - #14 )
+INFO  15:32:17,037 - #7 ;
+INFO  15:32:17,037 - #4 }
+INFO  15:32:17,037 - #14 )
+INFO  15:32:17,037 - #7 ;
+INFO  15:32:17,037 - #4 }
+INFO  15:32:17,037 - #6 void
+INFO  15:32:17,038 - #47 main
+INFO  15:32:17,038 - #13 (
+INFO  15:32:17,038 - #14 )
+INFO  15:32:17,038 - #47 int
+INFO  15:32:17,038 - #47 bodovi
+INFO  15:32:17,038 - #7 ;
+INFO  15:32:17,038 - #47 bool
+INFO  15:32:17,038 - #47 bt
+INFO  15:32:17,038 - #7 ;
+INFO  15:32:17,038 - #47 char
+INFO  15:32:17,038 - #47 slovo
+INFO  15:32:17,038 - #7 ;
+INFO  15:32:17,038 - #47 int
+INFO  15:32:17,038 - #47 broj
+INFO  15:32:17,038 - #7 ;
+INFO  15:32:17,038 - #3 {
+INFO  15:32:17,038 - #35 while
+INFO  15:32:17,038 - #13 (
+INFO  15:32:17,040 - #47 slovoa
+INFO  15:32:17,042 - #22 >
+INFO  15:32:17,042 - #47 slovob
+INFO  15:32:17,043 - #14 )
+INFO  15:32:17,043 - #3 {
+INFO  15:32:17,043 - #47 a
+INFO  15:32:17,043 - #19 =
+INFO  15:32:17,043 - #47 a
+INFO  15:32:17,043 - #28 +
+INFO  15:32:17,043 - #49 5
+INFO  15:32:17,044 - #7 ;
+INFO  15:32:17,045 - #33 if
+INFO  15:32:17,045 - #13 (
+INFO  15:32:17,045 - #47 a
+INFO  15:32:17,045 - #22 >
+INFO  15:32:17,045 - #49 7
+INFO  15:32:17,045 - #14 )
+INFO  15:32:17,045 - #36 break
+INFO  15:32:17,045 - #7 ;
+INFO  15:32:17,045 - #4 }
+INFO  15:32:17,045 - #35 while
+INFO  15:32:17,045 - #13 (
+INFO  15:32:17,045 - #47 slovoa
+INFO  15:32:17,045 - #27 ||
+INFO  15:32:17,045 - #47 slovob
+INFO  15:32:17,046 - #14 )
+INFO  15:32:17,046 - #3 {
+INFO  15:32:17,046 - #47 a
+INFO  15:32:17,046 - #19 =
+INFO  15:32:17,046 - #47 a
+INFO  15:32:17,046 - #29 -
+INFO  15:32:17,046 - #49 2
+INFO  15:32:17,046 - #7 ;
+INFO  15:32:17,046 - #4 }
+INFO  15:32:17,046 - #47 foreachfunc
+INFO  15:32:17,046 - #13 (
+INFO  15:32:17,047 - #14 )
+INFO  15:32:17,047 - #7 ;
+INFO  15:32:17,047 - #17 [
+INFO  15:32:17,047 - #18 ]
+INFO  15:32:17,053 - #19 =
+INFO  15:32:17,053 - #47 niz
+INFO  15:32:17,053 - #7 ;
+INFO  15:32:17,053 - #17 [
+INFO  15:32:17,053 - #47 slovoa
+INFO  15:32:17,053 - #15 ,
+INFO  15:32:17,053 - #15 ,
+INFO  15:32:17,054 - #47 slovob
+INFO  15:32:17,054 - #18 ]
+INFO  15:32:17,054 - #19 =
+INFO  15:32:17,054 - #47 niz
+INFO  15:32:17,054 - #7 ;
+INFO  15:32:17,054 - #17 [
+INFO  15:32:17,054 - #47 slovoa
+INFO  15:32:17,054 - #15 ,
+INFO  15:32:17,054 - #15 ,
+INFO  15:32:17,054 - #47 slovob
+INFO  15:32:17,054 - #18 ]
+INFO  15:32:17,054 - #19 =
+INFO  15:32:17,054 - #47 nizch
+INFO  15:32:17,054 - #7 ;
+INFO  15:32:17,054 - #17 [
+INFO  15:32:17,054 - #47 a
+INFO  15:32:17,054 - #15 ,
+INFO  15:32:17,054 - #15 ,
+INFO  15:32:17,054 - #47 b
+INFO  15:32:17,054 - #18 ]
+INFO  15:32:17,054 - #19 =
+INFO  15:32:17,054 - #47 nizch
+INFO  15:32:17,054 - #7 ;
+INFO  15:32:17,054 - #17 [
+INFO  15:32:17,054 - #15 ,
+INFO  15:32:17,054 - #15 ,
+INFO  15:32:17,054 - #47 a
+INFO  15:32:17,054 - #15 ,
+INFO  15:32:17,054 - #47 b
+INFO  15:32:17,054 - #18 ]
+INFO  15:32:17,054 - #19 =
+INFO  15:32:17,054 - #47 niz
+INFO  15:32:17,054 - #7 ;
+INFO  15:32:17,055 - #17 [
+INFO  15:32:17,055 - #47 niz
+INFO  15:32:17,055 - #17 [
+INFO  15:32:17,055 - #49 1
+INFO  15:32:17,055 - #18 ]
+INFO  15:32:17,055 - #15 ,
+INFO  15:32:17,055 - #15 ,
+INFO  15:32:17,055 - #47 a
+INFO  15:32:17,055 - #15 ,
+INFO  15:32:17,055 - #47 niz
+INFO  15:32:17,055 - #17 [
+INFO  15:32:17,055 - #49 2
+INFO  15:32:17,056 - #18 ]
+INFO  15:32:17,056 - #18 ]
+INFO  15:32:17,056 - #19 =
+INFO  15:32:17,056 - #47 niz2
+INFO  15:32:17,056 - #7 ;
+INFO  15:32:17,056 - #4 }
+INFO  15:32:17,056 - #4 }
+INFO  15:32:17,061 - Program(
+  ProgramIdentificator(
+   loops
+  ) [ProgramIdentificator]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          Declarations(
+            Declarations(
+              Declarations(
+                NoDeclarations(
+                ) [NoDeclarations]
+                CnstDeclaration(
+                  ConstDecl(
+                    Type(
+                     int
+                    ) [Type]
+                    Constants(
+                      Constants(
+                        OneConstant(
+                          ConstantDeclaration(
+                           nula
+                            NumberConstant(
+                             0
+                            ) [NumberConstant]
+                          ) [ConstantDeclaration]
+                        ) [OneConstant]
+                        ConstantDeclaration(
+                         jedan
+                          NumberConstant(
+                           1
+                          ) [NumberConstant]
+                        ) [ConstantDeclaration]
+                      ) [Constants]
+                      ConstantDeclaration(
+                       pet
+                        NumberConstant(
+                         5
+                        ) [NumberConstant]
+                      ) [ConstantDeclaration]
+                    ) [Constants]
+                  ) [ConstDecl]
+                ) [CnstDeclaration]
+              ) [Declarations]
+              CnstDeclaration(
+                ConstDecl(
+                  Type(
+                   bool
+                  ) [Type]
+                  OneConstant(
+                    ConstantDeclaration(
+                     radi
+                      BoolConstant(
+                       true
+                      ) [BoolConstant]
+                    ) [ConstantDeclaration]
+                  ) [OneConstant]
+                ) [ConstDecl]
+              ) [CnstDeclaration]
+            ) [Declarations]
+            CnstDeclaration(
+              ConstDecl(
+                Type(
+                 char
+                ) [Type]
+                OneConstant(
+                  ConstantDeclaration(
+                   slovoa
+                    CharConstant(
+                     a
+                    ) [CharConstant]
+                  ) [ConstantDeclaration]
+                ) [OneConstant]
+              ) [ConstDecl]
+            ) [CnstDeclaration]
+          ) [Declarations]
+          CnstDeclaration(
+            ConstDecl(
+              Type(
+               char
+              ) [Type]
+              OneConstant(
+                ConstantDeclaration(
+                 slovob
+                  CharConstant(
+                   b
+                  ) [CharConstant]
+                ) [ConstantDeclaration]
+              ) [OneConstant]
+            ) [ConstDecl]
+          ) [CnstDeclaration]
+        ) [Declarations]
+        VariableDeclaration(
+          VarDeclaration(
+            Type(
+             int
+            ) [Type]
+            Variables(
+              Variables(
+                Variables(
+                  OneVariable(
+                    VariableDecl(
+                     niz
+                      HasArrayBrackets(
+                      ) [HasArrayBrackets]
+                    ) [VariableDecl]
+                  ) [OneVariable]
+                  VariableDecl(
+                   niz2
+                    HasArrayBrackets(
+                    ) [HasArrayBrackets]
+                  ) [VariableDecl]
+                ) [Variables]
+                VariableDecl(
+                 a
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [Variables]
+              VariableDecl(
+               b
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [Variables]
+          ) [VarDeclaration]
+        ) [VariableDeclaration]
+      ) [Declarations]
+      VariableDeclaration(
+        VarDeclaration(
+          Type(
+           char
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             nizch
+              HasArrayBrackets(
+              ) [HasArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [VariableDeclaration]
+    ) [Declarations]
+    VariableDeclaration(
+      VarDeclaration(
+        Type(
+         bool
+        ) [Type]
+        OneVariable(
+          VariableDecl(
+           isok
+            NoArrayBrackets(
+            ) [NoArrayBrackets]
+          ) [VariableDecl]
+        ) [OneVariable]
+      ) [VarDeclaration]
+    ) [VariableDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethods(
+      ) [NoMethods]
+      MethodDecl(
+        VoidMethod(
+         foreachfunc
+        ) [VoidMethod]
+        NoMethodParameters(
+        ) [NoMethodParameters]
+        MethodVariables(
+          MethodVariables(
+            NoMethodVariables(
+            ) [NoMethodVariables]
+            VarDeclaration(
+              Type(
+               int
+              ) [Type]
+              OneVariable(
+                VariableDecl(
+                 broj
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [OneVariable]
+            ) [VarDeclaration]
+          ) [MethodVariables]
+          VarDeclaration(
+            Type(
+             char
+            ) [Type]
+            OneVariable(
+              VariableDecl(
+               slovo
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [OneVariable]
+          ) [VarDeclaration]
+        ) [MethodVariables]
+        MethodStatements(
+          MethodStatements(
+            MethodStatements(
+              MethodStatements(
+                NoMethodStatements(
+                ) [NoMethodStatements]
+                ForEachStatement(
+                  OneDesignator(
+                   slovo
+                  ) [OneDesignator]
+                  ForEachLoop(
+                   slovoa
+                  ) [ForEachLoop]
+                  PrintStatement(
+                    Expression(
+                      OneTerm(
+                        Term(
+                          OneFactor(
+                            FactorDesignator(
+                              OneDesignator(
+                               slovo
+                              ) [OneDesignator]
+                            ) [FactorDesignator]
+                          ) [OneFactor]
+                        ) [Term]
+                      ) [OneTerm]
+                    ) [Expression]
+                    NoPrintConstant(
+                    ) [NoPrintConstant]
+                  ) [PrintStatement]
+                ) [ForEachStatement]
+              ) [MethodStatements]
+              ForEachStatement(
+                OneDesignator(
+                 niz
+                ) [OneDesignator]
+                ForEachLoop(
+                 broj
+                ) [ForEachLoop]
+                MultipleStatements(
+                  Statements(
+                    NoStatement(
+                    ) [NoStatement]
+                    PrintStatement(
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 broj
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                      NoPrintConstant(
+                      ) [NoPrintConstant]
+                    ) [PrintStatement]
+                  ) [Statements]
+                ) [MultipleStatements]
+              ) [ForEachStatement]
+            ) [MethodStatements]
+            ForEachStatement(
+              OneDesignator(
+               nizch
+              ) [OneDesignator]
+              ForEachLoop(
+               slovo
+              ) [ForEachLoop]
+              MultipleStatements(
+                Statements(
+                  Statements(
+                    Statements(
+                      NoStatement(
+                      ) [NoStatement]
+                      IfStatement(
+                        IfStart(
+                        ) [IfStart]
+                        Then(
+                          OneCondition(
+                            ConditionTerm(
+                              ConditionFacts(
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           slovo
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                                IsEqual(
+                                ) [IsEqual]
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorCharacter(
+                                         d
+                                        ) [FactorCharacter]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                              ) [ConditionFacts]
+                            ) [ConditionTerm]
+                          ) [OneCondition]
+                        ) [Then]
+                        ContinueStatement(
+                        ) [ContinueStatement]
+                      ) [IfStatement]
+                    ) [Statements]
+                    PrintStatement(
+                      Expression(
+                        OneTerm(
+                          Term(
+                            OneFactor(
+                              FactorDesignator(
+                                OneDesignator(
+                                 slovo
+                                ) [OneDesignator]
+                              ) [FactorDesignator]
+                            ) [OneFactor]
+                          ) [Term]
+                        ) [OneTerm]
+                      ) [Expression]
+                      HasPrintConstant(
+                       2
+                      ) [HasPrintConstant]
+                    ) [PrintStatement]
+                  ) [Statements]
+                  IfStatement(
+                    IfStart(
+                    ) [IfStart]
+                    Then(
+                      OneCondition(
+                        ConditionTerm(
+                          ConditionFacts(
+                            Expression(
+                              OneTerm(
+                                Term(
+                                  OneFactor(
+                                    FactorDesignator(
+                                      OneDesignator(
+                                       slovo
+                                      ) [OneDesignator]
+                                    ) [FactorDesignator]
+                                  ) [OneFactor]
+                                ) [Term]
+                              ) [OneTerm]
+                            ) [Expression]
+                            IsEqual(
+                            ) [IsEqual]
+                            Expression(
+                              OneTerm(
+                                Term(
+                                  OneFactor(
+                                    FactorCharacter(
+                                     a
+                                    ) [FactorCharacter]
+                                  ) [OneFactor]
+                                ) [Term]
+                              ) [OneTerm]
+                            ) [Expression]
+                          ) [ConditionFacts]
+                        ) [ConditionTerm]
+                      ) [OneCondition]
+                    ) [Then]
+                    BreakStatement(
+                    ) [BreakStatement]
+                  ) [IfStatement]
+                ) [Statements]
+              ) [MultipleStatements]
+            ) [ForEachStatement]
+          ) [MethodStatements]
+          ForEachStatement(
+            OneDesignator(
+             niz
+            ) [OneDesignator]
+            ForEachLoop(
+             slovo
+            ) [ForEachLoop]
+            MultipleStatements(
+              Statements(
+                NoStatement(
+                ) [NoStatement]
+                PrintStatement(
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorDesignator(
+                            OneDesignator(
+                             slovo
+                            ) [OneDesignator]
+                          ) [FactorDesignator]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                  NoPrintConstant(
+                  ) [NoPrintConstant]
+                ) [PrintStatement]
+              ) [Statements]
+            ) [MultipleStatements]
+          ) [ForEachStatement]
+        ) [MethodStatements]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      MethodVariables(
+        MethodVariables(
+          MethodVariables(
+            MethodVariables(
+              NoMethodVariables(
+              ) [NoMethodVariables]
+              VarDeclaration(
+                Type(
+                 int
+                ) [Type]
+                OneVariable(
+                  VariableDecl(
+                   bodovi
+                    NoArrayBrackets(
+                    ) [NoArrayBrackets]
+                  ) [VariableDecl]
+                ) [OneVariable]
+              ) [VarDeclaration]
+            ) [MethodVariables]
+            VarDeclaration(
+              Type(
+               bool
+              ) [Type]
+              OneVariable(
+                VariableDecl(
+                 bt
+                  NoArrayBrackets(
+                  ) [NoArrayBrackets]
+                ) [VariableDecl]
+              ) [OneVariable]
+            ) [VarDeclaration]
+          ) [MethodVariables]
+          VarDeclaration(
+            Type(
+             char
+            ) [Type]
+            OneVariable(
+              VariableDecl(
+               slovo
+                NoArrayBrackets(
+                ) [NoArrayBrackets]
+              ) [VariableDecl]
+            ) [OneVariable]
+          ) [VarDeclaration]
+        ) [MethodVariables]
+        VarDeclaration(
+          Type(
+           int
+          ) [Type]
+          OneVariable(
+            VariableDecl(
+             broj
+              NoArrayBrackets(
+              ) [NoArrayBrackets]
+            ) [VariableDecl]
+          ) [OneVariable]
+        ) [VarDeclaration]
+      ) [MethodVariables]
+      MethodStatements(
+        MethodStatements(
+          MethodStatements(
+            MethodStatements(
+              MethodStatements(
+                MethodStatements(
+                  MethodStatements(
+                    MethodStatements(
+                      MethodStatements(
+                        NoMethodStatements(
+                        ) [NoMethodStatements]
+                        WhileStatement(
+                          WhileLoop(
+                          ) [WhileLoop]
+                          OneCondition(
+                            ConditionTerm(
+                              ConditionFacts(
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           slovoa
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                                Greater(
+                                ) [Greater]
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           slovob
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                              ) [ConditionFacts]
+                            ) [ConditionTerm]
+                          ) [OneCondition]
+                          MultipleStatements(
+                            Statements(
+                              Statements(
+                                NoStatement(
+                                ) [NoStatement]
+                                DesignatorStmt(
+                                  Assignment(
+                                    OneDesignator(
+                                     a
+                                    ) [OneDesignator]
+                                    AssignmentExpression(
+                                      Expression(
+                                        Terms(
+                                          OneTerm(
+                                            Term(
+                                              OneFactor(
+                                                FactorDesignator(
+                                                  OneDesignator(
+                                                   a
+                                                  ) [OneDesignator]
+                                                ) [FactorDesignator]
+                                              ) [OneFactor]
+                                            ) [Term]
+                                          ) [OneTerm]
+                                          Plus(
+                                          ) [Plus]
+                                          Term(
+                                            OneFactor(
+                                              FactorNumber(
+                                               5
+                                              ) [FactorNumber]
+                                            ) [OneFactor]
+                                          ) [Term]
+                                        ) [Terms]
+                                      ) [Expression]
+                                    ) [AssignmentExpression]
+                                  ) [Assignment]
+                                ) [DesignatorStmt]
+                              ) [Statements]
+                              IfStatement(
+                                IfStart(
+                                ) [IfStart]
+                                Then(
+                                  OneCondition(
+                                    ConditionTerm(
+                                      ConditionFacts(
+                                        Expression(
+                                          OneTerm(
+                                            Term(
+                                              OneFactor(
+                                                FactorDesignator(
+                                                  OneDesignator(
+                                                   a
+                                                  ) [OneDesignator]
+                                                ) [FactorDesignator]
+                                              ) [OneFactor]
+                                            ) [Term]
+                                          ) [OneTerm]
+                                        ) [Expression]
+                                        Greater(
+                                        ) [Greater]
+                                        Expression(
+                                          OneTerm(
+                                            Term(
+                                              OneFactor(
+                                                FactorNumber(
+                                                 7
+                                                ) [FactorNumber]
+                                              ) [OneFactor]
+                                            ) [Term]
+                                          ) [OneTerm]
+                                        ) [Expression]
+                                      ) [ConditionFacts]
+                                    ) [ConditionTerm]
+                                  ) [OneCondition]
+                                ) [Then]
+                                BreakStatement(
+                                ) [BreakStatement]
+                              ) [IfStatement]
+                            ) [Statements]
+                          ) [MultipleStatements]
+                        ) [WhileStatement]
+                      ) [MethodStatements]
+                      WhileStatement(
+                        WhileLoop(
+                        ) [WhileLoop]
+                        Conditions(
+                          OneCondition(
+                            ConditionTerm(
+                              ConditionFact(
+                                Expression(
+                                  OneTerm(
+                                    Term(
+                                      OneFactor(
+                                        FactorDesignator(
+                                          OneDesignator(
+                                           slovoa
+                                          ) [OneDesignator]
+                                        ) [FactorDesignator]
+                                      ) [OneFactor]
+                                    ) [Term]
+                                  ) [OneTerm]
+                                ) [Expression]
+                              ) [ConditionFact]
+                            ) [ConditionTerm]
+                          ) [OneCondition]
+                          Or(
+                          ) [Or]
+                          ConditionTerm(
+                            ConditionFact(
+                              Expression(
+                                OneTerm(
+                                  Term(
+                                    OneFactor(
+                                      FactorDesignator(
+                                        OneDesignator(
+                                         slovob
+                                        ) [OneDesignator]
+                                      ) [FactorDesignator]
+                                    ) [OneFactor]
+                                  ) [Term]
+                                ) [OneTerm]
+                              ) [Expression]
+                            ) [ConditionFact]
+                          ) [ConditionTerm]
+                        ) [Conditions]
+                        MultipleStatements(
+                          Statements(
+                            NoStatement(
+                            ) [NoStatement]
+                            DesignatorStmt(
+                              Assignment(
+                                OneDesignator(
+                                 a
+                                ) [OneDesignator]
+                                AssignmentExpression(
+                                  Expression(
+                                    Terms(
+                                      OneTerm(
+                                        Term(
+                                          OneFactor(
+                                            FactorDesignator(
+                                              OneDesignator(
+                                               a
+                                              ) [OneDesignator]
+                                            ) [FactorDesignator]
+                                          ) [OneFactor]
+                                        ) [Term]
+                                      ) [OneTerm]
+                                      Minus(
+                                      ) [Minus]
+                                      Term(
+                                        OneFactor(
+                                          FactorNumber(
+                                           2
+                                          ) [FactorNumber]
+                                        ) [OneFactor]
+                                      ) [Term]
+                                    ) [Terms]
+                                  ) [Expression]
+                                ) [AssignmentExpression]
+                              ) [Assignment]
+                            ) [DesignatorStmt]
+                          ) [Statements]
+                        ) [MultipleStatements]
+                      ) [WhileStatement]
+                    ) [MethodStatements]
+                    DesignatorStmt(
+                      FuncionCall(
+                        FunctionName(
+                          OneDesignator(
+                           foreachfunc
+                          ) [OneDesignator]
+                        ) [FunctionName]
+                        NoActualParams(
+                        ) [NoActualParams]
+                      ) [FuncionCall]
+                    ) [DesignatorStmt]
+                  ) [MethodStatements]
+                  DesignatorStmt(
+                    MultipleAssignment(
+                      OneDesignatorListElement(
+                        NoDesignatorElement(
+                        ) [NoDesignatorElement]
+                      ) [OneDesignatorListElement]
+                      MultipleAssignmentDesignator(
+                        OneDesignator(
+                         niz
+                        ) [OneDesignator]
+                      ) [MultipleAssignmentDesignator]
+                    ) [MultipleAssignment]
+                  ) [DesignatorStmt]
+                ) [MethodStatements]
+                DesignatorStmt(
+                  MultipleAssignment(
+                    Designators(
+                      Designators(
+                        OneDesignatorListElement(
+                          OneDesignatorElement(
+                            OneDesignator(
+                             slovoa
+                            ) [OneDesignator]
+                          ) [OneDesignatorElement]
+                        ) [OneDesignatorListElement]
+                        NoDesignatorElement(
+                        ) [NoDesignatorElement]
+                      ) [Designators]
+                      OneDesignatorElement(
+                        OneDesignator(
+                         slovob
+                        ) [OneDesignator]
+                      ) [OneDesignatorElement]
+                    ) [Designators]
+                    MultipleAssignmentDesignator(
+                      OneDesignator(
+                       niz
+                      ) [OneDesignator]
+                    ) [MultipleAssignmentDesignator]
+                  ) [MultipleAssignment]
+                ) [DesignatorStmt]
+              ) [MethodStatements]
+              DesignatorStmt(
+                MultipleAssignment(
+                  Designators(
+                    Designators(
+                      OneDesignatorListElement(
+                        OneDesignatorElement(
+                          OneDesignator(
+                           slovoa
+                          ) [OneDesignator]
+                        ) [OneDesignatorElement]
+                      ) [OneDesignatorListElement]
+                      NoDesignatorElement(
+                      ) [NoDesignatorElement]
+                    ) [Designators]
+                    OneDesignatorElement(
+                      OneDesignator(
+                       slovob
+                      ) [OneDesignator]
+                    ) [OneDesignatorElement]
+                  ) [Designators]
+                  MultipleAssignmentDesignator(
+                    OneDesignator(
+                     nizch
+                    ) [OneDesignator]
+                  ) [MultipleAssignmentDesignator]
+                ) [MultipleAssignment]
+              ) [DesignatorStmt]
+            ) [MethodStatements]
+            DesignatorStmt(
+              MultipleAssignment(
+                Designators(
+                  Designators(
+                    OneDesignatorListElement(
+                      OneDesignatorElement(
+                        OneDesignator(
+                         a
+                        ) [OneDesignator]
+                      ) [OneDesignatorElement]
+                    ) [OneDesignatorListElement]
+                    NoDesignatorElement(
+                    ) [NoDesignatorElement]
+                  ) [Designators]
+                  OneDesignatorElement(
+                    OneDesignator(
+                     b
+                    ) [OneDesignator]
+                  ) [OneDesignatorElement]
+                ) [Designators]
+                MultipleAssignmentDesignator(
+                  OneDesignator(
+                   nizch
+                  ) [OneDesignator]
+                ) [MultipleAssignmentDesignator]
+              ) [MultipleAssignment]
+            ) [DesignatorStmt]
+          ) [MethodStatements]
+          DesignatorStmt(
+            MultipleAssignment(
+              Designators(
+                Designators(
+                  Designators(
+                    OneDesignatorListElement(
+                      NoDesignatorElement(
+                      ) [NoDesignatorElement]
+                    ) [OneDesignatorListElement]
+                    NoDesignatorElement(
+                    ) [NoDesignatorElement]
+                  ) [Designators]
+                  OneDesignatorElement(
+                    OneDesignator(
+                     a
+                    ) [OneDesignator]
+                  ) [OneDesignatorElement]
+                ) [Designators]
+                OneDesignatorElement(
+                  OneDesignator(
+                   b
+                  ) [OneDesignator]
+                ) [OneDesignatorElement]
+              ) [Designators]
+              MultipleAssignmentDesignator(
+                OneDesignator(
+                 niz
+                ) [OneDesignator]
+              ) [MultipleAssignmentDesignator]
+            ) [MultipleAssignment]
+          ) [DesignatorStmt]
+        ) [MethodStatements]
+        DesignatorStmt(
+          MultipleAssignment(
+            Designators(
+              Designators(
+                Designators(
+                  OneDesignatorListElement(
+                    OneDesignatorElement(
+                      ArrayDesignator(
+                        DesignatorName(
+                         niz
+                        ) [DesignatorName]
+                        Expression(
+                          OneTerm(
+                            Term(
+                              OneFactor(
+                                FactorNumber(
+                                 1
+                                ) [FactorNumber]
+                              ) [OneFactor]
+                            ) [Term]
+                          ) [OneTerm]
+                        ) [Expression]
+                      ) [ArrayDesignator]
+                    ) [OneDesignatorElement]
+                  ) [OneDesignatorListElement]
+                  NoDesignatorElement(
+                  ) [NoDesignatorElement]
+                ) [Designators]
+                OneDesignatorElement(
+                  OneDesignator(
+                   a
+                  ) [OneDesignator]
+                ) [OneDesignatorElement]
+              ) [Designators]
+              OneDesignatorElement(
+                ArrayDesignator(
+                  DesignatorName(
+                   niz
+                  ) [DesignatorName]
+                  Expression(
+                    OneTerm(
+                      Term(
+                        OneFactor(
+                          FactorNumber(
+                           2
+                          ) [FactorNumber]
+                        ) [OneFactor]
+                      ) [Term]
+                    ) [OneTerm]
+                  ) [Expression]
+                ) [ArrayDesignator]
+              ) [OneDesignatorElement]
+            ) [Designators]
+            MultipleAssignmentDesignator(
+              OneDesignator(
+               niz2
+              ) [OneDesignator]
+            ) [MultipleAssignmentDesignator]
+          ) [MultipleAssignment]
+        ) [DesignatorStmt]
+      ) [MethodStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  15:32:17,062 - ===================================
+INFO  15:32:17,065 - Deklarisana konstanta nula jednaka 0 na liniji 3
+INFO  15:32:17,065 - Deklarisana konstanta jedan jednaka 1 na liniji 3
+INFO  15:32:17,065 - Deklarisana konstanta pet jednaka 5 na liniji 3
+INFO  15:32:17,065 - Deklarisana konstanta radi jednaka true na liniji 5
+INFO  15:32:17,065 - Deklarisana konstanta slovoa jednaka a na liniji 7
+INFO  15:32:17,065 - Deklarisana konstanta slovob jednaka b na liniji 9
+INFO  15:32:17,065 - Deklarisan niz niz na liniji 11
+INFO  15:32:17,065 - Deklarisan niz niz2 na liniji 11
+INFO  15:32:17,065 - Deklarisana promenljiva a na liniji 11
+INFO  15:32:17,065 - Deklarisana promenljiva b na liniji 11
+INFO  15:32:17,065 - Deklarisan niz nizch na liniji 12
+INFO  15:32:17,065 - Deklarisana promenljiva isok na liniji 13
+INFO  15:32:17,065 - Deklarisana funkcija foreachfunc povratna vrednost je tipa VOID na liniji 18
+INFO  15:32:17,065 - Deklarisana promenljiva broj na liniji 18
+INFO  15:32:17,065 - Deklarisana promenljiva slovo na liniji 18
+INFO  15:32:17,066 - Detektovana upotreba simbola slovo na liniji 19: Var slovo: char, 1, 1 
+INFO  15:32:17,066 - Detektovana upotreba simbola slovo na liniji 19: Var slovo: char, 1, 1 
+ERROR 15:32:17,066 - Semanticka greska na liniji 19: Designator mora predstavljati niz
+INFO  15:32:17,066 - Detektovana upotreba simbola niz na liniji 21: Var niz: Arr of int, 0, 0 
+INFO  15:32:17,066 - Detektovana upotreba simbola broj na liniji 22: Var broj: int, 0, 1 
+INFO  15:32:17,066 - Detektovana upotreba simbola nizch na liniji 25: Var nizch: Arr of char, 4, 0 
+INFO  15:32:17,066 - Detektovana upotreba simbola slovo na liniji 26: Var slovo: char, 1, 1 
+INFO  15:32:17,066 - Detektovana upotreba simbola slovo na liniji 27: Var slovo: char, 1, 1 
+INFO  15:32:17,066 - Detektovana upotreba simbola slovo na liniji 28: Var slovo: char, 1, 1 
+INFO  15:32:17,066 - Detektovana upotreba simbola niz na liniji 32: Var niz: Arr of int, 0, 0 
+INFO  15:32:17,066 - Detektovana upotreba simbola slovo na liniji 33: Var slovo: char, 1, 1 
+ERROR 15:32:17,066 - Semanticka greska na liniji 32: Promenljiva ident u foreach petlji mora biti istog tipa kao tip elementa niza Designator
+INFO  15:32:17,066 - Deklarisana funkcija foreachfunc sa 0 ulazna parametra na liniji 18
+INFO  15:32:17,066 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 37
+INFO  15:32:17,066 - Deklarisana promenljiva bodovi na liniji 38
+INFO  15:32:17,066 - Deklarisana promenljiva bt na liniji 39
+INFO  15:32:17,066 - Deklarisana promenljiva slovo na liniji 40
+INFO  15:32:17,066 - Deklarisana promenljiva broj na liniji 41
+INFO  15:32:17,066 - Detektovana upotreba simbola slovoa na liniji 46: Con slovoa: char, 97, 0 
+INFO  15:32:17,066 - Detektovana upotreba simbola slovob na liniji 46: Con slovob: char, 98, 0 
+INFO  15:32:17,066 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
+INFO  15:32:17,066 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
+INFO  15:32:17,067 - Detektovana upotreba simbola a na liniji 48: Var a: int, 2, 0 
+INFO  15:32:17,067 - Detektovana upotreba simbola slovoa na liniji 50: Con slovoa: char, 97, 0 
+INFO  15:32:17,067 - Detektovana upotreba simbola slovob na liniji 50: Con slovob: char, 98, 0 
+ERROR 15:32:17,067 - Semanticka greska na liniji 50: U izrazu sa || oba operanda moraju biti tipa boolean
+INFO  15:32:17,067 - Detektovana upotreba simbola a na liniji 51: Var a: int, 2, 0 
+INFO  15:32:17,067 - Detektovana upotreba simbola a na liniji 51: Var a: int, 2, 0 
+ERROR 15:32:17,067 - Semanticka greska na liniji 50:  Condition nije tipa bool
+INFO  15:32:17,067 - Detektovana upotreba simbola foreachfunc na liniji 56: Meth foreachfunc: notype, 0, 0 
+   Var broj: int, 0, 1 
+   Var slovo: char, 1, 1 
+
+INFO  15:32:17,067 - Detektovana upotreba simbola niz na liniji 60: Var niz: Arr of int, 0, 0 
+INFO  15:32:17,069 - Detektovana upotreba simbola slovoa na liniji 61: Con slovoa: char, 97, 0 
+ERROR 15:32:17,069 - Semanticka greska na liniji 61: Designator slovoa mora predstavljati promenljivu ili element niza
+INFO  15:32:17,069 - Detektovana upotreba simbola slovob na liniji 61: Con slovob: char, 98, 0 
+ERROR 15:32:17,069 - Semanticka greska na liniji 61: Designator slovob mora predstavljati promenljivu ili element niza
+INFO  15:32:17,069 - Detektovana upotreba simbola niz na liniji 61: Var niz: Arr of int, 0, 0 
+ERROR 15:32:17,069 - Semanticka greska na liniji 61: Tip designatora slovoa nije kompatibilan sa tipom elementa niza niz
+ERROR 15:32:17,069 - Semanticka greska na liniji 61: Tip designatora slovob nije kompatibilan sa tipom elementa niza niz
+INFO  15:32:17,069 - Detektovana upotreba simbola slovoa na liniji 62: Con slovoa: char, 97, 0 
+ERROR 15:32:17,069 - Semanticka greska na liniji 62: Designator slovoa mora predstavljati promenljivu ili element niza
+INFO  15:32:17,069 - Detektovana upotreba simbola slovob na liniji 62: Con slovob: char, 98, 0 
+ERROR 15:32:17,069 - Semanticka greska na liniji 62: Designator slovob mora predstavljati promenljivu ili element niza
+INFO  15:32:17,070 - Detektovana upotreba simbola nizch na liniji 62: Var nizch: Arr of char, 4, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola a na liniji 63: Var a: int, 2, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola b na liniji 63: Var b: int, 3, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola nizch na liniji 63: Var nizch: Arr of char, 4, 0 
+ERROR 15:32:17,070 - Semanticka greska na liniji 63: Tip designatora a nije kompatibilan sa tipom elementa niza nizch
+ERROR 15:32:17,070 - Semanticka greska na liniji 63: Tip designatora b nije kompatibilan sa tipom elementa niza nizch
+INFO  15:32:17,070 - Detektovana upotreba simbola a na liniji 64: Var a: int, 2, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola b na liniji 64: Var b: int, 3, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola niz na liniji 64: Var niz: Arr of int, 0, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola niz na liniji 65: Var niz: Arr of int, 0, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola a na liniji 65: Var a: int, 2, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola niz na liniji 65: Var niz: Arr of int, 0, 0 
+INFO  15:32:17,070 - Detektovana upotreba simbola niz2 na liniji 65: Var niz2: Arr of int, 1, 0 
+INFO  15:32:17,070 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 37
+INFO  15:32:17,070 - ===================================
+ERROR 15:32:17,070 - Parsiranje koda je neuspesno

@@ -15,6 +15,7 @@ program assignment
 	a= x++ + (x*7)+b[1];			//not ok
 	a = x + (x*7**2) + b[2];		//not ok
 	  
+	[a,b,,]= b + 5 ; //not ok
 	
 	
 	}

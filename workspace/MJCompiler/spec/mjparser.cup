@@ -67,7 +67,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParam, FunctionName, Designator, DesignatorName, ForEach;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParam, FunctionName, Designator, MultipleDesignator, DesignatorName, ForEach;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
@@ -234,9 +234,12 @@ DesignatorStatement ::= (ValueIncrement) Designator INCREMENT
 						|
 						(FuncionCall) FunctionName LPAREN ActParams RPAREN
 						|
-						(MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL Designator
+						(MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL MultipleDesignator
+						;
+
+MultipleDesignator ::= (MultipleAssignmentDesignator)Designator
 						|
-						(MultipleAssignmentError) LBRACKET DesignatorList RBRACKET EQUAL error 
+						(MultipleAssignmentError) error {: parser.report_error("Greska kod konstrukcije iskaza dodele. ", null); :}
 						;
 						
 AssignmentExpr ::= (AssignmentExpression) Expr

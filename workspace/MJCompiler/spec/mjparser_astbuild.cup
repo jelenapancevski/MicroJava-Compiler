@@ -97,7 +97,7 @@ terminal Character CHARCONST;
 terminal Integer NUMCONST;
 terminal Boolean BOOLCONST;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParam, FunctionName, Designator, DesignatorName, ForEach;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramIdentificator, ConstantDeclaration, Variable, MethodTypeName, OneParam, FunctionName, Designator, MultipleDesignator, DesignatorName, ForEach;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Constant, Expr, TermList, Factor, Parameter, FactorList, Term, Condition, CondTerm, CondFact, AssignmentExpr;
  
 
@@ -264,9 +264,12 @@ DesignatorStatement ::= (ValueIncrement) Designator:D1 INCREMENT {: RESULT=new V
 						|
 						(FuncionCall) FunctionName:F1 LPAREN ActParams:A2 RPAREN {: RESULT=new FuncionCall(F1, A2); RESULT.setLine(F1left); :}
 						|
-						(MultipleAssignment) LBRACKET DesignatorList:D1 RBRACKET EQUAL Designator:D2 {: RESULT=new MultipleAssignment(D1, D2); RESULT.setLine(D1left); :}
+						(MultipleAssignment) LBRACKET DesignatorList:D1 RBRACKET EQUAL MultipleDesignator:M2 {: RESULT=new MultipleAssignment(D1, M2); RESULT.setLine(D1left); :}
+						;
+
+MultipleDesignator ::= (MultipleAssignmentDesignator)Designator:D1 {: RESULT=new MultipleAssignmentDesignator(D1); RESULT.setLine(D1left); :}
 						|
-						(MultipleAssignmentError) LBRACKET DesignatorList:D1 RBRACKET EQUAL error {: RESULT=new MultipleAssignmentError(D1); RESULT.setLine(D1left); :} 
+						(MultipleAssignmentError) error {: parser.report_error("Greska kod konstrukcije iskaza dodele. ", null); :} {: RESULT=new MultipleAssignmentError(); :}
 						;
 						
 AssignmentExpr ::= (AssignmentExpression) Expr:E1 {: RESULT=new AssignmentExpression(E1); RESULT.setLine(E1left); :}

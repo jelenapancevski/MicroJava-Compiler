@@ -354,21 +354,27 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  
 	  //(MultipleAssignment) LBRACKET DesignatorList RBRACKET EQUAL Designator
 	  public void visit (MultipleAssignment multipleAssignment) {
-		  if(multipleAssignment.getDesignator().obj==Tab.noObj) return;
+		  if(multipleAssignment.getMultipleDesignator() instanceof MultipleAssignmentError) {
+			  designatorList = null;
+			  return;}
+		  if(((MultipleAssignmentDesignator)multipleAssignment.getMultipleDesignator()).getDesignator().obj==Tab.noObj) {
+			  designatorList = null;
+			  return;
+		  }
 		  // Check if designator is type array 
-		  if (multipleAssignment.getDesignator().obj.getType().getKind()!=Struct.Array) {
-			  report_error("Semanticka greska na liniji " + multipleAssignment.getLine() + ": Designator "+multipleAssignment.getDesignator().obj.getName()+ " mora predstavljati niz", null);
+		  if (((MultipleAssignmentDesignator)multipleAssignment.getMultipleDesignator()).getDesignator().obj.getType().getKind()!=Struct.Array) {
+			  report_error("Semanticka greska na liniji " + multipleAssignment.getLine() + ": Designator "+((MultipleAssignmentDesignator)multipleAssignment.getMultipleDesignator()).getDesignator().obj.getName()+ " mora predstavljati niz", null);
 			  designatorList=null;
 			  return;
 		  }
-		  Struct elemType = multipleAssignment.getDesignator().obj.getType().getElemType();
+		  Struct elemType = ((MultipleAssignmentDesignator)multipleAssignment.getMultipleDesignator()).getDesignator().obj.getType().getElemType();
 		  
 		  
 		  for (OneDesignatorElement designator :designatorList ) {
 			  if(designator==null) continue;
 			  if(designator.getDesignator().obj==Tab.noObj) continue;
 			  if(!designator.getDesignator().obj.getType().compatibleWith(elemType)) {
-				  report_error("Semanticka greska na liniji " + multipleAssignment.getLine() + ": Tip designatora "+designator.getDesignator().obj.getName()+ " nije kompatibilan sa tipom elementa niza "+multipleAssignment.getDesignator().obj.getName(), null);
+				  report_error("Semanticka greska na liniji " + multipleAssignment.getLine() + ": Tip designatora "+designator.getDesignator().obj.getName()+ " nije kompatibilan sa tipom elementa niza "+((MultipleAssignmentDesignator)multipleAssignment.getMultipleDesignator()).getDesignator().obj.getName(), null);
 			  }
 		  }
 		  designatorList=null;
@@ -639,7 +645,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	  
 	  //(ConditionFact) Expr
 	  public void visit (ConditionFact conditionFact) {
-		  if (!conditionFact.getExpr().struct.equals(boolType) && !conditionFact.getExpr().struct.equals(Tab.intType)) {
+		  if (!conditionFact.getExpr().struct.equals(boolType)) {
 			  conditionFact.struct = Tab.noType;
 			  return;
 		  }

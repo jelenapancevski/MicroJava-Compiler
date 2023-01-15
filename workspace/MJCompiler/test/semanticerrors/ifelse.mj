@@ -28,7 +28,7 @@ const int nula = 0, jedan = 1, pet = 5;
 		if( a > b) read(a); 		//ok
 		else read(b);
 		if((a+b-7) <= a) a= a+b-7; //ok
-		else if(a*2-jedan) a = a*2/2; // ok    
+		else if(a*2-jedan) a = a*2/2; // not ok    
 		else if (a*2-jedan>=pet) a=pet*nula-b; //ok
 		
 		// TESTOVI ZA CondTerm = CondFact {"&&" CondFact}

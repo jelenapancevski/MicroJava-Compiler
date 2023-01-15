@@ -1,287 +1,287 @@
-INFO  20:16:07,127 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\operations.mj
-INFO  20:16:07,180 - #2 program
-INFO  20:16:07,180 - #47 operations
-INFO  20:16:07,180 - #5 const
-INFO  20:16:07,181 - #47 char
-INFO  20:16:07,181 - #47 slovoa
-INFO  20:16:07,182 - #19 =
-INFO  20:16:07,182 - #48 a
-INFO  20:16:07,182 - #7 ;
-INFO  20:16:07,183 - #5 const
-INFO  20:16:07,184 - #47 char
-INFO  20:16:07,184 - #47 slovob
-INFO  20:16:07,184 - #19 =
-INFO  20:16:07,184 - #48 b
-INFO  20:16:07,184 - #7 ;
-INFO  20:16:07,184 - #5 const
-INFO  20:16:07,184 - #47 int
-INFO  20:16:07,184 - #47 jedan
-INFO  20:16:07,184 - #19 =
-INFO  20:16:07,185 - #49 1
-INFO  20:16:07,185 - #15 ,
-INFO  20:16:07,185 - #47 pet
-INFO  20:16:07,185 - #19 =
-INFO  20:16:07,185 - #49 5
-INFO  20:16:07,185 - #7 ;
-INFO  20:16:07,185 - #47 int
-INFO  20:16:07,185 - #47 niz
-INFO  20:16:07,185 - #17 [
-INFO  20:16:07,186 - #18 ]
-INFO  20:16:07,186 - #15 ,
-INFO  20:16:07,187 - #47 niz2
-INFO  20:16:07,187 - #17 [
-INFO  20:16:07,187 - #18 ]
-INFO  20:16:07,187 - #15 ,
-INFO  20:16:07,187 - #47 a
-INFO  20:16:07,187 - #15 ,
-INFO  20:16:07,188 - #47 b
-INFO  20:16:07,188 - #7 ;
-INFO  20:16:07,188 - #47 char
-INFO  20:16:07,189 - #47 nizch
-INFO  20:16:07,189 - #17 [
-INFO  20:16:07,189 - #18 ]
-INFO  20:16:07,189 - #7 ;
-INFO  20:16:07,189 - #3 {
-INFO  20:16:07,189 - #47 int
-INFO  20:16:07,190 - #47 sum
-INFO  20:16:07,190 - #13 (
-INFO  20:16:07,190 - #47 int
-INFO  20:16:07,190 - #47 a
-INFO  20:16:07,190 - #15 ,
-INFO  20:16:07,191 - #47 int
-INFO  20:16:07,191 - #47 b
-INFO  20:16:07,191 - #14 )
-INFO  20:16:07,191 - #47 int
-INFO  20:16:07,192 - #47 c
-INFO  20:16:07,192 - #7 ;
-INFO  20:16:07,192 - #3 {
-INFO  20:16:07,193 - #47 c
-INFO  20:16:07,193 - #19 =
-INFO  20:16:07,194 - #47 a
-INFO  20:16:07,194 - #28 +
-INFO  20:16:07,195 - #47 b
-INFO  20:16:07,196 - #7 ;
-INFO  20:16:07,196 - #38 return
-INFO  20:16:07,197 - #47 c
-INFO  20:16:07,197 - #7 ;
-INFO  20:16:07,197 - #4 }
-INFO  20:16:07,197 - #47 int
-INFO  20:16:07,198 - #47 funca
-INFO  20:16:07,198 - #13 (
-INFO  20:16:07,198 - #47 char
-INFO  20:16:07,198 - #47 a
-INFO  20:16:07,198 - #15 ,
-INFO  20:16:07,198 - #47 char
-INFO  20:16:07,198 - #47 b
-INFO  20:16:07,198 - #14 )
-INFO  20:16:07,198 - #3 {
-INFO  20:16:07,198 - #9 print
-INFO  20:16:07,198 - #13 (
-INFO  20:16:07,198 - #47 a
-INFO  20:16:07,198 - #14 )
-INFO  20:16:07,199 - #7 ;
-INFO  20:16:07,199 - #9 print
-INFO  20:16:07,199 - #13 (
-INFO  20:16:07,199 - #47 b
-INFO  20:16:07,199 - #14 )
-INFO  20:16:07,199 - #7 ;
-INFO  20:16:07,199 - #38 return
-INFO  20:16:07,199 - #49 1
-INFO  20:16:07,199 - #7 ;
-INFO  20:16:07,200 - #4 }
-INFO  20:16:07,200 - #47 bool
-INFO  20:16:07,200 - #47 samearray
-INFO  20:16:07,200 - #13 (
-INFO  20:16:07,200 - #47 int
-INFO  20:16:07,200 - #47 arr1
-INFO  20:16:07,200 - #17 [
-INFO  20:16:07,200 - #18 ]
-INFO  20:16:07,200 - #15 ,
-INFO  20:16:07,200 - #47 int
-INFO  20:16:07,200 - #47 arr2
-INFO  20:16:07,200 - #17 [
-INFO  20:16:07,200 - #18 ]
-INFO  20:16:07,201 - #14 )
-INFO  20:16:07,201 - #47 bool
-INFO  20:16:07,201 - #47 is
-INFO  20:16:07,201 - #7 ;
-INFO  20:16:07,201 - #3 {
-INFO  20:16:07,201 - #33 if
-INFO  20:16:07,201 - #13 (
-INFO  20:16:07,202 - #47 arr1
-INFO  20:16:07,202 - #20 ==
-INFO  20:16:07,202 - #47 arr2
-INFO  20:16:07,203 - #14 )
-INFO  20:16:07,203 - #47 is
-INFO  20:16:07,204 - #19 =
-INFO  20:16:07,204 - #50 true
-INFO  20:16:07,204 - #7 ;
-INFO  20:16:07,204 - #34 else
-INFO  20:16:07,204 - #47 is
-INFO  20:16:07,205 - #19 =
-INFO  20:16:07,205 - #50 false
-INFO  20:16:07,205 - #7 ;
-INFO  20:16:07,205 - #38 return
-INFO  20:16:07,206 - #47 is
-INFO  20:16:07,206 - #7 ;
-INFO  20:16:07,206 - #4 }
-INFO  20:16:07,206 - #6 void
-INFO  20:16:07,207 - #47 main
-INFO  20:16:07,207 - #13 (
-INFO  20:16:07,207 - #14 )
-INFO  20:16:07,207 - #47 int
-INFO  20:16:07,208 - #47 bodovi
-INFO  20:16:07,208 - #7 ;
-INFO  20:16:07,208 - #47 bool
-INFO  20:16:07,208 - #47 bt
-INFO  20:16:07,208 - #7 ;
-INFO  20:16:07,208 - #47 char
-INFO  20:16:07,208 - #47 slovo
-INFO  20:16:07,208 - #7 ;
-INFO  20:16:07,208 - #47 int
-INFO  20:16:07,208 - #47 broj
-INFO  20:16:07,208 - #7 ;
-INFO  20:16:07,209 - #3 {
-INFO  20:16:07,209 - #47 a
-INFO  20:16:07,209 - #19 =
-INFO  20:16:07,209 - #49 5
-INFO  20:16:07,209 - #7 ;
-INFO  20:16:07,209 - #47 b
-INFO  20:16:07,209 - #19 =
-INFO  20:16:07,209 - #49 7
-INFO  20:16:07,209 - #7 ;
-INFO  20:16:07,209 - #47 niz
-INFO  20:16:07,209 - #19 =
-INFO  20:16:07,209 - #12 new
-INFO  20:16:07,209 - #47 int
-INFO  20:16:07,209 - #17 [
-INFO  20:16:07,209 - #47 a
-INFO  20:16:07,209 - #18 ]
-INFO  20:16:07,209 - #7 ;
-INFO  20:16:07,210 - #47 niz2
-INFO  20:16:07,210 - #19 =
-INFO  20:16:07,210 - #12 new
-INFO  20:16:07,210 - #47 int
-INFO  20:16:07,210 - #17 [
-INFO  20:16:07,210 - #47 b
-INFO  20:16:07,210 - #18 ]
-INFO  20:16:07,210 - #7 ;
-INFO  20:16:07,210 - #47 b
-INFO  20:16:07,210 - #19 =
-INFO  20:16:07,210 - #49 5
-INFO  20:16:07,210 - #28 +
-INFO  20:16:07,210 - #47 slovoa
-INFO  20:16:07,210 - #7 ;
-INFO  20:16:07,210 - #47 b
-INFO  20:16:07,210 - #19 =
-INFO  20:16:07,210 - #47 b
-INFO  20:16:07,210 - #28 +
-INFO  20:16:07,211 - #47 pet
-INFO  20:16:07,211 - #28 +
-INFO  20:16:07,211 - #47 a
-INFO  20:16:07,211 - #29 -
-INFO  20:16:07,211 - #47 jedan
-INFO  20:16:07,211 - #7 ;
-INFO  20:16:07,211 - #47 a
-INFO  20:16:07,211 - #19 =
-INFO  20:16:07,211 - #47 samearray
-INFO  20:16:07,211 - #13 (
-INFO  20:16:07,212 - #47 niz
-INFO  20:16:07,212 - #15 ,
-INFO  20:16:07,212 - #47 niz2
-INFO  20:16:07,212 - #14 )
-INFO  20:16:07,213 - #28 +
-INFO  20:16:07,213 - #49 1
-INFO  20:16:07,213 - #7 ;
-INFO  20:16:07,213 - #47 a
-INFO  20:16:07,213 - #19 =
-INFO  20:16:07,213 - #47 sum
-INFO  20:16:07,213 - #13 (
-INFO  20:16:07,213 - #47 pet
-INFO  20:16:07,213 - #15 ,
-INFO  20:16:07,213 - #47 b
-INFO  20:16:07,213 - #14 )
-INFO  20:16:07,213 - #28 +
-INFO  20:16:07,213 - #47 jedan
-INFO  20:16:07,213 - #29 -
-INFO  20:16:07,213 - #47 pet
-INFO  20:16:07,213 - #31 /
-INFO  20:16:07,213 - #49 2
-INFO  20:16:07,214 - #7 ;
-INFO  20:16:07,214 - #47 a
-INFO  20:16:07,214 - #19 =
-INFO  20:16:07,214 - #47 b
-INFO  20:16:07,214 - #30 *
-INFO  20:16:07,215 - #47 funca
-INFO  20:16:07,215 - #13 (
-INFO  20:16:07,215 - #47 slovoa
-INFO  20:16:07,215 - #15 ,
-INFO  20:16:07,215 - #47 slovob
-INFO  20:16:07,215 - #14 )
-INFO  20:16:07,215 - #7 ;
-INFO  20:16:07,215 - #47 a
-INFO  20:16:07,215 - #19 =
-INFO  20:16:07,215 - #47 b
-INFO  20:16:07,215 - #30 *
-INFO  20:16:07,215 - #47 slovoa
-INFO  20:16:07,215 - #7 ;
-INFO  20:16:07,215 - #47 a
-INFO  20:16:07,216 - #19 =
-INFO  20:16:07,217 - #47 sum
-INFO  20:16:07,217 - #13 (
-INFO  20:16:07,217 - #47 a
-INFO  20:16:07,217 - #15 ,
-INFO  20:16:07,217 - #47 b
-INFO  20:16:07,217 - #14 )
-INFO  20:16:07,217 - #32 %
-INFO  20:16:07,217 - #49 2
-INFO  20:16:07,218 - #7 ;
-INFO  20:16:07,218 - #47 b
-INFO  20:16:07,218 - #19 =
-INFO  20:16:07,218 - #47 a
-INFO  20:16:07,218 - #31 /
-INFO  20:16:07,218 - #49 1
-INFO  20:16:07,218 - #7 ;
-INFO  20:16:07,218 - #47 b
-INFO  20:16:07,218 - #19 =
-INFO  20:16:07,218 - #47 samearray
-INFO  20:16:07,218 - #13 (
-INFO  20:16:07,218 - #47 niz
-INFO  20:16:07,218 - #15 ,
-INFO  20:16:07,220 - #47 niz2
-INFO  20:16:07,220 - #14 )
-INFO  20:16:07,220 - #32 %
-INFO  20:16:07,220 - #49 3
-INFO  20:16:07,220 - #7 ;
-INFO  20:16:07,220 - #47 b
-INFO  20:16:07,220 - #19 =
-INFO  20:16:07,220 - #29 -
-INFO  20:16:07,220 - #47 slovoa
-INFO  20:16:07,220 - #7 ;
-INFO  20:16:07,221 - #47 b
-INFO  20:16:07,221 - #19 =
-INFO  20:16:07,221 - #29 -
-INFO  20:16:07,221 - #47 jedan
-INFO  20:16:07,221 - #7 ;
-INFO  20:16:07,221 - #47 a
-INFO  20:16:07,221 - #19 =
-INFO  20:16:07,221 - #29 -
-INFO  20:16:07,221 - #47 sum
-INFO  20:16:07,221 - #13 (
-INFO  20:16:07,221 - #47 pet
-INFO  20:16:07,221 - #15 ,
-INFO  20:16:07,221 - #47 b
-INFO  20:16:07,222 - #14 )
-INFO  20:16:07,222 - #28 +
-INFO  20:16:07,222 - #47 jedan
-INFO  20:16:07,222 - #29 -
-INFO  20:16:07,222 - #47 pet
-INFO  20:16:07,222 - #31 /
-INFO  20:16:07,222 - #49 2
-INFO  20:16:07,222 - #7 ;
-INFO  20:16:07,222 - #4 }
-INFO  20:16:07,222 - #4 }
-INFO  20:16:07,229 - Program(
+INFO  15:38:02,703 - Compiling source file: C:\Users\Dell\Desktop\PP1\Projekat januarski rok\Compiler\workspace\MJCompiler\test\semanticerrors\operations.mj
+INFO  15:38:02,755 - #2 program
+INFO  15:38:02,755 - #47 operations
+INFO  15:38:02,755 - #5 const
+INFO  15:38:02,756 - #47 char
+INFO  15:38:02,756 - #47 slovoa
+INFO  15:38:02,757 - #19 =
+INFO  15:38:02,757 - #48 a
+INFO  15:38:02,757 - #7 ;
+INFO  15:38:02,757 - #5 const
+INFO  15:38:02,758 - #47 char
+INFO  15:38:02,758 - #47 slovob
+INFO  15:38:02,758 - #19 =
+INFO  15:38:02,758 - #48 b
+INFO  15:38:02,758 - #7 ;
+INFO  15:38:02,758 - #5 const
+INFO  15:38:02,758 - #47 int
+INFO  15:38:02,758 - #47 jedan
+INFO  15:38:02,759 - #19 =
+INFO  15:38:02,759 - #49 1
+INFO  15:38:02,759 - #15 ,
+INFO  15:38:02,759 - #47 pet
+INFO  15:38:02,759 - #19 =
+INFO  15:38:02,759 - #49 5
+INFO  15:38:02,759 - #7 ;
+INFO  15:38:02,759 - #47 int
+INFO  15:38:02,759 - #47 niz
+INFO  15:38:02,760 - #17 [
+INFO  15:38:02,760 - #18 ]
+INFO  15:38:02,760 - #15 ,
+INFO  15:38:02,761 - #47 niz2
+INFO  15:38:02,761 - #17 [
+INFO  15:38:02,761 - #18 ]
+INFO  15:38:02,761 - #15 ,
+INFO  15:38:02,761 - #47 a
+INFO  15:38:02,761 - #15 ,
+INFO  15:38:02,762 - #47 b
+INFO  15:38:02,762 - #7 ;
+INFO  15:38:02,762 - #47 char
+INFO  15:38:02,762 - #47 nizch
+INFO  15:38:02,763 - #17 [
+INFO  15:38:02,763 - #18 ]
+INFO  15:38:02,763 - #7 ;
+INFO  15:38:02,763 - #3 {
+INFO  15:38:02,763 - #47 int
+INFO  15:38:02,763 - #47 sum
+INFO  15:38:02,763 - #13 (
+INFO  15:38:02,764 - #47 int
+INFO  15:38:02,764 - #47 a
+INFO  15:38:02,764 - #15 ,
+INFO  15:38:02,764 - #47 int
+INFO  15:38:02,764 - #47 b
+INFO  15:38:02,764 - #14 )
+INFO  15:38:02,764 - #47 int
+INFO  15:38:02,765 - #47 c
+INFO  15:38:02,765 - #7 ;
+INFO  15:38:02,765 - #3 {
+INFO  15:38:02,765 - #47 c
+INFO  15:38:02,766 - #19 =
+INFO  15:38:02,766 - #47 a
+INFO  15:38:02,766 - #28 +
+INFO  15:38:02,766 - #47 b
+INFO  15:38:02,767 - #7 ;
+INFO  15:38:02,767 - #38 return
+INFO  15:38:02,768 - #47 c
+INFO  15:38:02,768 - #7 ;
+INFO  15:38:02,768 - #4 }
+INFO  15:38:02,768 - #47 int
+INFO  15:38:02,768 - #47 funca
+INFO  15:38:02,768 - #13 (
+INFO  15:38:02,768 - #47 char
+INFO  15:38:02,769 - #47 a
+INFO  15:38:02,769 - #15 ,
+INFO  15:38:02,769 - #47 char
+INFO  15:38:02,769 - #47 b
+INFO  15:38:02,769 - #14 )
+INFO  15:38:02,769 - #3 {
+INFO  15:38:02,769 - #9 print
+INFO  15:38:02,769 - #13 (
+INFO  15:38:02,769 - #47 a
+INFO  15:38:02,769 - #14 )
+INFO  15:38:02,769 - #7 ;
+INFO  15:38:02,770 - #9 print
+INFO  15:38:02,770 - #13 (
+INFO  15:38:02,770 - #47 b
+INFO  15:38:02,770 - #14 )
+INFO  15:38:02,770 - #7 ;
+INFO  15:38:02,770 - #38 return
+INFO  15:38:02,770 - #49 1
+INFO  15:38:02,770 - #7 ;
+INFO  15:38:02,770 - #4 }
+INFO  15:38:02,770 - #47 bool
+INFO  15:38:02,770 - #47 samearray
+INFO  15:38:02,770 - #13 (
+INFO  15:38:02,770 - #47 int
+INFO  15:38:02,770 - #47 arr1
+INFO  15:38:02,770 - #17 [
+INFO  15:38:02,771 - #18 ]
+INFO  15:38:02,771 - #15 ,
+INFO  15:38:02,771 - #47 int
+INFO  15:38:02,771 - #47 arr2
+INFO  15:38:02,772 - #17 [
+INFO  15:38:02,772 - #18 ]
+INFO  15:38:02,772 - #14 )
+INFO  15:38:02,772 - #47 bool
+INFO  15:38:02,772 - #47 is
+INFO  15:38:02,772 - #7 ;
+INFO  15:38:02,772 - #3 {
+INFO  15:38:02,772 - #33 if
+INFO  15:38:02,772 - #13 (
+INFO  15:38:02,773 - #47 arr1
+INFO  15:38:02,773 - #20 ==
+INFO  15:38:02,773 - #47 arr2
+INFO  15:38:02,774 - #14 )
+INFO  15:38:02,774 - #47 is
+INFO  15:38:02,774 - #19 =
+INFO  15:38:02,774 - #50 true
+INFO  15:38:02,775 - #7 ;
+INFO  15:38:02,775 - #34 else
+INFO  15:38:02,775 - #47 is
+INFO  15:38:02,775 - #19 =
+INFO  15:38:02,775 - #50 false
+INFO  15:38:02,775 - #7 ;
+INFO  15:38:02,775 - #38 return
+INFO  15:38:02,776 - #47 is
+INFO  15:38:02,776 - #7 ;
+INFO  15:38:02,776 - #4 }
+INFO  15:38:02,776 - #6 void
+INFO  15:38:02,776 - #47 main
+INFO  15:38:02,776 - #13 (
+INFO  15:38:02,776 - #14 )
+INFO  15:38:02,776 - #47 int
+INFO  15:38:02,777 - #47 bodovi
+INFO  15:38:02,777 - #7 ;
+INFO  15:38:02,777 - #47 bool
+INFO  15:38:02,777 - #47 bt
+INFO  15:38:02,777 - #7 ;
+INFO  15:38:02,777 - #47 char
+INFO  15:38:02,777 - #47 slovo
+INFO  15:38:02,777 - #7 ;
+INFO  15:38:02,777 - #47 int
+INFO  15:38:02,777 - #47 broj
+INFO  15:38:02,777 - #7 ;
+INFO  15:38:02,777 - #3 {
+INFO  15:38:02,777 - #47 a
+INFO  15:38:02,777 - #19 =
+INFO  15:38:02,777 - #49 5
+INFO  15:38:02,777 - #7 ;
+INFO  15:38:02,777 - #47 b
+INFO  15:38:02,777 - #19 =
+INFO  15:38:02,777 - #49 7
+INFO  15:38:02,777 - #7 ;
+INFO  15:38:02,778 - #47 niz
+INFO  15:38:02,778 - #19 =
+INFO  15:38:02,778 - #12 new
+INFO  15:38:02,778 - #47 int
+INFO  15:38:02,778 - #17 [
+INFO  15:38:02,778 - #47 a
+INFO  15:38:02,778 - #18 ]
+INFO  15:38:02,778 - #7 ;
+INFO  15:38:02,778 - #47 niz2
+INFO  15:38:02,778 - #19 =
+INFO  15:38:02,778 - #12 new
+INFO  15:38:02,778 - #47 int
+INFO  15:38:02,778 - #17 [
+INFO  15:38:02,778 - #47 b
+INFO  15:38:02,778 - #18 ]
+INFO  15:38:02,779 - #7 ;
+INFO  15:38:02,779 - #47 b
+INFO  15:38:02,779 - #19 =
+INFO  15:38:02,779 - #49 5
+INFO  15:38:02,779 - #28 +
+INFO  15:38:02,779 - #47 slovoa
+INFO  15:38:02,779 - #7 ;
+INFO  15:38:02,779 - #47 b
+INFO  15:38:02,779 - #19 =
+INFO  15:38:02,779 - #47 b
+INFO  15:38:02,779 - #28 +
+INFO  15:38:02,779 - #47 pet
+INFO  15:38:02,779 - #28 +
+INFO  15:38:02,779 - #47 a
+INFO  15:38:02,779 - #29 -
+INFO  15:38:02,779 - #47 jedan
+INFO  15:38:02,780 - #7 ;
+INFO  15:38:02,780 - #47 a
+INFO  15:38:02,780 - #19 =
+INFO  15:38:02,780 - #47 samearray
+INFO  15:38:02,780 - #13 (
+INFO  15:38:02,780 - #47 niz
+INFO  15:38:02,780 - #15 ,
+INFO  15:38:02,781 - #47 niz2
+INFO  15:38:02,781 - #14 )
+INFO  15:38:02,781 - #28 +
+INFO  15:38:02,781 - #49 1
+INFO  15:38:02,781 - #7 ;
+INFO  15:38:02,781 - #47 a
+INFO  15:38:02,781 - #19 =
+INFO  15:38:02,781 - #47 sum
+INFO  15:38:02,781 - #13 (
+INFO  15:38:02,781 - #47 pet
+INFO  15:38:02,781 - #15 ,
+INFO  15:38:02,781 - #47 b
+INFO  15:38:02,781 - #14 )
+INFO  15:38:02,782 - #28 +
+INFO  15:38:02,782 - #47 jedan
+INFO  15:38:02,782 - #29 -
+INFO  15:38:02,782 - #47 pet
+INFO  15:38:02,782 - #31 /
+INFO  15:38:02,782 - #49 2
+INFO  15:38:02,782 - #7 ;
+INFO  15:38:02,782 - #47 a
+INFO  15:38:02,783 - #19 =
+INFO  15:38:02,783 - #47 b
+INFO  15:38:02,783 - #30 *
+INFO  15:38:02,783 - #47 funca
+INFO  15:38:02,783 - #13 (
+INFO  15:38:02,783 - #47 slovoa
+INFO  15:38:02,783 - #15 ,
+INFO  15:38:02,783 - #47 slovob
+INFO  15:38:02,783 - #14 )
+INFO  15:38:02,783 - #7 ;
+INFO  15:38:02,783 - #47 a
+INFO  15:38:02,783 - #19 =
+INFO  15:38:02,783 - #47 b
+INFO  15:38:02,783 - #30 *
+INFO  15:38:02,783 - #47 slovoa
+INFO  15:38:02,783 - #7 ;
+INFO  15:38:02,783 - #47 a
+INFO  15:38:02,783 - #19 =
+INFO  15:38:02,783 - #47 sum
+INFO  15:38:02,783 - #13 (
+INFO  15:38:02,784 - #47 a
+INFO  15:38:02,784 - #15 ,
+INFO  15:38:02,784 - #47 b
+INFO  15:38:02,784 - #14 )
+INFO  15:38:02,784 - #32 %
+INFO  15:38:02,784 - #49 2
+INFO  15:38:02,784 - #7 ;
+INFO  15:38:02,784 - #47 b
+INFO  15:38:02,784 - #19 =
+INFO  15:38:02,784 - #47 a
+INFO  15:38:02,784 - #31 /
+INFO  15:38:02,784 - #49 1
+INFO  15:38:02,784 - #7 ;
+INFO  15:38:02,784 - #47 b
+INFO  15:38:02,784 - #19 =
+INFO  15:38:02,784 - #47 samearray
+INFO  15:38:02,784 - #13 (
+INFO  15:38:02,784 - #47 niz
+INFO  15:38:02,784 - #15 ,
+INFO  15:38:02,786 - #47 niz2
+INFO  15:38:02,786 - #14 )
+INFO  15:38:02,786 - #32 %
+INFO  15:38:02,786 - #49 3
+INFO  15:38:02,786 - #7 ;
+INFO  15:38:02,786 - #47 b
+INFO  15:38:02,786 - #19 =
+INFO  15:38:02,786 - #29 -
+INFO  15:38:02,786 - #47 slovoa
+INFO  15:38:02,786 - #7 ;
+INFO  15:38:02,787 - #47 b
+INFO  15:38:02,787 - #19 =
+INFO  15:38:02,787 - #29 -
+INFO  15:38:02,787 - #47 jedan
+INFO  15:38:02,787 - #7 ;
+INFO  15:38:02,787 - #47 a
+INFO  15:38:02,787 - #19 =
+INFO  15:38:02,787 - #29 -
+INFO  15:38:02,787 - #47 sum
+INFO  15:38:02,787 - #13 (
+INFO  15:38:02,787 - #47 pet
+INFO  15:38:02,787 - #15 ,
+INFO  15:38:02,787 - #47 b
+INFO  15:38:02,787 - #14 )
+INFO  15:38:02,787 - #28 +
+INFO  15:38:02,787 - #47 jedan
+INFO  15:38:02,787 - #29 -
+INFO  15:38:02,787 - #47 pet
+INFO  15:38:02,787 - #31 /
+INFO  15:38:02,787 - #49 2
+INFO  15:38:02,787 - #7 ;
+INFO  15:38:02,787 - #4 }
+INFO  15:38:02,787 - #4 }
+INFO  15:38:02,794 - Program(
   ProgramIdentificator(
    operations
   ) [ProgramIdentificator]
@@ -1617,122 +1617,122 @@ INFO  20:16:07,229 - Program(
     ) [MethodDecl]
   ) [MethodDeclarations]
 ) [Program]
-INFO  20:16:07,231 - ===================================
-INFO  20:16:07,234 - Deklarisana konstanta slovoa jednaka a na liniji 3
-INFO  20:16:07,234 - Deklarisana konstanta slovob jednaka b na liniji 5
-INFO  20:16:07,234 - Deklarisana konstanta jedan jednaka 1 na liniji 7
-INFO  20:16:07,234 - Deklarisana konstanta pet jednaka 5 na liniji 7
-INFO  20:16:07,234 - Deklarisan niz niz na liniji 9
-INFO  20:16:07,234 - Deklarisan niz niz2 na liniji 9
-INFO  20:16:07,234 - Deklarisana promenljiva a na liniji 9
-INFO  20:16:07,234 - Deklarisana promenljiva b na liniji 9
-INFO  20:16:07,234 - Deklarisan niz nizch na liniji 10
-INFO  20:16:07,234 - Deklarisana funkcija sum povratna vrednost je tipa int na liniji 14
-INFO  20:16:07,234 - 1. argument a tipa int na liniji 14
-INFO  20:16:07,234 - 2. argument b tipa int na liniji 14
-INFO  20:16:07,234 - Deklarisana promenljiva c na liniji 14
-INFO  20:16:07,235 - Detektovana upotreba simbola c na liniji 15: Var c: int, 2, 1 
-INFO  20:16:07,235 - Detektovana upotreba simbola a na liniji 15: Var a: int, 0, 1 
-INFO  20:16:07,235 - Detektovana upotreba simbola b na liniji 15: Var b: int, 1, 1 
-INFO  20:16:07,235 - Detektovana upotreba simbola c na liniji 16: Var c: int, 2, 1 
-INFO  20:16:07,235 - Deklarisana funkcija sum sa 2 ulazna parametra na liniji 14
-INFO  20:16:07,235 - Deklarisana funkcija funca povratna vrednost je tipa int na liniji 19
-INFO  20:16:07,235 - 1. argument a tipa char na liniji 19
-INFO  20:16:07,235 - 2. argument b tipa char na liniji 19
-INFO  20:16:07,235 - Detektovana upotreba simbola a na liniji 20: Var a: char, 0, 1 
-INFO  20:16:07,235 - Detektovana upotreba simbola b na liniji 21: Var b: char, 1, 1 
-INFO  20:16:07,235 - Deklarisana funkcija funca sa 2 ulazna parametra na liniji 19
-INFO  20:16:07,236 - Deklarisana funkcija samearray povratna vrednost je tipa bool na liniji 25
-INFO  20:16:07,236 - 1. argument arr1 niz tipa int na liniji 25
-INFO  20:16:07,236 - 2. argument arr2 niz tipa int na liniji 25
-INFO  20:16:07,236 - Deklarisana promenljiva is na liniji 25
-INFO  20:16:07,236 - Detektovana upotreba simbola arr1 na liniji 26: Var arr1: Arr of int, 0, 1 
-INFO  20:16:07,236 - Detektovana upotreba simbola arr2 na liniji 26: Var arr2: Arr of int, 1, 1 
-INFO  20:16:07,236 - Detektovana upotreba simbola is na liniji 26: Var is: , 2, 1 
-INFO  20:16:07,236 - Detektovana upotreba simbola is na liniji 27: Var is: , 2, 1 
-INFO  20:16:07,236 - Detektovana upotreba simbola is na liniji 28: Var is: , 2, 1 
-INFO  20:16:07,236 - Deklarisana funkcija samearray sa 2 ulazna parametra na liniji 25
-INFO  20:16:07,236 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 32
-INFO  20:16:07,236 - Deklarisana promenljiva bodovi na liniji 33
-INFO  20:16:07,236 - Deklarisana promenljiva bt na liniji 34
-INFO  20:16:07,236 - Deklarisana promenljiva slovo na liniji 35
-INFO  20:16:07,236 - Deklarisana promenljiva broj na liniji 36
-INFO  20:16:07,236 - Detektovana upotreba simbola a na liniji 39: Var a: int, 2, 0 
-INFO  20:16:07,236 - Detektovana upotreba simbola b na liniji 40: Var b: int, 3, 0 
-INFO  20:16:07,236 - Detektovana upotreba simbola niz na liniji 41: Var niz: Arr of int, 0, 0 
-INFO  20:16:07,236 - Detektovana upotreba simbola a na liniji 41: Var a: int, 2, 0 
-INFO  20:16:07,236 - Detektovana upotreba simbola niz2 na liniji 42: Var niz2: Arr of int, 1, 0 
-INFO  20:16:07,236 - Detektovana upotreba simbola b na liniji 42: Var b: int, 3, 0 
-INFO  20:16:07,236 - Detektovana upotreba simbola b na liniji 45: Var b: int, 3, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola slovoa na liniji 45: Con slovoa: char, 97, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola b na liniji 46: Var b: int, 3, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola b na liniji 46: Var b: int, 3, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola pet na liniji 46: Con pet: int, 5, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola a na liniji 46: Var a: int, 2, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola jedan na liniji 46: Con jedan: int, 1, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola samearray na liniji 47: Meth samearray: , 0, 2 
+INFO  15:38:02,796 - ===================================
+INFO  15:38:02,799 - Deklarisana konstanta slovoa jednaka a na liniji 3
+INFO  15:38:02,799 - Deklarisana konstanta slovob jednaka b na liniji 5
+INFO  15:38:02,799 - Deklarisana konstanta jedan jednaka 1 na liniji 7
+INFO  15:38:02,799 - Deklarisana konstanta pet jednaka 5 na liniji 7
+INFO  15:38:02,799 - Deklarisan niz niz na liniji 9
+INFO  15:38:02,799 - Deklarisan niz niz2 na liniji 9
+INFO  15:38:02,799 - Deklarisana promenljiva a na liniji 9
+INFO  15:38:02,799 - Deklarisana promenljiva b na liniji 9
+INFO  15:38:02,799 - Deklarisan niz nizch na liniji 10
+INFO  15:38:02,799 - Deklarisana funkcija sum povratna vrednost je tipa int na liniji 14
+INFO  15:38:02,800 - 1. argument a tipa int na liniji 14
+INFO  15:38:02,800 - 2. argument b tipa int na liniji 14
+INFO  15:38:02,800 - Deklarisana promenljiva c na liniji 14
+INFO  15:38:02,800 - Detektovana upotreba simbola c na liniji 15: Var c: int, 2, 1 
+INFO  15:38:02,800 - Detektovana upotreba simbola a na liniji 15: Var a: int, 0, 1 
+INFO  15:38:02,800 - Detektovana upotreba simbola b na liniji 15: Var b: int, 1, 1 
+INFO  15:38:02,801 - Detektovana upotreba simbola c na liniji 16: Var c: int, 2, 1 
+INFO  15:38:02,801 - Deklarisana funkcija sum sa 2 ulazna parametra na liniji 14
+INFO  15:38:02,801 - Deklarisana funkcija funca povratna vrednost je tipa int na liniji 19
+INFO  15:38:02,801 - 1. argument a tipa char na liniji 19
+INFO  15:38:02,801 - 2. argument b tipa char na liniji 19
+INFO  15:38:02,801 - Detektovana upotreba simbola a na liniji 20: Var a: char, 0, 1 
+INFO  15:38:02,801 - Detektovana upotreba simbola b na liniji 21: Var b: char, 1, 1 
+INFO  15:38:02,801 - Deklarisana funkcija funca sa 2 ulazna parametra na liniji 19
+INFO  15:38:02,801 - Deklarisana funkcija samearray povratna vrednost je tipa bool na liniji 25
+INFO  15:38:02,801 - 1. argument arr1 niz tipa int na liniji 25
+INFO  15:38:02,801 - 2. argument arr2 niz tipa int na liniji 25
+INFO  15:38:02,801 - Deklarisana promenljiva is na liniji 25
+INFO  15:38:02,802 - Detektovana upotreba simbola arr1 na liniji 26: Var arr1: Arr of int, 0, 1 
+INFO  15:38:02,802 - Detektovana upotreba simbola arr2 na liniji 26: Var arr2: Arr of int, 1, 1 
+INFO  15:38:02,802 - Detektovana upotreba simbola is na liniji 26: Var is: , 2, 1 
+INFO  15:38:02,802 - Detektovana upotreba simbola is na liniji 27: Var is: , 2, 1 
+INFO  15:38:02,802 - Detektovana upotreba simbola is na liniji 28: Var is: , 2, 1 
+INFO  15:38:02,802 - Deklarisana funkcija samearray sa 2 ulazna parametra na liniji 25
+INFO  15:38:02,802 - Deklarisana funkcija main povratna vrednost je tipa VOID na liniji 32
+INFO  15:38:02,802 - Deklarisana promenljiva bodovi na liniji 33
+INFO  15:38:02,802 - Deklarisana promenljiva bt na liniji 34
+INFO  15:38:02,802 - Deklarisana promenljiva slovo na liniji 35
+INFO  15:38:02,802 - Deklarisana promenljiva broj na liniji 36
+INFO  15:38:02,802 - Detektovana upotreba simbola a na liniji 39: Var a: int, 2, 0 
+INFO  15:38:02,802 - Detektovana upotreba simbola b na liniji 40: Var b: int, 3, 0 
+INFO  15:38:02,802 - Detektovana upotreba simbola niz na liniji 41: Var niz: Arr of int, 0, 0 
+INFO  15:38:02,802 - Detektovana upotreba simbola a na liniji 41: Var a: int, 2, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola niz2 na liniji 42: Var niz2: Arr of int, 1, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola b na liniji 42: Var b: int, 3, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola b na liniji 45: Var b: int, 3, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola slovoa na liniji 45: Con slovoa: char, 97, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola b na liniji 46: Var b: int, 3, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola b na liniji 46: Var b: int, 3, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola pet na liniji 46: Con pet: int, 5, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola a na liniji 46: Var a: int, 2, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola jedan na liniji 46: Con jedan: int, 1, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola a na liniji 47: Var a: int, 2, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola samearray na liniji 47: Meth samearray: , 0, 2 
    Var arr1: Arr of int, 0, 1 
    Var arr2: Arr of int, 1, 1 
    Var is: , 2, 1 
 
-INFO  20:16:07,237 - Detektovana upotreba simbola niz na liniji 47: Var niz: Arr of int, 0, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola niz2 na liniji 47: Var niz2: Arr of int, 1, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola a na liniji 48: Var a: int, 2, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola sum na liniji 48: Meth sum: int, 0, 2 
+INFO  15:38:02,803 - Detektovana upotreba simbola niz na liniji 47: Var niz: Arr of int, 0, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola niz2 na liniji 47: Var niz2: Arr of int, 1, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola a na liniji 48: Var a: int, 2, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola sum na liniji 48: Meth sum: int, 0, 2 
    Var a: int, 0, 1 
    Var b: int, 1, 1 
    Var c: int, 2, 1 
 
-INFO  20:16:07,237 - Detektovana upotreba simbola pet na liniji 48: Con pet: int, 5, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola b na liniji 48: Var b: int, 3, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola jedan na liniji 48: Con jedan: int, 1, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola pet na liniji 48: Con pet: int, 5, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola a na liniji 51: Var a: int, 2, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola b na liniji 51: Var b: int, 3, 0 
-INFO  20:16:07,237 - Detektovana upotreba simbola funca na liniji 51: Meth funca: int, 0, 2 
+INFO  15:38:02,803 - Detektovana upotreba simbola pet na liniji 48: Con pet: int, 5, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola b na liniji 48: Var b: int, 3, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola jedan na liniji 48: Con jedan: int, 1, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola pet na liniji 48: Con pet: int, 5, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola a na liniji 51: Var a: int, 2, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola b na liniji 51: Var b: int, 3, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola funca na liniji 51: Meth funca: int, 0, 2 
    Var a: char, 0, 1 
    Var b: char, 1, 1 
 
-INFO  20:16:07,238 - Detektovana upotreba simbola slovoa na liniji 51: Con slovoa: char, 97, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola slovob na liniji 51: Con slovob: char, 98, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola a na liniji 52: Var a: int, 2, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola b na liniji 52: Var b: int, 3, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola slovoa na liniji 52: Con slovoa: char, 97, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola a na liniji 53: Var a: int, 2, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola sum na liniji 53: Meth sum: int, 0, 2 
+INFO  15:38:02,803 - Detektovana upotreba simbola slovoa na liniji 51: Con slovoa: char, 97, 0 
+INFO  15:38:02,803 - Detektovana upotreba simbola slovob na liniji 51: Con slovob: char, 98, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola a na liniji 52: Var a: int, 2, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola b na liniji 52: Var b: int, 3, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola slovoa na liniji 52: Con slovoa: char, 97, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola a na liniji 53: Var a: int, 2, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola sum na liniji 53: Meth sum: int, 0, 2 
    Var a: int, 0, 1 
    Var b: int, 1, 1 
    Var c: int, 2, 1 
 
-INFO  20:16:07,238 - Detektovana upotreba simbola a na liniji 53: Var a: int, 2, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola b na liniji 53: Var b: int, 3, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola b na liniji 54: Var b: int, 3, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola a na liniji 54: Var a: int, 2, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola b na liniji 55: Var b: int, 3, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola samearray na liniji 55: Meth samearray: , 0, 2 
+INFO  15:38:02,804 - Detektovana upotreba simbola a na liniji 53: Var a: int, 2, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola b na liniji 53: Var b: int, 3, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola b na liniji 54: Var b: int, 3, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola a na liniji 54: Var a: int, 2, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola b na liniji 55: Var b: int, 3, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola samearray na liniji 55: Meth samearray: , 0, 2 
    Var arr1: Arr of int, 0, 1 
    Var arr2: Arr of int, 1, 1 
    Var is: , 2, 1 
 
-INFO  20:16:07,238 - Detektovana upotreba simbola niz na liniji 55: Var niz: Arr of int, 0, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola niz2 na liniji 55: Var niz2: Arr of int, 1, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola b na liniji 58: Var b: int, 3, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola slovoa na liniji 58: Con slovoa: char, 97, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola b na liniji 59: Var b: int, 3, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola jedan na liniji 59: Con jedan: int, 1, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola a na liniji 60: Var a: int, 2, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola sum na liniji 60: Meth sum: int, 0, 2 
+INFO  15:38:02,804 - Detektovana upotreba simbola niz na liniji 55: Var niz: Arr of int, 0, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola niz2 na liniji 55: Var niz2: Arr of int, 1, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola b na liniji 58: Var b: int, 3, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola slovoa na liniji 58: Con slovoa: char, 97, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola b na liniji 59: Var b: int, 3, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola jedan na liniji 59: Con jedan: int, 1, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola a na liniji 60: Var a: int, 2, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola sum na liniji 60: Meth sum: int, 0, 2 
    Var a: int, 0, 1 
    Var b: int, 1, 1 
    Var c: int, 2, 1 
 
-INFO  20:16:07,238 - Detektovana upotreba simbola pet na liniji 60: Con pet: int, 5, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola b na liniji 60: Var b: int, 3, 0 
-INFO  20:16:07,238 - Detektovana upotreba simbola jedan na liniji 60: Con jedan: int, 1, 0 
-INFO  20:16:07,239 - Detektovana upotreba simbola pet na liniji 60: Con pet: int, 5, 0 
-INFO  20:16:07,239 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 32
-INFO  20:16:07,239 - ===================================
+INFO  15:38:02,804 - Detektovana upotreba simbola pet na liniji 60: Con pet: int, 5, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola b na liniji 60: Var b: int, 3, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola jedan na liniji 60: Con jedan: int, 1, 0 
+INFO  15:38:02,804 - Detektovana upotreba simbola pet na liniji 60: Con pet: int, 5, 0 
+INFO  15:38:02,804 - Deklarisana funkcija main sa 0 ulazna parametra na liniji 32
+INFO  15:38:02,804 - ===================================
 =====================SYMBOL TABLE DUMP=========================
 Type int: int, -1, -1 
 Type char: char, -1, -1 
@@ -1777,5 +1777,4 @@ Prog operations: notype, 0, 1
       Var bt: , 1, 1 
       Var slovo: char, 2, 1 
       Var broj: int, 3, 1 
-
 
